@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 :root {
@@ -10,13 +11,13 @@ body {
     --color-secondary: #f72585;
     --color-dark: #333333;
     --color-light: #f8f9fa;
-
+    --font-main: 'Segoe UI', Arial, sans-serif;
 }
 
 
-/*************************************************************/
-/****************** ====== NAVBAR RESPONSIVE ====== **********/
-/*************************************************************/
+/*************************************************************************/
+/****************** ====== NAVBAR RESPONSIVE ====== *********************/
+/***********************************************************************/
 
 /* ====== VARIABLES ====== */
 :root {
@@ -26,7 +27,6 @@ body {
     --color-nav-link-hover: var(--color-secondary);
     --color-social-bg: #e9ecef;
     --color-social-hover: var(--color-secondary);
-    --font-main: 'Segoe UI', Arial, sans-serif;
     --nav-height: 70px;
     --nav-padding: 0px 20px;
     --transition: 0.3s cubic-bezier(.4, 0, .2, 1);
@@ -304,21 +304,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 20px 40px 20px;
-    background: white;
-    box-shadow: 0 8px 32px 0 rgba(247, 37, 133, 0.08);
-    margin-bottom: 0px;
+    padding: 100px 20px 80px 20px;
+    background: var(--color-light);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
     text-align: center;
 }
 
 .hero__image h1.responsive__text {
     font-size: 2.8rem;
-    font-weight: 800;
+    font-weight: 700;
+    font-family: var(--font-main);
     color: #333;
     letter-spacing: 1px;
     line-height: 1.1;
     text-shadow: 0 2px 12px rgba(247, 37, 133, 0.08);
-    
+
 }
 
 .hero__image h1.responsive__text span {
@@ -333,17 +333,18 @@ body {
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.4;
-    background: rgba(255,255,255,0.7);
 }
 
 /* Responsive para móviles */
 @media (max-width: 600px) {
     .hero__image {
-        padding: 100px 10px 24px 10px;
+        padding: 100px 10px 80px 10px;
     }
+
     .hero__image h1.responsive__text {
         font-size: 2rem;
     }
+
     .hero__image h2 {
         font-size: 1.1rem;
         padding: 10px 8px;
