@@ -62,13 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (hero) {
     setTimeout(() => {
       hero.classList.add('visible');
-    }, 50);
+    }, 125);
   }
   const divider = document.querySelector('.section__divider');
   if (divider) {
     setTimeout(() => {
       divider.classList.add('visible');
-    }, 50); // Un pequeño delay para que aparezca después del hero
+    }, 125); // Un pequeño delay para que aparezca después del hero
   }
   const slider = document.querySelector('.slider-gallery__container');
   if (slider) {
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*****************************************************************************************************/
 const sliderCardsData = [
   {
-    nombre: "Pack - Emprendedores",
+    nombre: "Pack - Emprendedor",
     subtitulo: "Pack oportuno para los ",
     img: "./assets/img/pack-s.jpg",
     precio: "$200.000 ARS",
