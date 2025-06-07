@@ -61,8 +61,9 @@ window.addEventListener('scroll', () => {
 /*****************************************************************************************************/
 const sliderCardsData = [
   { 
-    nombre: "Pack S",
-    subtitulo: "Oportuno para emprendedores",
+    nombre: "Para los emprendedores",
+    subtitulo: "En este pack oportuno para los emprendedores",
+    img: "./assets/img/pack-s.jpg",
     precio: "$200.000 ARS",
     precioNota: "Precio Final",
     items: [
@@ -78,8 +79,9 @@ const sliderCardsData = [
     ]
   },
   {
-    nombre: "Pack M",
-    subtitulo: "Ideal para los indecisos",
+    nombre: "Ideal para los indecisos",
+    subtitulo: "Este pack ideal para los indecisos",
+    img: "./assets/img/pack-m.jpg",
     precio: "$300.0000 ARS",
     precioNota: "Precio Final",
     items: [
@@ -95,8 +97,9 @@ const sliderCardsData = [
     ]
   },
   {
-    nombre: "Pack G",
-    subtitulo: "Perfecto para tu negocio",
+    nombre: "Perfecto para tu negocio",
+    subtitulo: "Este pack perfecto para tu negocio",
+    img: "./assets/img/pack-g.jpg",
     precio: "$400.000 ARS",
     precioNota: "Precio Final",
     items: [
@@ -120,11 +123,11 @@ const dotsContainer = document.getElementById('sliderGalleryDots');
 let current = 0;
 
 function renderCards() {
-  track.innerHTML = cardsData.map(card => `
-    <article class="card">
+  track.innerHTML = cardsData.map((card, idx) => `
+    <article class="card card__${idx + 1}">
       <aside class="card__aside">
         <figure class="card__figure">
-          <img src="https://satyr.io/400x200?text=card__image" alt="Dummy Image" class="card__image">
+          <img src="${card.img}" alt="Dummy Image" class="card__image">
         </figure>
       </aside>
       <header class="card__header">
@@ -135,12 +138,9 @@ function renderCards() {
         <ul>
           ${card.items.map(item => `<li>${item}</li>`).join('')}
         </ul>
-        
       </div>
       <footer class="card__footer">
-        <div class="card__actions">
-          <p class="card__copy">${card.precio} <br><span>${card.precioNota}</span></p>
-        </div>
+          <p class="card__precio">${card.precio} <span>${card.precioNota}</span> </p>
       </footer>
     </article>
   `).join('');
