@@ -16,12 +16,12 @@ body {
 
 .section__divider {
     opacity: 0;
-    transform: translateY(40px);
+    /*transform: translateY(40px);*/
     transition: opacity 0.9s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1);
 }
 .section__divider.visible {
     opacity: 1;
-    transform: translateY(0);
+   /* transform: translateY(0);*/
 }
 
 /*************************************************************************/
@@ -319,13 +319,13 @@ body {
     gap: 20px;
 /**efecto de carga*/
     opacity: 0;
-    transform: translateY(40px);
+    /*transform: translateY(40px);*/
     transition: opacity 0.9s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1);
 }
 /**efecto de carga*/
 .hero__image.visible {
     opacity: 1;
-    transform: translateY(0);
+    /*transform: translateY(0);*/
 }
 
 
