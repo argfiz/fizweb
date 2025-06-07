@@ -46,23 +46,46 @@ navMenu.addEventListener('click', (event) => {
 /*****************************************************************************************************/
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
-    navbar.style.height = '60px';
+    navbar.style.height = '50px';
     navbar.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
   } else {
-    navbar.style.height = '90px';
+    navbar.style.height = '70px';
     navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
   }
 });
 
+/******************************************SECTION DIVIDER**************************************/
+/* ======================================= HERO IMAGE LOAD =================================== */
+/******************************************GALLERY SWIPE LOAD**********************************/
+document.addEventListener('DOMContentLoaded', () => {
+  const hero = document.querySelector('.hero__image');
+  if (hero) {
+    setTimeout(() => {
+      hero.classList.add('visible');
+    }, 50);
+  }
+  const divider = document.querySelector('.section__divider');
+  if (divider) {
+    setTimeout(() => {
+      divider.classList.add('visible');
+    }, 50); // Un pequeño delay para que aparezca después del hero
+  }
+  const slider = document.querySelector('.slider-gallery__container');
+  if (slider) {
+    setTimeout(() => {
+      slider.classList.add('visible');
+    }, 250); // Un pequeño delay para que aparezca después del divider
+  }
+});
 
 
 /*****************************************************************************************************/
 /* ============================================ GALLERY SWIPE =================================== ****/
 /*****************************************************************************************************/
 const sliderCardsData = [
-  { 
-    nombre: "Para los emprendedores",
-    subtitulo: "En este pack oportuno para los emprendedores",
+  {
+    nombre: "Pack - Emprendedores",
+    subtitulo: "Pack oportuno para los ",
     img: "./assets/img/pack-s.jpg",
     precio: "$200.000 ARS",
     precioNota: "Precio Final",
@@ -79,7 +102,7 @@ const sliderCardsData = [
     ]
   },
   {
-    nombre: "Ideal para los indecisos",
+    nombre: "Pack - Indecisos",
     subtitulo: "Este pack ideal para los indecisos",
     img: "./assets/img/pack-m.jpg",
     precio: "$300.0000 ARS",
@@ -97,7 +120,7 @@ const sliderCardsData = [
     ]
   },
   {
-    nombre: "Perfecto para tu negocio",
+    nombre: "Pack - Empresa",
     subtitulo: "Este pack perfecto para tu negocio",
     img: "./assets/img/pack-g.jpg",
     precio: "$400.000 ARS",
@@ -241,3 +264,4 @@ track.addEventListener('pointerleave', () => {
   track.style.cursor = '';
   updateSlider();
 });
+

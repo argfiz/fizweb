@@ -14,7 +14,15 @@ body {
     --font-main: 'Segoe UI', Arial, sans-serif;
 }
 
-
+.section__divider {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1);
+}
+.section__divider.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /*************************************************************************/
 /****************** ====== NAVBAR RESPONSIVE ====== *********************/
@@ -58,8 +66,8 @@ body {
 }
 
 .logo-nav img {
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     border-radius: 0px;
     object-fit: cover;
 }
@@ -305,10 +313,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 170px 20px 60px 20px;
+    padding: 140px 20px 70px 20px;
     background: var(--color-light);
     text-align: center;
     gap: 20px;
+/**efecto de carga*/
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1);
+}
+/**efecto de carga*/
+.hero__image.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
@@ -345,7 +362,7 @@ body {
 /* Responsive para móviles */
 @media (max-width: 600px) {
     .hero__image {
-        padding: 160px 10px 50px 10px;
+        padding: 120px 10px 40px 10px;
     }
 
     .hero__image h1 {
@@ -368,15 +385,21 @@ body {
   position: relative;
   width: 100%;
   max-width: 100%;
-  margin: 40px auto;
   overflow: hidden;
   background: #fff;
   border-radius: 12px;
+  margin-top: 60px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  
-  
+/*efecto de carga*/
+  opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1);
 }
-
+/*efecto de carga*/
+.slider-gallery__container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 .slider-gallery__track {
   display: flex;
   transition: transform 0.5s cubic-bezier(.4,0,.2,1);
@@ -503,6 +526,7 @@ body {
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
+   
   }
   .slider-gallery__nav-dots {
     display: none;
