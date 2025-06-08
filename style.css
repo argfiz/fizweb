@@ -17,7 +17,7 @@ body {
 .section__divider {
     opacity: 0;
     /*transform: translateY(40px);*/
-    transition: opacity 0.9s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1);
+    transition: opacity 1.5s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1);
 }
 .section__divider.visible {
     opacity: 1;
@@ -320,7 +320,7 @@ body {
 /**efecto de carga*/
     opacity: 0;
     /*transform: translateY(40px);*/
-    transition: opacity 0.9s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1);
+    transition: opacity 1.5s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1);
 }
 /**efecto de carga*/
 .hero__image.visible {
@@ -380,155 +380,156 @@ body {
 /**********************************************************/
 /************=== GALLERY SWIPE  ========================= */
 /**********************************************************/
-
-.slider-gallery__container {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
-  background: #fff;
-  border-radius: 12px;
-  margin-top: 60px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-/*efecto de carga*/
-  opacity: 0;
+.swiper {
+    max-width: 100vw;
+    margin: 50px auto;
+    background: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.9s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1);
+    transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+
 }
-/*efecto de carga*/
-.slider-gallery__container.visible {
+.swiper.visible {
     opacity: 1;
     transform: translateY(0);
 }
-.slider-gallery__track {
-  display: flex;
-  transition: transform 0.5s cubic-bezier(.4,0,.2,1);
-  will-change: transform;
-  gap: 16px;
-  margin-bottom: 25px;
+
+.swiper-slide {
+    max-width: 310px;
+    margin-bottom: 40px;
+
 }
 
 .card {
-  min-width: 280px;
-  max-width: 400px;
-  margin: 0;
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font-main);
-  line-height: 1.5;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.card__aside {
-  width: 100%;
-  background: #f5f5f5;
-}
-
-.card__figure {
-  margin: 0;
-}
-
-.card__image {
-  width: 100%;
-  display: block;
+.card__img {
+    width: 100%;
+    object-fit: cover;
+    background: #f0f0f0;
 }
 
 .card__header {
-  padding: 16px;
-  background: #f72585;
-  color: #fff;
+    width: 280px;
+    background: #fff; /* Fondo blanco */
+    text-align: center;
+    padding: 0px 15px;
 }
-
+.card__header--1 {
+    border-bottom: 3px solid #00bf62;
+    
+}
+.card__header--2 {
+    border-bottom: 3px solid #4f9dff;
+}
+.card__header--3 {
+    border-bottom: 3px solid #fd3031;
+}
 .card__title {
-  font-size: 1.4rem;
-  margin: 0 0 4px 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #222;
+    text-align: center;
 }
 
-.card__subtitle {
-  font-size: 1rem;
-  margin: 0;
-  font-weight: 400;
+.card__sub {
+    font-size: 1rem;
+    color: #666; 
+    text-align: center;
 }
 
-.card__body {
-  padding: 16px;
-  flex: 1;
-  line-height: 2;
-}
-.card__footer {
-  padding: 12px 16px;
-  background: #fafafa;
-  border-top: 2px solid black;
-  text-align: center; /* Centra el contenido horizontalmente */
-}
-.card__footer p {
-  font-size: 1.7rem;
-  font-weight: 600;
-  color: #555;
-  display: inline-block;
-  margin: 0;
-  text-align: center;
+.card__items {
+    list-style: none;
+    width: 100%;
+
 }
 
-.card__footer p span {
-  display: block;
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: #555;
-  margin-top: -5px; /* Muy pegado al precio */
-}
-.card__1 .card__header {
-  background: #00bf63;
-}
-.card__1 .card__footer {
-  border-top: 2px solid #00bf63;
-}
-.card__2 .card__header {
-  background: #5158ff;
-}
-.card__2 .card__footer {
-  border-top: 2px solid #5158ff;;
-}
-.card__3 .card__header {
-  background: #ff3131;
-  border-top: 2px solid #ff3131;
-}
-.card__3 .card__footer {
-  border-top: 2px solid #ff3131;
+.card__items li {
+    font-size: 0.98rem;
+    color: #444;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 6px 15px;
 }
 
-.slider-gallery__nav-dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin: 16px 0;
+.card__items li:last-child {
+    border-bottom: none;
 }
 
-.slider-gallery__dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: none;
-  background: #ddd;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.slider-gallery__dot.active {
-  background: #f72585;
+.card__price {
+    text-align: center;
+    padding: 20px 0px;
+    padding-top: 5px;
 }
 
-/*RESPONSIVE */
-@media (min-width: 850px) {
-  .slider-gallery__container {
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-   
-  }
-  .slider-gallery__nav-dots {
-    display: none;
-  }
+.card__price span {
+    font-size: 1.7rem;
+    font-weight: 900;
+    display: block;
+}
+.card__price-1 span {
+    color: #00bf62;
+}
+.card__price-2 span {
+    color: #4f9dff;
+}
+.card__price-3 span {
+    color: #fd3031;
+}
+.card__price small {
+    font-size: 0.95rem;
+    color: #888;
+    display: block;
+    margin-top: 2px;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;   
+}
+.swiper-pagination-bullet {
+    background: #f72585 !important;
+    width: 14px;
+    height: 14px;
+    opacity: 1;
+    margin: 0 6px !important;
+    transition: transform 0.2s;
+}
+
+.swiper-pagination-bullet-active {
+    background: #f72585 !important;
+    transform: scale(1.25);
+    box-shadow: 0 0 0 2px #fff, 0 0 6px #f7258544;
+}
+
+@media (min-width: 501px) {
+    .swiper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 32px 0;
+
+    }
+
+    .swiper-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .swiper-slide {
+        width: 300px;
+        max-width: 300px;
+    }
 }

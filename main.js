@@ -70,11 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
       divider.classList.add('visible');
     }, 125); // Un pequeño delay para que aparezca después del hero
   }
-  const slider = document.querySelector('.slider-gallery__container');
-  if (slider) {
+  const swiper = document.querySelector('.swiper');
+  if (swiper) {
     setTimeout(() => {
-      slider.classList.add('visible');
-    }, 250); // Un pequeño delay para que aparezca después del divider
+      swiper.classList.add('visible');
+    }, 250); // Pequeño delay para suavidad
   }
 });
 
@@ -84,8 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
 /*****************************************************************************************************/
 const sliderCardsData = [
   {
-    nombre: "Pack - Emprendedor",
-    subtitulo: "Pack oportuno para los ",
+    nombre: "Pack - Pequeño",
+    subtitulo: "Pack oportuno para los emprendedores que inician su camino digital y quieren tener presencia en la web",
     img: "./assets/img/pack-s.jpg",
     precio: "$200.000 ARS",
     precioNota: "Precio Final",
@@ -102,8 +102,8 @@ const sliderCardsData = [
     ]
   },
   {
-    nombre: "Pack - Indecisos",
-    subtitulo: "Este pack ideal para los indecisos",
+    nombre: "Pack - Mediano",
+    subtitulo: "Este pack ideal para los indecisos y emprendedores en crecimiento que buscan una web más completa",
     img: "./assets/img/pack-m.jpg",
     precio: "$300.0000 ARS",
     precioNota: "Precio Final",
@@ -120,8 +120,8 @@ const sliderCardsData = [
     ]
   },
   {
-    nombre: "Pack - Empresa",
-    subtitulo: "Este pack perfecto para tu negocio",
+    nombre: "Pack - Grande",
+    subtitulo: "Este pack perfecto para tu negocio y para quienes buscan una web completa y profesional",
     img: "./assets/img/pack-g.jpg",
     precio: "$400.000 ARS",
     precioNota: "Precio Final",
@@ -139,129 +139,50 @@ const sliderCardsData = [
   }
 ];
 
-const cardsData = sliderCardsData;
-
-const track = document.getElementById('sliderGalleryTrack');
-const dotsContainer = document.getElementById('sliderGalleryDots');
-let current = 0;
-
-function renderCards() {
-  track.innerHTML = cardsData.map((card, idx) => `
-    <article class="card card__${idx + 1}">
-      <aside class="card__aside">
-        <figure class="card__figure">
-          <img src="${card.img}" alt="Dummy Image" class="card__image">
-        </figure>
-      </aside>
-      <header class="card__header">
-        <h2 class="card__title">${card.nombre}</h2>
-        <h3 class="card__subtitle">${card.subtitulo}</h3>
-      </header>
-      <div class="card__body">
-        <ul>
+// Renderiza las cartas en el swiper-wrapper
+function renderSlides() {
+  const wrapper = document.querySelector('.swiper-wrapper');
+  wrapper.innerHTML = sliderCardsData.map((card, idx) => `
+    <div class="swiper-slide">
+      <div class="card">
+        <img src="${card.img}" alt="${card.nombre}" class="card__img" />
+        <div class="card__header card__header--${idx + 1}">
+            <h3 class="card__title">${card.nombre}</h3>
+            <p class="card__sub">${card.subtitulo}</p>
+        </div>
+        <ul class="card__items">
           ${card.items.map(item => `<li>${item}</li>`).join('')}
         </ul>
+        <div class="card__price card__price-${idx + 1}">
+          <span>${card.precio}</span>
+          <small>${card.precioNota}</small>
+        </div>
       </div>
-      <footer class="card__footer">
-          <p class="card__precio">${card.precio} <span>${card.precioNota}</span> </p>
-      </footer>
-    </article>
-  `).join('');
+    </div>
+  `).join('')
 }
 
-function renderDots() {
-  dotsContainer.innerHTML = cardsData.map((_, idx) =>
-    `<button class="slider-gallery__dot${idx === current ? ' active' : ''}" data-idx="${idx}" aria-label="Ir a la carta ${idx + 1}"></button>`
-  ).join('');
-  dotsContainer.querySelectorAll('button').forEach(btn => {
-    btn.onclick = () => {
-      current = Number(btn.dataset.idx);
-      updateSlider();
-    };
-  });
-}
+renderSlides();
 
-function updateSlider() {
-  const cardWidth = track.children[0].offsetWidth;
-  const gap = parseInt(getComputedStyle(track).gap) || 0;
-  const containerWidth = track.parentElement.offsetWidth;
-  let translateX = 0;
-
-  if (current === 0) {
-    // Primera carta: pegada a la izquierda
-    translateX = 0;
-  } else if (current === cardsData.length - 1) {
-    // Última carta: pegada a la derecha
-    translateX = ((cardWidth + gap) * (cardsData.length - 1)) - (containerWidth - cardWidth);
-  } else {
-    // Carta del medio: centrada
-    translateX = ((cardWidth + gap) * current) - ((containerWidth - cardWidth) / 2);
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: false,
+  slidesPerView: 'auto',
+  spaceBetween: 15,
+  centeredSlides: true,
+    centerInsufficientSlides: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  touchEventsTarget: 'container',
+  breakpoints: {
+    501: {
+      slidesPerView: 'auto',
+      spaceBetween: 25,
+      centeredSlides: false,
+      centerInsufficientSlides: true,
+    }
   }
-
-  track.style.transform = `translateX(${-translateX}px)`;
-  renderDots();
-}
-
-function nextCard() {
-  current = (current + 1) % cardsData.length;
-  updateSlider();
-}
-function prevCard() {
-  current = (current - 1 + cardsData.length) % cardsData.length;
-  updateSlider();
-}
-
-// Inicialización
-renderCards();
-renderDots();
-updateSlider();
-
-window.addEventListener('resize', updateSlider);
-
-// Implementación del arrastre
-let startX = 0;
-let isDragging = false;
-let swipeEnabled = window.innerWidth < 850;
-
-function handleSwipeListeners() {
-  swipeEnabled = window.innerWidth < 850;
-}
-
-window.addEventListener('resize', handleSwipeListeners);
-
-// Modifica los listeners para que solo funcionen si swipeEnabled es true
-track.addEventListener('pointerdown', (e) => {
-  if (!swipeEnabled) return;
-  isDragging = true;
-  startX = e.clientX;
-  track.style.cursor = 'grabbing';
-});
-
-track.addEventListener('pointermove', (e) => {
-  if (!swipeEnabled || !isDragging) return;
-  const dx = e.clientX - startX;
-  track.style.transform = `translateX(${-current * track.children[0].offsetWidth + dx}px)`;
-});
-
-track.addEventListener('pointerup', (e) => {
-  if (!swipeEnabled || !isDragging) return;
-  isDragging = false;
-  track.style.cursor = '';
-  const dx = e.clientX - startX;
-  const threshold = track.children[0].offsetWidth / 4;
-  if (dx > threshold) {
-    prevCard();
-  } else if (dx < -threshold) {
-    nextCard();
-  } else {
-    updateSlider();
-  }
-});
-
-track.addEventListener('pointerleave', () => {
-  if (!swipeEnabled || !isDragging) return;
-  isDragging = false;
-  track.style.cursor = '';
-  updateSlider();
 });
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paginas Web - Fizoweb</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -80,18 +81,17 @@
         </div>
 
 
-        <!-- slider-gallery.html -->
-        <div class="slider-gallery__container" id="sliderGalleryContainer">
-            <div class="slider-gallery__track" id="sliderGalleryTrack">
-                <!-- Las cards se renderizan aquí por JS -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Las slides se insertan por JS -->
             </div>
-            <div class="slider-gallery__nav-dots" id="sliderGalleryDots"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 
