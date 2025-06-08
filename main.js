@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const sliderCardsData = [
   {
     nombre: "Pack - Pequeño",
-    subtitulo: "Pack oportuno para los emprendedores que inician su camino digital y quieren tener presencia en la web",
+    subtitulo: "Oportuno para los emprendedores que inician su camino digital y quieren tener presencia en la web",
     img: "./assets/img/pack-s.jpg",
     precio: "$200.000 ARS",
     precioNota: "Precio Final",

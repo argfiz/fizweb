@@ -399,7 +399,7 @@ body {
 .swiper-slide {
     max-width: 310px;
     margin-bottom: 40px;
-    margin-top: 70px;
+    margin-top: 60px;
 
 }
 
@@ -419,10 +419,11 @@ body {
 }
 
 .card__header {
-    width: 280px;
+    max-width: 310px;
     background: #fff; /* Fondo blanco */
     text-align: center;
     padding: 0px 15px;
+    
 }
 .card__header--1 {
     border-bottom: 3px solid #00bf62;
