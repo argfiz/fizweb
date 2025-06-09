@@ -387,12 +387,13 @@ body {
 
 
 .hero__image h2 {
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: #555;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.4;
+    width: 100%;
+    color:var(--color-dark);
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 1.5;
 }
 
 /* Responsive para móviles */
@@ -406,7 +407,7 @@ body {
     }
 
     .hero__image h2 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         padding: 10px 8px;
     }
 }
@@ -721,14 +722,14 @@ body {
 
 .tab__card h3 {
     margin: 0;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: var(--color-card-title);
 }
 
 .tab__card p {
     margin: 0;
     color: var(--color-card-desc);
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 @media (min-width: 701px) {
   #services .tab__card {
