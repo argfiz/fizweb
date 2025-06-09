@@ -403,7 +403,6 @@ body {
 
 
 .hero__image h2 {
-    width: 100%;
     color:var(--color-dark);
     font-size: 1.4rem;
     font-weight: 500;
@@ -424,7 +423,7 @@ body {
 
     .hero__image h2 {
         font-size: 1.3rem;
-        padding: 10px 10px;
+        padding: 10px 15px;
     }
 }
 
