@@ -34,7 +34,7 @@ body {
     padding: 25px 30px;
     padding-top: 50px;
     background: white;
-    max-width: 600px;
+    max-width: 700px;
     width: 100%;
     transition: box-shadow 0.3s;
      box-sizing: border-box;
@@ -50,11 +50,12 @@ body {
 }
 
 .section__title p {
+    width: 100%;
     color:var(--color-dark);
-    font-size: 1.15rem;
-    font-weight: 400;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
     margin: 0;
-    max-width: 480px;
     line-height: 1.5;
 }
 /*************************************************************************/
@@ -592,11 +593,11 @@ body {
    =======================================================================================================*/
 :root {
     --color-bg-main: #f4f6fa;
-    --color-bg-gradient: linear-gradient(180deg, white 50%, gray 50%);
+    --color-bg-gradient: linear-gradient(180deg, white 50%, var(--color-dark) 50%);
     --color-tab-bg: #f4f6fa;
     --color-tab-border: #d1d5db;
-    --color-tab-active-bg: #0078d7;
-    --color-tab-active-border: #0078d7;
+    --color-tab-active-bg: var(--color-secondary);
+    --color-tab-active-border: var(--color-secondary);
     --color-tab-active-shadow: 0 4px 16px rgba(0, 120, 215, 0.10);
     --color-tab-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     --color-tab-text: #333;
