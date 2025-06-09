@@ -414,7 +414,7 @@ body {
 /* Responsive para móviles */
 @media (max-width: 600px) {
     .hero__image {
-        padding: 120px 10px 40px 10px;
+        padding: 120px 25px 40px 25px;
     }
 
     .hero__image h1 {
@@ -423,7 +423,6 @@ body {
 
     .hero__image h2 {
         font-size: 1.3rem;
-        padding: 10px 15px;
     }
 }
 
