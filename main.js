@@ -230,7 +230,7 @@ const servicesData = [
     key: "mantenimiento",
     icon: "./assets/icons/setting-icon.svg",
     title: "Mantenimiento",
-    desc: "Mientras estemos a cargo del Hosting nos encargamos de su funcionamiento y realizamos copias de seguridad para proteger tu sitio ante cualquier problema y evitar pérdida de datos."
+    desc: "Mientras estemos a cargo del Hosting nos encargamos de su funcionamiento, realizamos copias de seguridad para proteger tu sitio ante cualquier problema y evitar pérdida de datos."
   }
 ];
 
