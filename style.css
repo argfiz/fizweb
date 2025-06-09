@@ -57,6 +57,7 @@ body {
     letter-spacing: 1px;
     margin: 0;
     line-height: 1.5;
+    
 }
 /*************************************************************************/
 /****************** ====== NAVBAR RESPONSIVE ====== *********************/
@@ -389,7 +390,7 @@ body {
 .hero__image h2 {
     width: 100%;
     color:var(--color-dark);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 500;
     letter-spacing: 1px;
     margin: 0;
@@ -403,12 +404,12 @@ body {
     }
 
     .hero__image h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .hero__image h2 {
-        font-size: 1.2rem;
-        padding: 10px 8px;
+        font-size: 1.3rem;
+        padding: 10px 0px;
     }
 }
 
@@ -443,8 +444,8 @@ body {
 
 .card {
     background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.35);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -728,8 +729,10 @@ body {
 
 .tab__card p {
     margin: 0;
+    width: 100%;
     color: var(--color-card-desc);
     font-size: 1.1rem;
+   
 }
 @media (min-width: 701px) {
   #services .tab__card {
@@ -745,3 +748,4 @@ body {
     font-size: 1.2rem;
 }
 }
+
