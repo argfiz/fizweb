@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
 
 :root {
@@ -17,13 +17,46 @@ body {
 .section__divider {
     opacity: 0;
     /*transform: translateY(40px);*/
-    transition: opacity 1.5s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1);
-}
-.section__divider.visible {
-    opacity: 1;
-   /* transform: translateY(0);*/
+    transition: opacity 1.5s cubic-bezier(.4, 0, .2, 1), transform 0.9s cubic-bezier(.4, 0, .2, 1);
 }
 
+.section__divider.visible {
+    opacity: 1;
+    /* transform: translateY(0);*/
+}
+
+.section__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.7rem;
+    margin: 0 auto;
+    padding: 25px 30px;
+    padding-top: 50px;
+    background: white;
+    max-width: 600px;
+    width: 100%;
+    transition: box-shadow 0.3s;
+     box-sizing: border-box;
+}
+
+.section__title h2 {
+    color: var(--color-secondary);
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0 0 0.2em 0;
+    text-shadow: 0 2px 12px rgba(247, 37, 133, 0.08);
+}
+
+.section__title p {
+    color:var(--color-dark);
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin: 0;
+    max-width: 480px;
+    line-height: 1.5;
+}
 /*************************************************************************/
 /****************** ====== NAVBAR RESPONSIVE ====== *********************/
 /***********************************************************************/
@@ -317,11 +350,12 @@ body {
     background: var(--color-light);
     text-align: center;
     gap: 20px;
-/**efecto de carga*/
+    /**efecto de carga*/
     opacity: 0;
     /*transform: translateY(40px);*/
-    transition: opacity 1.5s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1);
+    transition: opacity 1.5s cubic-bezier(.4, 0, .2, 1), transform 0.9s cubic-bezier(.4, 0, .2, 1);
 }
+
 /**efecto de carga*/
 .hero__image.visible {
     opacity: 1;
@@ -329,7 +363,7 @@ body {
 }
 
 
-.hero__image h1{
+.hero__image h1 {
     font-weight: 700;
     font-family: var(--font-main);
     font-size: 2.8rem;
@@ -345,8 +379,9 @@ body {
     color: var(--color-secondary);
     font-size: 1.1em;
     text-decoration: underline;
-    text-decoration-color: #b8b8b8;         /* Color gris para el subrayado */
-    text-decoration-thickness: 8px; 
+    text-decoration-color: #b8b8b8;
+    /* Color gris para el subrayado */
+    text-decoration-thickness: 8px;
 }
 
 
@@ -388,9 +423,10 @@ body {
     position: relative;
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+    transition: opacity 0.8s cubic-bezier(.4, 0, .2, 1), transform 0.8s cubic-bezier(.4, 0, .2, 1);
 
 }
+
 .swiper.visible {
     opacity: 1;
     transform: translateY(0);
@@ -398,7 +434,7 @@ body {
 
 .swiper-slide {
     max-width: 310px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     margin-top: 60px;
 
 }
@@ -420,45 +456,55 @@ body {
 
 .card__header {
     max-width: 310px;
-    background: #fff; /* Fondo blanco */
+    background: #fff;
+    /* Fondo blanco */
     text-align: center;
     padding: 0px 15px;
-    
+
 }
+
 .card__header--1 {
     border-bottom: 3px solid #00bf62;
-    
+
 }
+
 .card__header--2 {
     border-bottom: 3px solid #4f9dff;
 }
+
 .card__header--3 {
     border-bottom: 3px solid #fd3031;
 }
+
 .card__title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #222;
     text-align: center;
 }
 
 .card__sub {
-    font-size: 1rem;
-    color: #666; 
+    font-size: 1.1rem;
+    color: #666;
     text-align: center;
 }
 
 .card__items {
     list-style: none;
     width: 100%;
-
+    padding: 0;
+    padding: 15px 25px;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .card__items li {
-    font-size: 0.98rem;
+    width: 100%;
+    font-size: 1rem;
     color: #444;
     border-bottom: 1px solid #f0f0f0;
     padding: 6px 15px;
+    box-sizing: border-box;
 }
 
 .card__items li:last-child {
@@ -477,15 +523,19 @@ body {
     font-weight: 900;
     display: block;
 }
+
 .card__price-1 span {
     color: #00bf62;
 }
+
 .card__price-2 span {
     color: #4f9dff;
 }
+
 .card__price-3 span {
     color: #fd3031;
 }
+
 .card__price small {
     font-size: 0.95rem;
     color: #888;
@@ -499,8 +549,9 @@ body {
     left: 0;
     width: 100%;
     text-align: center;
-    z-index: 10;   
+    z-index: 10;
 }
+
 .swiper-pagination-bullet {
     background: #f72585 !important;
     width: 14px;
@@ -533,4 +584,162 @@ body {
         width: 300px;
         max-width: 300px;
     }
+}
+
+
+/* =======================================================================================================
+   =================================TABS TEMPLATE=================================================
+   =======================================================================================================*/
+:root {
+    --color-bg-main: #f4f6fa;
+    --color-bg-gradient: linear-gradient(180deg, white 50%, gray 50%);
+    --color-tab-bg: #f4f6fa;
+    --color-tab-border: #d1d5db;
+    --color-tab-active-bg: #0078d7;
+    --color-tab-active-border: #0078d7;
+    --color-tab-active-shadow: 0 4px 16px rgba(0, 120, 215, 0.10);
+    --color-tab-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --color-tab-text: #333;
+    --color-tab-active-text: #fff;
+    --color-card-bg: #fff;
+    --color-card-border: #e5e7eb;
+    --color-card-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    --color-card-shadow-active: 0px 5px 8px rgba(0, 0, 0, 0.20);
+    --color-card-title: #222;
+    --color-card-desc: #444;
+    --radius-tab: 3px;
+    --radius-card: 3px;
+    --transition-main: 0.2s;
+}
+
+/* Contenedor de tabs */
+.tabs__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--color-bg-gradient);
+    padding: 25px;
+    padding-top: 0px;
+    font-family: var(--font-main);
+}
+
+/* Fila de tabs */
+.option__tabs {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Botón estilo tecla de teléfono */
+.option__tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: var(--color-tab-bg);
+    border: 1px solid var(--color-tab-border);
+    border-radius: var(--radius-tab);
+    box-shadow: var(--color-tab-shadow);
+    font-size: 1.2rem;
+    color: var(--color-tab-text);
+    cursor: pointer;
+    transition: background var(--transition-main), border var(--transition-main), color var(--transition-main), box-shadow var(--transition-main);
+    margin: 0;
+    outline: none;
+}
+
+.option__tab img {
+    width: 25px;
+    height: 25px;
+    transition: filter var(--transition-main);
+    filter: none;
+}
+
+.option__tab.active,
+.option__tab:focus {
+    background: var(--color-tab-active-bg);
+    color: var(--color-tab-active-text);
+    border-color: var(--color-tab-active-border);
+    box-shadow: var(--color-tab-active-shadow);
+}
+
+.option__tab.active img,
+.option__tab:focus img {
+    filter: brightness(0) invert(1);
+}
+
+/* El contenido no toca las tabs */
+.tabs__details {
+    margin: 0 auto 0 auto;
+    max-width: 400px;
+    padding-top: 1.5rem;
+}
+
+.tabs__body {
+    min-height: 120px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Tarjeta de contenido */
+.tab__card {
+    background: var(--color-card-bg);
+    border-radius: var(--radius-card);
+    box-shadow: var(--color-card-shadow);
+    padding: 1.5rem 2rem;
+    margin: 0 auto 1.8rem auto;
+    max-width: 340px;
+    min-height: 170px;
+    border: 1px solid var(--color-card-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: box-shadow var(--transition-main);
+    text-align: center;
+    opacity: 0.8;
+    transform: translateY(15px) scale(0.50);
+    animation: fadeInCard 0.30s cubic-bezier(.33, 1.02, .54, .99) forwards;
+}
+
+@keyframes fadeInCard {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.tab__card.active {
+    box-shadow: var(--color-card-shadow-active);
+}
+
+.tab__card h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--color-card-title);
+}
+
+.tab__card p {
+    margin: 0;
+    color: var(--color-card-desc);
+    font-size: 1rem;
+}
+@media (min-width: 701px) {
+  #services .tab__card {
+    min-width:620px;
+  }
+  .tab__card h3 {
+    font-size: 1.6rem;
+}
+
+.tab__card p {
+    margin: 0;
+    color: var(--color-card-desc);
+    font-size: 1.2rem;
+}
 }

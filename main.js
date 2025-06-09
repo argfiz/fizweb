@@ -186,3 +186,110 @@ const swiper = new Swiper('.swiper', {
   }
 });
 
+/*****************************************************************************************************/
+/* ======================================== TABS SERVICES ======================================= */
+/*****************************************************************************************************/
+const servicesData = [
+  {
+    key: "paginas",
+    icon: "./assets/icons/pages-icon.svg",
+    title: "Páginas",
+    desc: "Cada página está diseñada para contener las secciones que sean necesarias, cada una contiene una parte clave de la información del negocio."
+  },
+  {
+    key: "secciones",
+    icon: "./assets/icons/section-icon.svg",
+    title: "Secciones",
+    desc: "Cada sección cuenta con una altura aproximada a la pantalla, garantizando una presentación óptima de la información almacenada."
+  },
+  {
+    key: "productos",
+    icon: "./assets/icons/package-icon.svg",
+    title: "Productos",
+    desc: "Antes del despliegue de la página web, precargaremos la cantidad de productos correspondiente al pack elegido, asegurando que la tienda esté lista para operar"
+  },
+  {
+    key: "seo",
+    icon: "./assets/icons/magnifier-icon.svg",
+    title: "SEO",
+    desc: "Optimizamos tu sitio web para motores de búsqueda mediante técnicas avanzadas de SEO. Esto mejora su visibilidad en Google y otros buscadores."
+  },
+  {
+    key: "multidispositivos",
+    icon: "./assets/icons/mobile-phone_icon.svg",
+    title: "Multidispositivos",
+    desc: "Ofrecemos un diseño responsive que garantiza una experiencia óptima en cualquier dispositivo. Se adaptará automáticamente a móviles, tablets y escritorios."
+  },
+  {
+    key: "hosting",
+    icon: "./assets/icons/hosting-icon.svg",
+    title: "Hosting",
+    desc: "Ofrecemos instalación y alojamiento web en AWS como parte del servicio, garantizando alto rendimiento y estabilidad asegurando su funcionamiento."
+  },
+  {
+    key: "mantenimiento",
+    icon: "./assets/icons/setting-icon.svg",
+    title: "Mantenimiento",
+    desc: "Mientras estemos a cargo del Hosting nos encargamos de su funcionamiento y realizamos copias de seguridad para proteger tu sitio ante cualquier problema y evitar pérdida de datos."
+  }
+];
+
+// Renderiza la tarjeta del servicio seleccionado
+function renderServiceCard(serviceKey) {
+  const service = servicesData.find(s => s.key === serviceKey);
+  const body = document.querySelector('.tabs__body');
+  if (!service || !body) return;
+  body.innerHTML = `
+    <div class="tab__card active">
+      <div class="title__tab__container">
+        <h3>${service.title}</h3>
+      </div>
+      <p>${service.desc}</p>
+    </div>
+  `;
+}
+
+// Genera dinámicamente los tabs de servicios
+function renderServiceTabs() {
+  const tabsContainer = document.querySelector('.option__tabs');
+  if (!tabsContainer) return;
+  tabsContainer.innerHTML = servicesData.map((service, idx) => `
+    <button class="option__tab${idx === 0 ? ' active' : ''}" data-service="${service.key}">
+      <img src="${service.icon}" alt="${service.title}">
+    </button>
+  `).join('');
+}
+
+// Maneja el cambio de tab
+function handleTabClick(e) {
+  const clicked = e.currentTarget;
+  // Si ya está activo, no hagas nada
+  if (clicked.classList.contains('active')) return;
+  // Quitar clase active de todos los tabs
+  document.querySelectorAll('.option__tab').forEach(tab => tab.classList.remove('active'));
+  // Agregar clase active al tab clickeado
+  clicked.classList.add('active');
+  // Renderizar la tarjeta correspondiente
+  renderServiceCard(clicked.dataset.service);
+}
+
+// Inicialización
+document.addEventListener('DOMContentLoaded', () => {
+  // Render inicial
+  const initialTab = document.querySelector('.option__tab.active') || document.querySelector('.option__tab');
+  if (initialTab) {
+    renderServiceCard(initialTab.dataset.service);
+  }
+  // Listeners
+  document.querySelectorAll('.option__tab').forEach(tab => {
+    tab.addEventListener('click', handleTabClick);
+  });
+});
+
+// Llama a la función después de definir servicesData y antes de los listeners
+renderServiceTabs();
+
+
+
+
+
