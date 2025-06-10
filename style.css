@@ -285,7 +285,7 @@ body {
         box-shadow: -8px 0 32px rgba(0, 0, 0, 0.18);
         z-index: 2000;
         padding: 0px;
-        gap: 40px;
+        gap: 100px;
         opacity: 0;
         pointer-events: none;
         transition: right 0.35s, opacity 0.2s, background 0.3s;
@@ -335,7 +335,8 @@ body {
     }
 
     .nav-menu__link {
-        font-size: 1.4rem;
+        font-family: var(--font-main);
+        font-size: 1.3rem;
         font-weight: 500;
         width: 100%;
         box-shadow: none;
