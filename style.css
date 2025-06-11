@@ -336,7 +336,6 @@ body {
 
     .nav-menu__link {
         font-family: var(--font-main);
-        font-size: 1.3rem;
         font-weight: 500;
         width: 100%;
         box-shadow: none;
@@ -517,7 +516,7 @@ body {
 
 .card__items li {
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #444;
     border-bottom: 1px solid #f0f0f0;
     padding: 6px 15px;
