@@ -290,6 +290,71 @@ document.addEventListener('DOMContentLoaded', () => {
 renderServiceTabs();
 
 
+/* =======================================================================================================
+   =================================FAQ TEMPLATE==========================================================
+   =======================================================================================================*/
+   const faqData = [
+  {
+    question: "¿Qué incluye el desarrollo de mi página web?",
+    answer: "Incluye un atractivo diseño, desarrollo responsive, integración de secciones, productos, formulario de contacto, enlaces a redes sociales y optimización para buscadores."
+  },
+  {
+    question: "¿Puedo modificar el contenido de mi web después de publicada?",
+    answer: "Sí, hasta una actualización gratuita con cambios menores para que puedas modificar textos, imágenes o productos. Los cambios mayores tendran costo adicional."
+  },
+  {
+    question: "¿Cuánto tiempo tarda en estar lista mi web?",
+    answer: "El tiempo depende del pack y la cantidad de contenido, pero normalmente entre 7 y 20 días hábiles desde la entrega de la información."
+  },
+  {
+    question: "¿El hosting está incluido en el servicio?",
+    answer: "Sí, todos los packs incluyen un año de hosting gratuito en servidores de alta calidad. Luego puedes renovar el servicio si lo deseas."
+  }
+];
+
+// Render FAQ solo si existe el contenedor
+function renderFAQ() {
+  const faqList = document.getElementById('faqList');
+  
+  if (!faqList) return;
+  faqList.innerHTML = faqData.map((item, idx) => `
+    <div class="faq__item" data-idx="${idx}">
+      <button class="faq__question" aria-expanded="false" type="button">
+        ${item.question}
+        <span class="faq__icon"><img src="assets/icons/right-arrow.svg" alt="Arrow"></span>
+      </button>
+      <div class="faq__answer">${item.answer}</div>
+    </div>
+  `).join('');
+
+  // Toggle logic
+  faqList.querySelectorAll('.faq__question').forEach((btn, idx) => {
+    btn.addEventListener('click', function () {
+      const item = btn.closest('.faq__item');
+      const isOpen = item.classList.contains('open');
+      // Quita la clase just-closed de todos los items
+      faqList.querySelectorAll('.faq__item').forEach(i => {
+        i.classList.remove('just-closed');
+      });
+      // Cierra todos los items
+      faqList.querySelectorAll('.faq__item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        // Si el actual NO estaba abierto, lo abre
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        // Si ya estaba abierto, lo acabas de cerrar: marca como just-closed
+        item.classList.add('just-closed');
+      }
+    });
+  });
+}
+
+// Ejecutar SIEMPRE al cargar el archivo JS (no uses DOMContentLoaded porque el script está al final)
+renderFAQ();
 
 
 
