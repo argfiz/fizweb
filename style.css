@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font-main);
 
 }
 
@@ -33,7 +34,6 @@ body {
     margin: 0 auto;
     padding: 25px 30px;
     padding-top: 50px;
-    background: white;
     max-width: 700px;
     width: 100%;
     transition: box-shadow 0.3s;
@@ -43,7 +43,7 @@ body {
 .section__title h2 {
     color: var(--color-secondary);
     font-size: 2.1rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 1px;
     margin: 0 0 0.2em 0;
     text-shadow: 0 2px 12px rgba(247, 37, 133, 0.08);
@@ -461,7 +461,7 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.20);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
 }
 
 .card__img {
@@ -476,6 +476,8 @@ body {
     /* Fondo blanco */
     text-align: center;
     padding: 0px 15px;
+    min-height: 190px ;
+    margin: auto 0;
 
 }
 
@@ -536,7 +538,7 @@ body {
 
 .card__price span {
     font-size: 1.7rem;
-    font-weight: 900;
+    font-weight: 800;
     display: block;
 }
 
@@ -866,18 +868,18 @@ footer {
   --color-shadow: rgba(0,0,0,0.04);
   --color-shadow-open: rgba(0,0,0,0.08);
   
-  /* Tipografía y bordes */
-  --font-main: 'Segoe UI', Arial, sans-serif;
-  --faq-radius: 8px;
+
 
 /* Contenedor principal */
 .faq__section {
-  background: var(--color-bg);
+  background: var(--color-dark);
   padding: 40px 0;
   padding-bottom: 80px;
   font-family: var(--font-main);
 }
-
+#faqSection .section__title {
+    text-align: center;
+}
 .main__container {
   max-width: 700px;
   margin: 0 auto;
@@ -900,7 +902,7 @@ footer {
 
 .faq__item {
   background: #fff;
-  border-radius: var(--faq-radius);
+  border-radius: 3px;
   box-shadow: 0 2px 8px var(--color-shadow);
   overflow: hidden;
   transition: box-shadow 0.2s, background 0.2s, color 0.2s;
@@ -952,7 +954,7 @@ footer {
 .faq__answer {
   max-height: 0;
   overflow: hidden;
-  background: var(--color-answer-bg);
+  background: white;
   color: #444;
   font-size: 1rem;
   padding: 0 20px;
