@@ -43,7 +43,7 @@ body {
 .section__title h2 {
     color: var(--color-secondary);
     font-size: 2.1rem;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1px;
     margin: 0 0 0.2em 0;
     text-shadow: 0 2px 12px rgba(247, 37, 133, 0.08);
@@ -894,8 +894,11 @@ footer {
 
     #faqSection .section__title {
         text-align: center;
+        padding-bottom:50px ;
     }
-
+    #faqSection .section__title h2{
+        color: white;
+    }
     .main__container {
         max-width: 700px;
         margin: 0 auto;
