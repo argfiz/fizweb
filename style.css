@@ -290,7 +290,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: var(--color-nav-menu-bg-movil);
+        background: var(--color-dark);
         backdrop-filter: blur(12px);
     }
 
