@@ -1018,3 +1018,40 @@ footer {
     }
 
 }
+
+/* Animación para entrar desde la izquierda */
+@keyframes faqItemInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animación para entrar desde la derecha */
+@keyframes faqItemInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Aplica animación alternada a los items */
+#faqSection .faq__item {
+    opacity: 0;
+}
+
+#faqSection .faq__item.faq-animate-left {
+    animation: faqItemInLeft 0.7s cubic-bezier(.4,0,.2,1) forwards;
+}
+
+#faqSection .faq__item.faq-animate-right {
+    animation: faqItemInRight 0.7s cubic-bezier(.4,0,.2,1) forwards;
+}

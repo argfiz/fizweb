@@ -386,6 +386,32 @@ function renderFAQ() {
 
 // Ejecutar SIEMPRE al cargar el archivo JS (no uses DOMContentLoaded porque el script está al final)
 renderFAQ();
+function animateFaqItemsOnScroll() {
+  const faqItems = document.querySelectorAll('#faqSection .faq__item');
+  if (!faqItems.length) return;
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Alterna la animación según el índice
+        const idx = Array.from(faqItems).indexOf(entry.target);
+        if (idx % 2 === 0) {
+          entry.target.classList.add('faq-animate-left');
+        } else {
+          entry.target.classList.add('faq-animate-right');
+        }
+        entry.target.style.opacity = '1';
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  faqItems.forEach(item => observer.observe(item));
+}
+
+// Llama a la función después de renderFAQ()
+renderFAQ();
+animateFaqItemsOnScroll();
 
 
 
