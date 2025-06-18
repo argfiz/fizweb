@@ -57,6 +57,7 @@ window.addEventListener('scroll', () => {
 /******************************************SECTION DIVIDER**************************************/
 /* ======================================= HERO IMAGE LOAD =================================== */
 /******************************************GALLERY SWIPE LOAD**********************************/
+/******************************************SECTION TITLE LOAD**********************************/
 document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('.hero__image');
   if (hero) {
@@ -68,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (divider) {
     setTimeout(() => {
       divider.classList.add('visible');
-    }, 125); // Un pequeño delay para que aparezca después del hero
+    }, 125);
   }
   const swiper = document.querySelector('.swiper');
   if (swiper) {
@@ -76,6 +77,36 @@ document.addEventListener('DOMContentLoaded', () => {
       swiper.classList.add('visible');
     }, 250); // Pequeño delay para suavidad
   }
+  // Animación de carga solo cuando .section__title entra en pantalla
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target); // Solo animar una vez
+      }
+    }), 500;
+  }, {
+    threshold: 0.75 // El 75% del elemento debe estar visible
+  });
+
+  document.querySelectorAll('.section__title').forEach(title => {
+    observer.observe(title);
+  });
+  // Animación de carga solo cuando .tabs__container entra en pantalla
+  const tabsObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target); // Solo animar una vez
+      }
+    }), 500;
+  }, {
+    threshold: 0.1 // El 10% del elemento debe estar visible
+  });
+
+  document.querySelectorAll('.tabs__container').forEach(container => {
+    tabsObserver.observe(container);
+  });
 });
 
 
@@ -170,7 +201,7 @@ const swiper = new Swiper('.swiper', {
   slidesPerView: 'auto',
   spaceBetween: 25,
   centeredSlides: false,
-    centerInsufficientSlides: true,
+  centerInsufficientSlides: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -293,7 +324,7 @@ renderServiceTabs();
 /* =======================================================================================================
    =================================FAQ TEMPLATE==========================================================
    =======================================================================================================*/
-   const faqData = [
+const faqData = [
   {
     question: "¿Qué incluye el desarrollo de mi página web?",
     answer: "Incluye un atractivo diseño, desarrollo responsive, integración de secciones, productos, formulario de contacto, enlaces a redes sociales y optimización para buscadores."
@@ -315,7 +346,7 @@ renderServiceTabs();
 // Render FAQ solo si existe el contenedor
 function renderFAQ() {
   const faqList = document.getElementById('faqList');
-  
+
   if (!faqList) return;
   faqList.innerHTML = faqData.map((item, idx) => `
     <div class="faq__item" data-idx="${idx}">

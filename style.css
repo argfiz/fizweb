@@ -9,7 +9,7 @@ body {
 :root {
     --color-bg: #fff;
     --color-primary: #7209b7;
-    --color-secondary: #f72585;
+    --color-secondary: #ff3791;
     --color-dark: #333333;
     --color-light: #f8f9fa;
     --font-main: 'Segoe UI', Arial, sans-serif;
@@ -28,8 +28,14 @@ body {
     width: 100%;
     transition: box-shadow 0.3s;
     box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1.5s cubic-bezier(.4, 0, .2, 1), transform 0.9s cubic-bezier(.4, 0, .2, 1);
 }
-
+.section__title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 .section__title h2 {
     color: var(--color-secondary);
     font-size: 2.1rem;
@@ -141,7 +147,7 @@ body {
     color: var(--color-nav-link);
     font-size: 1.2rem;
     font-weight: 500;
-    padding: 10px 15px;
+    padding: 5px 10px;
     border-radius: 4px;
     background: transparent;
     transition: background 0.18s, color 0.18s;
@@ -402,7 +408,7 @@ body {
     text-decoration: underline;
     text-decoration-color: #b8b8b8;
     /* Color gris para el subrayado */
-    text-decoration-thickness: 8px;
+    text-decoration-thickness: 7px;
 }
 
 
@@ -655,8 +661,14 @@ body {
     padding: 25px;
     padding-top: 0px;
     font-family: var(--font-main);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(.4, 0, .2, 1), transform 0.8s cubic-bezier(.4, 0, .2, 1);
 }
-
+.tabs__container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 /* Fila de tabs */
 .option__tabs {
     display: flex;
