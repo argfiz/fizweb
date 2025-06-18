@@ -327,19 +327,27 @@ renderServiceTabs();
 const faqData = [
   {
     question: "¿Qué incluye el desarrollo de mi página web?",
-    answer: "Incluye un atractivo diseño, desarrollo responsive, integración de secciones, productos, formulario de contacto, enlaces a redes sociales y optimización para buscadores."
+    answer: "Tu web incluye diseño moderno y adaptable a todos los dispositivos, estructura optimizada para buscadores, secciones personalizadas, formulario de contacto funcional, enlaces a redes sociales y carga rápida. Todo pensado para que tu marca se vea profesional desde el primer clic."
   },
   {
-    question: "¿Puedo modificar el contenido de mi web después de publicada?",
-    answer: "Sí, hasta una actualización gratuita con cambios menores para que puedas modificar textos, imágenes o productos. Los cambios mayores tendran costo adicional."
+    question: "¿Puedo modificar el contenido después de publicada?",
+    answer: "Sí. Incluimos una actualización gratuita con cambios menores (textos, imágenes o productos). Si necesitás cambios más grandes o nuevas funcionalidades, podemos cotizarlos sin compromiso."
   },
   {
     question: "¿Cuánto tiempo tarda en estar lista mi web?",
-    answer: "El tiempo depende del pack y la cantidad de contenido, pero normalmente entre 7 y 20 días hábiles desde la entrega de la información."
+    answer: "Depende del pack y la cantidad de contenido, pero en general el desarrollo toma entre 7 y 20 días hábiles desde que recibimos toda la información necesaria."
   },
   {
-    question: "¿El hosting está incluido en el servicio?",
-    answer: "Sí, todos los packs incluyen un año de hosting gratuito en servidores de alta calidad. Luego puedes renovar el servicio si lo deseas."
+    question: "¿El hosting está incluido?",
+    answer: "Sí. Todos los planes incluyen 1 año de hosting gratuito en servidores rápidos y seguros. Después podés renovarlo con nosotros o migrar tu sitio donde prefieras."
+  },
+  {
+    question: "¿Qué necesito para empezar?",
+    answer: "Solo tenés que enviarnos el contenido (textos, imágenes, logo) y contarnos de qué estilo o referencias tiene tu página deseada. Nosotros nos encargamos del resto."
+  },
+  {
+    question: "¿Mi sitio será visible en Google?",
+    answer: "Sí. Aplicamos tecnicas para que tu web sea indexada correctamente y tenga una base sólida para posicionarse en buscadores."
   }
 ];
 
