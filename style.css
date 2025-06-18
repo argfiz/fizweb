@@ -910,10 +910,15 @@ footer {
     }
 
     #faqSection .section__title {
-        text-align: center;
+       max-width: 900px;
         padding-bottom:50px ;
+       
+       
     }
     #faqSection .section__title h2{
+        color: white;
+    }
+    #faqSection .section__title p{
         color: white;
     }
     .main__container {
@@ -955,9 +960,9 @@ footer {
         border: none;
         outline: none;
         font-size: 1.1rem;
-        font-weight: 600;
+        font-weight: 500;
         text-align: left;
-        padding: 20px 20px 20px 20px;
+        padding: 15px 20px 15px 20px;
         cursor: pointer;
         position: relative;
         color: var(--color-dark);
