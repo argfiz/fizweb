@@ -470,7 +470,10 @@ body {
 .card {
     background: #fff;
     border-radius: 10px;
-    box-shadow: 5px 4px 15px rgba(0, 0, 0, 0.10);
+    box-shadow: 
+        5px 2px 8px 0 rgba(247, 37, 133, 0.06),   /* Sombra rosa muy suave */
+        5px 8px 32px 0 rgba(0, 0, 0, 0.10),       /* Sombra negra difusa */
+        5px 1.5px 6px 0 rgba(0, 0, 0, 0.04);      /* Sombra de realce */;
     display: flex;
     flex-direction: column;
 
