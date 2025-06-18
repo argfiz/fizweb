@@ -168,8 +168,8 @@ const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: false,
   slidesPerView: 'auto',
-  spaceBetween: 15,
-  centeredSlides: true,
+  spaceBetween: 25,
+  centeredSlides: false,
     centerInsufficientSlides: true,
   pagination: {
     el: '.swiper-pagination',
