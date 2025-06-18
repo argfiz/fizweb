@@ -47,10 +47,10 @@ navMenu.addEventListener('click', (event) => {
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
     navbar.style.height = '50px';
-    navbar.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
+    /*navbar.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';*/
   } else {
     navbar.style.height = '70px';
-    navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+    /*navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';*/
   }
 });
 
