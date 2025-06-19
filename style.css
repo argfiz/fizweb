@@ -1063,3 +1063,129 @@ footer {
 #faqSection .faq__item.faq-animate-right {
     animation: faqItemInRight 0.7s cubic-bezier(.4,0,.2,1) forwards;
 }
+
+
+
+/* =======================================================================================================
+   =================================CONTACT TEMPLATE==========================================================
+   =======================================================================================================*/
+   body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+#contact .main_container {
+    max-width: 900px;
+    margin: 75px auto;
+    margin-bottom: 0px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 32px;
+}
+
+.contact__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.contact__info, .contact__form {
+    flex: 1 1 300px;
+    min-width: 280px;
+}
+
+.contact__info h2,
+.contact__form h2 {
+    margin-top: 0;
+    color: var(--color-secondary);
+}
+
+.contact__details {
+    margin: 24px 0;
+}
+
+.contact__item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+.contact__icon {
+    width: 36px;
+    height: 36px;
+    background: #e0e7ef;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 14px;
+}
+
+.contact__text h3 {
+    margin: 0 0 4px 0;
+    font-size: 1.05em;
+    color: #333;
+}
+
+.social__links {
+    margin-top: 18px;
+}
+
+.social__links a {
+    display: inline-block;
+    margin-right: 12px;
+    color: #0077cc;
+    font-size: 1.3em;
+    text-decoration: none;
+}
+
+.contact__form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__group label {
+    margin-bottom: 6px;
+    font-size: 0.98em;
+    color: #444;
+}
+
+.form__group input,
+.form__group select,
+.form__group textarea {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    background: #fafbfc;
+    resize: vertical;
+}
+
+.form__group textarea {
+    min-height: 80px;
+}
+
+.submit__btn {
+    background: var(--color-secondary);
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit__btn:hover {
+    background: var(--color-dark);
+}

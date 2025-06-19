@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*****************************************************************************************************/
 const sliderCardsData = [
   {
-    nombre: "Pack - Pequeño",
+    nombre: "Pequeño",
     subtitulo: "Oportuno para los emprendedores que inician su camino digital y quieren tener presencia en la web",
     img: "./assets/img/pack-s.jpg",
     precio: "$200.000 ARS",
@@ -133,7 +133,7 @@ const sliderCardsData = [
     ]
   },
   {
-    nombre: "Pack - Mediano",
+    nombre: "Mediano",
     subtitulo: "Este pack ideal para los indecisos y emprendedores en crecimiento que buscan una web más completa",
     img: "./assets/img/pack-m.jpg",
     precio: "$300.0000 ARS",
@@ -151,7 +151,7 @@ const sliderCardsData = [
     ]
   },
   {
-    nombre: "Pack - Grande",
+    nombre: "Grande",
     subtitulo: "Este pack perfecto para tu negocio y para quienes buscan una web completa y profesional",
     img: "./assets/img/pack-g.jpg",
     precio: "$400.000 ARS",
@@ -255,7 +255,7 @@ const servicesData = [
     key: "hosting",
     icon: "./assets/icons/hosting-icon.svg",
     title: "Hosting",
-    desc: "Ofrecemos instalación y alojamiento web en AWS como parte del servicio, garantizando alto rendimiento y estabilidad asegurando su funcionamiento."
+    desc: "Ofrecemos instalación y alojamiento web en servidores como parte del servicio, garantizando alto rendimiento y estabilidad asegurando su funcionamiento."
   },
   {
     key: "mantenimiento",
