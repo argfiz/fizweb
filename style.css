@@ -30,8 +30,7 @@ body {
     box-sizing: border-box;
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 1.5s cubic-bezier(.4, 0, .2, 1), transform 0.9s cubic-bezier(.4, 0, .2, 1);
-}
+    transition: opacity 1.5s cubic-bezier(.4, 0, .2, 1), transform 0.9s cubic-bezier(.4, 0, .2, 1);}
 .section__title.visible {
     opacity: 1;
     transform: translateY(0);
@@ -653,6 +652,10 @@ body {
     --radius-tab: 3px;
     --radius-card: 3px;
     --transition-main: 0.2s;
+}
+
+#services .section__title {
+    background-color: #fff;
 }
 
 /* Contenedor de tabs */
