@@ -1122,7 +1122,9 @@ body {
     flex-wrap: wrap;
     gap: 32px;
 }
-
+.contact-info__header{
+    padding-bottom: 10px;
+}
 .contact__info,
 .contact__form {
     flex: 1 1 300px;
@@ -1139,10 +1141,11 @@ body {
     margin: 24px 0;
 }
 
+
 .contact__item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 18px;
+    margin-bottom: 25px;
 }
 
 .contact__icon {
@@ -1167,20 +1170,21 @@ body {
     font-size: 1.05em;
     color: #333;
 }
-
+.contact__text p {
+    margin: 0;
+}
 .social__links {
     margin-top: 30px;
     display: flex;
-    justify-content: center;
+    
     align-items: center;
-    gap: 12px;
+    gap: 5px;
 }
 
 .social__links a {
     
     display: inline-block;
     margin-right: 12px;
-    color: #0077cc;
     font-size: 1.3em;
     text-decoration: none;
 }
