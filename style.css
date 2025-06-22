@@ -942,7 +942,7 @@ footer {
     }
 
     #faqSection .section__title h2 {
-        color: white;
+        color: var(--color-secondary);
     }
 
     #faqSection .section__title p {
