@@ -31,11 +31,14 @@ body {
     box-sizing: border-box;
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 1.5s cubic-bezier(.4, 0, .2, 1), transform 0.9s cubic-bezier(.4, 0, .2, 1);}
+    transition: opacity 1.5s cubic-bezier(.4, 0, .2, 1), transform 0.9s cubic-bezier(.4, 0, .2, 1);
+}
+
 .section__title.visible {
     opacity: 1;
     transform: translateY(0);
 }
+
 .section__title h2 {
     color: var(--color-secondary);
     font-size: 2.1rem;
@@ -394,7 +397,7 @@ body {
     line-height: 1.1;
     text-shadow: 0 2px 12px rgba(247, 37, 133, 0.08);
     margin: 0;
-   
+
 }
 
 .hero__image h1.visible {
@@ -470,10 +473,14 @@ body {
 .card {
     background: #fff;
     border-radius: 10px;
-    box-shadow: 
-        5px 2px 8px 0 rgba(247, 37, 133, 0.06),   /* Sombra rosa muy suave */
-        5px 8px 32px 0 rgba(0, 0, 0, 0.10),       /* Sombra negra difusa */
-        5px 1.5px 6px 0 rgba(0, 0, 0, 0.04);      /* Sombra de realce */;
+    box-shadow:
+        5px 2px 8px 0 rgba(247, 37, 133, 0.06),
+        /* Sombra rosa muy suave */
+        5px 8px 32px 0 rgba(0, 0, 0, 0.10),
+        /* Sombra negra difusa */
+        5px 1.5px 6px 0 rgba(0, 0, 0, 0.04);
+    /* Sombra de realce */
+    ;
     display: flex;
     flex-direction: column;
 
@@ -672,10 +679,12 @@ body {
     transform: translateY(40px);
     transition: opacity 0.8s cubic-bezier(.4, 0, .2, 1), transform 0.8s cubic-bezier(.4, 0, .2, 1);
 }
+
 .tabs__container.visible {
     opacity: 1;
     transform: translateY(0);
 }
+
 /* Fila de tabs */
 .option__tabs {
     display: flex;
@@ -917,17 +926,20 @@ footer {
     }
 
     #faqSection .section__title {
-       max-width: 900px;
-        padding-bottom:50px ;
-       
-       
+        max-width: 900px;
+        padding-bottom: 50px;
+
+
     }
-    #faqSection .section__title h2{
+
+    #faqSection .section__title h2 {
         color: white;
     }
-    #faqSection .section__title p{
+
+    #faqSection .section__title p {
         color: white;
     }
+
     .main__container {
         max-width: 700px;
         margin: 0 auto;
@@ -1037,6 +1049,7 @@ footer {
         opacity: 0;
         transform: translateX(-100px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1049,6 +1062,7 @@ footer {
         opacity: 0;
         transform: translateX(100px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1061,11 +1075,11 @@ footer {
 }
 
 #faqSection .faq__item.faq-animate-left {
-    animation: faqItemInLeft 0.7s cubic-bezier(.4,0,.2,1) forwards;
+    animation: faqItemInLeft 0.7s cubic-bezier(.4, 0, .2, 1) forwards;
 }
 
 #faqSection .faq__item.faq-animate-right {
-    animation: faqItemInRight 0.7s cubic-bezier(.4,0,.2,1) forwards;
+    animation: faqItemInRight 0.7s cubic-bezier(.4, 0, .2, 1) forwards;
 }
 
 
@@ -1073,26 +1087,32 @@ footer {
 /* =======================================================================================================
    =================================CONTACT TEMPLATE==========================================================
    =======================================================================================================*/
-   body {
+html {
+    background-color: var(--color-dark);
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f4f4f4;
     margin: 0;
     padding: 0;
     color: #222;
+
 }
+
 #contact {
     background: var(--color-dark);
-    padding: 25px 0;
+
 }
 
 #contact .main_container {
     max-width: 900px;
-    margin: 75px auto;
+    margin: 68px auto;
     margin-bottom: 0px;
     background: #fff;
     border-radius: 3px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     padding: 32px;
+    padding-top: 50px;
 }
 
 .contact__container {
@@ -1101,7 +1121,8 @@ footer {
     gap: 32px;
 }
 
-.contact__info, .contact__form {
+.contact__info,
+.contact__form {
     flex: 1 1 300px;
     min-width: 280px;
 }
