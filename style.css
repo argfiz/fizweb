@@ -139,11 +139,13 @@ body {
 .nav-menu {
     display: flex;
     align-items: center;
+    
 }
 
 .nav-menu__list {
     display: flex;
     list-style: none;
+    gap: 6px;
 }
 
 .nav-menu__link {
@@ -1144,16 +1146,22 @@ body {
 }
 
 .contact__icon {
-    width: 36px;
-    height: 36px;
-    background: #e0e7ef;
+    width: 45px;
+    height: 45px;
+    background: var(--color-dark);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 14px;
 }
-
+.contact__icon img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    display: block;
+    filter: brightness(0) invert(1);
+}
 .contact__text h3 {
     margin: 0 0 4px 0;
     font-size: 1.05em;
@@ -1161,15 +1169,24 @@ body {
 }
 
 .social__links {
-    margin-top: 18px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
 }
 
 .social__links a {
+    
     display: inline-block;
     margin-right: 12px;
     color: #0077cc;
     font-size: 1.3em;
     text-decoration: none;
+}
+.social__links img {
+    width: 40px;
+    height: 40px;
 }
 
 .contact__form form {
