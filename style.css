@@ -58,7 +58,14 @@ body {
     line-height: 1.3;
 
 }
+.section__divider {
+    background: #f3f3f3; /* Color de la mitad superior */
+}
 
+.section__divider::after {
+    width: 100%;
+    background: #f3f3f3; /* Color de la mitad inferior */
+}
 @media (max-width: 600px) {
     .section__title {
         padding: 25px 20px;
@@ -450,7 +457,7 @@ body {
 /**********************************************************/
 .swiper {
     max-width: 100vw;
-    background: #ffffff;
+    background: #f3f3f3;
     border-radius: 12px;
     overflow: hidden;
     position: relative;
@@ -641,7 +648,7 @@ body {
    =======================================================================================================*/
 :root {
     --color-bg-main: #f4f6fa;
-    --color-bg-gradient: linear-gradient(180deg, white 40%, var(--color-dark) 40%);
+    --color-bg-gradient: linear-gradient(180deg, #f3f3f3 40%, var(--color-dark) 40%);
     --color-tab-bg: #f4f6fa;
     --color-tab-border: #d1d5db;
     --color-tab-active-bg: var(--color-secondary);
@@ -665,7 +672,7 @@ body {
 }
 
 #services .section__title {
-    background-color: #fff;
+    background-color: #f3f3f3
 }
 
 /* Contenedor de tabs */
