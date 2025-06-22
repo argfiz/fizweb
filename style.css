@@ -516,10 +516,16 @@ body {
     align-items: center;
     /* Centra horizontalmente el contenido */
 }
-
+.card__header h3{
+    margin: 0;
+    padding-bottom: 10px;
+}
+.card__header p{
+    margin: 0;
+ 
+}
 .card__header--1 {
     border-bottom: 3px solid #00bf62;
-
 }
 
 .card__header--2 {
