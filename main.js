@@ -251,8 +251,9 @@ const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: false,
   slidesPerView: 'auto',
+  initialSlide: 1, // <-- Esto selecciona la 2da carta al cargar
   spaceBetween: 25,
-  centeredSlides: false,
+  centeredSlides: true, // <-- Esto centra la slide activa
   centerInsufficientSlides: true,
   pagination: {
     el: '.swiper-pagination',
@@ -268,6 +269,8 @@ const swiper = new Swiper('.swiper', {
     }
   }
 });
+
+
 
 /*****************************************************************************************************/
 /* ======================================== TABS SERVICES ======================================= */
