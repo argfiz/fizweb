@@ -276,9 +276,9 @@ const servicesData = [
     desc: "Antes del despliegue de la página web, precargaremos la cantidad de productos correspondiente al pack elegido, asegurando que la tienda esté lista para operar"
   },
   {
-    key: "seo",
+    key: "google",
     icon: "./assets/icons/magnifier-icon.svg",
-    title: "SEO",
+    title: "Google",
     desc: "Optimizamos tu sitio web para motores de búsqueda mediante técnicas avanzadas de SEO. Esto mejora su visibilidad en Google y otros buscadores."
   },
   {
