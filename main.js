@@ -58,6 +58,7 @@ window.addEventListener('scroll', () => {
 /* ======================================= HERO IMAGE LOAD =================================== */
 /******************************************GALLERY SWIPE LOAD**********************************/
 /******************************************SECTION TITLE LOAD**********************************/
+/******************************************TABS OOPTION LOAD**********************************/
 document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('.hero__image');
   if (hero) {
@@ -106,6 +107,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.tabs__container').forEach(container => {
     tabsObserver.observe(container);
+  });
+  // Animación de carga solo cuando .option__tabs entra en pantalla
+  const optionTabsObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target); // Solo animar una vez
+      }
+    });
+  }, {
+    threshold: 0.1 // El 10% del elemento debe estar visible
+  });
+
+  document.querySelectorAll('.option__tabs').forEach(tabs => {
+    optionTabsObserver.observe(tabs);
   });
 });
 

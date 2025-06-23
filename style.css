@@ -704,15 +704,23 @@ body {
     padding: 25px;
     padding-top: 0px;
     font-family: var(--font-main);
+}
+/* Agrega la animación a .option__tabs */
+.option__tabs {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.8s cubic-bezier(.4, 0, .2, 1), transform 0.8s cubic-bezier(.4, 0, .2, 1);
 }
 
-.tabs__container.visible {
+.option__tabs.visible {
     opacity: 1;
     transform: translateY(0);
 }
+
 
 /* Fila de tabs */
 .option__tabs {
