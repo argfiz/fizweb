@@ -1163,6 +1163,8 @@ body {
 .contact__form {
     flex: 1 1 300px;
     min-width: 280px;
+    opacity: 0;
+    will-change: opacity, transform, filter;
 }
 
 .contact__info h2,
@@ -1272,4 +1274,32 @@ body {
 
 .submit__btn:hover {
     background: var(--color-dark);
+}
+
+/* Animaciones modernas y suaves para contacto (sin desplazamiento horizontal) */
+@keyframes contactFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+        filter: blur(2px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+.contact__info,
+.contact__form {
+    opacity: 0;
+    will-change: opacity, transform, filter;
+}
+
+.contact__info.visible {
+    animation: contactFadeIn 0.85s cubic-bezier(.4,0,.2,1) forwards;
+}
+
+.contact__form.visible {
+    animation: contactFadeIn 0.85s cubic-bezier(.4,0,.2,1) forwards;
 }

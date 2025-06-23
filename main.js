@@ -123,6 +123,22 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.option__tabs').forEach(tabs => {
     optionTabsObserver.observe(tabs);
   });
+
+  // Animación de carga de la sección de contacto
+const contactInfo = document.querySelector('.contact__info');
+  if (contactInfo) {
+    setTimeout(() => {
+      contactInfo.classList.add('visible');
+    }, 350); // Aparece primero
+  }
+
+  const contactForm = document.querySelector('.contact__form');
+  if (contactForm) {
+    setTimeout(() => {
+      contactForm.classList.add('visible');
+    }, 650); // Aparece después, más suave
+  }
+
 });
 
 
