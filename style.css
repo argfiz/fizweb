@@ -568,7 +568,12 @@ body {
     margin: 0;
     box-sizing: border-box;
 }
-
+.card__item-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
 .card__items li {
     width: 100%;
     font-size: 1.1rem;

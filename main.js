@@ -182,7 +182,27 @@ function renderSlides() {
             <p class="card__sub">${card.subtitulo}</p>
         </div>
         <ul class="card__items">
-          ${card.items.map(item => `<li>${item}</li>`).join('')}
+          ${card.items.map((item, i, arr) => {
+            // Último item: gift-icon
+            if (i === arr.length - 1) {
+              return `<li>
+                <img src="./assets/icons/gift-icon.png" alt="Gift" class="card__item-icon">
+                ${item}
+              </li>`;
+            }
+            // Primeros 3 items de la 2da y 3ra carta: plus-icon
+            if ((idx === 1 || idx === 2) && i < 3) {
+              return `<li>
+                <img src="./assets/icons/plus-icon.png" alt="Plus" class="card__item-icon">
+                ${item}
+              </li>`;
+            }
+            // Resto: ok_icon
+            return `<li>
+              <img src="./assets/icons/ok-icon.png" alt="Ok" class="card__item-icon">
+              ${item}
+            </li>`;
+          }).join('')}
         </ul>
         <div class="card__price card__price-${idx + 1}">
           <span>${card.precio}</span>
