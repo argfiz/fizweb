@@ -492,8 +492,8 @@ body {
     background: #fff;
     border-radius: 10px;
     box-shadow:
-        5px 2px 8px 0 rgba(247, 37, 133, 0.06),
-        /* Sombra rosa muy suave */
+        5px 2px 8px 0 rgba(0, 0, 0, 0.06),
+        /* Sombra negra muy suave */
         5px 8px 32px 0 rgba(0, 0, 0, 0.10),
         /* Sombra negra difusa */
         5px 1.5px 6px 0 rgba(0, 0, 0, 0.04);
@@ -638,9 +638,8 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-    background: #f72585 !important;
+    background: var(--color-secondary) !important;
     transform: scale(1.25);
-    box-shadow: 0 0 0 2px #fff, 0 0 6px #f7258544;
 }
 
 @media (min-width: 501px) {
