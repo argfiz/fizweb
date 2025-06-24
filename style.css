@@ -119,7 +119,7 @@ body {
 /* ====== VARIABLES ====== */
 :root {
     --color-nav-bg: var(--color-dark-2);
-    --color-nav-bg-gradient: linear-gradient(90deg, var(--color-dark) 0%, #5a0792 100%);
+    /*--color-nav-bg-gradient: linear-gradient(90deg, var(--color-dark) 0%, #5a0792 100%);*/
     --color-nav-link: #fff;
     --color-nav-link-hover: var(--color-secondary);
     --color-social-bg: #e9ecef;
@@ -666,8 +666,7 @@ body {
 
 .card__price {
     text-align: center;
-    padding: 25px 0px;
-    padding-top: 5px;
+    padding-bottom: 40px;
     width: 100%;
 }
 
