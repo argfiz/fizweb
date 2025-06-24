@@ -561,10 +561,10 @@ body {
 }
 .card__header h3 {
     font-size: 1.2rem;
-    font-weight:800;
+    font-weight:900;
     margin: 0;
     padding-bottom: 8px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 .card__header--1 {
     border-bottom: 4px solid #008200;
