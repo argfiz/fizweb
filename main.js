@@ -129,14 +129,14 @@ const contactInfo = document.querySelector('.contact__info');
   if (contactInfo) {
     setTimeout(() => {
       contactInfo.classList.add('visible');
-    }, 350); // Aparece primero
+    }, 250); // Aparece primero
   }
 
   const contactForm = document.querySelector('.contact__form');
   if (contactForm) {
     setTimeout(() => {
       contactForm.classList.add('visible');
-    }, 650); // Aparece después, más suave
+    }, 450); // Aparece después, más suave
   }
 
 });
