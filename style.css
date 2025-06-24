@@ -851,6 +851,7 @@ body {
     margin: 0;
     font-size: 1.5rem;
     color: var(--color-card-title);
+    letter-spacing: 3px;
 }
 
 .tab__card p {
