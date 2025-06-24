@@ -523,11 +523,11 @@ body {
 
     box-shadow:
 
-        0 0px 4px 0 rgba(247, 37, 133, 1),
+        0 0px 4px 2px rgba(247, 37, 133, 1),
         /* Sombra rosa con transparencia */
-        0 0px 15px 0 rgba(247, 37, 133, 0.60),
+        0 0px 8px 4px rgba(247, 37, 133, 0.60),
         /* Sombra rosa más difusa */
-        0 0px 3px 0 rgba(247, 37, 133, 0.45);
+        0 0px 12px 6px rgba(247, 37, 133, 0.45);
     /* Sombra rosa de realce */
 }
 
@@ -564,7 +564,7 @@ body {
     /* Fondo blanco */
     text-align: center;
     padding: 0px 15px;
-    min-height: 180px;
+    min-height: 170px;
     margin: auto 0;
     display: flex;
     flex-direction: column;
@@ -576,17 +576,19 @@ body {
 
 .card__header h3 {
     margin: 0;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 
 .card__header p {
     margin: 0;
     font-weight: 600;
+    line-height: 20px;
+    font-size: 1.1rem;
 
 }
 
 .card__header--1 {
-    border-bottom: 3px solid #008d49;
+    border-bottom: 3px solid #64987f;
     background:
         linear-gradient(rgba(0, 183, 18, 0.6)),
         /* overlay blanco semitransparente */
@@ -594,7 +596,7 @@ body {
 }
 
 .card__header--2 {
-    border-bottom: 3px solid #285285;
+    border-bottom: 3px solid #d8287a;
     background:
         linear-gradient(rgba(40, 94, 210, 0.8)),
         /* overlay blanco semitransparente */
@@ -627,18 +629,17 @@ body {
     margin-top: 0px;
 }
 
+.container-card__items {   
+    padding: 20px 50px;
+}
 .card__items {
     list-style: none;
-    width: 100%;
     padding: 0;
-    padding: 15px 25px;
-    margin: 0;
-    box-sizing: border-box;
-
 }
 
 .card__items--2 li {
     color: #fff !important;
+    border-bottom: 1px solid var(--color-dark-3) !important;
 }
 
 .card__item-icon {
@@ -656,10 +657,11 @@ body {
     border-bottom: 1px solid #f0f0f0;
     padding: 8px 0px;
     box-sizing: border-box;
+    
 }
 
 .card__items li:last-child {
-    border-bottom: none;
+    border-bottom: none !important;
 }
 
 .card__price {

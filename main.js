@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Animación de carga de la sección de contacto
-const contactInfo = document.querySelector('.contact__info');
+  const contactInfo = document.querySelector('.contact__info');
   if (contactInfo) {
     setTimeout(() => {
       contactInfo.classList.add('visible');
@@ -161,7 +161,6 @@ const sliderCardsData = [
       "Enlaces a redes sociales",
       "Formulario de contacto",
       "Instalación en servidor",
-      "Hosting, año de regalo."
     ]
   },
   {
@@ -179,7 +178,6 @@ const sliderCardsData = [
       "Enlaces a redes sociales",
       "Formulario de contacto",
       "Instalación en servidor",
-      "Hosting, año de regalo."
     ]
   },
   {
@@ -197,7 +195,6 @@ const sliderCardsData = [
       "Enlaces a redes sociales",
       "Formulario de contacto",
       "Instalación en servidor",
-      "Hosting, año de regalo."
     ]
   }
 ];
@@ -212,29 +209,25 @@ function renderSlides() {
             <h3 class="card__title">${card.nombre}</h3>
             <p class="card__sub">${card.subtitulo}</p>
         </div>
+        <div class="container-card__items">
         <ul class="card__items card__items--${idx + 1}">
           ${card.items.map((item, i, arr) => {
-            // Último item: gift-icon
-            if (i === arr.length - 1) {
-              return `<li>
-                <img src="./assets/icons/gift-icon.png" alt="Gift" class="card__item-icon">
-                ${item}
-              </li>`;
-            }
-            // Primeros 3 items de la 2da y 3ra carta: plus-icon
-            if ((idx === 1 || idx === 2) && i < 3) {
-              return `<li>
+    
+    // Primeros 3 items de la 2da y 3ra carta: plus-icon
+    if ((idx === 1 || idx === 2) && i < 3) {
+      return `<li>
                 <img src="./assets/icons/plus-icon.png" alt="Plus" class="card__item-icon">
                 ${item}
               </li>`;
-            }
-            // Resto: ok_icon
-            return `<li>
+    }
+    // Resto: ok_icon
+    return `<li>
               <img src="./assets/icons/ok-icon.png" alt="Ok" class="card__item-icon">
               ${item}
             </li>`;
-          }).join('')}
+  }).join('')}
         </ul>
+        </div>
         <div class="card__price card__price--${idx + 1}">
           <span>${card.precio}</span>
           <small>${card.precioNota}</small>
