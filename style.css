@@ -547,41 +547,25 @@ body {
     flex-direction: column;
 
 }
-
 .card--2 {
     background: #333;
 }
-
-/*.card__img {
-    width: 100%;
-    object-fit: cover;
-    background: #f0f0f0;
-}*/
-
 .card__header {
     max-width: 310px;
     background: #fff;
-    /* Fondo blanco */
-    text-align: center;
     padding: 0px 15px;
     min-height: 170px;
-    margin: auto 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Centra verticalmente el contenido */
-    align-items: center;
-    /* Centra horizontalmente el contenido */
 }
-
 .card__header h3 {
+    font-size: 1.2rem;
     font-weight:800;
     margin: 0;
     padding-bottom: 8px;
+    letter-spacing: 1px;
 }
-
-
-
 .card__header--1 {
     border-bottom: 4px solid #008200;
     background:
@@ -589,7 +573,6 @@ body {
         /* overlay blanco semitransparente */
         url('./assets/img/pack-s.jpg') center center/cover no-repeat, #fff;
 }
-
 .card__header--2 {
     border-bottom: 4px solid #d82869;
     background:
@@ -598,34 +581,26 @@ body {
         url('./assets/img/pack-m.jpg') center center/cover no-repeat, #fff;
 
 }
-
 .card__header--3 {
     border-bottom: 4px solid #820000;
     background:
         linear-gradient(rgba(220, 60, 60, 0.8)),
         /* overlay blanco semitransparente */
         url('./assets/img/pack-g.jpg') center center/cover no-repeat, #fff;
-
 }
-
 .card__title {
     font-size: 1.5rem;
     font-weight: 700;
     color: #fff;
-    text-align: center;
 }
-
 .card__sub {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
     color: #fff;
-    text-align: center;
     padding-top: 0px;
     margin: 0;
     line-height: 20px;
-    
 }
-
 .container-card__items {   
     padding: 20px 40px;
 }
