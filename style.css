@@ -493,10 +493,12 @@ body {
 }
 
 .swiper-slide:nth-child(2) .card {
+    
     box-shadow:
-        0 0px 8px 0 rgba(247, 37, 133, 0.72),   /* Sombra rosa con transparencia */
-        0 0px 32px 0 rgba(247, 37, 133, 0.40),  /* Sombra rosa más difusa */
-        0 0px 6px 0 rgba(247, 37, 133, 0.32);   /* Sombra rosa de realce */
+    
+        0 0px 4px 0 rgba(247, 37, 133, 1),   /* Sombra rosa con transparencia */
+        0 0px 15px 0 rgba(247, 37, 133, 0.60),  /* Sombra rosa más difusa */
+        0 0px 3px 0 rgba(247, 37, 133, 0.45);   /* Sombra rosa de realce */
 }
 
 
