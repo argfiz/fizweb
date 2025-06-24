@@ -207,12 +207,12 @@ function renderSlides() {
   const wrapper = document.querySelector('.swiper-wrapper');
   wrapper.innerHTML = sliderCardsData.map((card, idx) => `
     <div class="swiper-slide">
-      <div class="card">
+      <div class="card card--${idx + 1}">
         <div class="card__header card__header--${idx + 1}">
             <h3 class="card__title">${card.nombre}</h3>
             <p class="card__sub">${card.subtitulo}</p>
         </div>
-        <ul class="card__items">
+        <ul class="card__items card__items--${idx + 1}">
           ${card.items.map((item, i, arr) => {
             // Último item: gift-icon
             if (i === arr.length - 1) {
@@ -235,7 +235,7 @@ function renderSlides() {
             </li>`;
           }).join('')}
         </ul>
-        <div class="card__price card__price-${idx + 1}">
+        <div class="card__price card__price--${idx + 1}">
           <span>${card.precio}</span>
           <small>${card.precioNota}</small>
         </div>
