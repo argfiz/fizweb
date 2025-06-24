@@ -588,7 +588,7 @@ body {
 }
 
 .card__header--1 {
-    border-bottom: 3px solid #64987f;
+    border-bottom: 4px solid #008200;
     background:
         linear-gradient(rgba(0, 183, 18, 0.6)),
         /* overlay blanco semitransparente */
@@ -596,7 +596,7 @@ body {
 }
 
 .card__header--2 {
-    border-bottom: 3px solid #d8287a;
+    border-bottom: 4px solid #d82869;
     background:
         linear-gradient(rgba(40, 94, 210, 0.8)),
         /* overlay blanco semitransparente */
@@ -605,7 +605,7 @@ body {
 }
 
 .card__header--3 {
-    border-bottom: 3px solid #9e1111;
+    border-bottom: 4px solid #820000;
     background:
         linear-gradient(rgba(220, 60, 60, 0.8)),
         /* overlay blanco semitransparente */
