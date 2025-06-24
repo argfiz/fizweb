@@ -208,7 +208,6 @@ function renderSlides() {
   wrapper.innerHTML = sliderCardsData.map((card, idx) => `
     <div class="swiper-slide">
       <div class="card">
-        <img src="${card.img}" alt="${card.nombre}" class="card__img" />
         <div class="card__header card__header--${idx + 1}">
             <h3 class="card__title">${card.nombre}</h3>
             <p class="card__sub">${card.subtitulo}</p>
