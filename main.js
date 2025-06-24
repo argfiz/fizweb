@@ -165,7 +165,7 @@ const sliderCardsData = [
   },
   {
     nombre: "Mediano",
-    subtitulo: "Este pack ideal para los indecisos y emprendedores en crecimiento que buscan una web más completa",
+    subtitulo: "Pack ideal para los indecisos y emprendedores en crecimiento que buscan una web más completa",
     img: "./assets/img/pack-m.jpg",
     precio: "$300.0000 ARS",
     precioNota: "Precio Final",
@@ -182,7 +182,7 @@ const sliderCardsData = [
   },
   {
     nombre: "Grande",
-    subtitulo: "Este pack perfecto para tu negocio y para quienes buscan una web completa y profesional",
+    subtitulo: "Perfecto para tu negocio y para quienes buscan una web completa y profesional",
     img: "./assets/img/pack-g.jpg",
     precio: "$400.000 ARS",
     precioNota: "Precio Final",
