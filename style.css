@@ -750,7 +750,7 @@ body {
    =======================================================================================================*/
 :root {
     --color-bg-main: #f4f6fa;
-    --color-bg-gradient: linear-gradient(190deg, #f3f3f3 35%, var(--color-dark) 35%);
+    --color-bg-gradient: linear-gradient(#f3f3f3 25%, var(--color-dark) 25%);
     --color-tab-bg: #f4f6fa;
     --color-tab-border: #d1d5db;
     --color-tab-active-bg: var(--color-secondary);
@@ -760,7 +760,6 @@ body {
     --color-tab-text: #333;
     --color-tab-active-text: #fff;
     --color-card-bg: #fff;
-    --color-card-border: #e5e7eb;
     --color-card-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
     --color-card-shadow-active:
         0 0px 8px 0 rgba(0, 0, 0, 0.20),
@@ -783,8 +782,7 @@ body {
     flex-direction: column;
     justify-content: center;
     background: var(--color-bg-gradient);
-    padding: 25px;
-    padding-top: 0px;
+    padding: 25px 0px;
     font-family: var(--font-main);
 }
 
@@ -805,13 +803,6 @@ body {
 }
 
 
-/* Fila de tabs */
-.option__tabs {
-    display: flex;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
 /* Botón estilo tecla de teléfono */
 .option__tab {
@@ -829,7 +820,7 @@ body {
     color: var(--color-tab-text);
     cursor: pointer;
     transition: background var(--transition-main), border var(--transition-main), color var(--transition-main), box-shadow var(--transition-main);
-    margin: 0;
+    margin-top: 25px;
     outline: none;
 }
 
@@ -856,26 +847,26 @@ body {
 /* El contenido no toca las tabs */
 .tabs__details {
     margin: 0 auto 0 auto;
-    max-width: 400px;
     padding-top: 1.5rem;
 }
 
 .tabs__body {
-    min-height: 120px;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    padding: 0px ;
+    height: 300px;
+
 }
 
 /* Tarjeta de contenido */
 .tab__card {
+    padding: 0 50px;
     background: var(--color-card-bg);
     border-radius: var(--radius-card);
-    padding: 1.5rem 2rem;
-    margin: 0 auto 1.8rem auto;
-    max-width: 340px;
-    min-height: 220px;
-    border: 1px solid var(--color-card-border);
+    margin: 0 auto 0 auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -887,6 +878,7 @@ body {
 
 .tab__card.active {
     box-shadow: var(--color-card-shadow-active);
+    width: 100%;
 }
 
 .tab__card h3 {
@@ -942,7 +934,7 @@ body {
 
 @media (min-width: 701px) {
     #services .tab__card {
-        min-width: 620px;
+        width: 100%;
     }
 
     .tab__card h3 {
