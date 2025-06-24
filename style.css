@@ -634,10 +634,11 @@ body {
     padding: 15px 25px;
     margin: 0;
     box-sizing: border-box;
-    
+
 }
-.card__items--2 li{
-color: #fff !important;
+
+.card__items--2 li {
+    color: #fff !important;
 }
 
 .card__item-icon {
@@ -686,9 +687,11 @@ color: #fff !important;
 .card__price--2 span {
     color: #4f9dff;
 }
+
 .card__price--2 small {
     color: #fff !important;
 }
+
 .card__price--3 span {
     color: #fd3031;
 }
@@ -748,7 +751,7 @@ color: #fff !important;
    =======================================================================================================*/
 :root {
     --color-bg-main: #f4f6fa;
-    --color-bg-gradient: linear-gradient(180deg, #f3f3f3 40%, var(--color-dark) 40%);
+    --color-bg-gradient: linear-gradient(190deg, #f3f3f3 35%, var(--color-dark) 35%);
     --color-tab-bg: #f4f6fa;
     --color-tab-border: #d1d5db;
     --color-tab-active-bg: var(--color-secondary);
