@@ -721,13 +721,13 @@ body {
     --color-card-border: #e5e7eb;
     --color-card-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
     --color-card-shadow-active:
-        0 2px 8px 0 rgba(247, 37, 133, 0.07),
-        0 6px 24px 0 rgba(0, 0, 0, 0.10),
-        0 1.5px 6px 0 rgba(0, 0, 0, 0.04);
+        0 0px 8px 0 rgba(0, 0, 0, 0.28),
+        0 0px 24px 0 rgba(0, 0, 0, 0.24),
+        0 0px 6px 0 rgba(0, 0, 0, 0.10);
     --color-card-title: #222;
     --color-card-desc: #444;
-    --radius-tab: 3px;
-    --radius-card: 3px;
+    --radius-tab: 5px;
+    --radius-card: 5px;
     --transition-main: 0.2s;
 }
 
@@ -839,19 +839,9 @@ body {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    transition: box-shadow var(--transition-main);
     text-align: center;
-    opacity: 1;
-    transform: translateY(0px) scale(0.80);
-    animation: fadeInCard 0.30s cubic-bezier(.33, 1.02, .54, .99) forwards;
 }
 
-@keyframes fadeInCard {
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
 
 .tab__card.active {
     box-shadow: var(--color-card-shadow-active);
