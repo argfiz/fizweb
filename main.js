@@ -375,7 +375,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // Llama a la función después de definir servicesData y antes de los listeners
 renderServiceTabs();
 
-
 /* =======================================================================================================
    =================================FAQ TEMPLATE==========================================================
    =======================================================================================================*/
@@ -475,6 +474,78 @@ function animateFaqItemsOnScroll() {
 // Llama a la función después de renderFAQ()
 renderFAQ();
 animateFaqItemsOnScroll();
+
+function animateTabCardChange(serviceKey) {
+  const service = servicesData.find(s => s.key === serviceKey);
+  const body = document.querySelector('.tabs__body');
+  if (!service || !body) return;
+
+  let card = body.querySelector('.tab__card');
+  if (!card) {
+    // Primera carga
+    body.innerHTML = `
+      <div class="tab__card active">
+        <div class="title__tab__container">
+          <h3>${service.title}</h3>
+        </div>
+        <p>${service.desc}</p>
+      </div>
+    `;
+    return;
+  }
+
+  // Elementos actuales
+  const prevTitle = card.querySelector('.title__tab__container');
+  const prevP = card.querySelector('p');
+
+  // Anima los salientes
+  prevTitle.classList.add('tab-anim-out');
+  prevP.classList.add('tab-anim-out');
+
+  // Cuando termina la animación de salida, reemplaza el contenido y anima entrada
+  setTimeout(() => {
+    prevTitle.classList.remove('tab-anim-out');
+    prevP.classList.remove('tab-anim-out');
+
+    // Cambia el contenido
+    prevTitle.innerHTML = `<h3>${service.title}</h3>`;
+    prevP.textContent = service.desc;
+
+    // Anima entrada
+    prevTitle.classList.add('tab-anim-in');
+    prevP.classList.add('tab-anim-in');
+
+    // Limpia la clase de entrada después de la animación
+    setTimeout(() => {
+      prevTitle.classList.remove('tab-anim-in');
+      prevP.classList.remove('tab-anim-in');
+    }, 350);
+
+  }, 350); // Debe coincidir con la duración de la animación
+}
+
+// Cambia el manejador de tabs:
+function handleTabClick(e) {
+  const clicked = e.currentTarget;
+  if (clicked.classList.contains('active')) return;
+  document.querySelectorAll('.option__tab').forEach(tab => tab.classList.remove('active'));
+  clicked.classList.add('active');
+  animateTabCardChange(clicked.dataset.service);
+}
+
+// Inicialización
+document.addEventListener('DOMContentLoaded', () => {
+  const initialTab = document.querySelector('.option__tab.active') || document.querySelector('.option__tab');
+  if (initialTab) {
+    animateTabCardChange(initialTab.dataset.service);
+  }
+  document.querySelectorAll('.option__tab').forEach(tab => {
+    tab.addEventListener('click', handleTabClick);
+  });
+});
+
+// Llama a la función después de definir servicesData y antes de los listeners
+renderServiceTabs();
 
 
 

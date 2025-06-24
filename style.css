@@ -861,6 +861,27 @@ body {
 
 }
 
+
+@keyframes tabFadeOut {
+    from { opacity: 1; transform: scale(1);}
+    to   { opacity: 0; transform: scale(0.96);}
+}
+@keyframes tabFadeIn {
+    from { opacity: 0; transform: scale(0.96);}
+    to   { opacity: 1; transform: scale(1);}
+}
+
+.tab-anim-out {
+    animation: tabFadeOut 0.35s cubic-bezier(.4,0,.2,1) forwards;
+    pointer-events: none;
+}
+
+.tab-anim-in {
+    animation: tabFadeIn 0.35s cubic-bezier(.4,0,.2,1) forwards;
+    pointer-events: none;
+}
+
+
 @media (min-width: 701px) {
     #services .tab__card {
         min-width: 620px;
