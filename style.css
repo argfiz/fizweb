@@ -59,16 +59,37 @@ body {
 
 }
 
-.section__divider {
-    background: #f3f3f3;
-    /* Color de la mitad superior */
+
+/*Divider component*/
+.custom-shape-divider-top-1750729302 {
+    position: relative;
+    width: 100%;
+    height: 80px; /* Ajusta el alto según tu diseño */
+    overflow: hidden;
+    line-height: 0;
 }
 
-.section__divider::after {
+.custom-shape-divider-top-1750729302 svg {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: #f3f3f3;
-    /* Color de la mitad inferior */
+    height: 100%;
+    display: block;
 }
+.custom-shape-divider-top-1750729302 .shape-fill {
+    fill: #333333;
+}
+/** For mobile devices **/
+@media (max-width: 700px) {
+    .custom-shape-divider-top-1750729302 svg {
+        width: calc(148% + 1.3px);
+        height: 49px;
+    }
+}
+
+
+
 
 @media (max-width: 600px) {
     .section__title {
