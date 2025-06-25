@@ -1311,12 +1311,13 @@ body {
 
 .contact__text h3 {
     margin: 0 0 4px 0;
-    font-size: 1.05em;
+    font-size: 1.4em;
     color: #333;
 }
 
 .contact__text p {
     margin: 0;
+    font-size: 1.2em;
 }
 
 .social__links {
@@ -1353,7 +1354,7 @@ body {
 
 .form__group label {
     margin-bottom: 6px;
-    font-size: 0.98em;
+    font-size: 1.3rem;
     color: #444;
 }
 
@@ -1363,7 +1364,7 @@ body {
     padding: 8px 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1em;
+    font-size: 1.1rem;
     background: #fafbfc;
     resize: vertical;
 }
@@ -1378,7 +1379,7 @@ body {
     border: none;
     padding: 12px 0;
     border-radius: 4px;
-    font-size: 1.1em;
+    font-size: 1.3em;
     cursor: pointer;
     transition: background 0.2s;
 }
