@@ -71,31 +71,30 @@ body {
     /* Ajusta el alto según tu diseño */
     overflow: hidden;
     line-height: 0;
+    margin-top: -8px; /* Superpone ligeramente sobre el hero */
+    z-index: 2;
 }
 
 .custom-shape-divider-top-1750729302 svg {
     position: absolute;
     top: 0;
     left: 0;
-    width: 150%;
+    width: 100vw; /* Asegura que cubra todo el ancho */
     height: 100%;
     display: block;
+    transform: scaleY(-1);
 }
 
 .custom-shape-divider-top-1750729302 .shape-fill {
-    fill: #222;
+    fill: #f3f3f3ff;
 }
 
 /** For mobile devices **/
 @media (max-width: 700px) {
     .custom-shape-divider-top-1750729302 svg {
         width: calc(148% + 1.3px);
-        height: 40px;
     }
 }
-
-
-
 
 @media (max-width: 600px) {
     .section__title {
@@ -409,20 +408,26 @@ body {
 /**********************************************************/
 /************=== HERO IMAGE ESTILO BIENVENIDA =========== */
 /**********************************************************/
-.hero__image {
-    display: flex;
+.hero__container{
+display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 140px 20px 70px 20px;
-    background: var(--color-dark-2);
+    padding-top: 120px;
+    background: url('./assets/img/bg-welcome.svg') center center/cover no-repeat;
     text-align: center;
-    gap: 20px;
+    gap: 50px;
     /* Elimina la animación de carga aquí */
     opacity: 1;
     transform: none;
     transition: none;
 }
-
+.hero__image {
+    padding: 20px;
+    
+}
+.hero__image h1{
+padding-bottom: 15px;
+}
 /* Aplica la animación de carga a los hijos */
 .hero__image h1,
 .hero__image h2 {
@@ -805,20 +810,16 @@ body {
     text-align: center;
     margin-top: auto;
 }
-
-
 .tab__card.active {
     box-shadow: var(--color-card-shadow-active);
     width: 100%;
 }
-
 .tab__card h3 {
     color: #fff !important;
     font-size: 1.9rem;
     color: var(--color-card-title);
     letter-spacing: 3px;
 }
-
 .tab__card p {
     color: white;
     margin: 0;
