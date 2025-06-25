@@ -772,6 +772,7 @@ body {
 .tabs__details {
     margin: 0 auto 0 auto;
     padding-top: 1.5rem;
+    width: 100%;
 }
 
 .tabs__body {
@@ -786,8 +787,8 @@ body {
 
 /* Tarjeta de contenido */
 .tab__card {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 35px;
+    padding-left: 35px;
     background: var(--color-card-bg);
     border-radius: var(--radius-card);
     margin: 0 auto 0 auto;
