@@ -316,7 +316,8 @@ const servicesData = [
 function renderServiceCard(serviceKey) {
   const service = servicesData.find(s => s.key === serviceKey);
   const body = document.querySelector('.tabs__body');
-  if (!service || !body) return;
+  const tabs = document.querySelector('.option__tabs');
+  if (!service || !body || !tabs) return;
   body.innerHTML = `
     <div class="tab__card active">
       <div class="title__tab__container">
@@ -325,6 +326,9 @@ function renderServiceCard(serviceKey) {
       <p>${service.desc}</p>
     </div>
   `;
+  // Mueve .option__tabs dentro de .tab__card
+  const tabCard = body.querySelector('.tab__card');
+  tabCard.appendChild(tabs);
 }
 
 // Genera dinámicamente los tabs de servicios

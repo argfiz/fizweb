@@ -755,6 +755,7 @@ body {
     justify-content: center;
     background: var(--color-bg-gradient);
     padding: 25px 0px;
+    padding-bottom: 0px;
     font-family: var(--font-main);
 }
 
@@ -828,7 +829,7 @@ body {
     align-items: stretch;
     width: 100%;
     padding: 0px ;
-    height: 300px;
+    height: 380px;
 
 }
 
@@ -1031,7 +1032,7 @@ footer {
     /* Contenedor principal */
     .faq__section {
         background: var(--color-dark);
-        padding: 40px 0;
+        padding-top: 0;
         padding-bottom: 80px;
         font-family: var(--font-main);
     }
@@ -1039,8 +1040,6 @@ footer {
     #faqSection .section__title {
         max-width: 900px;
         padding-bottom: 50px;
-
-
     }
 
     #faqSection .section__title h2 {
