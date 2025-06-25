@@ -756,6 +756,7 @@ body {
 
 #services .section__title {
     background-color: #f3f3f3;
+    padding-top: 50px;
     padding-bottom: 0px;
 }
 
@@ -767,6 +768,7 @@ body {
     background: var(--color-bg-gradient);
     padding: 25px 0px;
     padding-bottom: 0px;
+    padding-top: 15px;
     font-family: var(--font-main);
 }
 
