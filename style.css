@@ -576,11 +576,11 @@ padding-bottom: 15px;
 }
 
 .card__header h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 900;
     margin: 0;
     padding-bottom: 8px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 .card__header--1 {
