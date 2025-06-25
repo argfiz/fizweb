@@ -1416,3 +1416,33 @@ body {
 .contact__form.visible {
     animation: contactFadeIn 0.85s cubic-bezier(.4, 0, .2, 1) forwards;
 }
+
+/* =======================================================================================================
+   =================================WHATSAPP FLOAT==========================================================
+   =======================================================================================================*/
+.whatsapp-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 3000;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    transition: transform 0.2s;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+}
