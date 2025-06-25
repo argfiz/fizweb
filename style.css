@@ -930,12 +930,15 @@ body {
 
     .tab__card h3 {
         font-size: 1.7rem;
+        padding-top: 0px ;
     }
 
     .tab__card p {
         font-size: 1.1rem;
     }
-
+    .option__tabs {
+        padding-bottom: 40px;
+    }
 }
 
 /* =======================================================================================================
