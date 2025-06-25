@@ -814,7 +814,7 @@ body {
 
 .tab__card h3 {
     color: #fff !important;
-    font-size: 2rem;
+    font-size: 1.9rem;
     color: var(--color-card-title);
     letter-spacing: 3px;
 }
@@ -823,7 +823,7 @@ body {
     color: white;
     margin: 0;
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 
 }
 
@@ -936,11 +936,6 @@ body {
     }
 
     
-
-    .tab__card p {
-        margin: 0;
-        font-size: 1.4rem;
-    }
 }
     @media (max-width: 700px) {
         .tab__card{
@@ -948,7 +943,10 @@ body {
             padding-left: 8px;
         }
         .tab__card h3 {
-        font-size: 1.8rem; 
+        font-size: 1.7rem; 
+    }
+    .tab__card p {
+        font-size: 1.1rem; 
     }
     
 }
