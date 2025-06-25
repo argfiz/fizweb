@@ -782,7 +782,7 @@ body {
     align-items: stretch;
     width: 100%;
     padding: 0px;
-    height: 380px;
+    height: 450px;
 
 }
 
@@ -1056,7 +1056,8 @@ footer {
 
     #faqSection .section__title {
         max-width: 900px;
-       padding-top: 100px;
+       padding-top: 80px;
+       padding-bottom: 50px;
     }
 
     #faqSection .section__title h2 {
