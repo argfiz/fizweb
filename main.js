@@ -384,8 +384,83 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// animación de cambio de tarjeta de servicio
+// Esta función se llama al hacer click en un tab
+// y anima el cambio de tarjeta de servicio
+function animateTabCardChange(serviceKey) {
+  const service = servicesData.find(s => s.key === serviceKey);
+  const body = document.querySelector('.tabs__body');
+  if (!service || !body) return;
+
+  let card = body.querySelector('.tab__card');
+  if (!card) {
+    body.innerHTML = `
+      <div class="tab__card active">
+        <div class="title__tab__container">
+          <h3>${service.title}</h3>
+        </div>
+        <p>${service.desc}</p>
+      </div>
+    `;
+    card = body.querySelector('.tab__card');
+  }
+
+  // Elementos actuales
+  const prevTitle = card.querySelector('.title__tab__container');
+  const prevP = card.querySelector('p');
+
+  prevTitle.classList.add('tab-anim-out');
+  prevP.classList.add('tab-anim-out');
+
+  setTimeout(() => {
+    prevTitle.classList.remove('tab-anim-out');
+    prevP.classList.remove('tab-anim-out');
+
+    prevTitle.innerHTML = `<h3>${service.title}</h3>`;
+    prevP.textContent = service.desc;
+
+    prevTitle.classList.add('tab-anim-in');
+    prevP.classList.add('tab-anim-in');
+
+    setTimeout(() => {
+      prevTitle.classList.remove('tab-anim-in');
+      prevP.classList.remove('tab-anim-in');
+    }, 350);
+
+    // Asigna el fondo dinámico
+    if (service.bg) {
+      card.style.backgroundImage = `url('${service.bg}')`;
+      card.style.backgroundSize = 'cover';
+      card.style.backgroundPosition = 'center';
+    } else {
+      card.style.backgroundImage = '';
+    }
+  }, 350);
+}
+
+// Cambia el manejador de tabs:
+function handleTabClick(e) {
+  const clicked = e.currentTarget;
+  if (clicked.classList.contains('active')) return;
+  document.querySelectorAll('.option__tab').forEach(tab => tab.classList.remove('active'));
+  clicked.classList.add('active');
+  animateTabCardChange(clicked.dataset.service);
+}
+
+// Inicialización
+document.addEventListener('DOMContentLoaded', () => {
+  const initialTab = document.querySelector('.option__tab.active') || document.querySelector('.option__tab');
+  if (initialTab) {
+    animateTabCardChange(initialTab.dataset.service);
+  }
+  document.querySelectorAll('.option__tab').forEach(tab => {
+    tab.addEventListener('click', handleTabClick);
+  });
+});
+
 // Llama a la función después de definir servicesData y antes de los listeners
 renderServiceTabs();
+
 
 /* =======================================================================================================
    =================================FAQ TEMPLATE==========================================================
@@ -487,79 +562,7 @@ function animateFaqItemsOnScroll() {
 renderFAQ();
 animateFaqItemsOnScroll();
 
-function animateTabCardChange(serviceKey) {
-  const service = servicesData.find(s => s.key === serviceKey);
-  const body = document.querySelector('.tabs__body');
-  if (!service || !body) return;
 
-  let card = body.querySelector('.tab__card');
-  if (!card) {
-    body.innerHTML = `
-      <div class="tab__card active">
-        <div class="title__tab__container">
-          <h3>${service.title}</h3>
-        </div>
-        <p>${service.desc}</p>
-      </div>
-    `;
-    card = body.querySelector('.tab__card');
-  }
-
-  // Elementos actuales
-  const prevTitle = card.querySelector('.title__tab__container');
-  const prevP = card.querySelector('p');
-
-  prevTitle.classList.add('tab-anim-out');
-  prevP.classList.add('tab-anim-out');
-
-  setTimeout(() => {
-    prevTitle.classList.remove('tab-anim-out');
-    prevP.classList.remove('tab-anim-out');
-
-    prevTitle.innerHTML = `<h3>${service.title}</h3>`;
-    prevP.textContent = service.desc;
-
-    prevTitle.classList.add('tab-anim-in');
-    prevP.classList.add('tab-anim-in');
-
-    setTimeout(() => {
-      prevTitle.classList.remove('tab-anim-in');
-      prevP.classList.remove('tab-anim-in');
-    }, 350);
-
-    // Asigna el fondo dinámico
-    if (service.bg) {
-      card.style.backgroundImage = `url('${service.bg}')`;
-      card.style.backgroundSize = 'cover';
-      card.style.backgroundPosition = 'center';
-    } else {
-      card.style.backgroundImage = '';
-    }
-  }, 350);
-}
-
-// Cambia el manejador de tabs:
-function handleTabClick(e) {
-  const clicked = e.currentTarget;
-  if (clicked.classList.contains('active')) return;
-  document.querySelectorAll('.option__tab').forEach(tab => tab.classList.remove('active'));
-  clicked.classList.add('active');
-  animateTabCardChange(clicked.dataset.service);
-}
-
-// Inicialización
-document.addEventListener('DOMContentLoaded', () => {
-  const initialTab = document.querySelector('.option__tab.active') || document.querySelector('.option__tab');
-  if (initialTab) {
-    animateTabCardChange(initialTab.dataset.service);
-  }
-  document.querySelectorAll('.option__tab').forEach(tab => {
-    tab.addEventListener('click', handleTabClick);
-  });
-});
-
-// Llama a la función después de definir servicesData y antes de los listeners
-renderServiceTabs();
 
 
 
