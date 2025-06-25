@@ -1238,7 +1238,10 @@ body {
     background: var(--color-dark);
 
 }
-
+#contact .section__title {
+    padding-left: 0px;
+    padding-right: 0px;
+}
 #contact .main_container {
     max-width: 900px;
     margin: 68px auto;
