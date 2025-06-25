@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }), 500;
   }, {
-    threshold: 0.25 // El 75% del elemento debe estar visible
+    threshold: 0.10 // El 10% del elemento debe estar visible
   });
 
   document.querySelectorAll('.section__title').forEach(title => {
