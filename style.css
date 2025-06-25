@@ -1326,7 +1326,7 @@ body {
     margin-bottom: 30px;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 .social__links a {
@@ -1338,8 +1338,8 @@ body {
 }
 
 .social__links img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
 }
 
 .contact__form form {
@@ -1355,7 +1355,7 @@ body {
 
 .form__group label {
     margin-bottom: 6px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #444;
 }
 
@@ -1365,7 +1365,7 @@ body {
     padding: 8px 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     background: #fafbfc;
     resize: vertical;
 }
