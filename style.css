@@ -810,6 +810,7 @@ body {
     font-size: 1.9rem;
     color: var(--color-card-title);
     letter-spacing: 3px;
+    padding-top: 25px;
 }
 
 .tab__card p {
@@ -824,7 +825,7 @@ body {
 /* Agrega la animación a .option__tabs */
 .option__tabs {
     margin-top: auto;
-    padding-bottom: 40px;
+    padding-bottom: 65px;
     display: flex;
     gap: 0.8rem;
     flex-wrap: wrap;
