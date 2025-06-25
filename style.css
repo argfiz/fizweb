@@ -650,8 +650,8 @@ body {
 }
 
 .card__price span {
-    font-size: 1.8rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 600;
     display: block;
 }
 
@@ -673,9 +673,10 @@ body {
 
 .card__price small {
     font-size: 1.2rem;
-    color: #888;
+    font-weight: 600;
+    color: #616161;
     display: block;
-    letter-spacing: 0px;
+    letter-spacing: -1px;
 }
 
 .swiper-pagination {
