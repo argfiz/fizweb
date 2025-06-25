@@ -755,7 +755,8 @@ body {
 }
 
 #services .section__title {
-    background-color: #f3f3f3
+    background-color: #f3f3f3;
+    padding-bottom: 0px;
 }
 
 /* Contenedor de tabs */
@@ -782,13 +783,13 @@ body {
     align-items: stretch;
     width: 100%;
     padding: 0px;
-    height: 450px;
+    height: 425px;
 
 }
 
 /* Tarjeta de contenido */
 .tab__card {
-    padding: 0 30px;
+    
     background: var(--color-card-bg);
     border-radius: var(--radius-card);
     margin: 0 auto 0 auto;
@@ -923,6 +924,10 @@ body {
 
 
 @media (min-width: 701px) {
+    #services .section__title {
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
     #services .tab__card {
         width: 100%;
         padding: 0 80px;
@@ -1049,14 +1054,14 @@ footer {
     /* Contenedor principal */
     .faq__section {
         background: var(--color-dark);
-        padding-top: 0;
+        padding-top: 30px;
         padding-bottom: 80px;
         font-family: var(--font-main);
     }
 
     #faqSection .section__title {
         max-width: 900px;
-       padding-top: 80px;
+       padding-top: 50px;
        padding-bottom: 50px;
     }
 
