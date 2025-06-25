@@ -52,9 +52,9 @@ body {
 
 .section__title p {
     width: 100%;
-    color: var(--color-dark);
+    color: var(--color-dark-3);
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight:300;
     letter-spacing: 1px;
     margin: 0;
     line-height: 1.3;
