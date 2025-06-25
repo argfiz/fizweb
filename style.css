@@ -584,9 +584,9 @@ padding-bottom: 15px;
 }
 
 .card__header--1 {
-    border-bottom: 4px solid #008200;
+    border-bottom: 4px solid #006400;
     background:
-        linear-gradient(rgba(0, 183, 18, 0.6)),
+        linear-gradient(rgba(0, 255, 26, 0.7)),
         /* overlay blanco semitransparente */
         url('./assets/img/pack-s.jpg') center center/cover no-repeat, #fff;
 }
@@ -594,16 +594,16 @@ padding-bottom: 15px;
 .card__header--2 {
     border-bottom: 4px solid #d82869;
     background:
-        linear-gradient(rgba(40, 94, 210, 0.8)),
+        linear-gradient(rgba(40, 94, 210, 0.7)),
         /* overlay blanco semitransparente */
         url('./assets/img/pack-m.jpg') center center/cover no-repeat, #fff;
 
 }
 
 .card__header--3 {
-    border-bottom: 4px solid #820000;
+    border-bottom: 4px solid #650000;
     background:
-        linear-gradient(rgba(220, 60, 60, 0.8)),
+        linear-gradient(rgba(255, 0, 0, 0.7)),
         /* overlay blanco semitransparente */
         url('./assets/img/pack-g.jpg') center center/cover no-repeat, #fff;
 }
