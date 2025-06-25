@@ -555,12 +555,12 @@ body {
 }
 
 .card__header h3 {
-    font-size: 1.3rem;
-    font-weight: 900;
+    font-size: 1.4rem;
+    font-weight: 700;
     margin: 0;
     padding-bottom: 8px;
     padding-left: 10px;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 }
 
 .card__header--1 {
@@ -629,6 +629,7 @@ body {
     font-size: 1.1rem;
     color: var(--color-dark);
     padding: 8px 0px;
+    padding-left: 6px;
     box-sizing: border-box;
 
 }
@@ -671,10 +672,10 @@ body {
 }
 
 .card__price small {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #888;
     display: block;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
 }
 
 .swiper-pagination {
