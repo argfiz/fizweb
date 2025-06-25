@@ -290,7 +290,8 @@ const servicesData = [
     key: "google",
     icon: "./assets/icons/magnifier-icon.svg",
     title: "Google",
-    desc: "Optimizamos tu sitio web para motores de búsqueda mediante técnicas avanzadas de SEO. Esto mejora su visibilidad en Google y otros buscadores."
+    desc: "Optimizamos tu sitio web para motores de búsqueda mediante técnicas avanzadas de SEO. Esto mejora su visibilidad en Google y otros buscadores.",
+    bg: "./assets/img/google-banner.jpg"
   },
   {
     key: "multidispositivos",
@@ -329,6 +330,15 @@ function renderServiceCard(serviceKey) {
   // Mueve .option__tabs dentro de .tab__card
   const tabCard = body.querySelector('.tab__card');
   tabCard.appendChild(tabs);
+
+  // Asigna el fondo dinámico
+  if (service.bg) {
+    tabCard.style.backgroundImage = `url('${service.bg}')`;
+    tabCard.style.backgroundSize = 'cover';
+    tabCard.style.backgroundPosition = 'center';
+  } else {
+    tabCard.style.backgroundImage = '';
+  }
 }
 
 // Genera dinámicamente los tabs de servicios
@@ -478,7 +488,6 @@ function animateTabCardChange(serviceKey) {
 
   let card = body.querySelector('.tab__card');
   if (!card) {
-    // Primera carga
     body.innerHTML = `
       <div class="tab__card active">
         <div class="title__tab__container">
@@ -487,37 +496,40 @@ function animateTabCardChange(serviceKey) {
         <p>${service.desc}</p>
       </div>
     `;
-    return;
+    card = body.querySelector('.tab__card');
   }
 
   // Elementos actuales
   const prevTitle = card.querySelector('.title__tab__container');
   const prevP = card.querySelector('p');
 
-  // Anima los salientes
   prevTitle.classList.add('tab-anim-out');
   prevP.classList.add('tab-anim-out');
 
-  // Cuando termina la animación de salida, reemplaza el contenido y anima entrada
   setTimeout(() => {
     prevTitle.classList.remove('tab-anim-out');
     prevP.classList.remove('tab-anim-out');
 
-    // Cambia el contenido
     prevTitle.innerHTML = `<h3>${service.title}</h3>`;
     prevP.textContent = service.desc;
 
-    // Anima entrada
     prevTitle.classList.add('tab-anim-in');
     prevP.classList.add('tab-anim-in');
 
-    // Limpia la clase de entrada después de la animación
     setTimeout(() => {
       prevTitle.classList.remove('tab-anim-in');
       prevP.classList.remove('tab-anim-in');
     }, 350);
 
-  }, 350); // Debe coincidir con la duración de la animación
+    // Asigna el fondo dinámico
+    if (service.bg) {
+      card.style.backgroundImage = `url('${service.bg}')`;
+      card.style.backgroundSize = 'cover';
+      card.style.backgroundPosition = 'center';
+    } else {
+      card.style.backgroundImage = '';
+    }
+  }, 350);
 }
 
 // Cambia el manejador de tabs:
