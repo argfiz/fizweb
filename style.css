@@ -831,7 +831,7 @@ body {
 /* Agrega la animación a .option__tabs */
 .option__tabs {
     margin-top: auto;
-    padding-bottom: 25px;
+    padding-bottom: 35px;
     display: flex;
     gap: 0.8rem;
     flex-wrap: wrap;
@@ -935,16 +935,23 @@ body {
         padding: 0 80px;
     }
 
-    .tab__card h3 {
-        font-size: 2rem;
-    }
+    
 
     .tab__card p {
         margin: 0;
         font-size: 1.4rem;
     }
 }
-
+    @media (max-width: 700px) {
+        .tab__card{
+            padding-right: 8px;
+            padding-left: 8px;
+        }
+        .tab__card h3 {
+        font-size: 1.8rem; 
+    }
+    
+}
 /* =======================================================================================================
    =================================FOOTER TEMPLATE=================================================
    =======================================================================================================*/
