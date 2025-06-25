@@ -212,7 +212,7 @@ function renderSlides() {
         <div class="container-card__items">
         <ul class="card__items card__items--${idx + 1}">
           ${card.items.map((item, i, arr) => {
-    
+
     // Primeros 3 items de la 2da y 3ra carta: plus-icon
     if ((idx === 1 || idx === 2) && i < 3) {
       return `<li>
@@ -272,19 +272,22 @@ const servicesData = [
     key: "paginas",
     icon: "./assets/icons/pages-icon.svg",
     title: "Páginas",
-    desc: "Cada página está diseñada para contener las secciones que sean necesarias, cada una contiene una parte clave de la información del negocio."
+    desc: "Cada página está diseñada para contener las secciones que sean necesarias, cada una contiene una parte clave de la información del negocio.",
+    bg: "./assets/img/google-banner.jpg"
   },
   {
     key: "secciones",
     icon: "./assets/icons/section-icon.svg",
     title: "Secciones",
-    desc: "Cada sección cuenta con una altura aproximada a la pantalla, garantizando una presentación óptima de la información almacenada."
+    desc: "Cada sección cuenta con una altura aproximada a la pantalla, garantizando una presentación óptima de la información almacenada.",
+    bg: "./assets/img/google-banner.jpg"
   },
   {
     key: "productos",
     icon: "./assets/icons/package-icon.svg",
     title: "Productos",
-    desc: "Antes del despliegue de la página web, precargaremos la cantidad de productos correspondiente al pack elegido, asegurando que la tienda esté lista para operar"
+    desc: "Antes del despliegue de la página web, precargaremos la cantidad de productos correspondiente al pack elegido, asegurando que la tienda esté lista para operar",
+    bg: "./assets/img/google-banner.jpg"
   },
   {
     key: "google",
@@ -297,19 +300,22 @@ const servicesData = [
     key: "multidispositivos",
     icon: "./assets/icons/mobile-phone_icon.svg",
     title: "Multidispositivos",
-    desc: "Ofrecemos un diseño responsive que garantiza una experiencia óptima en cualquier dispositivo. Se adaptará automáticamente a móviles, tablets y escritorios."
+    desc: "Ofrecemos un diseño responsive que garantiza una experiencia óptima en cualquier dispositivo. Se adaptará automáticamente a móviles, tablets y escritorios.",
+    bg: "./assets/img/google-banner.jpg"
   },
   {
     key: "hosting",
     icon: "./assets/icons/hosting-icon.svg",
     title: "Hosting",
-    desc: "Ofrecemos instalación y alojamiento web en servidores como parte del servicio, garantizando alto rendimiento y estabilidad asegurando su funcionamiento."
+    desc: "Ofrecemos instalación y alojamiento web en servidores como parte del servicio, garantizando alto rendimiento y estabilidad asegurando su funcionamiento.",
+    bg: "./assets/img/google-banner.jpg"
   },
   {
     key: "mantenimiento",
     icon: "./assets/icons/setting-icon.svg",
     title: "Mantenimiento",
-    desc: "Mientras estemos a cargo del Hosting nos encargamos de su funcionamiento, realizamos copias de seguridad para proteger tu sitio ante cualquier problema y evitar pérdida de datos."
+    desc: "Mientras estemos a cargo del Hosting nos encargamos de su funcionamiento, realizamos copias de seguridad para proteger tu sitio ante cualquier problema y evitar pérdida de datos.",
+    bg: "./assets/img/google-banner.jpg"
   }
 ];
 

@@ -800,16 +800,16 @@ body {
 }
 
 .tab__card h3 {
- 
+    color: #fff !important;
     font-size: 1.5rem;
     color: var(--color-card-title);
     letter-spacing: 3px;
 }
 
 .tab__card p {
+    color: white;
     margin: 0;
     width: 100%;
-    color: var(--color-card-desc);
     font-size: 1.1rem;
 
 }
@@ -923,7 +923,6 @@ body {
 
     .tab__card p {
         margin: 0;
-        color: var(--color-card-desc);
         font-size: 1.2rem;
     }
 }
