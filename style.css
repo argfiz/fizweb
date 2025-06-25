@@ -484,7 +484,7 @@ padding-bottom: 15px;
 /* Responsive para móviles */
 @media (max-width: 600px) {
     .hero__image {
-        padding: 120px 20px 40px 20px;
+        padding: 0px 20px 40px 20px;
     }
 
     .hero__image h1 {
