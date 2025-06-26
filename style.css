@@ -932,14 +932,19 @@ border: 3px solid #bb0000;
 
 
 @media (max-width: 700px) {
+    
+    .tabs__body {
+        height: calc(100vh/1.5);
+    }
     .tab__card {
-        padding-right: 25px;
-        padding-left: 25px;
+        padding-right: 30px;
+        padding-left: 30px;
+        
     }
 
     .tab__card h3 {
         font-size: 1.7rem;
-        padding-top: 0px ;
+        padding-top: 25px ;
     }
 
     .tab__card p {
