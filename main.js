@@ -215,7 +215,7 @@ function renderSlides() {
       : './assets/icons/ok-icon.png';
 
     return `<li>
-  <div class="card__item-value">
+  <div class="card__item-value card__item-value--${idx + 1}">
     <img src="${icon}" alt="icon" class="card__item-icon">
     <span>${value}</span>
   </div>

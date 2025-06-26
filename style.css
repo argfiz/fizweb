@@ -669,6 +669,13 @@ border: 3px solid #bb0000;
 }
 
 
+.card__item-value--1{
+    background: #0cba00;
+}
+.card__item-value--3{
+    background: #ff0400
+}
+
 .card__price {
     text-align: center;
     padding-bottom: 30px;
