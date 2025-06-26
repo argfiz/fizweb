@@ -152,16 +152,16 @@ const sliderCardsData = [
     img: "./assets/img/pack-s.jpg",
     precio: "$200.000 ARS",
     precioNota: "Precio Final",
-    items: [
-      "1 Página",
-      "3 Secciones",
-      "10 Productos",
-      "Multidispositivos",
-      "Flotante de WhatsApp",
-      "Enlaces a redes sociales",
-      "Formulario de contacto",
-      "Instalación en servidor",
-    ]
+    items: {
+      paginas: 1,
+      secciones: 3,
+      productos: 10,
+      /*multidispositivos: true,
+      whatsapp: true,
+      redes: true,
+      formulario: true,
+      instalacion: true*/
+    }
   },
   {
     nombre: "Mediano",
@@ -169,11 +169,11 @@ const sliderCardsData = [
     img: "./assets/img/pack-m.jpg",
     precio: "$300.0000 ARS",
     precioNota: "Precio Final",
-    items: [
-      "3 Páginas",
-      "9 Secciones",
-      "25 Productos",
-    ]
+    items: {
+      paginas: 5,
+      secciones: 15,
+      productos: 50
+    }
   },
   {
     nombre: "Grande",
@@ -181,11 +181,11 @@ const sliderCardsData = [
     img: "./assets/img/pack-g.jpg",
     precio: "$400.000 ARS",
     precioNota: "Precio Final",
-    items: [
-      "5 Páginas",
-      "15 Secciones",
-      "50 Productos",
-    ]
+    items: {
+      paginas: 5,
+      secciones: 15,
+      productos: 50
+    }
   }
 ];
 
@@ -197,27 +197,34 @@ function renderSlides() {
       <div class="card card--${idx + 1}">
         <div class="card__header card__header--${idx + 1}">
             <h3 class="card__title">${card.nombre}</h3>
-            
         </div>
         <p class="card__sub card__sub--${idx + 1}">${card.subtitulo}</p>
         <div class="container-card__items">
-        <ul class="card__items card__items--${idx + 1}">
-          ${card.items.map((item, i, arr) => {
+          <ul class="card__items card__items--${idx + 1}">
+            ${Object.entries(card.items).map(([key, value], i) => {
+    // Personaliza el label si quieres mostrar "Páginas", "Secciones", etc.
+    let label = '';
+    if (key === 'paginas') label = 'Páginas';
+    else if (key === 'secciones') label = 'Secciones';
+    else if (key === 'productos') label = 'Productos';
+    else label = key.charAt(0).toUpperCase() + key.slice(1);
 
-    // Primeros 3 items de la 2da y 3ra carta: plus-icon
-    if ((idx === 1 || idx === 2) && i < 3) {
-      return `<li>
-                <img src="./assets/icons/plus-icon.png" alt="Plus" class="card__item-icon">
-                ${item}
-              </li>`;
-    }
-    // Resto: ok_icon
+    // Ícono especial para la 2da y 3ra carta en los primeros 3 items
+    let icon = ((idx === 1 || idx === 2) && i < 3)
+      ? './assets/icons/plus-icon.png'
+      : './assets/icons/ok-icon.png';
+
     return `<li>
-              <img src="./assets/icons/ok-icon.png" alt="Ok" class="card__item-icon">
-              ${item}
-            </li>`;
-  }).join('')}
-        </ul>
+                <div>
+                  <img src="${icon}" alt="icon" class="card__item-icon">
+                  <span>${value}<span> 
+                  ${label}
+                  </div>
+                  
+                </li>`;
+  }).join('')
+    }
+          </ul>
         </div>
         <div class="card__price card__price--${idx + 1}">
           <span>${card.precio}</span>
@@ -225,7 +232,7 @@ function renderSlides() {
         </div>
       </div>
     </div>
-  `).join('')
+  `).join('');
 }
 
 renderSlides();
