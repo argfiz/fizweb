@@ -539,11 +539,15 @@ body {
     flex-direction: column;
 
 }
-
+.card--1 {
+border: 3px solid #0cb600;
+ }
 .card--2 {
     background: #333;
 }
-
+ .card--3 {
+border: 3px solid #bb0000;
+ }
 .card__header {
     max-width: 310px;
     background: #fff;
@@ -564,7 +568,7 @@ body {
 }
 
 .card__header--1 {
-    border-bottom: 4px solid #006400;
+    border-bottom: 4px solid #0cb600;
     background:
         linear-gradient(rgba(0, 255, 26, 0.7)),
         /* overlay blanco semitransparente */
@@ -581,7 +585,7 @@ body {
 }
 
 .card__header--3 {
-    border-bottom: 4px solid #650000;
+    border-bottom: 3px solid #bb0000;
     background:
         linear-gradient(rgba(255, 0, 0, 0.7)),
         /* overlay blanco semitransparente */
