@@ -679,7 +679,7 @@ border: 3px solid #bb0000;
 
 .card__price small {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
     color: #616161;
     display: block;
     letter-spacing: -1px;
