@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*****************************************************************************************************/
 const sliderCardsData = [
   {
-    nombre: "Pequeño",
+    nombre: "Chico",
     subtitulo: "Oportuno para los emprendedores que inician su camino digital y quieren tener presencia en la web.",
     img: "./assets/img/pack-s.jpg",
     precio: "$200.000 ARS",
