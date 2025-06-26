@@ -153,7 +153,7 @@ const sliderCardsData = [
     precio: "$200.000 ARS",
     precioNota: "Precio Final",
     items: {
-      pagina: 1,
+      página: 1,
       secciones: 3,
       productos: 10,
       /*multidispositivos: true,

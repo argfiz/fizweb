@@ -644,6 +644,7 @@ border: 3px solid #bb0000;
     min-width: 90px; /* o el ancho que prefieras */
     margin: 0;
     padding: 0;
+    gap: 5px;
 }
 
 .card__item-value {
@@ -656,7 +657,7 @@ border: 3px solid #bb0000;
     justify-content: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.10);
     position: relative;
-    padding: 2px;
+    
 }
 
 .card__item-value span {
@@ -664,8 +665,9 @@ border: 3px solid #bb0000;
     font-weight: 700;
     color: #fff;
     z-index: 1;
-    padding: 0px;
-    margin-top: -5px;
+    padding: 0;
+    margin: 0;
+    margin-top: -2px;
 }
 
 
