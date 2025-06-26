@@ -613,11 +613,18 @@ border: 3px solid #bb0000;
 }
 .container-card__items {
     padding: 0px 30px;
+    
 }
 
 .card__items {
-    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 12px; /* espacio entre burbujas */
+    justify-content: center;
+    align-items: flex-start;
     padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .card__items--2 li {
@@ -625,26 +632,42 @@ border: 3px solid #bb0000;
 }
 
 .card__item-icon {
-    width: 18px;
-    height: 18px;
-    margin-right: 8px;
-    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
 }
 
 .card__items li {
-    background: transparent;
-    width: 100%;
-    font-size: 1.1rem;
-    color: var(--color-dark);
-    padding: 8px 0px;
-    padding-left: 6px;
-    box-sizing: border-box;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 90px; /* o el ancho que prefieras */
+    margin: 0;
+    padding: 0;
 }
 
-.card__items li:last-child {
-    border-bottom: none !important;
+.card__item-value {
+    width: 64px;
+    height: 64px;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    position: relative;
+    padding: 5px;
 }
+
+.card__item-value span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    z-index: 1;
+    padding: 0px;
+    margin-top: -5px;
+}
+
 
 .card__price {
     text-align: center;

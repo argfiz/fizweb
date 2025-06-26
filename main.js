@@ -153,7 +153,7 @@ const sliderCardsData = [
     precio: "$200.000 ARS",
     precioNota: "Precio Final",
     items: {
-      paginas: 1,
+      pagina: 1,
       secciones: 3,
       productos: 10,
       /*multidispositivos: true,
@@ -170,9 +170,9 @@ const sliderCardsData = [
     precio: "$300.0000 ARS",
     precioNota: "Precio Final",
     items: {
-      paginas: 5,
-      secciones: 15,
-      productos: 50
+      paginas: 3,
+      secciones: 9,
+      productos: 25
     }
   },
   {
@@ -215,13 +215,12 @@ function renderSlides() {
       : './assets/icons/ok-icon.png';
 
     return `<li>
-                <div>
-                  <img src="${icon}" alt="icon" class="card__item-icon">
-                  <span>${value}<span> 
-                  ${label}
-                  </div>
-                  
-                </li>`;
+  <div class="card__item-value">
+    <img src="${icon}" alt="icon" class="card__item-icon">
+    <span>${value}</span>
+  </div>
+  <span>${label}</span>
+</li>`;
   }).join('')
     }
           </ul>
