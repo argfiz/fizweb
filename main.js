@@ -209,14 +209,8 @@ function renderSlides() {
     else if (key === 'productos') label = 'Productos';
     else label = key.charAt(0).toUpperCase() + key.slice(1);
 
-    // Ícono especial para la 2da y 3ra carta en los primeros 3 items
-    let icon = ((idx === 1 || idx === 2) && i < 3)
-      ? './assets/icons/plus-icon.png'
-      : './assets/icons/ok-icon.png';
-
     return `<li>
   <div class="card__item-value card__item-value--${idx + 1}">
-    <img src="${icon}" alt="icon" class="card__item-icon">
     <span>${value}</span>
   </div>
   <span>${label}</span>
