@@ -966,7 +966,7 @@ border: 3px solid #bb0000;
    =======================================================================================================*/
 :root {
     /* Footer básico reutilizable */
-    --footer-bg: var(--color-dark);
+    --footer-bg: var(--color-dark-2);
     --footer-text: #fff;
     --footer-link-hover: var(--color-secondary);
     --footer-copy: #bbb;
