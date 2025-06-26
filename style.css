@@ -967,7 +967,8 @@ border: 3px solid #bb0000;
         padding-bottom: 40px;
     }
 }
-@media (min-width: 1000px) {
+@media (min-width: 701px) and (max-width: 1000px) {
+
     .tabs__body {
         height: 400px;
     }
