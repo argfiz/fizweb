@@ -1079,7 +1079,7 @@ footer {
 
 /* Contenedor principal */
 .faq__section {
-    background: var(--color-dark);
+    background: url('./assets/img/bg-faq.svg') center center/cover no-repeat;
     padding-top: 30px;
     padding-bottom: 80px;
     font-family: var(--font-main);
