@@ -794,7 +794,7 @@ border: 3px solid #bb0000;
     align-items: stretch;
     width: 100%;
     padding: 0px;
-    height: 400px;
+    height: 500px;
 
 }
 
@@ -806,7 +806,7 @@ border: 3px solid #bb0000;
     border-radius: var(--radius-card);
     margin: 0 auto 0 auto;
     width: 100%;
-    height: 100%;
+    height: 500px;
     position: relative;
     display: flex;
     flex-direction: column;
