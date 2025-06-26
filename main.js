@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const sliderCardsData = [
   {
     nombre: "Pequeño",
-    subtitulo: "Oportuno para los emprendedores que inician su camino digital y quieren tener presencia en la web",
+    subtitulo: "Oportuno para los emprendedores que inician su camino digital y quieren tener presencia en la web.",
     img: "./assets/img/pack-s.jpg",
     precio: "$200.000 ARS",
     precioNota: "Precio Final",
@@ -165,7 +165,7 @@ const sliderCardsData = [
   },
   {
     nombre: "Mediano",
-    subtitulo: "Pack ideal para los indecisos y emprendedores en crecimiento que buscan una web más completa",
+    subtitulo: "Pack ideal para los indecisos y emprendedores en crecimiento que buscan una web más completa.",
     img: "./assets/img/pack-m.jpg",
     precio: "$300.0000 ARS",
     precioNota: "Precio Final",
@@ -177,7 +177,7 @@ const sliderCardsData = [
   },
   {
     nombre: "Grande",
-    subtitulo: "Perfecto para tu negocio y para quienes buscan una web completa y profesional",
+    subtitulo: "Perfecto para tu negocio y para quienes buscan una web completa y profesional con todo lo necesario.",
     img: "./assets/img/pack-g.jpg",
     precio: "$400.000 ARS",
     precioNota: "Precio Final",
