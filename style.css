@@ -945,9 +945,11 @@ border: 3px solid #bb0000;
     .tabs__body {
         height: calc(100vh/1.5);
     }
+
     .tab__card {
         padding-right: 30px;
         padding-left: 30px;
+        height: calc(100vh/1.5);
         
     }
 
