@@ -144,6 +144,7 @@ body {
 /* Oculta el logo grande del menú lateral en escritorio */
 .logo-nav__menu {
     display: none;
+    
 }
 
 /* ====== NAV LINKS ====== */
@@ -317,17 +318,19 @@ body {
     }
 
     .logo-nav__menu {
+        
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.50);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.80);
     }
 
     .logo-nav__menu img {
+        
         width: 120px;
         /* Más grande que el logo normal */
         height: 120px;
-        border-radius: 0px;
+        border-radius: 5px;
         object-fit: cover;
     }
 
