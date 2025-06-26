@@ -572,7 +572,7 @@ border: 3px solid #bb0000;
 .card__header--1 {
     border-bottom: 4px solid #0cb600;
     background:
-        linear-gradient(rgba(0, 255, 26, 0.7)),
+        linear-gradient(rgba(0, 255, 26, 0.5)),
         /* overlay blanco semitransparente */
         url('./assets/img/pack-s.jpg') center center/cover no-repeat, #fff;
 }
@@ -580,7 +580,7 @@ border: 3px solid #bb0000;
 .card__header--2 {
     border-bottom: 4px solid #d82869;
     background:
-        linear-gradient(rgba(40, 94, 210, 0.7)),
+        linear-gradient(rgba(40, 94, 210, 0.5)),
         /* overlay blanco semitransparente */
         url('./assets/img/pack-m.jpg') center center/cover no-repeat, #fff;
 
@@ -589,7 +589,7 @@ border: 3px solid #bb0000;
 .card__header--3 {
     border-bottom: 3px solid #bb0000;
     background:
-        linear-gradient(rgba(255, 0, 0, 0.7)),
+        linear-gradient(rgba(255, 0, 0, 0.6)),
         /* overlay blanco semitransparente */
         url('./assets/img/pack-g.jpg') center center/cover no-repeat, #fff;
 }
@@ -603,14 +603,16 @@ border: 3px solid #bb0000;
 .card__sub {
     font-size: 1.2rem;
     font-weight: 500;
-    color: #fff;
-    padding-top: 0px;
+    padding: 25px;
+    padding-bottom: 0px;
     margin: 0;
-    line-height: 20px;
+    line-height: 22px;
 }
-
+.card__sub--2 {
+    color: #fff;
+}
 .container-card__items {
-    padding: 20px 30px;
+    padding: 0px 30px;
 }
 
 .card__items {
@@ -646,7 +648,7 @@ border: 3px solid #bb0000;
 
 .card__price {
     text-align: center;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     width: 100%;
 }
 

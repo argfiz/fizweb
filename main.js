@@ -173,11 +173,6 @@ const sliderCardsData = [
       "3 Páginas",
       "9 Secciones",
       "25 Productos",
-      "Multidispositivos",
-      "Flotante de WhatsApp",
-      "Enlaces a redes sociales",
-      "Formulario de contacto",
-      "Instalación en servidor",
     ]
   },
   {
@@ -190,11 +185,6 @@ const sliderCardsData = [
       "5 Páginas",
       "15 Secciones",
       "50 Productos",
-      "Multidispositivos",
-      "Flotante de WhatsApp",
-      "Enlaces a redes sociales",
-      "Formulario de contacto",
-      "Instalación en servidor",
     ]
   }
 ];
@@ -207,8 +197,9 @@ function renderSlides() {
       <div class="card card--${idx + 1}">
         <div class="card__header card__header--${idx + 1}">
             <h3 class="card__title">${card.nombre}</h3>
-            <p class="card__sub">${card.subtitulo}</p>
+            
         </div>
+        <p class="card__sub card__sub--${idx + 1}">${card.subtitulo}</p>
         <div class="container-card__items">
         <ul class="card__items card__items--${idx + 1}">
           ${card.items.map((item, i, arr) => {
