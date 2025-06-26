@@ -534,11 +534,11 @@ body {
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow:
+    /*box-shadow:
         0 5px 4px 0 rgba(0, 0, 0, 0.12),
-        /* Sombra negra muy suave */
+        /* Sombra negra muy suave 
         0 2px 15px 0 rgba(0, 0, 0, 0.20),
-        /* Sombra negra difusa */
+        /* Sombra negra difusa 
         0 1px 3px 0 rgba(0, 0, 0, 0.08);
     /* Sombra de realce */
     display: flex;
@@ -672,6 +672,7 @@ border: 3px solid #bb0000;
     margin: 0;
     display: inline-block;
     padding-bottom: 2px;
+    line-height: 1;
 }
 
 .card__item-value--1{
