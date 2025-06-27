@@ -714,10 +714,11 @@ body {
     color: #ffffff;
     display: block;
     letter-spacing: -1px;
+    margin-top: -8px;
 }
 .card__price-info{
-    padding: 8px 0;
-    padding-bottom: 20px;
+    padding: 25px 0;
+    
     
 }
 .card__price img{
