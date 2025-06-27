@@ -718,13 +718,22 @@ body {
 }
 .card__price-info{
     padding: 25px 0;
-    
+}
+.card__price-info-icon{
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.7);
+    width: 42px;
+    height: 42px;
+    background: var(--color-dark);
+    border-radius: 50%;
+    margin: 0 auto;
     
 }
 .card__price img{
+   
     height: 42px;
     width: 42px;
     filter: brightness(0) invert(1);
+    
 }
 
 .swiper-pagination {

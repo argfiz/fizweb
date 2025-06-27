@@ -244,8 +244,10 @@ function renderSlides() {
           <span>${card.precio}</span>
           <small>${card.precioNota}</small>
           <div class="card__price-info">
-            <img src="${card.precioNotaInfo || './assets/icons/info-icon.svg'}" alt="Info Icon">
+            <div class="card__price-info-icon">
+              <img src="${card.precioNotaInfo || './assets/icons/info-icon.svg'}" alt="Info Icon">
           </div>
+              </div>
         </div>
       </div>
     </div>
