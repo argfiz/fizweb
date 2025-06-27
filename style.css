@@ -536,17 +536,17 @@ body {
 
 .card--1 {
     border: 2px solid #11ff00;
-    background: #333;
+    background: #444;
 }
 
 .card--2 {
     border: 2px solid #000dff;
-    background: #333;
+    background: #444;
 }
 
 .card--3 {
     border: 2px solid #ff0000;
-    background: #333;
+    background: #444;
 }
 
 .card__header {
@@ -685,11 +685,6 @@ body {
     text-align: center;
     padding-bottom: 30px;
     width: 100%;
-}
-
-.card__price--2 {
-    background: #333;
-    color: #fff;
 }
 
 .card__price span {

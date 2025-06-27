@@ -189,6 +189,7 @@ const sliderCardsData = [
     img: "./assets/img/pack-m.jpg",
     precio: "$300.000",
     precioNota: "Precio Final",
+    precioNotaInfo: "./assets/icons/info-icon.jpg",
     items: {
       paginas: 3,
       secciones: 9,
