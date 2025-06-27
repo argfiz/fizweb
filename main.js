@@ -170,7 +170,7 @@ const sliderCardsData = [
     nombre: "Inicial",
     subtitulo: "Oportuno para los emprendedores que inician su camino digital y quieren tener presencia en la web.",
     img: "./assets/img/pack-s.jpg",
-    precio: "$200.000 ARS",
+    precio: "$200.000",
     precioNota: "Precio Final",
     items: {
       página: 1,
@@ -187,7 +187,7 @@ const sliderCardsData = [
     nombre: "Mediano",
     subtitulo: "Pack ideal para los indecisos y emprendedores en crecimiento que buscan una web más completa.",
     img: "./assets/img/pack-m.jpg",
-    precio: "$300.0000 ARS",
+    precio: "$300.000",
     precioNota: "Precio Final",
     items: {
       paginas: 3,
@@ -199,7 +199,7 @@ const sliderCardsData = [
     nombre: "Full",
     subtitulo: "Perfecto para tu negocio y para quienes buscan una web completa y profesional con todo lo necesario.",
     img: "./assets/img/pack-g.jpg",
-    precio: "$400.000 ARS",
+    precio: "$400.000",
     precioNota: "Precio Final",
     items: {
       paginas: 5,

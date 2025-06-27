@@ -693,9 +693,10 @@ body {
 }
 
 .card__price span {
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 600;
     display: block;
+    
 }
 
 .card__price--1 span {
@@ -871,7 +872,7 @@ body {
     color: white;
     margin: 0;
     width: 100%;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 
 }
 
@@ -1022,6 +1023,11 @@ body {
     .tab__card {
         height: 400px;
 
+    }
+}
+@media (min-width: 1001px) {
+    .tab__card p{
+        font-size: 1.8rem;
     }
 }
 
