@@ -318,14 +318,14 @@ const servicesData = [
     key: "hosting",
     icon: "./assets/icons/hosting-icon.svg",
     title: "Hosting",
-    desc: "Ofrecemos instalación y alojamiento web en servidores como parte del servicio, garantizando alto rendimiento y estabilidad asegurando su funcionamiento.",
+    desc: "Ofrecemos como parte del servicio la instalación y puesta en marcha del sitio web asegurando su funcionamiento.",
     bg: "./assets/img/google-banner.jpg"
   },
   {
     key: "mantenimiento",
     icon: "./assets/icons/setting-icon.svg",
     title: "Mantenimiento",
-    desc: "Mientras estemos a cargo del Hosting nos encargamos de su funcionamiento, realizamos copias de seguridad para proteger tu sitio ante cualquier problema y evitar pérdida de datos.",
+    desc: "Si lo deseas estaremos a cargo del funcionamiento y mantenimiento del hosting, abonando una tarifa mensual para poder seguir estando en linea.",
     bg: "./assets/img/google-banner.jpg"
   }
 ];
