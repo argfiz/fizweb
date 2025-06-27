@@ -1140,9 +1140,9 @@ footer {
     background: url('./assets/img/bg-faq.svg') center center/cover no-repeat;
 
     font-family: var(--font-main);
-    padding-bottom: 100px;
+    padding-bottom: 0px;
     margin-bottom: 0px;
-    margin-bottom: 0px;
+    height: 100%;
 }
 
 #faqSection .section__title {
