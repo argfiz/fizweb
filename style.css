@@ -665,18 +665,18 @@ body {
     padding: 0;
     margin: 0;
     display: inline-block;
-    padding-bottom: 2px;
+    padding-bottom: 1px;
     line-height: 1;
 }
 
 .card__item-value--1 {
-    background: #0cba00;
+    background: #0dc400;
 }
 .card__item-value--2 {
-    background: #0000ff
+    background: #0000d1
 }
 .card__item-value--3 {
-    background: #ff0400
+    background: #d20300
 }
 
 .card__price {
@@ -697,17 +697,17 @@ body {
 }
 
 .card__price--1 span {
-    color: #09ff00;
+    color: #5bff56;
 }
 
 .card__price--2 span {
-    color: #0073ff;
+    color: #3590ff;
 }
 
 
 
 .card__price--3 span {
-    color: #ff0000;
+    color: #ff4545;
 }
 
 .card__price small {
