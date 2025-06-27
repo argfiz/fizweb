@@ -59,6 +59,7 @@ window.addEventListener('scroll', () => {
 /******************************************GALLERY SWIPE LOAD**********************************/
 /******************************************SECTION TITLE LOAD**********************************/
 /******************************************TABS OOPTION LOAD**********************************/
+/*******************************************WHATSAPP LOAD*****************************************/
 document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('.hero__image');
   if (hero) {
@@ -138,6 +139,12 @@ document.addEventListener('DOMContentLoaded', () => {
       contactForm.classList.add('visible');
     }, 450); // Aparece después, más suave
   }
+
+// Animación de carga del botón de WhatsApp
+setTimeout(() => {
+    const wa = document.querySelector('.whatsapp-float');
+    if (wa) wa.classList.add('show');
+  }, 700); // Espera 1 segundo antes de mostrar y animar
 
 });
 
