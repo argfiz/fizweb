@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         obs.unobserve(entry.target); // Solo animar una vez
       }
     });
-  }, { threshold: 0.15 }); // Ajusta el threshold si quieres
+  }, { threshold: 0.10 }); // Ajusta el threshold si quieres
 
   const swiperEl = document.querySelector('.swiper');
   if (swiperEl) {
