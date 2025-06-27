@@ -536,17 +536,17 @@ body {
 
 .card--1 {
     border: 2px solid #11ff00;
-    background: #444;
+    background: #333;
 }
 
 .card--2 {
     border: 2px solid #000dff;
-    background: #444;
+    background: #333;
 }
 
 .card--3 {
     border: 2px solid #ff0000;
-    background: #444;
+    background: #333;
 }
 
 .card__header {
