@@ -610,7 +610,8 @@ body {
 }
 
 .container-card__items {
-    padding: 30px;
+    padding: 1px;
+    padding-top: 30px;
     padding-bottom: 17px;
 
 }
@@ -636,14 +637,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 90px;
+    min-width: 80px;
     /* o el ancho que prefieras */
     margin: 0;
     padding: 0;
-    gap: 5px;
+    gap: 3px;
 }
-
-
 
 .card__item-value {
     width: 64px;
