@@ -569,7 +569,7 @@ body {
 }
 
 .card__header--1 {
-    border-bottom: 2px solid #00ff00;
+    border-bottom: 2px solid #00d200;
     background:
         linear-gradient(rgba(0, 255, 26, 0.4)),
         /* overlay blanco semitransparente */
@@ -696,7 +696,7 @@ body {
 }
 
 .card__price--1 span {
-    color: #47ff40;
+    color: #39ce34;
 }
 
 .card__price--2 span {
@@ -718,9 +718,9 @@ body {
 }
 
 .card__price img{
-    padding-top: 5px;
-    height: 28px;
-    width: 28px;
+    padding-top: 8px;
+    height: 42px;
+    width: 42px;
     filter: brightness(0) invert(1);
 }
 
