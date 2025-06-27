@@ -780,6 +780,9 @@ body {
 }
 
 @media (max-width: 500px) {
+    .card__sub {
+        font-weight: 400;
+    }
     .card__header p {
         font-size: 1.2rem;
         font-weight: 400;
@@ -1017,7 +1020,7 @@ body {
     }
 
     .tab__card p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .option__tabs {
