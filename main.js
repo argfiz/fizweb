@@ -73,12 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       divider.classList.add('visible');
     }, 125);
   }
-  const swiper = document.querySelector('.swiper');
-  if (swiper) {
-    setTimeout(() => {
-      swiper.classList.add('visible');
-    }, 250); // Pequeño delay para suavidad
-  }
+
   // Animación de carga solo cuando .section__title entra en pantalla
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
@@ -94,6 +89,24 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.section__title').forEach(title => {
     observer.observe(title);
   });
+
+
+  // Animación de entrada solo cuando Swiper entra en pantalla
+  const swiperObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target); // Solo animar una vez
+      }
+    });
+  }, { threshold: 0.15 }); // Ajusta el threshold si quieres
+
+  const swiperEl = document.querySelector('.swiper');
+  if (swiperEl) {
+    swiperObserver.observe(swiperEl);
+  }
+
+
   // Animación de carga solo cuando .tabs__container entra en pantalla
   const tabsObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
@@ -140,8 +153,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 450); // Aparece después, más suave
   }
 
-// Animación de carga del botón de WhatsApp
-setTimeout(() => {
+  // Animación de carga del botón de WhatsApp
+  setTimeout(() => {
     const wa = document.querySelector('.whatsapp-float');
     if (wa) wa.classList.add('show');
   }, 700); // Espera 1 segundo antes de mostrar y animar
