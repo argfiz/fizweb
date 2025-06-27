@@ -196,7 +196,7 @@ const sliderCardsData = [
     }
   },
   {
-    nombre: "Grande",
+    nombre: "Full",
     subtitulo: "Perfecto para tu negocio y para quienes buscan una web completa y profesional con todo lo necesario.",
     img: "./assets/img/pack-g.jpg",
     precio: "$400.000 ARS",
