@@ -641,7 +641,7 @@ body {
     /* o el ancho que prefieras */
     margin: 0;
     padding: 0;
-    gap: 3px;
+    gap: 6px;
 }
 
 .card__item-value {
