@@ -619,7 +619,7 @@ body {
 .card__items {
     display: flex;
     flex-wrap: wrap;
-    gap: 18px 12px;
+    gap: 8px;
     /* espacio entre burbujas */
     justify-content: center;
     align-items: flex-start;
