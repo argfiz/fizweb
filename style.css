@@ -647,13 +647,12 @@ body {
 .card__item-value {
     width: 64px;
     height: 64px;
-    background: var(--color-secondary);
     border-radius: 50%;
     border: solid 1px #cacaca;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.6);
     position: relative;
 
 }
