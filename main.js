@@ -189,7 +189,7 @@ const sliderCardsData = [
     img: "./assets/img/pack-m.jpg",
     precio: "$300.000",
     precioNota: "Precio Final",
-    precioNotaInfo: "./assets/icons/info-icon.jpg",
+    precioNotaInfo: "./assets/icons/info-icon.svg",
     items: {
       paginas: 3,
       secciones: 9,
@@ -199,7 +199,7 @@ const sliderCardsData = [
   {
     nombre: "Full",
     subtitulo: "Perfecto para tu negocio y para quienes buscan una web completa y profesional con todo lo necesario.",
-    img: "./assets/img/pack-g.jpg",
+    img: "./assets/img/pack-g.svg",
     precio: "$400.000",
     precioNota: "Precio Final",
     items: {
@@ -242,7 +242,7 @@ function renderSlides() {
         </div>
         <div class="card__price card__price--${idx + 1}">
           <span>${card.precio}</span>
-          <small>${card.precioNota}</small>
+          <small>${card.precioNota}</small><img src="${card.precioNotaInfo || './assets/icons/info-icon.svg'}" alt="Info Icon">
         </div>
       </div>
     </div>

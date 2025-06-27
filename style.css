@@ -683,7 +683,7 @@ body {
 
 .card__price {
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
     width: 100%;
 }
 
@@ -714,6 +714,13 @@ body {
     color: #ffffff;
     display: block;
     letter-spacing: -1px;
+}
+
+.card__price img{
+    padding-top: 5px;
+    height: 28px;
+    width: 28px;
+    filter: brightness(0) invert(1);
 }
 
 .swiper-pagination {
