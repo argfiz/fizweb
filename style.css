@@ -670,15 +670,15 @@ body {
 }
 
 .card__item-value--1 {
-    background: #0dc400;
+    background: #0ba300;
 }
 
 .card__item-value--2 {
-    background: #0000d1
+    background: #0000ae
 }
 
 .card__item-value--3 {
-    background: #d20300
+    background: #c50300
 }
 
 .card__price {
@@ -688,24 +688,24 @@ body {
 }
 
 .card__price span {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     font-weight: 600;
     display: block;
     
 }
 
 .card__price--1 span {
-    color: #5bff56;
+    color: #47ff40;
 }
 
 .card__price--2 span {
-    color: #3590ff;
+    color: #2857ff;
 }
 
 
 
 .card__price--3 span {
-    color: #ff4545;
+    color: #ff1f1f;
 }
 
 .card__price small {
