@@ -535,17 +535,17 @@ body {
 }
 
 .card--1 {
-    border: 3px solid #11ff00;
+    border: 2px solid #11ff00;
     background: #333;
 }
 
 .card--2 {
-    border: 3px solid #000dff;
+    border: 2px solid #000dff;
     background: #333;
 }
 
 .card--3 {
-    border: 3px solid #ff0000;
+    border: 2px solid #ff0000;
     background: #333;
 }
 
@@ -569,7 +569,7 @@ body {
 }
 
 .card__header--1 {
-    border-bottom: 3px solid #00ff00;
+    border-bottom: 2px solid #00ff00;
     background:
         linear-gradient(rgba(0, 255, 26, 0.4)),
         /* overlay blanco semitransparente */
@@ -577,7 +577,7 @@ body {
 }
 
 .card__header--2 {
-    border-bottom: 3px solid #001eff;
+    border-bottom: 2px solid #001eff;
     background:
         linear-gradient(rgba(40, 94, 210, 0.4)),
         /* overlay blanco semitransparente */
@@ -586,7 +586,7 @@ body {
 }
 
 .card__header--3 {
-    border-bottom: 3px solid #ff0000;
+    border-bottom: 2px solid #ff0000;
     background:
         linear-gradient(rgba(255, 0, 0, 0.4)),
         /* overlay blanco semitransparente */
