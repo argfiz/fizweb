@@ -521,7 +521,7 @@ body {
 .card {
     
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 110px;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -747,7 +747,7 @@ body {
 
 .card__price-info.open {
     z-index: 30;
-    background: rgba(10,10,10,0.92);
+    background: rgba(20, 20, 20, 0.62);
     box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px); /* Para Safari */
@@ -782,6 +782,7 @@ body {
     font-size: 1.2rem;
     line-height: 1.2;
     width: 100%;
+    text-align: center;
 }
 
 .card__price-info-icon {
