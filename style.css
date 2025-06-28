@@ -801,6 +801,15 @@ body {
     pointer-events: auto;
     position: static; /* NO absolute */
     order: 2; /* Siempre al final del flex */
+    -webkit-tap-highlight-color: transparent;
+}
+
+.card__price-info-icon:focus,
+.card__price-info-icon:active {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent;
+    background: transparent;
 }
 .card__price-info.open .card__price-info-icon {
     box-shadow: 0 0px 18px 2px rgba(0, 0, 0, 0.2);
@@ -809,6 +818,9 @@ body {
     display: block;
 }
 .card__price-info-icon img {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent;
     filter: brightness(0) invert(1);
 }
 
