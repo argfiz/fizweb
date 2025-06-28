@@ -246,20 +246,21 @@ function renderSlides() {
           
         </div>
         <div class="card__price-info">
-            <div class="card__price-info-text">
-              <p>Multidispositivo</p><br>
-              <p>Formulario de contacto</p><br>
-              <p>Botón WhatsApp flotante</p><br>
-              <p>Conexion a Redes Sociales</p><br>
-              <p>Instalacion en servidor</p><br>
-              <p>No incluye dominio ni hosting. Ver abajo si necesitás de este servicio.</p>
-            </div>
-            <div class="card__price-info-icon">
-              <img src="${card.precioNotaInfo || './assets/icons/info-icon.svg'}" alt="Info Icon">
+          <div class="card__price-info-text">
+            <ul>
+              <li><p>Multidispositivo</p></li>
+              <li><p>Formulario de contacto</p></li>
+              <li><p>Botón WhatsApp flotante</p></li>
+              <li><p>Conexion a Redes Sociales</p></li>
+              <li><p>Instalacion en servidor</p></li>
+              <li><p>No incluye dominio ni hosting. Ver abajo si necesitás de este servicio.</p></li>
+            </ul>
+          </div>
+          <div class="card__price-info-icon">
+            <img src="${card.precioNotaInfo || './assets/icons/info-icon.svg'}" alt="Info Icon">
             </div>
           </div>
-
-      </div>
+        </div>
     </div>
   `).join('');
 }
