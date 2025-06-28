@@ -246,6 +246,9 @@ function renderSlides() {
           
         </div>
         <div class="card__price-info">
+            <div class="card__price-info-text">
+              <p>No incluye dominio ni hosting (consultanos si necesitás cotizarlos aparte).</p>
+            </div>
             <div class="card__price-info-icon">
               <img src="${card.precioNotaInfo || './assets/icons/info-icon.svg'}" alt="Info Icon">
             </div>
