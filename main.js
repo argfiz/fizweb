@@ -259,7 +259,35 @@ function renderSlides() {
   `).join('');
 }
 
+
+
+function addPriceInfoListeners() {
+  document.querySelectorAll('.card__price-info-icon').forEach(iconDiv => {
+    iconDiv.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const priceInfo = iconDiv.closest('.card__price-info');
+      const card = iconDiv.closest('.card');
+      const header = card.querySelector('.card__header');
+      const priceInfoRect = priceInfo.getBoundingClientRect();
+      const headerRect = header.getBoundingClientRect();
+      // Calcula la altura desde el icono hasta el pie de card__header
+      const height = Math.max(120, Math.round(priceInfoRect.bottom - headerRect.bottom));
+      if (priceInfo.classList.contains('open')) {
+        priceInfo.classList.remove('open');
+        priceInfo.style.setProperty('--info-panel-height', `56px`);
+      } else {
+        priceInfo.classList.add('open');
+        priceInfo.style.setProperty('--info-panel-height', `${height}px`);
+      }
+    });
+  });
+}
+
 renderSlides();
+addPriceInfoListeners();
+
+
+
 
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
