@@ -749,7 +749,9 @@ body {
     z-index: 30;
     background: rgba(10,10,10,0.92);
     box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45);
-    filter: blur(0.5px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px); /* Para Safari */
+    filter: none; /* Quita el blur general */
     height: var(--info-panel-height, 120px);
     pointer-events: auto;
 }
@@ -765,7 +767,6 @@ body {
     width: 100%;
     position: static; /* NO absolute */
     order: 1; /* Antes del icono */
-    text-align: center;
     
     
 }
@@ -778,11 +779,9 @@ body {
 
 .card__price-info-text p {
      margin: 0;
-    font-size: 1.3rem;
-    line-height: 1.3;
+    font-size: 1.2rem;
+    line-height: 1.2;
     width: 100%;
-    justify-content: center;
-    align-items: center;
 }
 
 .card__price-info-icon {
@@ -804,7 +803,7 @@ body {
     order: 2; /* Siempre al final del flex */
 }
 .card__price-info.open .card__price-info-icon {
-    box-shadow: 0 0px 18px 2px #fff2;
+    box-shadow: 0 0px 18px 2px rgba(0, 0, 0, 0.2);
 }
 .info-icon {
     display: block;
