@@ -519,19 +519,15 @@ body {
 
 
 .card {
-    
     position: relative;
     padding-bottom: 110px;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
-    /*box-shadow:
+    box-shadow:
         0 5px 4px 0 rgba(0, 0, 0, 0.12),
-        /* Sombra negra muy suave 
         0 2px 15px 0 rgba(0, 0, 0, 0.20),
-        /* Sombra negra difusa 
         0 1px 3px 0 rgba(0, 0, 0, 0.08);
-    /* Sombra de realce */
     display: flex;
     flex-direction: column;
 }
@@ -671,15 +667,15 @@ body {
 }
 
 .card__item-value--1 {
-    background: #0ba300;
+    background: #087900;
 }
 
 .card__item-value--2 {
-    background: #0000ae
+    background: #0017a9
 }
 
 .card__item-value--3 {
-    background: #c50300
+    background: #b40300
 }
 
 .card__price {
@@ -695,17 +691,17 @@ body {
 }
 
 .card__price--1 span {
-    color: #39ce34;
+    color: #00c30d;
 }
 
 .card__price--2 span {
-    color: #2857ff;
+    color: #2e5bff;
 }
 
 
 
 .card__price--3 span {
-    color: #ff1f1f;
+    color: #ff2828;
 }
 
 .card__price small {
@@ -797,7 +793,7 @@ body {
     justify-content: center;
     z-index: 2;
     cursor: pointer;
-    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.8);
     transition: box-shadow 0.2s;
     pointer-events: auto;
     position: static; /* NO absolute */
@@ -1259,11 +1255,17 @@ footer {
 /* Contenedor principal */
 .faq__section {
     background: url('./assets/img/bg-faq.svg') center center/cover no-repeat;
-
+    /*Tecnica para Fijar el background en la ventana, no en el contenedor*/
+    /*el fondo no se mueve aunque cambie el alto del contenedor*/
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: var(--font-main);
     padding-bottom: 0px;
     margin-bottom: 0px;
     height: 100%;
+    
 }
 
 #faqSection .section__title {
