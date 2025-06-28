@@ -243,12 +243,14 @@ function renderSlides() {
         <div class="card__price card__price--${idx + 1}">
           <span>${card.precio}</span>
           <small>${card.precioNota}</small>
-          <div class="card__price-info">
+          
+        </div>
+        <div class="card__price-info">
             <div class="card__price-info-icon">
               <img src="${card.precioNotaInfo || './assets/icons/info-icon.svg'}" alt="Info Icon">
+            </div>
           </div>
-              </div>
-        </div>
+
       </div>
     </div>
   `).join('');
