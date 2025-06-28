@@ -714,25 +714,37 @@ body {
     letter-spacing: -1px;
     margin-top: -8px;
 }
+
+
+
+
+
+
+
 .card__price-info{
     padding: 25px 0;
 }
 .card__price-info-icon{
     box-shadow: 0 0px 12px rgba(0, 0, 0, 0.7);
-    width: 42px;
-    height: 42px;
-    background: var(--color-dark);
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     margin: 0 auto;
     
 }
-.card__price-info img{
-   
-    height: 42px;
-    width: 42px;
+.card__price-info-icon img{
     filter: brightness(0) invert(1);
+    display: block;
     
 }
+
+
+
+
+
+
+
+
 
 .swiper-pagination {
     position: absolute;
