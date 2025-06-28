@@ -253,7 +253,7 @@ function renderSlides() {
               <li><p>Botón WhatsApp flotante</p></li>
               <li><p>Conexion a Redes Sociales</p></li>
               <li><p>Instalacion en servidor</p></li>
-              <li><p>No incluye dominio ni hosting. Ver abajo si necesitás de este servicio.</p></li>
+              <li><p>No incluye dominio ni hosting. Ver mas abajo.</p></li>
             </ul>
           </div>
           <div class="card__price-info-icon">
