@@ -726,8 +726,6 @@ body {
 .card__price-info{
    
     position: absolute;
-    left: 0;
-    right: 0;
     bottom: 0;
     z-index: 1;
     width: 100%;
@@ -785,8 +783,8 @@ body {
 
 .card__price-info-icon {
     border-style: none;
-    width: 48px;
-    height: 48px;
+    width:60px;
+    height: 60px;
     background: var(--color-dark);
     border-radius: 50%;
     margin: 0 auto 25px auto;
