@@ -789,7 +789,7 @@ body {
     color: #fff;
     font-weight: 400;
     position: relative;
-    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.27);
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.4);
     transition: background 0.2s, box-shadow 0.2s;
     min-width: 220px;
     max-width: 100%;
@@ -805,7 +805,7 @@ body {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #ff3791 60%, #7209b7 100%);
+    background: var(--color-secondary);
     display: inline-block;
 }
 .card__price-info-text li:last-child {
@@ -814,10 +814,9 @@ body {
     font-weight: 600;
     font-size: 1rem;
     border-left: 3px solid #ff3791;
-    padding-left: 38px;
 }
 .card__price-info-text li:last-child::before {
-    background: linear-gradient(135deg, #ff3791 60%, #fff 100%);
+    background: var(--color-secondary);
    
 }
 .card__price-info-text p {
