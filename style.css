@@ -733,8 +733,7 @@ body {
     transition:
         background 0.35s cubic-bezier(.4,0,.2,1),
         box-shadow 0.35s cubic-bezier(.4,0,.2,1),
-        filter 0.35s cubic-bezier(.4,0,.2,1),
-        height 0.45s cubic-bezier(.4,0,.2,1);
+        filter 0.35s cubic-bezier(.4,0,.2,1);
     display: flex;
     flex-direction: column;
     align-items: stretch;
