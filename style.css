@@ -809,8 +809,8 @@ body {
     display: inline-block;
 }
 .card__price-info-text li:last-child {
-    background: rgba(255, 55, 145, 0.13);
-    color: #ff3791;
+    background: rgba(255, 55, 145, 0.33);
+    
     font-weight: 600;
     font-size: 1rem;
     border-left: 3px solid #ff3791;
