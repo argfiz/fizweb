@@ -248,11 +248,11 @@ function renderSlides() {
         <div class="card__price-info">
           <div class="card__price-info-text">
             <ul>
-              <li><p>Multidispositivo</p></li>
+              <li><p>Multidispositivos</p></li>
               <li><p>Botón WhatsApp flotante</p></li>
               <li><p>Conexion a Redes Sociales</p></li>
               <li><p>Instalacion en servidor</p></li>
-              <li><p>No incluye dominio ni hosting.</p></li>
+              <li><p>No incluye dominio ni hosting</p></li>
             </ul>
           </div>
           <div class="card__price-info-icon">
