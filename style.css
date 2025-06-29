@@ -1484,19 +1484,22 @@ footer {
    =================================CONTACT TEMPLATE==========================================================
    =======================================================================================================*/
 html {
-    background-color: var(--color-dark);
+    background-color: var(--color-dark-3);
 }
 
 body {
     margin: 0;
     padding: 0;
-    color: #222;
+    
 
 }
 
 #contact {
-    background: var(--color-dark);
-
+    background: url('./assets/img/bg-welcome.svg') center center/cover no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #contact .section__title {
@@ -1513,7 +1516,6 @@ body {
     margin: 68px auto;
     margin-bottom: 0px;
     background: #f3f3f3;
-    border-radius: 3px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     padding: 32px;
     padding-top: 0px;
@@ -1578,7 +1580,8 @@ body {
 .contact__text h3 {
     margin: 0 0 4px 0;
     font-size: 1.4em;
-    color: #666;
+    color: #555;
+    letter-spacing: 1px;
 }
 
 .contact__text p {
@@ -1622,7 +1625,7 @@ body {
 .form__group label {
     margin-bottom: 6px;
     font-size: 1.1rem;
-    color: #444;
+    color: var(--color-dark);
 }
 
 .form__group input,
