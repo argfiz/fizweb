@@ -785,7 +785,7 @@ body {
 }
 .card__price-info-text li {
     background: rgba(255,255,255,0.08);
-    border-radius: 12px;
+    border-radius: 12px 0px 0px 12px;
     padding: 10px 18px 12px 38px;
     color: #fff;
     font-weight: 400;
