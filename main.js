@@ -243,11 +243,18 @@ function renderSlides() {
         <div class="card__price card__price--${idx + 1}">
           <span>${card.precio}</span>
           <small>${card.precioNota}</small>
-          
         </div>
-        <div class="card__price-info">
+
+          <div class="card__price-info">
             <div class="card__price-info-text">
-              <p>No incluye dominio ni hosting (consultanos si necesitás cotizarlos aparte).</p>
+              <ul>
+                <li>Multidispositivo</li>
+                <li>Formulario de contacto</li>
+                <li>Botón WhatsApp flotante</li>
+                <li>Conexion a Redes Sociales</li>
+                <li>Instalacion en servidor</li>
+                <li>No incluye dominio ni hosting. Ver abajo si necesitás de este servicio.</li>
+              </ul>
             </div>
             <div class="card__price-info-icon">
               <img src="${card.precioNotaInfo || './assets/icons/info-icon.svg'}" alt="Info Icon">
