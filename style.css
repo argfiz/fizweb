@@ -755,12 +755,15 @@ body {
 .card__price-info-text ul {
     list-style: none;
     padding: 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
     margin: 0;
     display: flex;
     flex-direction: column;
     gap: 0px;
     width: 100%;
     max-width: 100%;
+    background: rgba(255,255,255,0.13);
 }
 .card__price-info-text li {
     position: relative;
@@ -773,7 +776,6 @@ body {
     font-weight: 500;
     transition: background 0.18s, box-shadow 0.18s;
     margin: 0;
-    letter-spacing: -1px;
     
 }
 .card__price-info-text li::before {
@@ -907,7 +909,7 @@ body {
     }
     60% {
         opacity: 1;
-        transform: translateY(0px) scale(1.02);
+        transform: translateY(0px) scale(1.05);
         filter: blur(2px);
     }
     100% {
@@ -936,7 +938,7 @@ body {
 }
 
 .card__price-info.open {
-    animation: cardPriceInfoIn 0.55s cubic-bezier(.4,0,.2,1);
+    animation: cardPriceInfoIn 0.60s cubic-bezier(.4,0,.2,1);
 }
 
 .card__price-info:not(.open) {
