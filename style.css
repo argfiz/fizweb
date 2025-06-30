@@ -895,6 +895,53 @@ body {
 
 }
 
+/* Animaciones para la tarjeta de precios
+// Estas animaciones se aplican a la tarjeta de precios cuando se abre o cierra la información de precios.
+// Se utilizan para crear un efecto de entrada y salida suave con transformación y desenfoque.
+// Las animaciones se definen con keyframes y se aplican a la clase .card*/
+@keyframes cardPriceInfoIn {
+    0% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.98);
+        filter: blur(12px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-8px) scale(1.02);
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes cardPriceInfoOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.98);
+        filter: blur(12px);
+    }
+}
+
+.card__price-info {
+    /* ...tus estilos previos... */
+    will-change: opacity, transform, filter;
+}
+
+.card__price-info.open {
+    animation: cardPriceInfoIn 0.55s cubic-bezier(.4,0,.2,1);
+}
+
+.card__price-info:not(.open) {
+    animation: cardPriceInfoOut 0.35s cubic-bezier(.4,0,.2,1);
+}
 /* =======================================================================================================
    =================================TABS TEMPLATE=================================================
    =======================================================================================================*/
