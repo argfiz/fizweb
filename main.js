@@ -240,11 +240,14 @@ function renderSlides() {
     }
           </ul>
         </div>
-        <div class="card__price card__price--${idx + 1}">
-          <span>${card.precio}</span>
-          <small>${card.precioNota}</small>
-        </div>
-
+        
+                    <div class="card__price card__price--${idx + 1}">
+            <span>${card.precio}</span>
+            <small>${card.precioNota}</small>
+          </div>
+          <div class="card__price-info-icon">
+            <img src="${card.precioNotaInfo || './assets/icons/info-icon.svg'}" alt="Info Icon">
+          </div>
           <div class="card__price-info">
             <div class="card__price-info-text">
               <ul>
@@ -253,11 +256,8 @@ function renderSlides() {
                 <li>Botón WhatsApp flotante</li>
                 <li>Conexion a Redes Sociales</li>
                 <li>Instalacion en servidor</li>
-                <li>No incluye dominio ni hosting. Ver abajo si necesitás de este servicio.</li>
+                <li>No incluye dominio ni hosting</li>
               </ul>
-            </div>
-            <div class="card__price-info-icon">
-              <img src="${card.precioNotaInfo || './assets/icons/info-icon.svg'}" alt="Info Icon">
             </div>
           </div>
 
@@ -266,7 +266,21 @@ function renderSlides() {
   `).join('');
 }
 
+
+function addPriceInfoListeners() {
+  document.querySelectorAll('.card__price-info-icon').forEach(iconDiv => {
+    iconDiv.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const card = iconDiv.closest('.card');
+      const priceInfo = card.querySelector('.card__price-info');
+      priceInfo.classList.toggle('open');
+    });
+  });
+}
+
 renderSlides();
+addPriceInfoListeners();
+
 
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',

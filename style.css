@@ -519,6 +519,7 @@ body {
 
 
 .card {
+    position: relative;
     background: url('./assets/img/bg-card.png') center center/cover no-repeat;
     border-radius: 10px;
     overflow: hidden;
@@ -708,24 +709,65 @@ body {
 
 
 
-
-
-
-.card__price-info{
-    padding: 25px 0;
+.card__price-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 30;
+    width: 100%;
+    pointer-events: none;
+    opacity: 0;
+    background: transparent;
+    transition: opacity 0.25s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
-.card__price-info-icon{
-    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.7);
-    width: 45px;
-    height: 45px;
+
+.card__price-info.open {
+    pointer-events: auto;
+    opacity: 1;
+    background: linear-gradient(rgba(20,20,20,0.52));
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.card__price-info-text {
+    display: none;
+    color: #fff;
+    width: 100%;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__price-info.open .card__price-info-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__price-info-icon {
+    width: 58px;
+    height: 58px;
     border-radius: 50%;
-    margin: 0 auto;
-    
+    margin: 22px auto 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 31;
+    cursor: pointer;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.7);
+    background: var(--color-dark);
+    pointer-events: auto;
+    position: relative;
 }
-.card__price-info-icon img{
+.card__price-info-icon img {
     filter: brightness(0) invert(1);
     display: block;
-    
 }
 
 
