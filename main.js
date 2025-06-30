@@ -250,6 +250,7 @@ function renderSlides() {
           </div>
           <div class="card__price-info">
             <div class="card__price-info-text">
+            <p>Incluye:</p>
               <ul>
                 <li>Multidispositivo</li>
                 <li>Botón WhatsApp flotante</li>
