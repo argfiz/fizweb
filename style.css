@@ -738,10 +738,8 @@ body {
     color: #fff;
     width: 100%;
     flex: 1 1 auto;
-    justify-content: center;
-    align-items: center;
-    
-    
+    padding-top: 60px;
+     
 }
 .card__price-info-text ul {
     list-style: none;
@@ -755,7 +753,7 @@ body {
 }
 .card__price-info-text li {
     background: rgba(255,255,255,0.13);
-    padding: 16px 0px;
+    padding: 18px 0px;
     color: #fff;
     font-size: 1.1rem;
     font-weight: 500;
@@ -780,8 +778,8 @@ body {
 .card__price-info.open .card__price-info-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+   
 }
 
 .card__price-info-icon {
