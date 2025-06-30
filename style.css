@@ -392,6 +392,10 @@ body {
     padding-top: 150px;
     padding-bottom: 0px;
     background: url('./assets/img/bg-welcome.svg') center center/cover no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
     gap: 0px;
     /* Elimina la animación de carga aquí */
@@ -1265,7 +1269,12 @@ footer {
 /* Contenedor principal */
 .faq__section {
     background: url('./assets/img/bg-faq.svg') center center/cover no-repeat;
-
+    /*Tecnica para Fijar el background en la ventana, no en el contenedor*/
+    /*el fondo no se mueve aunque cambie el alto del contenedor*/
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: var(--font-main);
     padding-bottom: 0px;
     margin-bottom: 0px;
