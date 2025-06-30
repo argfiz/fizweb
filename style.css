@@ -510,7 +510,7 @@ body {
 }
 
 .swiper-slide {
-    max-width: 310px;
+    max-width: 300px;
     margin-bottom: 60px;
     margin-top: 60px;
 }
@@ -519,7 +519,7 @@ body {
 
 
 .card {
-    background: url('./assets/img/bg-card.svg') center center/cover no-repeat;
+    background: url('./assets/img/bg-card.png') center center/cover no-repeat;
     border-radius: 10px;
     overflow: hidden;
     display: flex;
