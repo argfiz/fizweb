@@ -755,19 +755,20 @@ body {
 .card__price-info-text ul {
     list-style: none;
     padding: 0;
-    padding-bottom: 5px;
-    padding-top: 5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 2px solid var(--color-secondary);
     margin: 0;
     display: flex;
     flex-direction: column;
     gap: 0px;
     width: 100%;
     max-width: 100%;
-    background: rgba(0, 0, 0, 0.16);
+    background: rgb(49, 49, 49);
 }
 .card__price-info-text li {
     position: relative;
-    background: rgba(255, 255, 255, 0.217);
+    
     padding: 13px 0px;
     padding-bottom: 17px;
     padding-left: 45px;
