@@ -252,7 +252,6 @@ function renderSlides() {
             <div class="card__price-info-text">
               <ul>
                 <li>Multidispositivo</li>
-                <li>Formulario de contacto</li>
                 <li>Botón WhatsApp flotante</li>
                 <li>Conexion a Redes Sociales</li>
                 <li>Instalacion en servidor</li>
