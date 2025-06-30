@@ -1394,7 +1394,11 @@ footer {
         font-size: 1rem;
     }
 }
-
+@media (max-width: 900px) {
+    .faq__section {
+        background-attachment: scroll; 
+    }
+}
 
 
 /* Animación para entrar desde la izquierda */
