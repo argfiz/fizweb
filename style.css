@@ -767,18 +767,19 @@ body {
     background: rgba(255,255,255,0.13);
     padding: 18px 0px;
     padding-bottom: 21px;
-    padding-left: 32px;
+    padding-left: 43px;
     color: #fff;
     font-size: 1.1rem;
     font-weight: 500;
     transition: background 0.18s, box-shadow 0.18s;
     margin: 0;
+    letter-spacing: -1px;
     
 }
 .card__price-info-text li::before {
     content: '';
     position: absolute;
-    left: 15px;
+    left: 25px;
     top: 50%;
     transform: translateY(-50%);
     width: 10px;
