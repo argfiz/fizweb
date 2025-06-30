@@ -791,7 +791,7 @@ body {
     display: inline-block;
 }
 .card__price-info-text li:last-child {
-    background: var(--color-secondary);
+    background: #ff00a6cc;
     color: #fff;
     font-weight: 700;
 }
