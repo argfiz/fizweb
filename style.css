@@ -529,7 +529,7 @@ body {
 
 }
 
-.card--1 {
+/*.card--1 {
     border: 2px solid #11ff00;
 }
 
@@ -539,7 +539,7 @@ body {
 
 .card--3 {
     border: 2px solid #ff0000;
-}
+}*/
 
 .card__header {
     max-width: 310px;
@@ -741,9 +741,8 @@ body {
     flex: 1 1 auto;
 }
 .card__price-info-text p {
-    margin: 0 0 18px 0;
+    margin: 0;
     padding: 40px;
-    padding-bottom: 20px;
     font-size: 1.4rem;
     font-weight: 600;
     color: #fff;
@@ -793,7 +792,7 @@ body {
     display: inline-block;
 }
 .card__price-info-text li:last-child {
-    background: #ff4ab77a;
+    background: #ff4ab7c0;
     color: #fff;
     font-weight: 700;
 }
