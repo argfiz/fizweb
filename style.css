@@ -1457,7 +1457,7 @@ body {
 }
 
 #contact {
-    background: var(--color-dark);
+    background: url('./assets/img/bg-hero-image.svg') center center/cover no-repeat;
 
 }
 
@@ -1540,7 +1540,7 @@ body {
 .contact__text h3 {
     margin: 0 0 4px 0;
     font-size: 1.4em;
-    color: #666;
+    color: #444;
 }
 
 .contact__text p {
@@ -1584,7 +1584,7 @@ body {
 .form__group label {
     margin-bottom: 6px;
     font-size: 1.1rem;
-    color: #444;
+    color: #333;
 }
 
 .form__group input,
