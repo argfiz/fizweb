@@ -172,15 +172,11 @@ const sliderCardsData = [
     img: "./assets/img/pack-s.jpg",
     precio: "$200.000",
     precioNota: "Precio Final",
+    precioMensual: "$15.000",
     items: {
       página: 1,
       secciones: 3,
       productos: 10,
-      /*multidispositivos: true,
-      whatsapp: true,
-      redes: true,
-      formulario: true,
-      instalacion: true*/
     }
   },
   {
@@ -190,6 +186,7 @@ const sliderCardsData = [
     precio: "$300.000",
     precioNota: "Precio Final",
     precioNotaInfo: "./assets/icons/info-icon.svg",
+    precioMensual: "$30.000",
     items: {
       paginas: 3,
       secciones: 9,
@@ -202,6 +199,7 @@ const sliderCardsData = [
     img: "./assets/img/pack-g.svg",
     precio: "$400.000",
     precioNota: "Precio Final",
+    precioMensual: "$45.000",
     items: {
       paginas: 5,
       secciones: 15,
@@ -252,14 +250,17 @@ function renderSlides() {
             </div>
             <div class="card__price-info">
               <div class="card__price-info-text">
-              <p>Incluye:</p>
+                <p class="card__price-info-text-top">Incluye:</p>
                 <ul>
                   <li>Multidispositivos</li>
                   <li>Botón WhatsApp flotante</li>
                   <li>Conexion a Redes Sociales</li>
                   <li>Instalacion en servidor</li>
-                  <li>No incluye dominio ni hosting</li>
+                  <li>No incluye mantenimiento</li>
                 </ul>
+                <p class="card__price-info-text-bottom">
+                  ${card.precioMensual ? `Mantenimiento <span>${card.precioMensual} /mes</span>` : ''}
+                </p>
               </div>
             </div>
       </div>
