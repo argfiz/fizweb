@@ -382,6 +382,7 @@ body {
     }
 }
 
+
 /**********************************************************/
 /************=== HERO IMAGE ESTILO BIENVENIDA =========== */
 /**********************************************************/
@@ -392,10 +393,6 @@ body {
     padding-top: 150px;
     padding-bottom: 0px;
     background: url('./assets/img/bg-welcome.svg') center center/cover no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
     text-align: center;
     gap: 0px;
     /* Elimina la animación de carga aquí */
