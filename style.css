@@ -728,8 +728,8 @@ body {
 .card__price-info.open {
     pointer-events: auto;
     opacity: 1;
-    background: linear-gradient(rgba(20,20,20,0.52));
-    backdrop-filter: blur(6px);
+    background: linear-gradient(rgba(20,20,20,0.70));
+    backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(6px);
 }
 
@@ -759,7 +759,7 @@ body {
     justify-content: center;
     z-index: 31;
     cursor: pointer;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.70);
     background: var(--color-dark);
     pointer-events: auto;
     position: relative;
