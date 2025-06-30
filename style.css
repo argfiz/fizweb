@@ -763,11 +763,11 @@ body {
     gap: 0px;
     width: 100%;
     max-width: 100%;
-    background: rgba(255,255,255,0.13);
+    background: rgba(0, 0, 0, 0.16);
 }
 .card__price-info-text li {
     position: relative;
-    background: rgba(255,255,255,0.13);
+    background: rgba(255, 255, 255, 0.217);
     padding: 13px 0px;
     padding-bottom: 17px;
     padding-left: 45px;
