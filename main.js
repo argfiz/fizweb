@@ -259,7 +259,7 @@ function renderSlides() {
                   <li>No incluye mantenimiento</li>
                 </ul>
                 <p class="card__price-info-text-bottom">
-                  ${card.precioMensual ? `Mantenimiento <span>${card.precioMensual} /mes</span>` : ''}
+                  ${card.precioMensual ? `Mantenimiento <br><span>${card.precioMensual}</span> /mes` : ''}
                 </p>
               </div>
             </div>
