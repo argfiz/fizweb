@@ -768,8 +768,8 @@ body {
 .card__price-info-text li {
     position: relative;
     background: rgba(255,255,255,0.13);
-    padding: 11px 0px;
-    padding-bottom: 16px;
+    padding: 13px 0px;
+    padding-bottom: 17px;
     padding-left: 45px;
     color: #fff;
     font-size: 1rem;
