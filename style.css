@@ -902,12 +902,12 @@ body {
 @keyframes cardPriceInfoIn {
     0% {
         opacity: 0;
-        transform: translateY(60px) scale(0.98);
+        transform: translateY(60px) scale(0.78);
         filter: blur(12px);
     }
     60% {
         opacity: 1;
-        transform: translateY(-8px) scale(1.02);
+        transform: translateY(0px) scale(1.02);
         filter: blur(2px);
     }
     100% {
@@ -925,7 +925,7 @@ body {
     }
     100% {
         opacity: 0;
-        transform: translateY(60px) scale(0.98);
+        transform: translateY(60px) scale(0.78);
         filter: blur(12px);
     }
 }
