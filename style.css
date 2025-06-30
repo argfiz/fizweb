@@ -766,13 +766,14 @@ body {
     position: relative;
     background: rgba(255,255,255,0.13);
     padding: 18px 0px;
-    padding-left: 40px;
+    padding-bottom: 21px;
+    padding-left: 32px;
     color: #fff;
     font-size: 1.1rem;
     font-weight: 500;
     transition: background 0.18s, box-shadow 0.18s;
     margin: 0;
-    line-height: 1.5;   
+    
 }
 .card__price-info-text li::before {
     content: '';
@@ -788,7 +789,7 @@ body {
     display: inline-block;
 }
 .card__price-info-text li:last-child {
-    background: #ff00a6cc;
+    background: #ff4ab77a;
     color: #fff;
     font-weight: 700;
 }

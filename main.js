@@ -223,44 +223,45 @@ function renderSlides() {
         <div class="container-card__items">
           <ul class="card__items card__items--${idx + 1}">
             ${Object.entries(card.items).map(([key, value], i) => {
-    // Personaliza el label si quieres mostrar "Páginas", "Secciones", etc.
-    let label = '';
-    if (key === 'paginas') label = 'Páginas';
-    else if (key === 'secciones') label = 'Secciones';
-    else if (key === 'productos') label = 'Productos';
-    else label = key.charAt(0).toUpperCase() + key.slice(1);
+                
+              // Personaliza el label si quieres mostrar "Páginas", "Secciones", etc.
+                let label = '';
+                if (key === 'paginas') label = 'Páginas';
+                else if (key === 'secciones') label = 'Secciones';
+                else if (key === 'productos') label = 'Productos';
+                else label = key.charAt(0).toUpperCase() + key.slice(1);
 
-    return `<li>
-  <div class="card__item-value card__item-value--${idx + 1}">
-    <span>${value}</span>
-  </div>
-  <span>${label}</span>
-</li>`;
-  }).join('')
-    }
+                return `<li>
+                  <div class="card__item-value card__item-value--${idx + 1}">
+                    <span>${value}</span>
+                  </div>
+                  <span>${label}</span>
+                </li>`;
+
+              }).join('')
+             }
           </ul>
         </div>
         
-                    <div class="card__price card__price--${idx + 1}">
-            <span>${card.precio}</span>
-            <small>${card.precioNota}</small>
-          </div>
-          <div class="card__price-info-icon">
-            <img src="${card.precioNotaInfo || './assets/icons/info-icon.svg'}" alt="Info Icon">
-          </div>
-          <div class="card__price-info">
-            <div class="card__price-info-text">
-            <p>Incluye:</p>
-              <ul>
-                <li>Multidispositivo</li>
-                <li>Botón WhatsApp flotante</li>
-                <li>Conexion a Redes Sociales</li>
-                <li>Instalacion en servidor</li>
-                <li>No incluye dominio ni hosting</li>
-              </ul>
+            <div class="card__price card__price--${idx + 1}">
+              <span>${card.precio}</span>
+              <small>${card.precioNota}</small>
             </div>
-          </div>
-
+            <div class="card__price-info-icon">
+              <img src="${card.precioNotaInfo || './assets/icons/info-icon.svg'}" alt="Info Icon">
+            </div>
+            <div class="card__price-info">
+              <div class="card__price-info-text">
+              <p>Incluye:</p>
+                <ul>
+                  <li>Multidispositivo</li>
+                  <li>Botón WhatsApp flotante</li>
+                  <li>Conexion a Redes Sociales</li>
+                  <li>Instalacion en servidor</li>
+                  <li>No incluye dominio ni hosting</li>
+                </ul>
+              </div>
+            </div>
       </div>
     </div>
   `).join('');
