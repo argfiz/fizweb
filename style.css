@@ -519,16 +519,9 @@ body {
 
 
 .card {
-    background: #fff;
+    background: url('./assets/img/bg-card.svg') center center/cover no-repeat;
     border-radius: 10px;
     overflow: hidden;
-    /*box-shadow:
-        0 5px 4px 0 rgba(0, 0, 0, 0.12),
-        /* Sombra negra muy suave 
-        0 2px 15px 0 rgba(0, 0, 0, 0.20),
-        /* Sombra negra difusa 
-        0 1px 3px 0 rgba(0, 0, 0, 0.08);
-    /* Sombra de realce */
     display: flex;
     flex-direction: column;
 
@@ -536,17 +529,14 @@ body {
 
 .card--1 {
     border: 2px solid #11ff00;
-    background: #333;
 }
 
 .card--2 {
     border: 2px solid #000dff;
-    background: #333;
 }
 
 .card--3 {
     border: 2px solid #ff0000;
-    background: #333;
 }
 
 .card__header {
