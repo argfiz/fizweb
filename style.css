@@ -313,7 +313,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: var(--color-dark);
+        background: url('./assets/img/bg-card.png') center center/cover no-repeat;
         /*backdrop-filter: blur(12px);*/
     }
 
