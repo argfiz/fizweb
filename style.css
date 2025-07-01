@@ -1,3 +1,4 @@
+* { cursor: default; }
 body {
     margin: 0;
     padding: 0;
@@ -175,8 +176,13 @@ body {
 
 .nav-menu__link:hover,
 .nav-menu__link:focus {
-    background: var(--color-secondary);
-    color: #fff;
+    color: var(--color-secondary);
+}
+
+.nav-menu__link.active,
+.nav-menu__link:active {
+    color: var(--color-secondary) !important;
+    transition: background 0.18s, color 0.18s;
 }
 
 /* ====== SOCIAL LINKS ====== */
@@ -379,6 +385,7 @@ body {
         box-shadow: 0 2px 12px rgba(247, 37, 133, 0.10);
         outline: none;
         width: 100%;
+
     }
 }
 

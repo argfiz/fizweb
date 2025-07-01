@@ -25,6 +25,14 @@ document.querySelectorAll('.nav-menu__link').forEach(link => {
     document.body.style.overflow = '';
   });
 });
+// Resalta el nav-menu__link activo
+document.querySelectorAll('.nav-menu__link').forEach(link => {
+  link.addEventListener('click', function() {
+    document.querySelectorAll('.nav-menu__link').forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
 //Cerrar menú al hacer click en cualquier parte fuera del menu movil
 document.addEventListener('click', (event) => {
   if (!navMenu.contains(event.target) && !hamburger.contains(event.target)) {
