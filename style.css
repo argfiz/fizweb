@@ -522,7 +522,7 @@ body {
 .card {
     position: relative;
     background: url('./assets/img/bg-card.png') center center/cover no-repeat;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -643,7 +643,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.6);
     position: relative;
 
 }
@@ -991,7 +991,7 @@ body {
         0 0px 6px 0 rgba(0, 0, 0, 0.06);
     --color-card-title: #222;
     --color-card-desc: #444;
-    --radius-tab: 5px;
+    --radius-tab: 50%;
     --radius-card: 5px;
     --transition-main: 0.2s;
 }
