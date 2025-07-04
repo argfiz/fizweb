@@ -342,9 +342,9 @@ body {
 
     .nav-menu__social-link {
         box-shadow:
-            0 5px 15px 0 rgba(0, 0, 0, 0.5),
-            0 15px 32px 0 rgba(0, 0, 0, 0.53),
-            0 2.5px 12px 0 rgba(0, 0, 0, 0.43);
+            0 0px 15px 0 rgba(0, 0, 0, 0.5),
+            0 0px 32px 0 rgba(0, 0, 0, 0.53),
+            0 0px 12px 0 rgba(0, 0, 0, 0.43);
         background: #fff;
     }
 
@@ -369,6 +369,7 @@ body {
     .nav-menu__link {
         font-family: var(--font-main);
         font-weight: 500;
+        font-size: 1.3rem;
         width: 100%;
         box-shadow: none;
         transition: background 0.5s, color 0.18s, box-shadow 0.18s;
@@ -818,7 +819,7 @@ body {
     display: inline-block;
 }
 .card__price-info-text li:last-child {
-    background: #ff4ab7c0;
+    background: #ff4ab7dd;
     color: #fff;
     font-weight: 700;
 }
