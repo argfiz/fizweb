@@ -758,8 +758,7 @@ body {
     transition: background 0.2s;
 }
 .card__price-info-text-bottom {
-    margin-top: 20px;
-    padding: 0px;
+    margin-top: 25px;
     border-radius: 10px;
     color: #fff;
     font-size: 1.4rem;
@@ -773,16 +772,11 @@ body {
 
 .card__price-info-text-bottom span {
     color: #fff;
-    
-    padding: 2px 8px;
-    margin-left: 6px;
     font-weight: 600;
     font-size: 1.7em;
     display: inline-block;
 }
-.card__price-info-text-bottom span{
-    padding: 0px;
-}
+
 .card__price-info-text ul {
     list-style: none;
     padding: 0;
