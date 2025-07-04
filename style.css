@@ -651,9 +651,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.6);
     position: relative;
-
+    text-align: center;
 }
 
 .card__item-value span {
@@ -666,6 +665,13 @@ body {
     display: inline-block;
     padding-bottom: 1px;
     line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    line-height: 1;
+    text-align: center;
 }
 
 .card__item-value--1 {
@@ -920,6 +926,19 @@ body {
     }
     .card__price-info-text li {
         font-weight: 400;
+    }
+
+    .card__item-value {
+        position: relative;
+    }
+    
+    .card__item-value span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 0;
     }
 
 }
