@@ -189,7 +189,7 @@ const sliderCardsData = [
   },
   {
     nombre: "Mediano",
-    subtitulo: "Pack ideal para los indecisos y emprendedores en crecimiento que buscan una web más completa.",
+    subtitulo: "Ideal para los indecisos y emprendedores en crecimiento que buscan una web más completa.",
     img: "./assets/img/pack-m.jpg",
     precio: "$300.000",
     precioNota: "Precio Final",
