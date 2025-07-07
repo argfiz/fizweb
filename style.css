@@ -1672,7 +1672,7 @@ body {
 .form__group {
     display: flex;
     flex-direction: column;
-    padding-top: px;
+    padding-top: 3px;
 }
 
 .form__group label {
