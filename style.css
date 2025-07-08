@@ -1412,7 +1412,7 @@ footer {
 
 .faq__item {
     background: #fff;
-    border-radius: 3px;
+    border-radius: 10px;
     box-shadow: 0 2px 8px var(--color-shadow);
     overflow: hidden;
     transition: box-shadow 0.2s, background 0.2s, color 0.2s;
