@@ -203,7 +203,7 @@ const sliderCardsData = [
   },
   {
     nombre: "Full",
-    subtitulo: "Perfecto para tu negocio y para quienes buscan una web completa y profesional con todo lo necesario.",
+    subtitulo: "Perfecto para quienes buscan una web completa y profesional con todo lo necesario.",
     img: "./assets/img/pack-g.svg",
     precio: "$400.000",
     precioNota: "Precio Final",
