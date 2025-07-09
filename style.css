@@ -10,7 +10,9 @@ body:not(.contact-page) {
     background: #f3f3f3;
 }
 .contact-page{
-    background: url('./assets/img/bg-welcome.jpg') center center/cover no-repeat fixed;
+    background: url('./assets/img/bg-welcome.jpg') center center/cover no-repeat;
+    background-attachment: scroll;
+    min-height: 100vh;
 }
 :root {
     --color-bg: #f3f3f3;
@@ -80,7 +82,19 @@ body:not(.contact-page) {
         font-weight: 300;
     }
 }
+/* Solo en desktop mantén el fondo fijo si quieres */
+@media (min-width: 901px) {
+    .contact-page {
+        background-attachment: fixed;
+    }
+}
 
+/* En móviles, usa scroll */
+@media (max-width: 900px) {
+    .contact-page {
+        background-attachment: scroll;
+    }
+}
 /************************************************************/
 /***************Divider component***************************/
 /************************************************************/
