@@ -1536,18 +1536,13 @@ footer {
    =================================CONTACT TEMPLATE==========================================================
    =======================================================================================================*/
 html {
-    background-color: var(--color-dark);
+    background-color: #111;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    color: #222;
 
-}
 
 #contact {
-    background: url('./assets/img/bg-hero-image.svg') center center/cover no-repeat;
+    background: url('./assets/img/bg-welcome.jpg') center center/cover no-repeat;
 }
 
 #contact .section__title {
