@@ -4,10 +4,14 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font-main);
-    background: #f3f3f3 !important;
-
 }
-
+/* Agrega el fondo gris solo para páginas que NO sean contact-page */
+body:not(.contact-page) {
+    background: #f3f3f3;
+}
+.contact-page{
+    background: url('./assets/img/bg-welcome.jpg') center center/cover no-repeat fixed;
+}
 :root {
     --color-bg: #f3f3f3;
     --color-primary: #7209b7;
@@ -1274,10 +1278,10 @@ footer {
     color: var(--footer-text);
     padding: var(--footer-padding);
     font-size: var(--footer-font-size);
-
-
 }
-
+.contact__footer{
+    background: transparent;
+}
 .footer__container {
 
     max-width: var(--footer-max-width);
@@ -1542,7 +1546,7 @@ html {
 
 
 #contact {
-    background: url('./assets/img/bg-welcome.jpg') center center/cover no-repeat;
+    background: transparent;
 }
 
 #contact .section__title {
