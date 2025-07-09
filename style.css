@@ -330,7 +330,6 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.80);
     }
 
     .logo-nav__menu img {
@@ -1362,13 +1361,7 @@ footer {
 
 /* Contenedor principal */
 .faq__section {
-    background: url('./assets/img/bg-faq.svg') center center/cover no-repeat;
-    /*Tecnica para Fijar el background en la ventana, no en el contenedor*/
-    /*el fondo no se mueve aunque cambie el alto del contenedor*/
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: #222;
     font-family: var(--font-main);
     padding-bottom: 0px;
     margin-bottom: 0px;
