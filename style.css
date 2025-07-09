@@ -1547,6 +1547,17 @@ footer {
 }
 
 
+@media (min-width: 701px) and (max-width: 1000px){
+    #faqSection .section__title {
+        padding-top: 100px;
+    }
+    .faq__title {
+        padding-top: 120px;
+        font-size: 1.8rem;
+    }
+}
+
+
 /* Animación para entrar desde la izquierda */
 @keyframes faqItemInLeft {
     from {
