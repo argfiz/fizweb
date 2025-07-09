@@ -516,7 +516,11 @@ body:not(.contact-page) {
         font-size: 1.3rem;
     }
 }
-
+@media (max-width: 900px) {
+    .hero__container {
+        background-attachment: scroll;
+    }
+}
 
 
 /**********************************************************/
