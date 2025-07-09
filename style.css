@@ -341,7 +341,6 @@ body:not(.contact-page) {
         width: 120px;
         /* Más grande que el logo normal */
         height: 120px;
-        border-radius: 5px;
         object-fit: cover;
     }
 
