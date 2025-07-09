@@ -1008,9 +1008,9 @@ body {
     --color-card-bg: #000;
     --color-card-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
     --color-card-shadow-active:
-        0 0px 10px 0 rgba(0, 0, 0, 0.40),
-        0 0px 30px 0 rgba(0, 0, 0, 0.20),
-        0 0px 7px 0 rgba(0, 0, 0, 0.10);
+        0 8px 10px 0 rgba(0, 0, 0, 1),
+        0 8px 30px 0 rgba(0, 0, 0, 0.50),
+        0 8px 7px 0 rgba(0, 0, 0, 0.25);
     --color-card-title: #222;
     --color-card-desc: #444;
     --radius-tab: 50%;
@@ -1361,7 +1361,7 @@ footer {
 
 /* Contenedor principal */
 .faq__section {
-    background: #222;
+    background: #111;
     font-family: var(--font-main);
     padding-bottom: 0px;
     margin-bottom: 0px;
