@@ -1055,10 +1055,8 @@ body:not(.contact-page) {
     flex-direction: column;
     justify-content: center;
     background: var(--color-bg-gradient);
-    padding-bottom: 0px;
     padding-top: 15px;
     font-family: var(--font-main);
-
 }
 
 
@@ -1123,7 +1121,6 @@ body:not(.contact-page) {
 /* Agrega la animación a .option__tabs */
 .option__tabs {
     margin-top: auto;
-    padding-bottom: 65px;
     display: flex;
     gap: 0.8rem;
     flex-wrap: wrap;
@@ -1177,43 +1174,6 @@ body:not(.contact-page) {
 .option__tab.active img,
 .option__tab:focus img {
     filter: brightness(0) invert(1);
-}
-
-
-
-
-@keyframes tabFadeOut {
-    from {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    to {
-        opacity: 0;
-        transform: scale(0.96);
-    }
-}
-
-@keyframes tabFadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.96);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.tab-anim-out {
-    animation: tabFadeOut 0.35s cubic-bezier(.4, 0, .2, 1) forwards;
-    pointer-events: none;
-}
-
-.tab-anim-in {
-    animation: tabFadeIn 0.35s cubic-bezier(.4, 0, .2, 1) forwards;
-    pointer-events: none;
 }
 
 
@@ -1273,6 +1233,75 @@ body:not(.contact-page) {
         font-size: 1.8rem;
     }
 }
+
+
+
+/* Tabs dentro de la tarjeta - SIN animaciones */
+.tab__card .option__tabs {
+  margin-top: auto;
+  padding-bottom: 40px;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+  /* Eliminar cualquier transición */
+  transition: none;
+  transform: none;
+  opacity: 1;
+}
+
+.tab__card .option__tab {
+  z-index: 2;
+  position: relative;
+  /* Eliminar cualquier transición */
+  transition: background 0.2s, border 0.2s, color 0.2s, box-shadow 0.2s;
+  /* Solo mantener transiciones de hover/active */
+}
+
+/* Mejorar las animaciones del contenido */
+@keyframes tabFadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.96) translateY(-10px);
+        filter: blur(3px);
+    }
+}
+
+@keyframes tabFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96) translateY(10px);
+        filter: blur(3px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+.tab-anim-out {
+    animation: tabFadeOut 0.35s cubic-bezier(.4, 0, .2, 1) forwards;
+    pointer-events: none;
+    z-index: 2;
+    position: relative;
+}
+
+.tab-anim-in {
+    animation: tabFadeIn 0.35s cubic-bezier(.4, 0, .2, 1) forwards;
+    pointer-events: none;
+    z-index: 2;
+    position: relative;
+}
+
+
 
 /* =======================================================================================================
    =================================FOOTER TEMPLATE=================================================

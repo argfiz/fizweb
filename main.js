@@ -315,8 +315,6 @@ const swiper = new Swiper('.swiper', {
   }
 });
 
-
-
 /*****************************************************************************************************/
 /* ======================================== TABS SERVICES ======================================= */
 /*****************************************************************************************************/
@@ -372,70 +370,15 @@ const servicesData = [
   }
 ];
 
-// Renderiza la tarjeta del servicio seleccionado
-function renderServiceCard(serviceKey) {
-  const service = servicesData.find(s => s.key === serviceKey);
-  const body = document.querySelector('.tabs__body');
-  const tabs = document.querySelector('.option__tabs');
-  if (!service || !body || !tabs) return;
-  body.innerHTML = `
-    <div class="tab__card active">
-      <div class="title__tab__container">
-        <h3>${service.title}</h3>
-      </div>
-      <p>${service.desc}</p>
-    </div>
-  `;
-  // Mueve .option__tabs dentro de .tab__card
-  const tabCard = body.querySelector('.tab__card');
-  tabCard.appendChild(tabs);
-
-  // Asigna el fondo dinámico
-  if (service.bg) {
-    tabCard.style.backgroundImage = `url('${service.bg}')`;
-    tabCard.style.backgroundSize = 'cover';
-    tabCard.style.backgroundPosition = 'center';
-  } else {
-    tabCard.style.backgroundImage = '';
-  }
-}
-
-// Genera dinámicamente los tabs de servicios
-function renderServiceTabs() {
-  const tabsContainer = document.querySelector('.option__tabs');
-  if (!tabsContainer) return;
-  tabsContainer.innerHTML = servicesData.map((service, idx) => `
-    <button class="option__tab${idx === 0 ? ' active' : ''}" data-service="${service.key}">
-      <img src="${service.icon}" alt="${service.title}">
-    </button>
-  `).join('');
-}
-
 // Maneja el cambio de tab
 function handleTabClick(e) {
   const clicked = e.currentTarget;
   // Si ya está activo, no hagas nada
   if (clicked.classList.contains('active')) return;
-  // Quitar clase active de todos los tabs
-  document.querySelectorAll('.option__tab').forEach(tab => tab.classList.remove('active'));
-  // Agregar clase active al tab clickeado
-  clicked.classList.add('active');
-  // Renderizar la tarjeta correspondiente
-  renderServiceCard(clicked.dataset.service);
+  
+  // Llamar a la animación
+  animateTabCardChange(clicked.dataset.service);
 }
-
-// Inicialización
-document.addEventListener('DOMContentLoaded', () => {
-  // Render inicial
-  const initialTab = document.querySelector('.option__tab.active') || document.querySelector('.option__tab');
-  if (initialTab) {
-    renderServiceCard(initialTab.dataset.service);
-  }
-  // Listeners
-  document.querySelectorAll('.option__tab').forEach(tab => {
-    tab.addEventListener('click', handleTabClick);
-  });
-});
 
 // animación de cambio de tarjeta de servicio
 // Esta función se llama al hacer click en un tab
@@ -446,74 +389,114 @@ function animateTabCardChange(serviceKey) {
   if (!service || !body) return;
 
   let card = body.querySelector('.tab__card');
+  
   if (!card) {
+    // Crear la tarjeta inicial CON los tabs dentro
     body.innerHTML = `
       <div class="tab__card active">
         <div class="title__tab__container">
           <h3>${service.title}</h3>
         </div>
         <p>${service.desc}</p>
+        <div class="option__tabs">
+          ${servicesData.map((srv, idx) => `
+            <button class="option__tab${srv.key === serviceKey ? ' active' : ''}" data-service="${srv.key}">
+              <img src="${srv.icon}" alt="${srv.title}">
+            </button>
+          `).join('')}
+        </div>
       </div>
     `;
     card = body.querySelector('.tab__card');
-  }
-
-  // Elementos actuales
-  const prevTitle = card.querySelector('.title__tab__container');
-  const prevP = card.querySelector('p');
-
-  prevTitle.classList.add('tab-anim-out');
-  prevP.classList.add('tab-anim-out');
-
-  setTimeout(() => {
-    prevTitle.classList.remove('tab-anim-out');
-    prevP.classList.remove('tab-anim-out');
-
-    prevTitle.innerHTML = `<h3>${service.title}</h3>`;
-    prevP.textContent = service.desc;
-
-    prevTitle.classList.add('tab-anim-in');
-    prevP.classList.add('tab-anim-in');
-
-    setTimeout(() => {
-      prevTitle.classList.remove('tab-anim-in');
-      prevP.classList.remove('tab-anim-in');
-    }, 350);
-
-    // Asigna el fondo dinámico
+    
+    // Aplicar fondo inicial
     if (service.bg) {
       card.style.backgroundImage = `url('${service.bg}')`;
       card.style.backgroundSize = 'cover';
       card.style.backgroundPosition = 'center';
-    } else {
-      card.style.backgroundImage = '';
     }
+
+    // Agregar listeners a los nuevos tabs
+    addTabListeners();
+    return;
+  }
+
+  // Elementos del contenido (NO los tabs)
+  const titleContainer = card.querySelector('.title__tab__container');
+  const descParagraph = card.querySelector('p');
+  const tabsContainer = card.querySelector('.option__tabs');
+
+  // Actualizar el tab activo SIN animación
+  tabsContainer.querySelectorAll('.option__tab').forEach(tab => {
+    tab.classList.toggle('active', tab.dataset.service === serviceKey);
+  });
+
+  // Crear overlay para transición de fondo
+  const bgOverlay = document.createElement('div');
+  bgOverlay.style.cssText = `
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('${service.bg}');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  `;
+  
+  card.style.position = 'relative';
+  card.appendChild(bgOverlay);
+
+  // Animar salida del contenido
+  titleContainer.classList.add('tab-anim-out');
+  descParagraph.classList.add('tab-anim-out');
+
+  // Mostrar el overlay del fondo
+  setTimeout(() => {
+    bgOverlay.style.opacity = '1';
+  }, 50);
+
+  // Después de la animación de salida, cambiar contenido
+  setTimeout(() => {
+    // Limpiar clases de salida
+    titleContainer.classList.remove('tab-anim-out');
+    descParagraph.classList.remove('tab-anim-out');
+
+    // Cambiar contenido
+    titleContainer.innerHTML = `<h3>${service.title}</h3>`;
+    descParagraph.textContent = service.desc;
+
+    // Aplicar el nuevo fondo a la tarjeta principal
+    if (service.bg) {
+      card.style.backgroundImage = `url('${service.bg}')`;
+      card.style.backgroundSize = 'cover';
+      card.style.backgroundPosition = 'center';
+    }
+
+    // Animar entrada del nuevo contenido
+    titleContainer.classList.add('tab-anim-in');
+    descParagraph.classList.add('tab-anim-in');
+
+    // Limpiar después de la animación de entrada
+    setTimeout(() => {
+      titleContainer.classList.remove('tab-anim-in');
+      descParagraph.classList.remove('tab-anim-in');
+      bgOverlay.remove();
+    }, 350);
+
   }, 350);
 }
 
-// Cambia el manejador de tabs:
-function handleTabClick(e) {
-  const clicked = e.currentTarget;
-  if (clicked.classList.contains('active')) return;
-  document.querySelectorAll('.option__tab').forEach(tab => tab.classList.remove('active'));
-  clicked.classList.add('active');
-  animateTabCardChange(clicked.dataset.service);
-}
-
-// Inicialización
-document.addEventListener('DOMContentLoaded', () => {
-  const initialTab = document.querySelector('.option__tab.active') || document.querySelector('.option__tab');
-  if (initialTab) {
-    animateTabCardChange(initialTab.dataset.service);
-  }
+// Función para agregar listeners a los tabs dentro de la tarjeta
+function addTabListeners() {
   document.querySelectorAll('.option__tab').forEach(tab => {
     tab.addEventListener('click', handleTabClick);
   });
-});
-
-// Llama a la función después de definir servicesData y antes de los listeners
-renderServiceTabs();
-
+}
 
 /* =======================================================================================================
    =================================FAQ TEMPLATE==========================================================
@@ -614,6 +597,12 @@ function animateFaqItemsOnScroll() {
 // Llama a la función después de renderFAQ()
 renderFAQ();
 animateFaqItemsOnScroll();
+
+// Inicialización - Renderizar la primera tarjeta con tabs dentro
+document.addEventListener('DOMContentLoaded', () => {
+  // Renderizar la tarjeta inicial (por defecto el primer servicio)
+  animateTabCardChange(servicesData[0].key);
+});
 
 
 
