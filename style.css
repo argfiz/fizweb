@@ -851,7 +851,7 @@ body:not(.contact-page) {
     display: inline-block;
 }
 .card__price-info-text li:last-child {
-    background: #ff4ab7dd;
+    background: #ff4ab7;
     color: #fff;
     font-weight: 700;
 }
