@@ -326,21 +326,21 @@ const servicesData = [
     icon: "./assets/icons/pages-icon.svg",
     title: "Páginas",
     desc: "Cada página está diseñada para contener las secciones que sean necesarias, cada una contiene una parte clave de la información del negocio.",
-    bg: "./assets/img/google-banner.jpg"
+    bg: "./assets/img/pages-banner.jpg"
   },
   {
     key: "secciones",
     icon: "./assets/icons/section-icon.svg",
     title: "Secciones",
     desc: "Cada sección cuenta con una altura aproximada a la pantalla, garantizando una presentación óptima de la información almacenada.",
-    bg: "./assets/img/google-banner.jpg"
+    bg: "./assets/img/sections-banner.jpg"
   },
   {
     key: "productos",
     icon: "./assets/icons/package-icon.svg",
     title: "Productos",
     desc: "Antes del despliegue de la página web, precargaremos la cantidad de productos correspondiente al pack elegido, asegurando que la tienda esté lista para operar",
-    bg: "./assets/img/google-banner.jpg"
+    bg: "./assets/img/products-banner.jpg"
   },
   {
     key: "google",
@@ -354,21 +354,21 @@ const servicesData = [
     icon: "./assets/icons/mobile-phone_icon.svg",
     title: "Multidispositivos",
     desc: "Ofrecemos un diseño responsive que garantiza una experiencia óptima en cualquier dispositivo. Se adaptará automáticamente a móviles, tablets y escritorios.",
-    bg: "./assets/img/google-banner.jpg"
+    bg: "./assets/img/multidispositivos-banner.jpg"
   },
   {
     key: "hosting",
     icon: "./assets/icons/hosting-icon.svg",
     title: "Hosting",
     desc: "Ofrecemos como parte del servicio la instalación y puesta en marcha del sitio web asegurando su funcionamiento.",
-    bg: "./assets/img/google-banner.jpg"
+    bg: "./assets/img/hosting-banner.jpg"
   },
   {
     key: "mantenimiento",
     icon: "./assets/icons/setting-icon.svg",
     title: "Mantenimiento",
     desc: "Si lo deseas estaremos a cargo del funcionamiento y mantenimiento del hosting, abonando una tarifa mensual para poder seguir estando en linea.",
-    bg: "./assets/img/google-banner.jpg"
+    bg: "./assets/img/mantenimiento-banner.jpg"
   }
 ];
 
