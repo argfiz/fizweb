@@ -531,6 +531,10 @@ const faqData = [
   {
     question: "¿Mi sitio será visible en Google?",
     answer: "Sí. Aplicamos tecnicas para que tu web sea indexada correctamente y tenga una base sólida para posicionarse en buscadores."
+  },
+  {
+    question: "¿Qué pasa si no contrato el mantenimiento?",
+    answer: "Si preferís no contratar el mantenimiento de Hosting y Dominio, se le facilitarán los links de los sitios donde se encuentran los servicios que recomendamos para agilizar la puesta en marcha del sitio web. Si elegís con mantenimiento, solo relajate porque no tendrás de qué preocuparte por temas técnicos."
   }
 ];
 
