@@ -950,7 +950,7 @@ body:not(.contact-page) {
 }
 
 .container-card__price-info{
-    border-bottom: 1px solid var(--color-secondary);
+    border-bottom: 2px solid var(--color-secondary);
     padding: 0px 0px;
     padding-bottom: 0px;
     display: flex;
