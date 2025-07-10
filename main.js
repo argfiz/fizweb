@@ -510,31 +510,31 @@ function addTabListeners() {
 const faqData = [
   {
     question: "¿Qué incluye el desarrollo de mi página web?",
-    answer: "Tu web incluye diseño moderno y adaptable a todos los dispositivos, estructura optimizada para buscadores, secciones personalizadas, formulario de contacto funcional, enlaces a redes sociales y carga rápida. Todo pensado para que tu marca se vea profesional desde el primer clic."
+    answer: "Tu sitio va a tener un diseño moderno que se adapta a cualquier pantalla, secciones personalizadas, formulario de contacto, enlaces a tus redes y carga rápida. También lo preparamos para que Google lo entienda bien. Todo listo para que tu marca se vea profesional desde el primer momento."
   },
   {
     question: "¿Puedo modificar el contenido después de publicada?",
-    answer: "Sí. Incluimos una actualización gratuita con cambios menores (textos, imágenes o productos). Si necesitás cambios más grandes o nuevas funcionalidades, podemos cotizarlos sin compromiso."
+    answer: "Sí. Incluimos una actualización gratis para cambios chicos como textos, imágenes o productos. Si más adelante querés agregar cosas nuevas o hacer cambios grandes, te pasamos un presupuesto sin compromiso."
   },
   {
     question: "¿Cuánto tiempo tarda en estar lista mi web?",
-    answer: "Depende del pack y la cantidad de contenido, pero en general el desarrollo toma entre 7 y 20 días hábiles desde que recibimos toda la información necesaria."
+    answer: "Depende del plan y de cuánto contenido tengas, pero en general la web está lista entre 7 y 20 días hábiles desde que nos pasás todo lo necesario."
   },
   {
     question: "¿El hosting está incluido?",
-    answer: "Sí. Todos los planes incluyen 1 año de hosting gratuito en servidores rápidos y seguros. Después podés renovarlo con nosotros o migrar tu sitio donde prefieras."
+    answer: "Sí. Todos los planes incluyen 1 año de hosting gratis en servidores rápidos y seguros. Después podés renovarlo con nosotros o mover tu sitio donde prefieras."
   },
   {
     question: "¿Qué necesito para empezar?",
-    answer: "Solo tenés que enviarnos el contenido (textos, imágenes, logo) y contarnos de qué estilo o referencias tiene tu página deseada. Nosotros nos encargamos del resto."
+    answer: "Solo tenés que enviarnos los textos, imágenes, tu logo y contarnos qué estilo te gusta. Con eso, nosotros nos encargamos de todo lo demás."
   },
   {
     question: "¿Mi sitio será visible en Google?",
-    answer: "Sí. Aplicamos tecnicas para que tu web sea indexada correctamente y tenga una base sólida para posicionarse en buscadores."
+    answer: "Sí. Lo preparamos para que Google lo pueda encontrar y mostrar en los resultados de búsqueda. Así tenés más chances de que te encuentren."
   },
   {
     question: "¿Qué pasa si no contrato el mantenimiento?",
-    answer: "Si preferís no contratar el mantenimiento de Hosting y Dominio, se le facilitarán los links de los sitios donde se encuentran los servicios que recomendamos para agilizar la puesta en marcha del sitio web. Si elegís con mantenimiento, solo relajate porque no tendrás de qué preocuparte por temas técnicos."
+    answer: "Si no querés el mantenimiento, te pasamos los links de los servicios que recomendamos para que puedas gestionarlo por tu cuenta. Pero si lo contratás, nos ocupamos nosotros y te olvidás de los temas técnicos."
   }
 ];
 
