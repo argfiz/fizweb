@@ -7,7 +7,7 @@ body {
 }
 /* Agrega el fondo gris solo para páginas que NO sean contact-page */
 body:not(.contact-page) {
-    background: #f3f3f3;
+    background: #fff;
 }
 .contact-page{
     background: url('./assets/img/bg-welcome.jpg') center center/cover no-repeat;
@@ -15,7 +15,7 @@ body:not(.contact-page) {
     min-height: 100vh;
 }
 :root {
-    --color-bg: #f3f3f3;
+    --color-bg: #fff;
     --color-primary: #7209b7;
     --color-secondary: #ff3791;
     --color-dark: #333333;
@@ -569,7 +569,7 @@ body:not(.contact-page) {
     padding: 0px;
     margin: 0px;
     max-width: 100vw;
-    background: #f3f3f3;
+    background: #fff;
     overflow: hidden;
     position: relative;
     opacity: 0;
@@ -1060,7 +1060,7 @@ body:not(.contact-page) {
    =======================================================================================================*/
 :root {
     --color-bg-main: #f4f6fa;
-    --color-bg-gradient: linear-gradient(#f3f3f3 25%, var(--color-dark) 25%);
+    --color-bg-gradient: linear-gradient(#fff 25%, var(--color-dark) 25%);
     --color-tab-bg: #f4f6fa;
     --color-tab-border: #d1d5db;
     --color-tab-active-bg: var(--color-secondary);
@@ -1083,7 +1083,7 @@ body:not(.contact-page) {
 }
 
 #services .section__title {
-    background-color: #f3f3f3;
+    background-color: #fff;
     padding-top: 25px;
     padding-bottom: 25px;
 }
@@ -1664,7 +1664,7 @@ html {
     max-width: 900px;
     margin: 68px auto;
     margin-bottom: 0px;
-    background: #f3f3f3;
+    background: #fff;
     border-radius: 3px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     padding: 32px;
