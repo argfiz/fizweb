@@ -912,9 +912,9 @@ body:not(.contact-page) {
 }
 .card__price-info-text li {
     position: relative;
-    padding: 7px 0px;
+    padding: 9px 0px;
     padding-bottom: 13px;
-    padding-left: 40px;
+    padding-left: 55px;
     color: #fff;
     font-size: 1rem;
     font-weight: 400;
@@ -925,7 +925,7 @@ body:not(.contact-page) {
 .card__price-info-text li::before {
     content: '';
     position: absolute;
-    left: 25px;
+    left: 40px;
     top: 50%;
     transform: translateY(-50%);
     width: 7px;
@@ -938,7 +938,7 @@ body:not(.contact-page) {
 .card__price-info-text li:last-child {
     background: #ff4ab7;
     color: #fff;
-    font-weight: 700;
+    font-weight: 900;
 }
 .card__price-info-text li:last-child::before {
     background: var(--color-light);
