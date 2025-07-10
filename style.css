@@ -1577,21 +1577,16 @@ footer {
 .faq__list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 
 .faq__item {
     background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px var(--color-shadow);
+    border-radius: 5px;
     overflow: hidden;
     transition: box-shadow 0.2s, background 0.2s, color 0.2s;
 }
 
-
-.faq__item.open {
-    box-shadow: 0 4px 16px var(--color-shadow-open);
-}
 
 .faq__question {
     width: 100%;
