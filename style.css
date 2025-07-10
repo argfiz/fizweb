@@ -961,8 +961,9 @@ body:not(.contact-page) {
 
 #home .list-card__price-info-text-bottom {
    border: none;
-   padding-top: 10px;
+   padding-top: 0px;
    padding-bottom: 10px;
+   background: transparent;
 }
 #home .list-card__price-info-text-bottom li:last-child {
     background: transparent;
