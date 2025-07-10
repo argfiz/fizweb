@@ -545,6 +545,10 @@ const faqData = [
   {
     question: "¿Qué pasa si no contrato el mantenimiento?",
     answer: "Si no querés el mantenimiento, te facilitamos los links del Hosting y del Dominio que recomendamos para que puedas gestionarlo por tu cuenta y avanzar con la instalacion del sitio web en el servidor de tu preferencia. Pero si lo contratás, nos ocupamos nosotros para que no te ocupes de los temas técnicos."
+  },
+  {
+    question: "¿Qué pasa si me arrepiento?",
+    answer: "Si te arrepentís, podés contactarnos y veremos cómo resolver la situación. Siempre buscamos la satisfacción del cliente. Si ya empezamos el trabajo, te pasaremos un presupuesto por lo realizado hasta ese momento."
   }
 ];
 
