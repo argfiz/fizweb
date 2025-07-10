@@ -264,7 +264,7 @@ function renderSlides() {
             </div>
             <div class="card__price-info">
               <div class="card__price-info-text">
-                <p class="card__price-info-text-top">Incluye:</p>
+                
                 <ul>
                   <li>Multidispositivos</li>
                   <li>Botón WhatsApp flotante</li>
@@ -274,7 +274,9 @@ function renderSlides() {
                 </ul>
                 <div class="container-card__price-info">
                   <p class="card__price-info-text-bottom">
-                      ${card.precioMensual ? `Mantenimiento <br><span>${card.precioMensual}</span> /mes` : ''}
+                      ${card.precioMensual ? `Mantenimiento <br>
+                      <span>${card.precioMensual}</span> /mes <br>
+                      <span id="recommended">RECOMENDADO</span>` : ''}
                   </p>
                 
                 <ul class="list-card__price-info-text-bottom">

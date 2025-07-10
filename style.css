@@ -863,6 +863,7 @@ body:not(.contact-page) {
     text-align: left;
     transition: background 0.2s;
 }
+
 .card__price-info-text-bottom {
     margin-top: 25px;
     border-radius: 10px;
@@ -883,11 +884,22 @@ body:not(.contact-page) {
     display: inline-block;
 }
 
+#recommended {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-block;
+    margin-top: 0px;
+    padding: 1px 2px;
+    background: var(--color-secondary);
+    border-radius: 3px;
+}
+
 .card__price-info-text ul {
     list-style: none;
     padding: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-top: 1px solid var(--color-secondary);
     margin: 0;
     display: flex;
