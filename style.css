@@ -912,8 +912,8 @@ body:not(.contact-page) {
 }
 .card__price-info-text li {
     position: relative;
-    padding: 7px 0px;
-    padding-bottom: 13px;
+    padding: 5px 0px;
+    padding-bottom: 9px;
     padding-left: 40px;
     color: #fff;
     font-size: 1rem;
