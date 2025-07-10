@@ -952,7 +952,7 @@ body:not(.contact-page) {
 #home .list-card__price-info-text-bottom li:last-child {
     background: transparent;
     color: #fff;
-    font-weight: 500;
+    font-weight: 300;
 }
 #home .list-card__price-info-text-bottom li:last-child::before {
     background: var(--color-secondary);

@@ -278,7 +278,7 @@ function renderSlides() {
                   </p>
                 
                 <ul class="list-card__price-info-text-bottom">
-                  <li>QR</li>
+                  <li>Codigo QR</li>
                   <li>Hosting y Dominio</li>
                   <li>Una actualizacion anual</li>
                 </ul>
