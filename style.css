@@ -991,9 +991,9 @@ body:not(.contact-page) {
     pointer-events: auto;
     position: relative;
     box-shadow: 
-        0 2px 12px rgba(0, 0, 0, 0.25),
-        0 4px 24px rgba(0, 0, 0, 0.35),
-        0 8px 48px rgba(0, 0, 0, 0.45);
+        0 2px 12px rgba(0, 0, 0, 0.45),
+        0 4px 24px rgba(0, 0, 0, 0.55),
+        0 8px 48px rgba(0, 0, 0, 0.65);
     /* Agregar la transición aquí para que funcione en ambas direcciones */
     transition: transform 0.5s ease;
 }
@@ -1002,9 +1002,9 @@ body:not(.contact-page) {
     transform: scale(1.2);
     transition: transform 0.5s ease;
     box-shadow: 
-        0 4px 16px rgba(0, 0, 0, 0.35),
-        0 8px 32px rgba(0, 0, 0, 0.45),
-        0 16px 64px rgba(0, 0, 0, 0.55);
+        0 4px 16px rgba(0, 0, 0, 0.55),
+        0 8px 32px rgba(0, 0, 0, 0.65),
+        0 16px 64px rgba(0, 0, 0, 0.75);
 }
 .card__price-info-icon img {
     filter: brightness(0) invert(1);
@@ -1031,9 +1031,9 @@ body:not(.contact-page) {
 
 
 
-
-
-
+/* =======================================================================================================
+   =================================SWIPER PAGINATION=================================================
+   =======================================================================================================*/
 .swiper-pagination {
     position: absolute;
     bottom: 12px;
@@ -1042,7 +1042,6 @@ body:not(.contact-page) {
     text-align: center;
     z-index: 10;
 }
-
 .swiper-pagination-bullet {
     background: #f72585 !important;
     width: 14px;
@@ -1051,11 +1050,63 @@ body:not(.contact-page) {
     margin: 0 6px !important;
     transition: transform 0.2s;
 }
-
 .swiper-pagination-bullet-active {
     background: var(--color-secondary) !important;
     transform: scale(1.25);
 }
+
+
+
+/* Animaciones para la tarjeta de precios
+// Estas animaciones se aplican a la tarjeta de precios cuando se abre o cierra la información de precios.
+// Se utilizan para crear un efecto de entrada y salida suave con transformación y desenfoque.
+// Las animaciones se definen con keyframes y se aplican a la clase .card*/
+@keyframes cardPriceInfoIn {
+    0% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.78);
+        filter: blur(12px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(0px) scale(1.05);
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes cardPriceInfoOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.78);
+        filter: blur(12px);
+    }
+}
+
+.card__price-info {
+    /* ...tus estilos previos... */
+    will-change: opacity, transform, filter;
+}
+
+.card__price-info.open {
+    animation: cardPriceInfoIn 0.60s cubic-bezier(.4,0,.2,1);
+}
+
+.card__price-info:not(.open) {
+    animation: cardPriceInfoOut 0.35s cubic-bezier(.4,0,.2,1);
+}
+
+
+
 
 @media (min-width: 501px) {
     .swiper {
@@ -1106,53 +1157,7 @@ body:not(.contact-page) {
 
 }
 
-/* Animaciones para la tarjeta de precios
-// Estas animaciones se aplican a la tarjeta de precios cuando se abre o cierra la información de precios.
-// Se utilizan para crear un efecto de entrada y salida suave con transformación y desenfoque.
-// Las animaciones se definen con keyframes y se aplican a la clase .card*/
-@keyframes cardPriceInfoIn {
-    0% {
-        opacity: 0;
-        transform: translateY(60px) scale(0.78);
-        filter: blur(12px);
-    }
-    60% {
-        opacity: 1;
-        transform: translateY(0px) scale(1.05);
-        filter: blur(2px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        filter: blur(0);
-    }
-}
 
-@keyframes cardPriceInfoOut {
-    0% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        filter: blur(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(60px) scale(0.78);
-        filter: blur(12px);
-    }
-}
-
-.card__price-info {
-    /* ...tus estilos previos... */
-    will-change: opacity, transform, filter;
-}
-
-.card__price-info.open {
-    animation: cardPriceInfoIn 0.60s cubic-bezier(.4,0,.2,1);
-}
-
-.card__price-info:not(.open) {
-    animation: cardPriceInfoOut 0.35s cubic-bezier(.4,0,.2,1);
-}
 /* =======================================================================================================
    =================================TABS TEMPLATE=================================================
    =======================================================================================================*/
