@@ -381,7 +381,7 @@ const servicesData = [
     key: "mantenimiento",
     icon: "./assets/icons/setting-icon.svg",
     title: "Mantenimiento",
-    desc: "Si querés, podemos ocuparnos del hosting y el dominio. Con una tarifa mensual, nos aseguramos de que tu página siga funcionando sin interrupciones y siempre esté en línea.",
+    desc: "Si querés, podemos ocuparnos del hosting y del dominio. Con una tarifa mensual, nos aseguramos de que tu página siga funcionando sin interrupciones y siempre esté en línea. Además obtendras tu QR y una actualizacion menor anual gratis.",
     bg: "./assets/img/mantenimiento-banner.jpg"
   }
 ];
