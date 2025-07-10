@@ -167,6 +167,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (wa) wa.classList.add('show');
   }, 700); // Espera 1 segundo antes de mostrar y animar
 
+// Animación de carga del welcome banner (igual que WhatsApp)
+setTimeout(() => {
+  const welcomeContainer = document.querySelector('.welcome__banner-container');
+  if (welcomeContainer) welcomeContainer.classList.add('show');
+}, 250);
+
 });
 
 
