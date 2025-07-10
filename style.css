@@ -987,20 +987,31 @@ body:not(.contact-page) {
     align-items: center;
     justify-content: center;
     z-index: 31;
-    cursor: pointer;
+    cursor: pointer !important;
     pointer-events: auto;
     position: relative;
+    box-shadow: 
+        0 2px 12px rgba(0, 0, 0, 0.25),
+        0 4px 24px rgba(0, 0, 0, 0.35),
+        0 8px 48px rgba(0, 0, 0, 0.45);
+    /* Agregar la transición aquí para que funcione en ambas direcciones */
+    transition: transform 0.5s ease;
+}
+.card__price-info-icon:hover {
+    cursor: pointer !important;
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+    box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.35),
+        0 8px 32px rgba(0, 0, 0, 0.45),
+        0 16px 64px rgba(0, 0, 0, 0.55);
 }
 .card__price-info-icon img {
     filter: brightness(0) invert(1);
     display: block;
+    cursor: pointer !important;
 }
-.card__price-info-icon,
-.card__price-info-icon img {
-    -webkit-tap-highlight-color: transparent;
-    outline: none !important;
-    box-shadow: none !important;
-}
+
 
 
 
