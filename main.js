@@ -524,7 +524,7 @@ const faqData = [
   },
   {
     question: "¿Puedo modificar el contenido después de publicada?",
-    answer: "Si, dispones de una actualizacion anual gratis para cambios chicos como textos, imágenes o productos. Si más adelante querés agregar cosas nuevas o hacer cambios grandes, te pasamos un presupuesto sin compromiso "
+    answer: "Si, dispones de una actualizacion anual gratis para cambios menores como textos, imágenes o productos. Si más adelante querés agregar cosas nuevas o hacer cambios grandes, te pasamos un presupuesto sin compromiso "
   },
   {
     question: "¿Cuánto tiempo tarda en estar lista mi web?",
