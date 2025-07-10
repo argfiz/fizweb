@@ -297,7 +297,26 @@ function addPriceInfoListeners() {
   document.querySelectorAll('.card__price-info-icon').forEach(iconDiv => {
     iconDiv.addEventListener('click', function(e) {
       e.stopPropagation();
-      const card = iconDiv.closest('.card');
+      
+      // Función para manejar el tap en móviles
+      function handleMobileIconTap(icon) {
+        // Solo en móviles (ancho menor a 700px)
+        if (window.innerWidth <= 700) {
+          // Agregar clase de animación
+          icon.classList.add('tap-animation');
+          
+          // Remover la clase después de la animación
+          setTimeout(() => {
+            icon.classList.remove('tap-animation');
+          }, 300);
+        }
+      }
+      
+      // Ejecutar animación de tap
+      handleMobileIconTap(this);
+      
+      // Lógica original para mostrar/ocultar info
+      const card = this.closest('.card');
       const priceInfo = card.querySelector('.card__price-info');
       priceInfo.classList.toggle('open');
     });
@@ -329,6 +348,14 @@ const swiper = new Swiper('.swiper', {
       centerInsufficientSlides: true,
     }
   }
+});
+
+window.addEventListener('resize', () => {
+  // Actualizar listeners si cambia el tamaño de pantalla
+  const icons = document.querySelectorAll('.card__price-info-icon');
+  icons.forEach(icon => {
+    icon.classList.remove('tap-animation');
+  });
 });
 
 /*****************************************************************************************************/

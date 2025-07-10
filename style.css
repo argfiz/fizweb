@@ -1156,7 +1156,39 @@ body:not(.contact-page) {
     }
 
 }
+/* Animación de tap para móviles */
+@media (max-width: 700px) {
+    .card__price-info-icon {
+        /* Eliminar el hover en móviles */
+        transition: none;
+    }
+    
+    .card__price-info-icon:hover {
+        transform: none;
+        box-shadow: 
+            0 2px 12px rgba(0, 0, 0, 0.25),
+            0 4px 24px rgba(0, 0, 0, 0.35),
+            0 8px 48px rgba(0, 0, 0, 0.45);
+    }
+    
+    /* Animación específica para tap */
+    .card__price-info-icon.tap-animation {
+        animation: mobileIconTap 0.3s cubic-bezier(.4, 0, .2, 1);
+    }
+}
 
+/* Keyframe para la animación de tap */
+@keyframes mobileIconTap {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 /* =======================================================================================================
    =================================TABS TEMPLATE=================================================
