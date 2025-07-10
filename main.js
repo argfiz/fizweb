@@ -272,9 +272,17 @@ function renderSlides() {
                   <li>Instalacion en servidor</li>
                   <li>No incluye mantenimiento</li>
                 </ul>
-                <p class="card__price-info-text-bottom">
-                  ${card.precioMensual ? `Mantenimiento <br><span>${card.precioMensual}</span> /mes` : ''}
-                </p>
+                <div class="container-card__price-info">
+                  <p class="card__price-info-text-bottom">
+                      ${card.precioMensual ? `Mantenimiento <br><span>${card.precioMensual}</span> /mes` : ''}
+                  </p>
+                
+                <ul class="list-card__price-info-text-bottom">
+                  <li>QR</li>
+                  <li>Hosting y Dominio</li>
+                  <li>Una actualizacion anual</li>
+                </ul>
+                </div>
               </div>
             </div>
       </div>
