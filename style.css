@@ -880,14 +880,15 @@ body:not(.contact-page) {
 .card__price-info-text-bottom span {
     color: #fff;
     font-weight: 600;
-    font-size: 1.7em;
+    font-size: 2em;
     display: inline-block;
 }
 
 #recommended {
     color: #fff;
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
     display: inline-block;
     margin-top: 0px;
     padding: 1px 2px;
@@ -899,7 +900,7 @@ body:not(.contact-page) {
     list-style: none;
     padding: 0;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     border-top: 1px solid var(--color-secondary);
     margin: 0;
     display: flex;
@@ -911,8 +912,8 @@ body:not(.contact-page) {
 }
 .card__price-info-text li {
     position: relative;
-    padding: 5px 0px;
-    padding-bottom: 9px;
+    padding: 7px 0px;
+    padding-bottom: 13px;
     padding-left: 40px;
     color: #fff;
     font-size: 1rem;
@@ -949,7 +950,7 @@ body:not(.contact-page) {
 }
 
 .container-card__price-info{
-    border: 1px solid var(--color-secondary);
+    border-bottom: 1px solid var(--color-secondary);
     padding: 0px 0px;
     padding-bottom: 0px;
     display: flex;
@@ -960,6 +961,8 @@ body:not(.contact-page) {
 
 #home .list-card__price-info-text-bottom {
    border: none;
+   padding-top: 10px;
+   padding-bottom: 10px;
 }
 #home .list-card__price-info-text-bottom li:last-child {
     background: transparent;
