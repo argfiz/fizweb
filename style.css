@@ -533,6 +533,7 @@ body:not(.contact-page) {
     height: auto;
     margin: 40px auto;
     margin-top: -250px;
+    margin-bottom: 0px;
     border-radius: 10px;
     position: relative; 
     z-index: 1;
@@ -1268,7 +1269,7 @@ body:not(.contact-page) {
 }
 @media (min-width: 1001px) {
     .tab__card p{
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 }
 
