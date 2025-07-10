@@ -586,7 +586,7 @@ body:not(.contact-page) {
 .swiper-slide {
     max-width: 300px;
     margin-bottom: 60px;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 
@@ -595,7 +595,7 @@ body:not(.contact-page) {
 .card {
     position: relative;
     background: url('./assets/img/bg-card.png') center center/cover no-repeat;
-    border-radius: 20px;
+    border-radius: 3px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
