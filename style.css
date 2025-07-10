@@ -865,7 +865,6 @@ body:not(.contact-page) {
 }
 .card__price-info-text li {
     position: relative;
-    
     padding: 13px 0px;
     padding-bottom: 17px;
     padding-left: 45px;
@@ -882,8 +881,8 @@ body:not(.contact-page) {
     left: 25px;
     top: 50%;
     transform: translateY(-50%);
-    width: 9px;
-    height: 9px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: var(--color-secondary);
     
@@ -1059,9 +1058,9 @@ body:not(.contact-page) {
    =================================TABS TEMPLATE=================================================
    =======================================================================================================*/
 :root {
-    --color-bg-main: #f4f6fa;
+    --color-bg-main: #fff;
     --color-bg-gradient: linear-gradient(#fff 25%, var(--color-dark) 25%);
-    --color-tab-bg: #f4f6fa;
+    --color-tab-bg: #fff;
     --color-tab-border: #d1d5db;
     --color-tab-active-bg: var(--color-secondary);
     --color-tab-active-border: var(--color-secondary);
