@@ -544,7 +544,7 @@ const faqData = [
   },
   {
     question: "¿Qué pasa si no contrato el mantenimiento?",
-    answer: "Si no querés el mantenimiento, te pasamos los links del Hosting y del Dominio que recomendamos para que puedas gestionarlo por tu cuenta. Pero si lo contratás, nos ocupamos nosotros para que no te ocupes de los temas técnicos."
+    answer: "Si no querés el mantenimiento, te facilitamos los links del Hosting y del Dominio que recomendamos para que puedas gestionarlo por tu cuenta y avanzar con la instalacion del sitio web en el servidor de tu preferencia. Pero si lo contratás, nos ocupamos nosotros para que no te ocupes de los temas técnicos."
   }
 ];
 
