@@ -381,7 +381,7 @@ const servicesData = [
     key: "mantenimiento",
     icon: "./assets/icons/setting-icon.svg",
     title: "Mantenimiento",
-    desc: "Si querés, podemos ocuparnos del hosting y del dominio. Con una tarifa mensual, nos aseguramos de que tu página siga funcionando sin interrupciones y siempre esté en línea. Además obtendras tu QR y una actualizacion menor anual gratis.",
+    desc: "Si querés, podemos ocuparnos del hosting y del dominio. Con una tarifa mensual, nos aseguramos de que tu página siga funcionando sin interrupciones y siempre esté en línea. Además obtendras tu QR y una actualizacion anual gratis.",
     bg: "./assets/img/mantenimiento-banner.jpg"
   }
 ];
@@ -520,19 +520,19 @@ function addTabListeners() {
 const faqData = [
   {
     question: "¿Qué incluye el desarrollo de mi página web?",
-    answer: "Tu sitio va a tener un diseño moderno que se adapta a cualquier pantalla, secciones personalizadas, formulario de contacto, enlaces a tus redes y carga rápida. También lo preparamos para que Google lo entienda bien. Todo listo para que tu marca se vea profesional desde el primer momento."
+    answer: "Tu sitio va a tener un diseño moderno que se adapta a cualquier pantalla, secciones personalizadas, enlaces a tus redes y carga rápida. Todo listo para que tu marca se vea profesional desde el primer momento."
   },
   {
     question: "¿Puedo modificar el contenido después de publicada?",
-    answer: "Sí. Incluimos una actualización gratis para cambios chicos como textos, imágenes o productos. Si más adelante querés agregar cosas nuevas o hacer cambios grandes, te pasamos un presupuesto sin compromiso."
+    answer: "Si, dispones de una actualizacion anual gratis para cambios chicos como textos, imágenes o productos. Si más adelante querés agregar cosas nuevas o hacer cambios grandes, te pasamos un presupuesto sin compromiso "
   },
   {
     question: "¿Cuánto tiempo tarda en estar lista mi web?",
-    answer: "Depende del plan y de cuánto contenido tengas, pero en general la web está lista entre 7 y 20 días hábiles desde que nos pasás todo lo necesario."
+    answer: "Depende del plan y de cuánto contenido tengas, pero en general la web está lista entre 7 y 30 días hábiles desde que nos pasás todo lo necesario."
   },
   {
     question: "¿El hosting está incluido?",
-    answer: "Sí. Todos los planes incluyen 1 año de hosting gratis en servidores rápidos y seguros. Después podés renovarlo con nosotros o mover tu sitio donde prefieras."
+    answer: "No, el hosting y el dominio no están incluidos en el precio del desarrollo. Pero si querés, podemos encargarnos de eso por una tarifa mensual. Así nos ocupamos de que tu sitio esté siempre online y funcionando bien."
   },
   {
     question: "¿Qué necesito para empezar?",
