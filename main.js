@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
 setTimeout(() => {
   const welcomeContainer = document.querySelector('.welcome__banner-container');
   if (welcomeContainer) welcomeContainer.classList.add('show');
-}, 250);
+}, 400);
 
 });
 
