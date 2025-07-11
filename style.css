@@ -1876,7 +1876,7 @@ transition: transform 0.2s ease, background-color 0.2s ease;
     margin-top: 45px;
     margin-bottom: 30px;
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     align-items: center;
     gap: 18px;
 }
@@ -1901,7 +1901,7 @@ transition: transform 0.2s ease, background-color 0.2s ease;
     overflow: hidden;
     margin-top: 0px;
     display: block;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     margin-top: 0px;
 }
 
@@ -1987,7 +1987,15 @@ transition: transform 0.2s ease, background-color 0.2s ease;
     animation: contactFadeIn 0.85s cubic-bezier(.4, 0, .2, 1) forwards;
 }
 
-
+@media (max-width: 600px) {
+    .social__links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .qr-code{
+        margin: 0 auto;
+    }
+}
 
 
 /* =======================================================================================================
