@@ -990,20 +990,17 @@ body:not(.contact-page) {
     pointer-events: auto;
     position: relative;
     box-shadow: 
-        0 2px 20px rgba(0, 0, 0, 1),
-        0 4px 40px rgba(0, 0, 0, 0.8),
-        0 8px 80px rgba(0, 0, 0, 0.7);
+        0 2px 15px rgba(0, 0, 0, 1),
+        0 4px 25px rgba(0, 0, 0, 0.8),
+        0 8px 40px rgba(0, 0, 0, 0.7);
     /* Agregar la transición aquí para que funcione en ambas direcciones */
     transition: transform 0.5s ease;
 }
 .card__price-info-icon:hover {
     cursor: pointer !important;
     transform: scale(1.2);
-    transition: transform 0.5s ease;
-    box-shadow: 
-        0 4px 24px rgba(0, 0, 0, 0.75),
-        0 8px 48px rgba(0, 0, 0, 0.85),
-        0 16px 94px rgba(0, 0, 0, 0.95);
+    transition: transform 0.4s ease;
+    
 }
 .card__price-info-icon img {
     filter: brightness(0) invert(1);
