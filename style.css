@@ -1915,13 +1915,12 @@ transition: transform 0.2s ease, background-color 0.2s ease;
 .contact__form form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 25px;
 }
 
 .form__group {
     display: flex;
     flex-direction: column;
-    padding-top: 3px;
 }
 
 .form__group label {
@@ -1934,13 +1933,14 @@ transition: transform 0.2s ease, background-color 0.2s ease;
 .form__group input,
 .form__group select,
 .form__group textarea {
-    font-weight: 100;
+    font-weight: 400;
     padding: 8px 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
     font-size: 1.2rem;
     background: #ffffff;
     resize: vertical;
+    color: var(--color-dark);
 }
 
 .form__group textarea {
