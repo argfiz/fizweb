@@ -1876,6 +1876,7 @@ transition: transform 0.2s ease, background-color 0.2s ease;
     margin-top: 45px;
     margin-bottom: 30px;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 18px;
 }
@@ -1899,9 +1900,9 @@ transition: transform 0.2s ease, background-color 0.2s ease;
     border-radius: 0px;
     overflow: hidden;
     margin-top: 0px;
-     display: block;
-        margin: 0 auto;
-        margin-top: 0px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0px;
 }
 
 
