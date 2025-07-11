@@ -550,24 +550,20 @@ const faqData = [
     answer: "Tu sitio va a tener un diseño moderno que se adapta a cualquier pantalla, secciones personalizadas, enlaces a tus redes y carga rápida. Todo listo para que tu marca se vea profesional desde el primer momento."
   },
   {
-    question: "¿Puedo modificar el contenido después de publicada?",
-    answer: "Si estamos a cargo del mantenimiento, dispones de una actualizacion anual gratis para cambios menores como textos, imágenes o productos. Si más adelante querés agregar cosas nuevas o hacer cambios grandes, te pasamos un presupuesto sin compromiso "
-  },
-  {
     question: "¿Cuánto tiempo tarda en estar lista mi web?",
     answer: "Depende del plan y de cuánto contenido tengas, pero en general la web está lista entre 7 y 30 días hábiles desde que nos pasás todo lo necesario."
   },
   {
-    question: "¿El hosting está incluido?",
-    answer: "No, el hosting y el dominio no están incluidos en el precio del desarrollo. Pero si querés, podemos encargarnos de eso por una tarifa mensual. Así nos ocupamos de que tu sitio esté siempre online y funcionando bien."
+    question: "¿Puedo modificar el contenido después de publicada?",
+    answer: "Si estamos a cargo del mantenimiento, dispones de una actualizacion anual gratis para cambios menores como textos, imágenes o productos. Si más adelante querés agregar cosas nuevas o hacer cambios grandes, te pasamos un presupuesto sin compromiso "
+  },
+  {
+    question: "¿El Hosting y el Dominio están incluido?",
+    answer: "No, el precio es por el desarrollo del sitio web. Pero si querés, podemos encargarnos de eso por una tarifa mensual. Así nos ocupamos de que tu sitio esté siempre online y funcionando bien."
   },
   {
     question: "¿Qué necesito para empezar?",
     answer: "Solo tenés que enviarnos los textos, imágenes, tu logo y contarnos qué estilo te gusta. Con eso, nosotros nos encargamos de todo lo demás."
-  },
-  {
-    question: "¿Mi sitio será visible en Google?",
-    answer: "Sí. Lo preparamos para que Google lo pueda encontrar y mostrar en los resultados de búsqueda. Así tenés más chances de que te encuentren."
   },
   {
     question: "¿Qué pasa si no contrato el mantenimiento?",
