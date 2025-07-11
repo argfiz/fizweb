@@ -333,7 +333,7 @@ body:not(.contact-page) {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: url('./assets/img/bg-card.png') center center/cover no-repeat;
+        background: #131313;
         /*backdrop-filter: blur(12px);*/
     }
 
