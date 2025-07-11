@@ -1944,7 +1944,7 @@ transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .form__group textarea {
-    min-height: 80px;
+    min-height: 100px;
 }
 
 .submit__btn {
