@@ -1838,16 +1838,21 @@ html {
 }
 
 .contact__icon {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     background: var(--color-secondary);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 14px;
+transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
+.contact__icon:hover {
+    transform: scale(1.1);
+    background: var(--color-dark);
+}
 .contact__icon img {
     width: 25px;
     height: 25px;
