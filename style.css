@@ -990,9 +990,9 @@ body:not(.contact-page) {
     pointer-events: auto;
     position: relative;
     box-shadow: 
-        0 2px 20px rgba(0, 0, 0, 0.65),
-        0 4px 40px rgba(0, 0, 0, 0.75),
-        0 8px 80px rgba(0, 0, 0, 0.85);
+        0 2px 20px rgba(0, 0, 0, 1),
+        0 4px 40px rgba(0, 0, 0, 0.8),
+        0 8px 80px rgba(0, 0, 0, 0.7);
     /* Agregar la transición aquí para que funcione en ambas direcciones */
     transition: transform 0.5s ease;
 }
