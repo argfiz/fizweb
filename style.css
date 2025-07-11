@@ -17,7 +17,7 @@ body:not(.contact-page) {
 :root {
     --color-bg: #fff;
     --color-primary: #7209b7;
-    --color-secondary: #ff3791;
+    --color-secondary: #f70f77;
     --color-dark: #333333;
     --color-dark-2: #222222;
     --color-dark-3: #111111;
@@ -936,7 +936,7 @@ body:not(.contact-page) {
     display: inline-block;
 }
 .card__price-info-text li:last-child {
-    background: #ff4ab7;
+    background: var(--color-secondary);
     color: #fff;
     font-weight: 900;
 }
