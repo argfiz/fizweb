@@ -1,4 +1,4 @@
-* { cursor: default; }
+/** { cursor: default; }*/
 body {
     margin: 0;
     padding: 0;
@@ -1882,11 +1882,16 @@ transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .social__links a {
-
     display: inline-block;
-    margin-right: 5px;
     font-size: 1.3em;
     text-decoration: none;
+    cursor: pointer !important;
+    transition: transform 0.2s ease;
+}
+
+.social__links a:hover {
+    cursor: pointer !important;
+    transform: translateY(-5px);
 }
 
 .social__links img {
@@ -1895,8 +1900,8 @@ transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .qr-code {
-    width: 170px;
-    height: 170px;
+    width: 175px;
+    height: 175px;
     border-radius: 0px;
     overflow: hidden;
     margin-top: 0px;
