@@ -161,6 +161,26 @@ body:not(.contact-page) {
     letter-spacing: 1px;
     font-family: var(--font-main);
 }
+/*======= LOGO NAVBAR sin sombra en movil ====== */
+.logo-nav,
+.logo-nav img,
+.logo-nav span {
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+    -tap-highlight-color: transparent !important;
+}
+.logo-nav:focus,
+.logo-nav:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+
+
 
 /* Oculta el logo grande del menú lateral en escritorio */
 .logo-nav__menu {
