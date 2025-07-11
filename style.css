@@ -161,10 +161,10 @@ body:not(.contact-page) {
     letter-spacing: 1px;
     font-family: var(--font-main);
 }
-/*======= LOGO NAVBAR sin sombra en movil ====== */
-.logo-nav,
-.logo-nav img,
-.logo-nav span {
+/*======= LOGO NAVBAR sin sombra en el tap del movil ====== */
+.logo-nav__link,
+.logo-nav__link img,
+.logo-nav__link span {
     -webkit-tap-highlight-color: transparent !important;
     outline: none !important;
     user-select: none;
@@ -173,8 +173,8 @@ body:not(.contact-page) {
     -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
     -tap-highlight-color: transparent !important;
 }
-.logo-nav:focus,
-.logo-nav:active {
+.logo-nav__link:focus,
+.logo-nav__link:active {
     outline: none !important;
     -webkit-tap-highlight-color: transparent !important;
 }
