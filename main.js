@@ -562,16 +562,16 @@ const faqData = [
     answer: "No, el precio es por el desarrollo del sitio web. Pero si querés, podemos encargarnos de eso por una tarifa mensual. Así nos ocupamos de que tu sitio esté siempre online y funcionando bien."
   },
   {
-    question: "¿Por que es importante y te recomendamos contratar el mantenimiento?",
+    question: "¿Por que te recomendamos contratar el mantenimiento?",
     answer: "Porque el mantenimiento garantiza que tu sitio web esté siempre actualizado, seguro y funcionando correctamente. Además, te ahorra tiempo y preocupaciones, permitiéndote enfocarte en hacer crecer tu negocio."
-  },
-  {
-    question: "¿Qué necesito para empezar?",
-    answer: "Solo tenés que enviarnos los textos, imágenes, tu logo y contarnos qué estilo te gusta. Con eso, nosotros nos encargamos de todo lo demás."
   },
   {
     question: "¿Qué pasa si no contrato el mantenimiento?",
     answer: "Si no querés el mantenimiento, te facilitamos los links del Hosting y del Dominio que recomendamos para que puedas gestionarlo por tu cuenta y avanzar con la instalacion del sitio web en el servidor de tu preferencia. Pero si lo contratás, nos ocupamos nosotros para que no te compliques con temas técnicos."
+  },
+  {
+    question: "¿Qué necesito para empezar?",
+    answer: "Solo tenés que enviarnos los textos, imágenes, tu logo y contarnos qué estilo te gusta. Con eso, nosotros nos encargamos de todo lo demás."
   },
   {
     question: "¿Qué pasa si me arrepiento?",
