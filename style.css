@@ -1621,7 +1621,9 @@ footer {
 ======= FOOTER sin sombra en el tap del movil =========
 =========================================================== */
 .footer-links,
-.footer__social {
+.footer__social,
+.footer-links a,
+.footer__social a {
     -webkit-tap-highlight-color: transparent !important;
     outline: none !important;
     user-select: none;
@@ -1630,12 +1632,16 @@ footer {
     -webkit-tap-highlight-color: transparent !important;
 }
 .footer-links:focus,
-.footer-links:active {
+.footer-links:active,
+.footer-links a:focus,
+.footer-links a:active {
     outline: none !important;
     -webkit-tap-highlight-color: transparent !important;
 }
 .footer__social:focus,
-.footer__social:active {
+.footer__social:active,
+.footer__social a:focus,
+.footer__social a:active  {
     outline: none !important;
     -webkit-tap-highlight-color: transparent !important;
 }
