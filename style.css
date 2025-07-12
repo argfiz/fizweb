@@ -323,6 +323,28 @@ body:not(.contact-page) {
     display: block;
 
 }
+/*============================================================
+======= Eliminar el hover en móviles =========================
+=========================================================== */
+.hamburger,
+.hamburger span {
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent !important;
+}
+.hamburger:focus,
+.hamburger:active,
+.hamburger span:focus,
+.hamburger span:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+
+
 
 /* Animación */
 .hamburger.active span:nth-child(1) {
