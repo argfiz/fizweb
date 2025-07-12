@@ -167,11 +167,37 @@ document.addEventListener('DOMContentLoaded', () => {
     if (wa) wa.classList.add('show');
   }, 700); // Espera 1 segundo antes de mostrar y animar
 
-// Animación de carga del welcome banner (igual que WhatsApp)
-setTimeout(() => {
+// Animación de carga del welcome banner con preload de imagen
+function loadWelcomeBanner() {
   const welcomeContainer = document.querySelector('.welcome__banner-container');
-  if (welcomeContainer) welcomeContainer.classList.add('show');
-}, 400);
+  const welcomeImg = document.querySelector('.welcome__banner');
+  
+  if (!welcomeContainer || !welcomeImg) return;
+  
+  // Crear una imagen para precargar
+  const img = new Image();
+  img.src = welcomeImg.src;
+  
+  // Cuando la imagen esté cargada, ejecutar la animación
+  img.onload = () => {
+    welcomeContainer.classList.add('show');
+  };
+  
+  // Fallback: Si la imagen ya está en caché, ejecutar inmediatamente
+  if (img.complete) {
+    welcomeContainer.classList.add('show');
+  }
+  
+  // Timeout de seguridad: mostrar después de 1 segundo máximo
+  setTimeout(() => {
+    if (!welcomeContainer.classList.contains('show')) {
+      welcomeContainer.classList.add('show');
+    }
+  }, 1000);
+}
+
+// Ejecutar la función con un pequeño retraso
+setTimeout(loadWelcomeBanner, 400);
 
 });
 

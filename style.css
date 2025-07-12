@@ -670,7 +670,7 @@ body:not(.contact-page) {
 }
 
 .welcome__banner-container.show {
-    animation: welcomeBannerPopIn 0.7s cubic-bezier(.4, 0, .2, 1);
+    animation: welcomeBannerPopIn 0.8s cubic-bezier(.4, 0, .2, 1);
     animation-delay: 0s;
     opacity: 1;
     pointer-events: auto;
@@ -678,11 +678,11 @@ body:not(.contact-page) {
 
 @keyframes welcomeBannerPopIn {
     0% {
-        transform: scale(0.6);
+        transform: scale(0.5);
         opacity: 0;
     }
-    60% {
-        transform: scale(1.1);
+    70% {
+        transform: scale(1.05);
         opacity: 1;
     }
     100% {
