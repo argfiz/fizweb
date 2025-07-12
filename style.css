@@ -270,8 +270,21 @@ body:not(.contact-page) {
     filter: brightness(0) invert(1);
     transition: filter 0.2s;
 }
+@media (max-width: 700px)  {
+   
+    .nav-menu__social-link {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav-menu__social-link img {
+        width: 28px;
+        height: 28px;
+    }
+    
+}
 /*=======================================================
-======= FOOTER sin sombra en el tap del movil =========
+=======sin sombra en el tap del movil =========
 =========================================================== */
 .nav-menu__social,
 .footer__social-link,
