@@ -1995,13 +1995,13 @@ transition: transform 0.2s ease, background-color 0.2s ease;
 
 .contact__text h3 {
     margin: 0 0 4px 0;
-    font-size: 1.4em;
-    color: #444;
+    font-size: 1.3em;
+    color: var(--color-dark);
 }
 
 .contact__text p {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 .social__links {
