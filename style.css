@@ -1753,7 +1753,7 @@ footer {
 
 /* Contenedor principal */
 .faq__section {
-    background: #111;
+    background: linear-gradient(0deg,rgba(17, 17, 17, 1) 25%, rgba(85, 85, 85, 1) 100%);
     font-family: var(--font-main);
     padding-bottom: 0px;
     margin-bottom: 0px;
