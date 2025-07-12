@@ -426,6 +426,7 @@ function handleTabClick(e) {
 // animación de cambio de tarjeta de servicio
 // Esta función se llama al hacer click en un tab
 // y anima el cambio de tarjeta de servicio
+// animación de cambio de tarjeta de servicio MEJORADA
 function animateTabCardChange(serviceKey) {
   const service = servicesData.find(s => s.key === serviceKey);
   const body = document.querySelector('.tabs__body');
@@ -474,64 +475,76 @@ function animateTabCardChange(serviceKey) {
     tab.classList.toggle('active', tab.dataset.service === serviceKey);
   });
 
-  // Crear overlay para transición de fondo
-  const bgOverlay = document.createElement('div');
-  bgOverlay.style.cssText = `
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('${service.bg}');
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    z-index: 1;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
-  `;
+  // PRECARGAR la nueva imagen antes de la transición
+  const newImage = new Image();
+  newImage.src = service.bg;
   
-  card.style.position = 'relative';
-  card.appendChild(bgOverlay);
+  // Cuando la imagen esté cargada, hacer la transición
+  newImage.onload = () => {
+    // Crear overlay para transición de fondo
+    const bgOverlay = document.createElement('div');
+    bgOverlay.style.cssText = `
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('${service.bg}');
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      z-index: 1;
+      transition: opacity 0.8s ease;
+      pointer-events: none;
+    `;
+    
+    card.style.position = 'relative';
+    card.appendChild(bgOverlay);
 
-  // Animar salida del contenido
-  titleContainer.classList.add('tab-anim-out');
-  descParagraph.classList.add('tab-anim-out');
+    // Animar salida del contenido
+    titleContainer.classList.add('tab-anim-out');
+    descParagraph.classList.add('tab-anim-out');
 
-  // Mostrar el overlay del fondo
-  setTimeout(() => {
-    bgOverlay.style.opacity = '1';
-  }, 50);
-
-  // Después de la animación de salida, cambiar contenido
-  setTimeout(() => {
-    // Limpiar clases de salida
-    titleContainer.classList.remove('tab-anim-out');
-    descParagraph.classList.remove('tab-anim-out');
-
-    // Cambiar contenido
-    titleContainer.innerHTML = `<h3>${service.title}</h3>`;
-    descParagraph.textContent = service.desc;
-
-    // Aplicar el nuevo fondo a la tarjeta principal
-    if (service.bg) {
-      card.style.backgroundImage = `url('${service.bg}')`;
-      card.style.backgroundSize = 'cover';
-      card.style.backgroundPosition = 'center';
-    }
-
-    // Animar entrada del nuevo contenido
-    titleContainer.classList.add('tab-anim-in');
-    descParagraph.classList.add('tab-anim-in');
-
-    // Limpiar después de la animación de entrada
+    // Mostrar el overlay del fondo (MÁS LENTO)
     setTimeout(() => {
-      titleContainer.classList.remove('tab-anim-in');
-      descParagraph.classList.remove('tab-anim-in');
-      bgOverlay.remove();
-    }, 350);
+      bgOverlay.style.opacity = '1';
+    }, 100);
 
-  }, 350);
+    // Después de la animación de salida, cambiar contenido
+    setTimeout(() => {
+      // Limpiar clases de salida
+      titleContainer.classList.remove('tab-anim-out');
+      descParagraph.classList.remove('tab-anim-out');
+
+      // Cambiar contenido
+      titleContainer.innerHTML = `<h3>${service.title}</h3>`;
+      descParagraph.textContent = service.desc;
+
+      // Aplicar el nuevo fondo a la tarjeta principal
+      if (service.bg) {
+        card.style.backgroundImage = `url('${service.bg}')`;
+        card.style.backgroundSize = 'cover';
+        card.style.backgroundPosition = 'center';
+      }
+
+      // Animar entrada del nuevo contenido
+      titleContainer.classList.add('tab-anim-in');
+      descParagraph.classList.add('tab-anim-in');
+
+      // Limpiar después de la animación de entrada
+      setTimeout(() => {
+        titleContainer.classList.remove('tab-anim-in');
+        descParagraph.classList.remove('tab-anim-in');
+        bgOverlay.remove();
+      }, 450); // Más tiempo para transición suave
+
+    }, 450); // Más tiempo para la salida
+  };
+
+  // Si la imagen ya está en caché, ejecutar inmediatamente
+  if (newImage.complete) {
+    newImage.onload();
+  }
 }
 
 // Función para agregar listeners a los tabs dentro de la tarjeta
