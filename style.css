@@ -454,11 +454,30 @@ body:not(.contact-page) {
     .nav-menu__link:focus {
         background: var(--color-secondary);
         color: #fff;
-        box-shadow: 0 2px 12px rgba(247, 37, 133, 0.10);
         outline: none;
         width: 100%;
 
     }
+}
+
+/*============================================================
+======= Eliminar el hover en móviles =========================
+=========================================================== */
+.nav-menu__item,
+.nav-menu__item a {
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent !important;
+}
+.nav-menu__item:focus,
+.nav-menu__item:active,
+.nav-menu__item a:focus,
+.nav-menu__item a:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
 }
 
 
@@ -1068,7 +1087,9 @@ body:not(.contact-page) {
     display: block;
     cursor: pointer !important;
 }
-
+/*============================================================
+======= Eliminar el hover en móviles =========================
+=========================================================== */
 .card__price-info-icon,
 .card__price-info-icon img {
     -webkit-tap-highlight-color: transparent !important;
@@ -1076,8 +1097,7 @@ body:not(.contact-page) {
     user-select: none;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
-    -tap-highlight-color: transparent !important;
+    -webkit-tap-highlight-color: transparent !important;
 }
 .card__price-info-icon:focus,
 .card__price-info-icon:active {
