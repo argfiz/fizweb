@@ -744,7 +744,7 @@ body:not(.contact-page) {
 .card {
     position: relative;
     background: url('./assets/img/bg-card.png') center center/cover no-repeat;
-    border-radius: 3px;
+    border-radius: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
