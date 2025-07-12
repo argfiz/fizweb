@@ -375,7 +375,7 @@ body:not(.contact-page) {
 }
 
 /* ========== RESPONSIVE ========== */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
 
     .nav-menu__list,
     .nav-menu__social {
