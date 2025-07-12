@@ -2012,8 +2012,8 @@ html {
 }
 
 .contact__icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background: var(--color-secondary);
     border-radius: 50%;
     display: flex;
@@ -2028,8 +2028,8 @@ transition: transform 0.2s ease, background-color 0.2s ease;
     background: var(--color-dark);
 }
 .contact__icon img {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
     display: block;
     filter: brightness(0) invert(1);
@@ -2093,8 +2093,8 @@ transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .social__links img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 /*============================================================
 ======= Eliminar el hover en móviles =========================
@@ -2122,8 +2122,8 @@ transition: transform 0.2s ease, background-color 0.2s ease;
 
 
 .qr-code {
-    width: 175px;
-    height: 175px;
+    width: 200px;
+    height: 200px;
     border-radius: 0px;
     overflow: hidden;
     display: block;
