@@ -1792,7 +1792,7 @@ footer {
 .faq__list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
 }
 
 .faq__item {
