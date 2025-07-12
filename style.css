@@ -958,7 +958,7 @@ body:not(.contact-page) {
     pointer-events: auto;
     opacity: 1;
     background: linear-gradient(rgba(20,20,20,0.70));
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
 }
 
@@ -1176,7 +1176,7 @@ body:not(.contact-page) {
 @keyframes cardPriceInfoIn {
     0% {
         opacity: 0;
-        transform: translateY(60px) scale(0.78);
+        transform: translateY(0px) scale(0.6);
         filter: blur(12px);
     }
     60% {
@@ -1195,11 +1195,11 @@ body:not(.contact-page) {
     0% {
         opacity: 1;
         transform: translateY(0) scale(1);
-        filter: blur(0);
+        filter: blur(12px);
     }
     100% {
         opacity: 0;
-        transform: translateY(60px) scale(0.78);
+        transform: translateY(0px) scale(0.75);
         filter: blur(12px);
     }
 }
