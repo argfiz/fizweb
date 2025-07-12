@@ -270,6 +270,33 @@ body:not(.contact-page) {
     filter: brightness(0) invert(1);
     transition: filter 0.2s;
 }
+/*=======================================================
+======= FOOTER sin sombra en el tap del movil =========
+=========================================================== */
+.nav-menu__social,
+.footer__social-link,
+.nav-menu__social img {
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent !important;
+}
+.nav-menu__social:focus,
+.nav-menu__social:active,
+.footer__social-link:focus,
+.footer__social-link:active,
+.nav-menu__social img:focus,
+.nav-menu__social img:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+
+
+
+
 
 /* ====== HAMBURGER ====== */
 .hamburger {
