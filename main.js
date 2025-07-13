@@ -68,6 +68,8 @@ window.addEventListener('scroll', () => {
 /******************************************SECTION TITLE LOAD**********************************/
 /******************************************TABS OOPTION LOAD**********************************/
 /*******************************************WHATSAPP LOAD*****************************************/
+/*******************************************banner-welcome LOAD*****************************************/
+
 document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('.hero__image');
   if (hero) {
