@@ -1099,6 +1099,7 @@ body:not(.contact-page) {
 
 
 .card__price-info-icon {
+    background: var(--color-secondary);
     width: 58px;
     height: 58px;
     border-radius: 50%;
