@@ -392,7 +392,7 @@ const servicesData = [
     key: "paginas",
     icon: "./assets/icons/pages-icon.svg",
     title: "Páginas",
-    desc: "Cada página de tu sitio está pensada para mostrar una parte importante de tu negocio. Incluye solo las secciones que realmente necesitás, organizadas para que tus clientes entiendan quién sos y qué ofrecés, sin vueltas.",
+    desc: "Cada página de tu sitio está pensada para mostrar una parte importante de tu negocio. Incluye solo las secciones que realmente necesitás, organizadas para que tus clientes entiendan quién sos y qué ofrecés.",
     bg: "./assets/img/pages-banner.jpg"
   },
   {
@@ -434,7 +434,7 @@ const servicesData = [
     key: "mantenimiento",
     icon: "./assets/icons/setting-icon.svg",
     title: "Mantenimiento",
-    desc: "Si querés, podemos ocuparnos del hosting y del dominio. Con una tarifa mensual, nos aseguramos de que tu página siga funcionando sin interrupciones y siempre esté en línea. Además obtendras tu QR y una actualizacion anual gratis.",
+    desc: "Si querés, podemos ocuparnos del hosting y del dominio. Con una tarifa mensual, nos aseguramos de que tu página siga funcionando correctamente y sin interrupciones. Además obtendras tu QR y una actualizacion anual para usarlo cuando gustes.",
     bg: "./assets/img/mantenimiento-banner.jpg"
   }
 ];
