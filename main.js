@@ -406,7 +406,7 @@ const servicesData = [
     key: "productos",
     icon: "./assets/icons/package-icon.svg",
     title: "Productos",
-    desc: "Antes de lanzar tu sitio, cargamos los productos incluidos en el plan que elijas. Así tu tienda queda lista para funcionar desde el primer día, sin que tengas que preocuparte por nada técnico.",
+    desc: "Antes de lanzar tu sitio, cargamos los productos incluidos en el plan que elijas. Así tu tienda queda lista para funcionar desde el primer día, con todo lo que tus clientes necesitan ver.",
     bg: "./assets/img/products-banner.jpg"
   },
   {
