@@ -645,21 +645,20 @@ body:not(.contact-page) {
 }
 
 /* Animación de tipeo y borrado */
-.typewriter {
+.hero__image h1 .typewriter {
     position: relative;
-    color: #b8b8b8;
-    font-size: 1.1em;
+    color: var(--color-secondary);
+    font-size: 1.3em;
     text-decoration: underline;
     text-decoration-color: #b8b8b8;
     text-decoration-thickness: 6px;
-    min-height: 1.4em; /* CAMBIAR de 1.2em a 1.4em */
-    min-width: 200px;  /* AGREGAR esto */
+    min-height: 1.4em;
+    min-width: 50px;
     display: inline-block;
-    vertical-align: baseline; /* AGREGAR esto */
-    line-height: 1.4;
+    vertical-align: baseline;
+    line-height: 1.1;
+    /*transform: translateY(-2px);*/
 }
-
-
 
 
 @keyframes blink {
@@ -668,13 +667,14 @@ body:not(.contact-page) {
 }
 /* Cursor que sigue al texto */
 .typewriter-cursor {
-    color: #b8b8b8 !important;
-    font-weight: 900;
+    color: var(--color-light) !important;
+    font-weight: 400;
     animation: blink 0.7s infinite;
     margin-left: 2px;
     vertical-align: baseline; 
     line-height: inherit; 
     text-decoration: none !important; 
+    text-decoration-color: transparent !important;
 }
 /* Asegurar que el texto se mantenga en su lugar */
 .typewriter-text {
@@ -720,15 +720,7 @@ body:not(.contact-page) {
     .hero__image h2 {
         font-size: 1.3rem;
     }
-    .typewriter-cursor {
-    color: #b8b8b8 !important;
-    font-weight: 900;
-    animation: blink 0.7s infinite;
-    margin-left: 5px;
-    vertical-align: baseline; 
-    line-height: inherit; 
-    text-decoration: none !important; 
-}
+    
 }
 
 @media (max-width: 900px) {

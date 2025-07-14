@@ -213,7 +213,7 @@ function initTypewriter() {
     let currentText = '';
     let isDeleting = false;
     let typeSpeed = 150;
-    let deleteSpeed = 100;
+    let deleteSpeed = 50;
     let pauseTime = 2500;
 
     function type() {
