@@ -720,6 +720,15 @@ body:not(.contact-page) {
     .hero__image h2 {
         font-size: 1.3rem;
     }
+    .typewriter-cursor {
+    color: #b8b8b8 !important;
+    font-weight: 900;
+    animation: blink 0.7s infinite;
+    margin-left: 2px;
+    vertical-align: baseline; 
+    line-height: inherit; 
+    text-decoration: none !important; 
+}
 }
 
 @media (max-width: 900px) {
