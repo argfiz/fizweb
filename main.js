@@ -203,7 +203,7 @@ setTimeout(loadWelcomeBanner, 400);
 
 });
 
-// Función de animación de tipeo
+// Función de animación de tipeo MEJORADA
 function initTypewriter() {
     const typewriterElement = document.querySelector('.typewriter');
     if (!typewriterElement) return;
@@ -227,7 +227,8 @@ function initTypewriter() {
             typeSpeed = 150;
         }
 
-        typewriterElement.textContent = currentText;
+        // CAMBIAR ESTA LÍNEA: Agregar el cursor junto al texto
+        typewriterElement.innerHTML = `${currentText}<span class="typewriter-cursor">|</span>`;
 
         if (!isDeleting && currentText === currentWord) {
             // Pausa antes de empezar a borrar
