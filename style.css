@@ -649,6 +649,7 @@ body:not(.contact-page) {
     position: relative;
     color: var(--color-secondary);
     font-size: 1.5em;
+    font-weight: 500;
     text-decoration: none;
     text-decoration-color: #b8b8b8;
     min-width: 50px;
