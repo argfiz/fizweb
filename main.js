@@ -226,8 +226,8 @@ function changeBanner() {
   currentBannerIndex = (currentBannerIndex + 1) % bannerData.length;
   
   // Animación de transición
-  welcomeImg.style.opacity = '0.5';
-  welcomeImg.style.transform = 'scale(0.95)';
+  welcomeImg.style.opacity = '1';
+  welcomeImg.style.transform = 'scale(0.8)';
   welcomeImg.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
   
   // Cambiar imagen después de la animación
