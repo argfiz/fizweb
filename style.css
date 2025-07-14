@@ -1953,7 +1953,6 @@ footer {
 .faq__item--important {
     background: linear-gradient(135deg, #74003a 0%, var(--color-secondary) 50%);
     border: 2px solid var(--color-secondary);
-    box-shadow: 0 4px 16px rgba(247, 15, 119, 0.3);
     animation: pulseImportant 2s infinite;
 }
 
