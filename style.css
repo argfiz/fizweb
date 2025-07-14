@@ -648,7 +648,7 @@ body:not(.contact-page) {
 .hero__image h1 .typewriter {
     position: relative;
     color: var(--color-secondary);
-    font-size: 1.3em;
+    font-size: 1.5em;
     text-decoration: none;
     text-decoration-color: #b8b8b8;
     min-width: 50px;
@@ -664,10 +664,9 @@ body:not(.contact-page) {
 }
 /* Cursor que sigue al texto */
 .typewriter-cursor {
-    color: var(--color-light) !important;
+    color: #b8b8b8 !important;
     font-weight: 300;
     animation: blink 0.6s infinite;
-    margin-left: 2px;
     vertical-align: baseline; 
     line-height: inherit; 
     text-decoration: none !important; 
