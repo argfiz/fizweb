@@ -651,12 +651,12 @@ body:not(.contact-page) {
     font-size: 1.1em;
     text-decoration: underline;
     text-decoration-color: #b8b8b8;
-    text-decoration-thickness: 7px;
+    text-decoration-thickness: 6px;
     min-height: 1.4em; /* CAMBIAR de 1.2em a 1.4em */
     min-width: 200px;  /* AGREGAR esto */
     display: inline-block;
     vertical-align: baseline; /* AGREGAR esto */
-    line-height: 1.1;
+    line-height: 1.4;
 }
 
 
@@ -669,7 +669,7 @@ body:not(.contact-page) {
 /* Cursor que sigue al texto */
 .typewriter-cursor {
     color: #b8b8b8 !important;
-    font-weight: 500;
+    font-weight: 700;
     animation: blink 1s infinite;
     margin-left: 2px;
     vertical-align: baseline; /* AGREGAR esto */
@@ -681,11 +681,9 @@ body:not(.contact-page) {
     min-width: 120px;
     text-align: left;
 }
-/* AGREGAR esta regla nueva */
-.typewriter:empty::before {
-    content: '\00A0'; /* Espacio no rompible cuando está vacío */
-    opacity: 0;
-}
+
+
+
 @media (max-width: 1200px) {
     .hero__container {
         padding-top: 100px;
