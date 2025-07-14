@@ -611,7 +611,7 @@ body:not(.contact-page) {
     text-decoration: underline;
     text-decoration-color: #b8b8b8;
     /* Color gris para el subrayado */
-    text-decoration-thickness: 7px;
+    text-decoration-thickness: 6px;
 }
 
 
@@ -629,7 +629,7 @@ body:not(.contact-page) {
 /* Animación de tipeo y borrado */
 .typewriter {
     position: relative;
-    color: var(--color-secondary);
+    color: #b8b8b8;
     font-size: 1.1em;
     text-decoration: underline;
     text-decoration-color: #b8b8b8;
@@ -650,8 +650,8 @@ body:not(.contact-page) {
 }
 /* Cursor que sigue al texto */
 .typewriter-cursor {
-    color: var(--color-secondary);
-    font-weight: 600;
+    color: #b8b8b8;
+    font-weight: 500;
     animation: blink 1s infinite;
     margin-left: 2px;
     vertical-align: baseline; /* AGREGAR esto */

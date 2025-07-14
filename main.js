@@ -214,7 +214,7 @@ function initTypewriter() {
     let isDeleting = false;
     let typeSpeed = 150;
     let deleteSpeed = 100;
-    let pauseTime = 2000;
+    let pauseTime = 2500;
 
     function type() {
         const currentWord = words[currentWordIndex];
