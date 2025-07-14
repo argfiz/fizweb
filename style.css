@@ -724,7 +724,7 @@ body:not(.contact-page) {
     color: #b8b8b8 !important;
     font-weight: 900;
     animation: blink 0.7s infinite;
-    margin-left: 2px;
+    margin-left: 5px;
     vertical-align: baseline; 
     line-height: inherit; 
     text-decoration: none !important; 
