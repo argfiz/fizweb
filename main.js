@@ -654,7 +654,8 @@ const faqData = [
   },
   {
     question: "¿Por que te recomendamos contratar el mantenimiento?",
-    answer: "Porque el mantenimiento garantiza que tu sitio web esté siempre actualizado, seguro y funcionando correctamente. Además, te ahorra tiempo y preocupaciones, permitiéndote enfocarte en hacer crecer tu negocio."
+    answer: "Porque el mantenimiento garantiza que tu sitio web esté siempre actualizado, seguro y funcionando correctamente. Además, te ahorra tiempo y preocupaciones, permitiéndote enfocarte en hacer crecer tu negocio.",
+    important: true
   },
   {
     question: "¿Qué pasa si no contrato el mantenimiento?",
@@ -676,7 +677,7 @@ function renderFAQ() {
 
   if (!faqList) return;
   faqList.innerHTML = faqData.map((item, idx) => `
-    <div class="faq__item" data-idx="${idx}">
+    <div class="faq__item${item.important ? ' faq__item--important' : ''}" data-idx="${idx}">
       <button class="faq__question" aria-expanded="false" type="button">
         ${item.question}
         <span class="faq__icon"><img src="assets/icons/right-arrow.svg" alt="Arrow"></span>

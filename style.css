@@ -1949,6 +1949,28 @@ footer {
     transition: box-shadow 0.2s, background 0.2s, color 0.2s;
 }
 
+/* Pregunta importante destacada */
+.faq__item--important {
+    background: linear-gradient(135deg, #74003a 0%, var(--color-secondary) 100%);
+    border: 2px solid var(--color-secondary);
+    box-shadow: 0 4px 16px rgba(247, 15, 119, 0.3);
+    animation: pulseImportant 2s infinite;
+}
+
+.faq__item--important .faq__question {
+    color: white;
+    font-weight: 600;
+}
+
+.faq__item--important .faq__answer {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--color-dark);
+    font-weight: 500;
+}
+
+.faq__item--important .faq__icon img {
+    filter: brightness(0) invert(1);
+}
 
 .faq__question {
     width: 100%;
