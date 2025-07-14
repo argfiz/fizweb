@@ -496,8 +496,7 @@ body:not(.contact-page) {
 }
 
 /*============================================================
-======= Eliminar el hover en móviles =========================
-=========================================================== */
+======= Eliminar el hover en móviles ========================= */
 .nav-menu__item,
 .nav-menu__item a {
     -webkit-tap-highlight-color: transparent !important;
@@ -673,6 +672,7 @@ body:not(.contact-page) {
     opacity: 0;
     pointer-events: none;
     will-change: opacity, transform;
+    position: relative; /* AGREGAR ESTO */
 }
 
 .welcome__banner-container.show {
@@ -682,6 +682,71 @@ body:not(.contact-page) {
     pointer-events: auto;
 }
 
+/* Flecha en el extremo derecho */
+.welcome__banner-arrow {
+    position: absolute;
+    right: 20px;
+    top:10%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.123);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    cursor: pointer !important;
+    transition: background 0.3s ease, transform 0.2s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.welcome__banner-container.show .welcome__banner-arrow {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.welcome__banner-arrow:hover {
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.welcome__banner-arrow img {
+    width: 35px;
+    height: 35px;
+    fill: var(--color-secondary);
+    transition: fill 0.3s ease;
+}
+
+/* Responsive para móviles */
+@media (max-width: 700px) {
+    .welcome__banner-arrow {
+        right: 15px;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .welcome__banner-arrow img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Eliminar sombra del tap en móviles */
+.welcome__banner-arrow {
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.welcome__banner-arrow:focus,
+.welcome__banner-arrow:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
 @keyframes welcomeBannerPopIn {
     0% {
         transform: scale(0.5);
@@ -1130,8 +1195,7 @@ body:not(.contact-page) {
     cursor: pointer !important;
 }
 /*============================================================
-======= Eliminar el hover en móviles =========================
-=========================================================== */
+======= Eliminar el hover en móviles ========================= */
 .card__price-info-icon,
 .card__price-info-icon img {
     -webkit-tap-highlight-color: transparent !important;
@@ -2055,8 +2119,7 @@ transition: transform 0.2s ease, background-color 0.2s ease;
     filter: brightness(0) invert(1);
 }
 /*============================================================
-======= Eliminar el hover en móviles =========================
-=========================================================== */
+======= Eliminar el hover en móviles ========================= */
 .contact__item a,
 .contact__icon,
 .contact__icon img {
