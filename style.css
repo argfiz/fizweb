@@ -710,7 +710,7 @@ body:not(.contact-page) {
     .hero__image h1 {
         font-size: 2.2rem;
         height: 3em; /* Altura más pequeña en móviles */
-        min-height: 3em;
+        min-height: 150px;
     }
 
     .hero__image h2 {
