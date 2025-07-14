@@ -650,7 +650,7 @@ body:not(.contact-page) {
 }
 /* Cursor que sigue al texto */
 .typewriter-cursor {
-    color: #b8b8b8;
+    color: #b8b8b8 !important;
     font-weight: 500;
     animation: blink 1s infinite;
     margin-left: 2px;
