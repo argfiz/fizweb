@@ -5,15 +5,18 @@ body {
     box-sizing: border-box;
     font-family: var(--font-main);
 }
+
 /* Agrega el fondo gris solo para páginas que NO sean contact-page */
 body:not(.contact-page) {
     background: #fff;
 }
-.contact-page{
+
+.contact-page {
     background: url('./assets/img/bg-welcome.jpg') center center/cover no-repeat;
     background-attachment: scroll;
     min-height: 100vh;
 }
+
 :root {
     --color-bg: #fff;
     --color-primary: #7209b7;
@@ -82,6 +85,7 @@ body:not(.contact-page) {
         font-weight: 300;
     }
 }
+
 /* Solo en desktop mantén el fondo fijo si quieres */
 @media (min-width: 901px) {
     .contact-page {
@@ -95,6 +99,7 @@ body:not(.contact-page) {
         background-attachment: scroll;
     }
 }
+
 /************************************************************/
 /***************Divider component***************************/
 /************************************************************/
@@ -138,9 +143,11 @@ body:not(.contact-page) {
     z-index: 2000;
     transition: height 0.3s cubic-bezier(.4, 0, .2, 1), padding 0.3s cubic-bezier(.4, 0, .2, 1);
 }
-.logo-nav__link{
+
+.logo-nav__link {
     text-decoration: none;
 }
+
 .logo-nav {
     display: flex;
     align-items: center;
@@ -161,6 +168,7 @@ body:not(.contact-page) {
     letter-spacing: 1px;
     font-family: var(--font-main);
 }
+
 /*======= LOGO NAVBAR sin sombra en el tap del movil ======
 =========================================================== */
 .logo-nav__link,
@@ -174,11 +182,13 @@ body:not(.contact-page) {
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent !important;
 }
+
 .logo-nav__link:focus,
 .logo-nav__link:active {
     outline: none !important;
     -webkit-tap-highlight-color: transparent !important;
 }
+
 .logo-nav:focus,
 .logo-nav:active {
     outline: none !important;
@@ -270,8 +280,9 @@ body:not(.contact-page) {
     filter: brightness(0) invert(1);
     transition: filter 0.2s;
 }
-@media (max-width: 700px)  {
-   
+
+@media (max-width: 700px) {
+
     .nav-menu__social-link {
         width: 50px;
         height: 50px;
@@ -281,8 +292,9 @@ body:not(.contact-page) {
         width: 28px;
         height: 28px;
     }
-    
+
 }
+
 /*=======================================================
 =======sin sombra en el tap del movil =========
 =========================================================== */
@@ -296,6 +308,7 @@ body:not(.contact-page) {
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent !important;
 }
+
 .nav-menu__social:focus,
 .nav-menu__social:active,
 .footer__social-link:focus,
@@ -336,6 +349,7 @@ body:not(.contact-page) {
     display: block;
 
 }
+
 /*============================================================
 ======= Eliminar el hover en móviles =========================
 =========================================================== */
@@ -348,6 +362,7 @@ body:not(.contact-page) {
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent !important;
 }
+
 .hamburger:focus,
 .hamburger:active,
 .hamburger span:focus,
@@ -506,6 +521,7 @@ body:not(.contact-page) {
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent !important;
 }
+
 .nav-menu__item:focus,
 .nav-menu__item:active,
 .nav-menu__item a:focus,
@@ -524,17 +540,17 @@ body:not(.contact-page) {
     align-items: center;
     padding-top: 150px;
     padding-bottom: 0px;
-    
+
     /* Fondo simple y optimizado */
     background: #1a1a1a url('./assets/img/bg-welcome.jpg') center center/cover no-repeat;
-    
+
     text-align: center;
     gap: 0px;
     opacity: 1;
     transform: none;
     transition: none;
     height: auto;
-    
+
     /* Optimización para móviles */
     background-attachment: scroll;
 }
@@ -637,6 +653,7 @@ body:not(.contact-page) {
         font-size: 1.3rem;
     }
 }
+
 @media (max-width: 900px) {
     .hero__container {
         background-attachment: scroll;
@@ -655,9 +672,9 @@ body:not(.contact-page) {
     margin-top: -250px;
     margin-bottom: 0px;
     border-radius: 10px;
-    position: relative; 
+    position: relative;
     z-index: 1;
-    opacity: 1; 
+    opacity: 1;
     width: 90%;
     max-width: 800px;
 }
@@ -672,8 +689,10 @@ body:not(.contact-page) {
     opacity: 0;
     pointer-events: none;
     will-change: opacity, transform;
-    position: relative; /* AGREGAR ESTO */
+    position: relative;
+    /* AGREGAR ESTO */
 }
+
 .welcome__banner-indicators {
     position: absolute;
     bottom: 5px;
@@ -696,6 +715,7 @@ body:not(.contact-page) {
 .welcome__banner-indicator.active {
     background: var(--color-secondary);
 }
+
 .welcome__banner-container.show {
     animation: welcomeBannerPopIn 0.8s cubic-bezier(.4, 0, .2, 1);
     animation-delay: 0s;
@@ -707,7 +727,7 @@ body:not(.contact-page) {
 .welcome__banner-arrow {
     position: absolute;
     right: 10%;
-    top:10%;
+    top: 10%;
     transform: translateY(-50%);
     width: 60px;
     height: 60px;
@@ -747,7 +767,7 @@ body:not(.contact-page) {
         width: 50px;
         height: 50px;
     }
-    
+
     .welcome__banner-arrow img {
         width: 25px;
         height: 25px;
@@ -768,15 +788,18 @@ body:not(.contact-page) {
     outline: none !important;
     -webkit-tap-highlight-color: transparent !important;
 }
+
 @keyframes welcomeBannerPopIn {
     0% {
         transform: scale(0.5);
         opacity: 0;
     }
+
     70% {
         transform: scale(1.05);
         opacity: 1;
     }
+
     100% {
         transform: scale(1);
         opacity: 1;
@@ -786,9 +809,10 @@ body:not(.contact-page) {
 @media (min-width: 901px) and (max-width: 1200px) {
     .welcome__banner {
         margin-top: -200px;
-        
+
     }
 }
+
 @media (min-width: 601px) and (max-width: 900px) {
     .welcome__banner {
         margin-top: -150px;
@@ -798,9 +822,10 @@ body:not(.contact-page) {
 @media (max-width: 600px) {
     .welcome__banner {
         margin-top: -100px;
+        padding-bottom: 15px;
+
     }
 }
-
 
 
 /**********************************************************/
@@ -1049,7 +1074,7 @@ body:not(.contact-page) {
 .card__price-info.open {
     pointer-events: auto;
     opacity: 1;
-    background: linear-gradient(rgba(20,20,20,0.70));
+    background: linear-gradient(rgba(20, 20, 20, 0.70));
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
 }
@@ -1060,6 +1085,7 @@ body:not(.contact-page) {
     width: 100%;
     flex: 1 1 auto;
 }
+
 .card__price-info-text-top {
     margin: 0;
     padding: 18px;
@@ -1117,6 +1143,7 @@ body:not(.contact-page) {
     max-width: 100%;
     background: transparent;
 }
+
 .card__price-info-text li {
     position: relative;
     padding: 9px 0px;
@@ -1127,8 +1154,9 @@ body:not(.contact-page) {
     font-weight: 400;
     transition: background 0.18s, box-shadow 0.18s;
     margin: 0;
-    
+
 }
+
 .card__price-info-text li::before {
     content: '';
     position: absolute;
@@ -1139,24 +1167,26 @@ body:not(.contact-page) {
     height: 7px;
     border-radius: 50%;
     background: var(--color-secondary);
-    
+
     display: inline-block;
 }
+
 .card__price-info-text li:last-child {
     background: var(--color-secondary);
     color: #fff;
     font-weight: 900;
 }
+
 .card__price-info-text li:last-child::before {
     background: var(--color-light);
 }
 
 .card__price-info.open .card__price-info-text {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
-.container-card__price-info{
+.container-card__price-info {
     padding: 0px 0px;
     padding-bottom: 0px;
     display: flex;
@@ -1166,16 +1196,18 @@ body:not(.contact-page) {
 }
 
 #home .list-card__price-info-text-bottom {
-   border: none;
-   padding-top: 0px;
-   padding-bottom: 10px;
-   background: transparent;
+    border: none;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    background: transparent;
 }
+
 #home .list-card__price-info-text-bottom li:last-child {
     background: transparent;
     color: #fff;
     font-weight: 400;
 }
+
 #home .list-card__price-info-text-bottom li:last-child::before {
     background: var(--color-secondary);
 }
@@ -1197,24 +1229,27 @@ body:not(.contact-page) {
     cursor: pointer !important;
     pointer-events: auto;
     position: relative;
-    box-shadow: 
+    box-shadow:
         0 2px 15px rgba(0, 0, 0, 1),
         0 4px 25px rgba(0, 0, 0, 0.8),
         0 8px 40px rgba(0, 0, 0, 0.7);
     /* Agregar la transición aquí para que funcione en ambas direcciones */
     transition: transform 0.5s ease;
 }
+
 .card__price-info-icon:hover {
     cursor: pointer !important;
     transform: scale(1.2);
     transition: transform 0.4s ease;
-    
+
 }
+
 .card__price-info-icon img {
     filter: brightness(0) invert(1);
     display: block;
     cursor: pointer !important;
 }
+
 /*============================================================
 ======= Eliminar el hover en móviles ========================= */
 .card__price-info-icon,
@@ -1226,6 +1261,7 @@ body:not(.contact-page) {
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent !important;
 }
+
 .card__price-info-icon:focus,
 .card__price-info-icon:active {
     outline: none !important;
@@ -1246,6 +1282,7 @@ body:not(.contact-page) {
     text-align: center;
     z-index: 10;
 }
+
 .swiper-pagination-bullet {
     background: #f72585 !important;
     width: 14px;
@@ -1254,6 +1291,7 @@ body:not(.contact-page) {
     margin: 0 6px !important;
     transition: transform 0.2s;
 }
+
 .swiper-pagination-bullet-active {
     background: var(--color-secondary) !important;
     transform: scale(1.25);
@@ -1271,11 +1309,13 @@ body:not(.contact-page) {
         transform: translateY(0px) scale(0.6);
         filter: blur(12px);
     }
+
     60% {
         opacity: 1;
         transform: translateY(0px) scale(1.05);
         filter: blur(2px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -1289,6 +1329,7 @@ body:not(.contact-page) {
         transform: translateY(0) scale(1);
         filter: blur(12px);
     }
+
     100% {
         opacity: 0;
         transform: translateY(0px) scale(0.75);
@@ -1302,11 +1343,11 @@ body:not(.contact-page) {
 }
 
 .card__price-info.open {
-    animation: cardPriceInfoIn 0.60s cubic-bezier(.4,0,.2,1);
+    animation: cardPriceInfoIn 0.60s cubic-bezier(.4, 0, .2, 1);
 }
 
 .card__price-info:not(.open) {
-    animation: cardPriceInfoOut 0.35s cubic-bezier(.4,0,.2,1);
+    animation: cardPriceInfoOut 0.35s cubic-bezier(.4, 0, .2, 1);
 }
 
 
@@ -1337,11 +1378,13 @@ body:not(.contact-page) {
     .card__sub {
         font-weight: 400;
     }
+
     .card__header p {
         font-size: 1.2rem;
         font-weight: 400;
 
     }
+
     .card__price-info-text li {
         font-weight: 400;
     }
@@ -1349,7 +1392,7 @@ body:not(.contact-page) {
     .card__item-value {
         position: relative;
     }
-    
+
     .card__item-value span {
         position: absolute;
         top: 50%;
@@ -1360,21 +1403,22 @@ body:not(.contact-page) {
     }
 
 }
+
 /* Animación de tap para móviles */
 @media (max-width: 700px) {
     .card__price-info-icon {
         /* Eliminar el hover en móviles */
         transition: none;
     }
-    
+
     .card__price-info-icon:hover {
         transform: none;
-        box-shadow: 
+        box-shadow:
             0 2px 12px rgba(0, 0, 0, 0.25),
             0 4px 24px rgba(0, 0, 0, 0.35),
             0 8px 48px rgba(0, 0, 0, 0.45);
     }
-    
+
     /* Animación específica para tap */
     .card__price-info-icon.tap-animation {
         animation: mobileIconTap 0.3s cubic-bezier(.4, 0, .2, 1);
@@ -1386,9 +1430,11 @@ body:not(.contact-page) {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.15);
     }
+
     100% {
         transform: scale(1);
     }
@@ -1536,9 +1582,10 @@ body:not(.contact-page) {
     user-select: none;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
     -tap-highlight-color: transparent !important;
 }
+
 .option__tab img {
     width: 25px;
     height: 25px;
@@ -1550,11 +1597,12 @@ body:not(.contact-page) {
     user-select: none;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
     -tap-highlight-color: transparent !important;
 }
+
 .option__tab:focus,
-.option__tab:active{
+.option__tab:active {
     outline: none !important;
     -webkit-tap-highlight-color: transparent !important;
 }
@@ -1625,8 +1673,9 @@ body:not(.contact-page) {
 
     }
 }
+
 @media (min-width: 1001px) {
-    .tab__card p{
+    .tab__card p {
         font-size: 1.7rem;
     }
 }
@@ -1635,26 +1684,26 @@ body:not(.contact-page) {
 
 /* Tabs dentro de la tarjeta - SIN animaciones */
 .tab__card .option__tabs {
-  margin-top: auto;
-  padding-bottom: 40px;
-  display: flex;
-  gap: 0.8rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  z-index: 2;
-  position: relative;
-  /* Eliminar cualquier transición */
-  transition: none;
-  transform: none;
-  opacity: 1;
+    margin-top: auto;
+    padding-bottom: 40px;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+    /* Eliminar cualquier transición */
+    transition: none;
+    transform: none;
+    opacity: 1;
 }
 
 .tab__card .option__tab {
-  z-index: 2;
-  position: relative;
-  /* Eliminar cualquier transición */
-  transition: background 0.2s, border 0.2s, color 0.2s, box-shadow 0.2s;
-  /* Solo mantener transiciones de hover/active */
+    z-index: 2;
+    position: relative;
+    /* Eliminar cualquier transición */
+    transition: background 0.2s, border 0.2s, color 0.2s, box-shadow 0.2s;
+    /* Solo mantener transiciones de hover/active */
 }
 
 /* Mejorar las animaciones del contenido */
@@ -1664,6 +1713,7 @@ body:not(.contact-page) {
         transform: scale(1) translateY(0);
         filter: blur(0);
     }
+
     to {
         opacity: 0;
         transform: scale(0.96) translateY(-8px);
@@ -1677,6 +1727,7 @@ body:not(.contact-page) {
         transform: scale(0.98) translateY(8px);
         filter: blur(2px);
     }
+
     to {
         opacity: 1;
         transform: scale(1) translateY(0);
@@ -1726,9 +1777,11 @@ footer {
     padding: var(--footer-padding);
     font-size: var(--footer-font-size);
 }
-.contact__footer{
+
+.contact__footer {
     background: transparent;
 }
+
 .footer__container {
 
     max-width: var(--footer-max-width);
@@ -1805,6 +1858,7 @@ footer {
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent !important;
 }
+
 .footer-links:focus,
 .footer-links:active,
 .footer-links a:focus,
@@ -1812,10 +1866,11 @@ footer {
     outline: none !important;
     -webkit-tap-highlight-color: transparent !important;
 }
+
 .footer__social:focus,
 .footer__social:active,
 .footer__social a:focus,
-.footer__social a:active  {
+.footer__social a:active {
     outline: none !important;
     -webkit-tap-highlight-color: transparent !important;
 }
@@ -1845,7 +1900,7 @@ footer {
 
 /* Contenedor principal */
 .faq__section {
-    background: linear-gradient(0deg,rgba(17, 17, 17, 1) 0%, rgba(34, 34, 34, 1) 100%);
+    background: linear-gradient(0deg, rgba(17, 17, 17, 1) 0%, rgba(34, 34, 34, 1) 100%);
     font-family: var(--font-main);
     padding-bottom: 0px;
     margin-bottom: 0px;
@@ -1913,12 +1968,14 @@ footer {
     justify-content: space-between;
     gap: 30px;
 }
+
 .faq__icon {
     margin-left: 12px;
     transition: transform 0.3s;
     display: flex;
     align-items: center;
 }
+
 .faq__icon img {
     width: 20px;
     height: 20px;
@@ -1939,6 +1996,7 @@ footer {
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent !important;
 }
+
 .faq__question:focus,
 .faq__question:active {
     outline: none !important;
@@ -1975,9 +2033,11 @@ footer {
     .main__container {
         padding: 0 8px;
     }
+
     #faqSection .section__title {
         padding-top: 80px;
     }
+
     .faq__title {
         padding-top: 100px;
         font-size: 1.5rem;
@@ -1987,17 +2047,19 @@ footer {
         font-size: 1rem;
     }
 }
+
 @media (max-width: 900px) {
     .faq__section {
-        background-attachment: scroll; 
+        background-attachment: scroll;
     }
 }
 
 
-@media (min-width: 701px) and (max-width: 1000px){
+@media (min-width: 701px) and (max-width: 1000px) {
     #faqSection .section__title {
         padding-top: 100px;
     }
+
     .faq__title {
         padding-top: 120px;
         font-size: 1.8rem;
@@ -2125,13 +2187,14 @@ html {
     align-items: center;
     justify-content: center;
     margin-right: 14px;
-transition: transform 0.2s ease, background-color 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .contact__icon:hover {
     transform: scale(1.2);
     background: var(--color-dark);
 }
+
 .contact__icon img {
     width: 30px;
     height: 30px;
@@ -2139,6 +2202,7 @@ transition: transform 0.2s ease, background-color 0.2s ease;
     display: block;
     filter: brightness(0) invert(1);
 }
+
 /*============================================================
 ======= Eliminar el hover en móviles ========================= */
 .contact__item a,
@@ -2151,6 +2215,7 @@ transition: transform 0.2s ease, background-color 0.2s ease;
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent !important;
 }
+
 .contact__item a:focus,
 .contact__item a:active,
 .contact__icon:focus,
@@ -2200,6 +2265,7 @@ transition: transform 0.2s ease, background-color 0.2s ease;
     width: 60px;
     height: 60px;
 }
+
 /*============================================================
 ======= Eliminar el hover en móviles =========================
 =========================================================== */
@@ -2212,6 +2278,7 @@ transition: transform 0.2s ease, background-color 0.2s ease;
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent !important;
 }
+
 .social__links a:focus,
 .social__links a:active,
 .social__links a img:focus,
@@ -2323,7 +2390,8 @@ transition: transform 0.2s ease, background-color 0.2s ease;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .qr-code{
+
+    .qr-code {
         margin: 0 auto;
     }
 }
