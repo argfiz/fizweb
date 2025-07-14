@@ -208,7 +208,7 @@ setTimeout(loadWelcomeBanner, 400);
 /* ======================================== WELCOME BANNER ================================ */   
 /*****************************************************************************************************/
 const bannerData = [
-  "./assets /img/welcome-banner.png",
+  "./assets/img/welcome-banner.png",
   "./assets/img/welcome-banner2.png",
   "./assets/img/welcome-banner3.png"
 ]
