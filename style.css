@@ -563,13 +563,31 @@ body:not(.contact-page) {
 }
 
 .hero__image {
-    padding: 20px;
+    padding: 25px;
     padding-bottom: 60px;
-
+    max-height: 100vh;
+    min-height: 280px; /* AGREGAR altura mínima fija */
+    height: 280px; /* AGREGAR altura fija */
+    display: flex; /* AGREGAR */
+    flex-direction: column; /* AGREGAR */
+    justify-content: center; /* AGREGAR */
+    align-items: center; /* AGREGAR */
 }
 
 .hero__image h1 {
     padding-bottom: 20px;
+    font-weight: 700;
+    font-family: var(--font-main);
+    font-size: 2.8rem;
+    color: white;
+    letter-spacing: 1px !important;
+    line-height: 1.1;
+    text-shadow: 0 2px 12px rgba(247, 37, 133, 0.08);
+    margin: 0;
+    position: relative;
+    min-height: auto; /* AGREGAR altura mínima fija */
+    height: 100px; /* AGREGAR altura fija */
+    
 }
 
 
@@ -685,10 +703,14 @@ body:not(.contact-page) {
     .hero__image {
         padding: 0px 20px 25px 20px;
         padding-bottom: 70px;
+        height: 250px; /* Altura fija más pequeña en móviles */
+        min-height: 250px; /* Altura mínima en móviles */
     }
 
     .hero__image h1 {
         font-size: 2.2rem;
+        height: 3em; /* Altura más pequeña en móviles */
+        min-height: 3em;
     }
 
     .hero__image h2 {
