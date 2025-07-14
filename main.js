@@ -267,7 +267,8 @@ const bannerData = [
   "./assets/img/welcome-banner2.png",
   "./assets/img/welcome-banner3.png",
   "./assets/img/welcome-banner4.png",
-  "./assets/img/welcome-banner5.png"
+  "./assets/img/welcome-banner5.png",
+  "./assets/img/welcome-banner6.png"
 ];
 
 // Variables para controlar el banner
