@@ -626,6 +626,39 @@ body:not(.contact-page) {
 
 }
 
+/* Animación de tipeo y borrado */
+.typewriter {
+    position: relative;
+    color: var(--color-secondary);
+    font-size: 1.1em;
+    text-decoration: underline;
+    text-decoration-color: #b8b8b8;
+    text-decoration-thickness: 7px;
+    min-height: 1.2em;
+    display: inline-block;
+}
+
+.typewriter::after {
+    content: '|';
+    position: absolute;
+    right: -8px;
+    color: var(--color-secondary);
+    font-weight: normal;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Asegurar que el texto se mantenga en su lugar */
+.typewriter-text {
+    display: inline-block;
+    min-width: 120px;
+    text-align: left;
+}
+
 @media (max-width: 900px) {
     .hero__container {
         padding-top: 130px;

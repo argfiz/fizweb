@@ -69,7 +69,7 @@ window.addEventListener('scroll', () => {
 /******************************************TABS OOPTION LOAD**********************************/
 /*******************************************WHATSAPP LOAD*****************************************/
 /*******************************************banner-welcome LOAD*****************************************/
-
+/**************************Función de animación de tipeo**************************************/
 document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('.hero__image');
   if (hero) {
@@ -203,7 +203,61 @@ setTimeout(loadWelcomeBanner, 400);
 
 });
 
+// Función de animación de tipeo
+function initTypewriter() {
+    const typewriterElement = document.querySelector('.typewriter');
+    if (!typewriterElement) return;
 
+    const words = typewriterElement.getAttribute('data-words').split(',');
+    let currentWordIndex = 0;
+    let currentText = '';
+    let isDeleting = false;
+    let typeSpeed = 150;
+    let deleteSpeed = 100;
+    let pauseTime = 2000;
+
+    function type() {
+        const currentWord = words[currentWordIndex];
+        
+        if (isDeleting) {
+            currentText = currentWord.substring(0, currentText.length - 1);
+            typeSpeed = deleteSpeed;
+        } else {
+            currentText = currentWord.substring(0, currentText.length + 1);
+            typeSpeed = 150;
+        }
+
+        typewriterElement.textContent = currentText;
+
+        if (!isDeleting && currentText === currentWord) {
+            // Pausa antes de empezar a borrar
+            typeSpeed = pauseTime;
+            isDeleting = true;
+        } else if (isDeleting && currentText === '') {
+            // Cambiar a la siguiente palabra
+            isDeleting = false;
+            currentWordIndex = (currentWordIndex + 1) % words.length;
+            typeSpeed = 500; // Pausa antes de escribir la siguiente palabra
+        }
+
+        setTimeout(type, typeSpeed);
+    }
+
+    // Iniciar la animación después de que se muestre el hero
+    setTimeout(() => {
+        type();
+    }, 1000);
+}
+
+// Llamar a la función en el DOMContentLoaded existente
+document.addEventListener('DOMContentLoaded', () => {
+    // ...código existente...
+    
+    // Inicializar typewriter
+    initTypewriter();
+    
+    // ...resto del código...
+});
 /*****************************************************************************************************/
 /* ======================================== WELCOME BANNER ================================ */   
 /*****************************************************************************************************/
