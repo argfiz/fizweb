@@ -702,20 +702,20 @@ body:not(.contact-page) {
     }
 
     .hero__image {
-        padding: 0px 20px 25px 20px;
+        padding: 25px 20px 25px 20px;
         padding-bottom: 70px;
         height: 250px; /* Altura fija más pequeña en móviles */
         min-height: 250px; /* Altura mínima en móviles */
     }
 
     .hero__image h1 {
-        font-size: 2rem;
-        height: 3em; /* Altura más pequeña en móviles */
+        font-size: 2.1rem;
         min-height: 150px;
     }
 
     .hero__image h2 {
         font-size: 1.3rem;
+        margin-top: 25px;
     }
     
 }
