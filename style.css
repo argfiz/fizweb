@@ -629,7 +629,7 @@ body:not(.contact-page) {
     text-decoration: underline;
     text-decoration-color: #b8b8b8;
     /* Color gris para el subrayado */
-    text-decoration-thickness: 6px;
+    text-decoration-thickness: 7px;
 }
 
 
@@ -672,8 +672,9 @@ body:not(.contact-page) {
     font-weight: 900;
     animation: blink 0.7s infinite;
     margin-left: 2px;
-    vertical-align: baseline; /* AGREGAR esto */
-    line-height: inherit; /* AGREGAR esto */
+    vertical-align: baseline; 
+    line-height: inherit; 
+    text-decoration: none !important; 
 }
 /* Asegurar que el texto se mantenga en su lugar */
 .typewriter-text {
