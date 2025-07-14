@@ -211,9 +211,48 @@ const bannerData = [
   "./assets/img/welcome-banner.png",
   "./assets/img/welcome-banner2.png",
   "./assets/img/welcome-banner3.png"
-]
+];
 
+// Variables para controlar el banner
+let currentBannerIndex = 0;
 
+// Función para cambiar banner
+function changeBanner() {
+  const welcomeImg = document.querySelector('.welcome__banner');
+  const indicators = document.querySelectorAll('.welcome__banner-indicator');
+  if (!welcomeImg) return;
+  
+  // Incrementar índice
+  currentBannerIndex = (currentBannerIndex + 1) % bannerData.length;
+  
+  // Animación de transición
+  welcomeImg.style.opacity = '0.5';
+  welcomeImg.style.transform = 'scale(0.95)';
+  welcomeImg.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+  
+  // Cambiar imagen después de la animación
+  setTimeout(() => {
+    welcomeImg.src = bannerData[currentBannerIndex];
+    welcomeImg.style.opacity = '1';
+    welcomeImg.style.transform = 'scale(1)';
+    
+    // Actualizar indicadores
+    indicators.forEach((indicator, index) => {
+      indicator.classList.toggle('active', index === currentBannerIndex);
+    });
+  }, 300);
+}
+
+// Funcionalidad para la flecha del welcome banner
+document.addEventListener('DOMContentLoaded', () => {
+    const welcomeArrow = document.querySelector('.welcome__banner-arrow');
+    if (welcomeArrow) {
+        welcomeArrow.addEventListener('click', () => {
+            // Cambiar banner en lugar de hacer scroll
+            changeBanner();
+        });
+    }
+});
 /*****************************************************************************************************/
 /* ============================================ GALLERY SWIPE =================================== ****/
 /*****************************************************************************************************/

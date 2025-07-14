@@ -674,7 +674,28 @@ body:not(.contact-page) {
     will-change: opacity, transform;
     position: relative; /* AGREGAR ESTO */
 }
+.welcome__banner-indicators {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 3;
+}
 
+.welcome__banner-indicator {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.welcome__banner-indicator.active {
+    background: var(--color-secondary);
+}
 .welcome__banner-container.show {
     animation: welcomeBannerPopIn 0.8s cubic-bezier(.4, 0, .2, 1);
     animation-delay: 0s;
@@ -685,7 +706,7 @@ body:not(.contact-page) {
 /* Flecha en el extremo derecho */
 .welcome__banner-arrow {
     position: absolute;
-    right: 20px;
+    right: 10%;
     top:10%;
     transform: translateY(-50%);
     width: 60px;
@@ -720,11 +741,11 @@ body:not(.contact-page) {
 }
 
 /* Responsive para móviles */
-@media (max-width: 700px) {
+@media (max-width: 850px) {
     .welcome__banner-arrow {
         right: 15px;
-        width: 35px;
-        height: 35px;
+        width: 50px;
+        height: 50px;
     }
     
     .welcome__banner-arrow img {
