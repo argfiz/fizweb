@@ -669,8 +669,8 @@ body:not(.contact-page) {
 /* Cursor que sigue al texto */
 .typewriter-cursor {
     color: #b8b8b8 !important;
-    font-weight: 700;
-    animation: blink 1s infinite;
+    font-weight: 900;
+    animation: blink 0.7s infinite;
     margin-left: 2px;
     vertical-align: baseline; /* AGREGAR esto */
     line-height: inherit; /* AGREGAR esto */
@@ -686,11 +686,12 @@ body:not(.contact-page) {
 
 @media (max-width: 1200px) {
     .hero__container {
-        padding-top: 100px;
+        padding-top: 80px;
     }
     .hero__container h1 {
         height:2em; /* Altura más pequeña en móviles */
         min-height: 100px; /* Altura mínima en móviles */
+        padding-bottom: 30px;
     }
 }
 
