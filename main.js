@@ -212,8 +212,8 @@ function initTypewriter() {
     let currentWordIndex = 0;
     let currentText = '';
     let isDeleting = false;
-    let typeSpeed = 150;
-    let deleteSpeed = 50;
+    let typeSpeed = 200;
+    let deleteSpeed = 70;
     let pauseTime = 2500;
 
     function type() {
