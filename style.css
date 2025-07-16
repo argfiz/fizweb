@@ -553,6 +553,12 @@ body:not(.contact-page) {
 
     /* Optimización para móviles */
     background-attachment: scroll;
+
+    /* ✅ Optimizaciones */
+    will-change: auto;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    contain: layout;
 }
 
 /* Fixed solo en desktop */
@@ -573,6 +579,11 @@ body:not(.contact-page) {
     justify-content: center;
     align-items: center;
     gap: 30px !important;
+    /* ✅ Optimizaciones */
+    will-change: auto;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    contain: layout;
 }
 
 .hero__image h1 {
@@ -629,12 +640,18 @@ body:not(.contact-page) {
         0 0 40px rgba(247, 15, 119, 0.3);
     text-transform: none;
     text-align: center;
+    /* ✅ Optimizaciones de rendimiento */
+    will-change: contents;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    contain: layout style;
 }
 
 .typewriter-cursor {
     color: #00d4ff !important;
     font-weight: 300;
-    animation: blink 0.6s infinite;
+    /* ✅ Animación más suave */
+    animation: blinkOptimized 1.2s infinite;
     vertical-align: baseline;
     line-height: inherit;
     text-decoration: none !important;
@@ -643,8 +660,26 @@ body:not(.contact-page) {
     text-shadow: 
         0 0 15px rgba(0, 212, 255, 0.8),
         0 0 30px rgba(0, 212, 255, 0.6);
+    /* ✅ Optimizaciones */
+    will-change: opacity;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
-
+/* ✅ ANIMACIÓN OPTIMIZADA */
+@keyframes blinkOptimized {
+    0%, 40% { 
+        opacity: 1; 
+        transform: translateZ(0);
+    }
+    50%, 90% { 
+        opacity: 0; 
+        transform: translateZ(0);
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateZ(0);
+    }
+}
 /* Aplica la animación de carga a los hijos */
 .hero__image h1,
 .hero__image h2 {

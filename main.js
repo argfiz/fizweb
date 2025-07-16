@@ -203,7 +203,7 @@ setTimeout(loadWelcomeBanner, 400);
 
 });
 
-// Función de animación de tipeo MEJORADA
+// ✅ FUNCIÓN TYPEWRITER OPTIMIZADA PARA SCROLL Y TOUCH
 function initTypewriter() {
     const typewriterElement = document.querySelector('.typewriter');
     if (!typewriterElement) return;
@@ -215,47 +215,217 @@ function initTypewriter() {
     let typeSpeed = 200;
     let deleteSpeed = 70;
     let pauseTime = 2500;
+    let animationId;
+    let isPaused = false;
 
-    function type() {
-        const currentWord = words[currentWordIndex];
-        
-        if (isDeleting) {
-            currentText = currentWord.substring(0, currentText.length - 1);
-            typeSpeed = deleteSpeed;
-        } else {
-            currentText = currentWord.substring(0, currentText.length + 1);
-            typeSpeed = 150;
+    // ✅ Variables para detectar scroll y touch
+    let isScrolling = false;
+    let isTouching = false;
+    let scrollTimeout;
+    let touchTimeout;
+    let lastScrollTime = 0;
+    let lastTouchTime = 0;
+
+    // ✅ Usar requestAnimationFrame para mejor rendimiento
+    let lastTime = 0;
+    let nextUpdateTime = 0;
+
+    function type(currentTime) {
+        // Solo actualizar cuando sea necesario y no esté pausado
+        if (currentTime >= nextUpdateTime && !isPaused) {
+            const currentWord = words[currentWordIndex];
+            
+            if (isDeleting) {
+                currentText = currentWord.substring(0, currentText.length - 1);
+                nextUpdateTime = currentTime + deleteSpeed;
+            } else {
+                currentText = currentWord.substring(0, currentText.length + 1);
+                nextUpdateTime = currentTime + 150;
+            }
+
+            // ✅ Batch DOM update - solo si cambió el contenido
+            const newContent = `${currentText}<span class="typewriter-cursor">|</span>`;
+            if (typewriterElement.innerHTML !== newContent) {
+                typewriterElement.innerHTML = newContent;
+            }
+
+            if (!isDeleting && currentText === currentWord) {
+                nextUpdateTime = currentTime + pauseTime;
+                isDeleting = true;
+            } else if (isDeleting && currentText === '') {
+                isDeleting = false;
+                currentWordIndex = (currentWordIndex + 1) % words.length;
+                nextUpdateTime = currentTime + 500;
+            }
         }
 
-        // CAMBIAR ESTA LÍNEA: Agregar el cursor junto al texto
-        typewriterElement.innerHTML = `${currentText}<span class="typewriter-cursor">|</span>`;
-
-        if (!isDeleting && currentText === currentWord) {
-            // Pausa antes de empezar a borrar
-            typeSpeed = pauseTime;
-            isDeleting = true;
-        } else if (isDeleting && currentText === '') {
-            // Cambiar a la siguiente palabra
-            isDeleting = false;
-            currentWordIndex = (currentWordIndex + 1) % words.length;
-            typeSpeed = 500; // Pausa antes de escribir la siguiente palabra
+        // ✅ Continuar solo si no está pausado
+        if (!isPaused) {
+            animationId = requestAnimationFrame(type);
         }
-
-        setTimeout(type, typeSpeed);
     }
 
-    // Iniciar la animación después de que se muestre el hero
+    // ✅ Función para pausar animación
+    function pauseAnimation() {
+        if (!isPaused) {
+            isPaused = true;
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+        }
+    }
+
+    // ✅ Función para reanudar animación
+    function resumeAnimation() {
+        if (isPaused) {
+            isPaused = false;
+            if (!animationId) {
+                animationId = requestAnimationFrame(type);
+            }
+        }
+    }
+
+    // ✅ MANEJO DE SCROLL OPTIMIZADO
+    function handleScroll() {
+        const now = Date.now();
+        lastScrollTime = now;
+        
+        if (!isScrolling) {
+            isScrolling = true;
+            pauseAnimation();
+        }
+
+        // Limpiar timeout previo
+        clearTimeout(scrollTimeout);
+        
+        // Reanudar después de que pare el scroll
+        scrollTimeout = setTimeout(() => {
+            if (Date.now() - lastScrollTime >= 150) {
+                isScrolling = false;
+                if (!isTouching) {
+                    resumeAnimation();
+                }
+            }
+        }, 150);
+    }
+
+    // ✅ MANEJO DE TOUCH PARA MÓVILES
+    function handleTouchStart(e) {
+        lastTouchTime = Date.now();
+        isTouching = true;
+        pauseAnimation();
+    }
+
+    function handleTouchMove(e) {
+        lastTouchTime = Date.now();
+        if (!isTouching) {
+            isTouching = true;
+            pauseAnimation();
+        }
+    }
+
+    function handleTouchEnd(e) {
+        clearTimeout(touchTimeout);
+        
+        // Reanudar después de un pequeño delay
+        touchTimeout = setTimeout(() => {
+            if (Date.now() - lastTouchTime >= 200) {
+                isTouching = false;
+                if (!isScrolling) {
+                    resumeAnimation();
+                }
+            }
+        }, 200);
+    }
+
+    // ✅ MANEJO DE VISIBILIDAD
+    function handleVisibilityChange() {
+        if (document.hidden) {
+            pauseAnimation();
+        } else if (!isScrolling && !isTouching) {
+            resumeAnimation();
+        }
+    }
+
+    // ✅ Intersection Observer para pausar cuando no sea visible
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (!isPaused && !isScrolling && !isTouching) {
+                    resumeAnimation();
+                }
+            } else {
+                pauseAnimation();
+            }
+        });
+    }, { threshold: 0.1 });
+
+    observer.observe(typewriterElement);
+
+    // ✅ AGREGAR TODOS LOS EVENT LISTENERS
+    
+    // Scroll listeners (pasivo para mejor rendimiento)
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Touch listeners para móviles
+    document.addEventListener('touchstart', handleTouchStart, { passive: true });
+    document.addEventListener('touchmove', handleTouchMove, { passive: true });
+    document.addEventListener('touchend', handleTouchEnd, { passive: true });
+    document.addEventListener('touchcancel', handleTouchEnd, { passive: true });
+    
+    // Visibilidad de la página
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    
+    // Pausar durante resize
+    window.addEventListener('resize', () => {
+        pauseAnimation();
+        setTimeout(() => {
+            if (!isScrolling && !isTouching) {
+                resumeAnimation();
+            }
+        }, 300);
+    });
+
+    // ✅ INICIAR DESPUÉS DE UN DELAY
     setTimeout(() => {
-        type();
+        if (!isPaused) {
+            animationId = requestAnimationFrame(type);
+        }
     }, 1000);
+
+    // ✅ CLEANUP FUNCTION
+    return () => {
+        if (animationId) {
+            cancelAnimationFrame(animationId);
+        }
+        window.removeEventListener('scroll', handleScroll);
+        document.removeEventListener('touchstart', handleTouchStart);
+        document.removeEventListener('touchmove', handleTouchMove);
+        document.removeEventListener('touchend', handleTouchEnd);
+        document.removeEventListener('touchcancel', handleTouchEnd);
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+        observer.disconnect();
+        clearTimeout(scrollTimeout);
+        clearTimeout(touchTimeout);
+    };
 }
 
 // Llamar a la función en el DOMContentLoaded existente
 document.addEventListener('DOMContentLoaded', () => {
     // ...código existente...
     
-    // Inicializar typewriter
-    initTypewriter();
+    // ✅ Inicializar typewriter optimizado con cleanup
+    setTimeout(() => {
+        const typewriterCleanup = initTypewriter();
+        
+        // Cleanup al cerrar/recargar la página
+        window.addEventListener('beforeunload', () => {
+            if (typewriterCleanup) {
+                typewriterCleanup();
+            }
+        });
+    }, 1000);
     
     // ...resto del código...
 });
