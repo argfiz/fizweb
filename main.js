@@ -907,11 +907,11 @@ const faqData = [
   },
   {
     question: "¿Puedo modificar el contenido después de publicada?",
-    answer: "Si estamos a cargo del mantenimiento, dispones de una actualizacion anual gratis para cambios menores como textos, imágenes o productos. Si más adelante querés agregar cosas nuevas o hacer cambios grandes, te pasamos un presupuesto sin compromiso "
+    answer: "Si contratas mantenimiento, dispones de una actualizacion anual para cambios menores como textos, imágenes o productos. Posteriormente, si querés hacer cambios más grandes, te pasamos un presupuesto sin compromiso "
   },
   {
-    question: "¿El Hosting y el Dominio están incluido?",
-    answer: "No, el precio es por el desarrollo del sitio web. Pero si querés, podemos encargarnos de eso por una tarifa mensual. Así nos ocupamos de que tu sitio esté siempre online y funcionando bien."
+    question: "¿El Hosting, Dominio y QR están incluido?",
+    answer: "No, el precio es por el desarrollo del sitio web. Pero si contratas el mantenimiento podemos encargarnos de eso por una tarifa mensual. Así nos ocupamos de que tu sitio esté siempre online y funcionando correctamente."
   },
   {
     question: "¿Por que te recomendamos contratar el mantenimiento?",
@@ -920,7 +920,7 @@ const faqData = [
   },
   {
     question: "¿Qué pasa si no contrato el mantenimiento?",
-    answer: "Si no querés el mantenimiento, te facilitamos los links del Hosting y del Dominio que recomendamos para que puedas gestionarlo por tu cuenta y avanzar con la instalacion del sitio web en el servidor de tu preferencia. Pero si lo contratás, nos ocupamos nosotros para que no te compliques con temas técnicos."
+    answer: "Si no querés el mantenimiento, te facilitamos los links del Hosting y del Dominio que recomendamos para que puedas gestionarlo por tu cuenta y podamos avanzar con la instalacion del sitio web en el servidor de tu preferencia. Pero si lo contratás, nos ocupamos nosotros para que no te compliques con temas técnicos."
   },
   {
     question: "¿Qué necesito para empezar?",
@@ -928,7 +928,7 @@ const faqData = [
   },
   {
     question: "¿Qué pasa si me arrepiento?",
-    answer: "Si te arrepentís, podés contactarnos y veremos cómo resolver la situación. Siempre buscamos la satisfacción del cliente. Si ya empezamos el trabajo, te pasaremos un presupuesto por lo realizado hasta ese momento."
+    answer: "Si te arrepentís, podés contactarnos y veremos cómo resolver la situación. Siempre buscamos la satisfacción del cliente. Si ya empezamos el trabajo, te pasaremos un presupuesto por lo realizado hasta ese momento y te devolvemos la diferencia."
   }
 ];
 
