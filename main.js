@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 typewriterCleanup();
             }
         });
-    }, 1000);
+    }, 200);
 
     // ===== WELCOME BANNER CON INDICADORES =====
     setTimeout(() => {
@@ -818,7 +818,7 @@ function initTypewriter() {
     let currentText = '';
     let isDeleting = false;
     let typeSpeed = 200;
-    let deleteSpeed = 70;
+    let deleteSpeed = 50;
     let pauseTime = 2500;
     let animationId;
     let isPaused = false;
