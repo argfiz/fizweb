@@ -46,7 +46,7 @@ body:not(.contact-page) {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 1.5s cubic-bezier(.4, 0, .2, 1), transform 0.9s cubic-bezier(.4, 0, .2, 1);
-    
+
 }
 
 .section__title.visible {
@@ -557,12 +557,14 @@ body:not(.contact-page) {
     transform: translateZ(0);
     contain: layout;
 }
+
 /* Fixed solo en desktop */
 @media (min-width: 901px) {
     .hero__container {
         background-attachment: fixed !important;
     }
 }
+
 .hero__image {
     padding: 25px;
     padding-bottom: 75px;
@@ -580,6 +582,7 @@ body:not(.contact-page) {
     transform: translateZ(0);
     contain: layout;
 }
+
 .hero__image h1 {
     font-weight: 600 !important;
     font-family: var(--font-hero) !important;
@@ -630,8 +633,8 @@ body:not(.contact-page) {
     margin-top: -4px !important;
     overflow: hidden;
     box-sizing: border-box;
-    text-shadow: 
-        0 0 20px rgba(247, 15, 119, 0.7) ,
+    text-shadow:
+        0 0 20px rgba(247, 15, 119, 0.7),
         0 0 40px rgba(247, 15, 119, 0.5) !important;
     text-transform: none;
     text-align: center;
@@ -652,7 +655,7 @@ body:not(.contact-page) {
     text-decoration: none !important;
     text-decoration-color: transparent !important;
     margin-left: -4px;
-    text-shadow: 
+    text-shadow:
         0 0 15px rgba(0, 212, 255, 0.8),
         0 0 30px rgba(0, 212, 255, 0.6);
     /* ✅ Optimizaciones */
@@ -660,21 +663,28 @@ body:not(.contact-page) {
     backface-visibility: hidden;
     transform: translateZ(0);
 }
+
 /* ✅ ANIMACIÓN OPTIMIZADA */
 @keyframes blinkOptimized {
-    0%, 40% { 
-        opacity: 1; 
+
+    0%,
+    40% {
+        opacity: 1;
         transform: translateZ(0);
     }
-    50%, 90% { 
-        opacity: 0; 
+
+    50%,
+    90% {
+        opacity: 0;
         transform: translateZ(0);
     }
-    100% { 
-        opacity: 1; 
+
+    100% {
+        opacity: 1;
         transform: translateZ(0);
     }
 }
+
 /* Aplica la animación de carga a los hijos */
 .hero__image h1,
 .hero__image h2 {
@@ -694,19 +704,29 @@ body:not(.contact-page) {
 
 
 @keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
 }
+
 /* Cursor que sigue al texto */
 .typewriter-cursor {
     color: #b8b8b8 !important;
     font-weight: 300;
     animation: blink 0.6s infinite;
-    vertical-align: baseline; 
-    line-height: inherit; 
-    text-decoration: none !important; 
+    vertical-align: baseline;
+    line-height: inherit;
+    text-decoration: none !important;
     text-decoration-color: transparent !important;
 }
+
 /* Asegurar que el texto se mantenga en su lugar */
 .typewriter-text {
     display: inline-block;
@@ -720,18 +740,18 @@ body:not(.contact-page) {
     .hero__container {
         padding-top: 100px;
     }
-    
+
     .hero__image {
         min-height: 300px;
         height: 300px;
         max-height: 300px;
         gap: 15px;
     }
-    
+
     .hero__image h1 {
         font-size: 2.5rem;
     }
-    
+
     .hero__image h2 {
         color: #fff !important;
         font-size: 1.3rem;
@@ -763,6 +783,7 @@ body:not(.contact-page) {
         color: #fff !important;
         max-width: 100%;
     }
+
     .hero__image h1 .typewriter {
         margin-top: -3px !important;
     }
@@ -777,13 +798,14 @@ body:not(.contact-page) {
         gap: 18px;
         padding-top: 0px;
     }
-    
+
     .hero__image h1 {
         font-size: 2.3rem !important;
     }
-    
+
     .hero__image h2 {
-        font-size: 1.5rem !important; ;
+        font-size: 1.5rem !important;
+        ;
         color: #fff !important;
     }
 }
@@ -817,7 +839,13 @@ body:not(.contact-page) {
     pointer-events: none;
     will-change: opacity, transform;
     position: relative;
-    /* AGREGAR ESTO */
+}
+
+.welcome__banner-container.show {
+    animation: welcomeBannerPopIn 0.8s cubic-bezier(.4, 0, .2, 1);
+    animation-delay: 0s;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .welcome__banner-indicators {
@@ -834,7 +862,7 @@ body:not(.contact-page) {
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     cursor: pointer;
     transition: background 0.3s ease;
 }
@@ -843,14 +871,7 @@ body:not(.contact-page) {
     background: var(--color-secondary);
 }
 
-.welcome__banner-container.show {
-    animation: welcomeBannerPopIn 0.8s cubic-bezier(.4, 0, .2, 1);
-    animation-delay: 0s;
-    opacity: 1;
-    pointer-events: auto;
-}
-
-/* Flecha en el extremo derecho */
+/* ✅ NUEVA FLECHA DERECHA*/
 .welcome__banner-arrow {
     position: absolute;
     right: 10%;
@@ -915,28 +936,8 @@ body:not(.contact-page) {
     height: 35px;
     fill: var(--color-secondary);
     transition: fill 0.3s ease;
-    transform: rotate(180deg); /* Rotar para apuntar hacia la izquierda */
-}
-
-/* Responsive para móviles */
-@media (max-width: 850px) {
-    .welcome__banner-arrow {
-        right: 15px;
-        width: 50px;
-        height: 50px;
-    }
-
-    .welcome__banner-arrow--left {
-        left: 15px;
-        width: 50px;
-        height: 50px;
-    }
-
-    .welcome__banner-arrow img,
-    .welcome__banner-arrow--left img {
-        width: 25px;
-        height: 25px;
-    }
+    transform: rotate(180deg);
+    /* Rotar para apuntar hacia la izquierda */
 }
 
 /* Eliminar sombra del tap en móviles */
@@ -957,6 +958,7 @@ body:not(.contact-page) {
     -webkit-tap-highlight-color: transparent !important;
 }
 
+
 @keyframes welcomeBannerPopIn {
     0% {
         transform: scale(0.5);
@@ -974,10 +976,31 @@ body:not(.contact-page) {
     }
 }
 
+
 @media (min-width: 901px) and (max-width: 1200px) {
     .welcome__banner {
         margin-top: -200px;
 
+    }
+}
+
+@media (max-width: 850px) {
+    .welcome__banner-arrow {
+        right: 15px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .welcome__banner-arrow--left {
+        left: 15px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .welcome__banner-arrow img,
+    .welcome__banner-arrow--left img {
+        width: 25px;
+        height: 25px;
     }
 }
 
@@ -2119,7 +2142,7 @@ footer {
 
 /* Pregunta importante destacada */
 .faq__item--important {
-    background:  #b9006c ;
+    background: #b9006c;
     border: 2px solid var(--color-secondary);
     animation: pulseImportant 2s infinite;
 }
@@ -2227,9 +2250,11 @@ footer {
         padding-top: 80px;
         font-size: 1.2rem !important;
     }
-     #faqSection .section__title p {
+
+    #faqSection .section__title p {
         font-size: 1.2rem !important;
     }
+
     .faq__title {
         padding-top: 100px;
         font-size: 1.5rem;
@@ -2311,7 +2336,7 @@ html {
 
 #contact {
     background: transparent;
-    
+
 }
 
 #contact .section__title {
@@ -2319,7 +2344,7 @@ html {
     padding-right: 0px;
     font-size: 1.4rem;
     font-weight: 400;
-    
+
 }
 
 
@@ -2497,8 +2522,6 @@ html {
     margin-top: 0px;
     margin-left: -10px;
 }
-
-
 
 .contact__form form {
     display: flex;
