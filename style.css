@@ -2602,7 +2602,7 @@ html {
 .form__group textarea {
     font-weight: 400;
     padding: 8px 10px;
-    border: 1px solid #ff0073;
+    border: 1px solid #cecece;
     border-radius: 10px;
     font-size: 1.2rem;
     background: #fff6fa;
