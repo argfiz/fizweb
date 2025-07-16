@@ -819,7 +819,7 @@ body:not(.contact-page) {
     height: auto;
     margin: 40px auto;
     margin-top: -250px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
     border-radius: 10px;
     position: relative;
     z-index: 1;
@@ -850,7 +850,6 @@ body:not(.contact-page) {
 
 .welcome__banner-indicators {
     position: absolute;
-    bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -1078,6 +1077,7 @@ body:not(.contact-page) {
 .swiper {
     padding: 0px;
     margin: 0px;
+    margin-top: 40px !important;
     max-width: 100vw;
     background: #fff;
     overflow: hidden;
@@ -1701,9 +1701,12 @@ body:not(.contact-page) {
     --color-card-bg: #000;
     --color-card-shadow: 0 8px 32px rgba(0, 0, 0, 1);
     --color-card-shadow-active:
-        0 8px 20px 0 rgba(0, 0, 0, 0.8),
-        0 8px 40px 0 rgba(0, 0, 0, 0.6),
-        0 8px 10px 0 rgba(0, 0, 0, 1);
+        0 25px 30px -5px rgba(0, 0, 0, 0.9),     
+        0 12px 15px -6px rgba(0, 0, 0, 0.7),     
+        0 40px 70px -12px rgba(0, 0, 0, 0.8),    
+        0 60px 120px -20px rgba(0, 0, 0, 0.6),   
+        0 6px 10px -2px rgba(0, 0, 0, 0.5),      
+        inset 0 2px 4px 0 rgba(255, 255, 255, 0.06);
     --color-card-title: #222;
     --color-card-desc: #444;
     --radius-tab: 50%;
