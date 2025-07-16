@@ -2087,7 +2087,7 @@ footer {
 
 #faqSection .section__title p {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .main__container {
@@ -2225,8 +2225,11 @@ footer {
 
     #faqSection .section__title {
         padding-top: 80px;
+        font-size: 1.2rem !important;
     }
-
+     #faqSection .section__title p {
+        font-size: 1.2rem !important;
+    }
     .faq__title {
         padding-top: 100px;
         font-size: 1.5rem;
@@ -2308,11 +2311,13 @@ html {
 
 #contact {
     background: transparent;
+    
 }
 
 #contact .section__title {
     padding-left: 0px;
     padding-right: 0px;
+    
 }
 
 #contact .section__title p {
