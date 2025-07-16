@@ -577,10 +577,10 @@ body:not(.contact-page) {
 
 .hero__image h1 {
     font-weight: 700 !important;
-    font-family: var(--font-main) !important;
+    font-family: var(--font-hero) !important;
     font-size: 3rem !important;
     color: white;
-    letter-spacing: 1px !important;
+    letter-spacing: 2px !important;
     line-height: 1.1 !important;
     text-shadow: 0 2px 12px rgba(247, 37, 133, 0.08) !important;
     margin: 0;
@@ -614,13 +614,13 @@ body:not(.contact-page) {
     color: var(--color-secondary);
     font-size: 1.6em !important;
     font-weight: 300 !important;
-    font-family: var(--font-hero);
+    font-family: var(--font-hero) !important;
     text-decoration: none;
     text-decoration-color: #b8b8b8;
     min-width: 50px;
     display: inline-block;
     vertical-align: baseline;
-    letter-spacing: 1px;
+    letter-spacing: -2px !important;
     max-width: 100%;
     overflow: hidden;
     box-sizing: border-box;
