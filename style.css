@@ -2198,8 +2198,8 @@ footer {
 
 /* Pregunta importante destacada */
 .faq__item--important {
-    background: #b9006c;
-    border: 2px solid var(--color-secondary);
+    background: #e60086;
+    border: 2px solid #ff8ed0;
     animation: pulseImportant 2s infinite;
 }
 
