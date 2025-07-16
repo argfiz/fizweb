@@ -471,13 +471,47 @@ function changeBanner() {
   }, 300);
 }
 
+// ✅ FUNCIÓN PARA BANNER ANTERIOR (NUEVA)
+function changeBannerPrevious() {
+    const welcomeImg = document.querySelector('.welcome__banner');
+    const indicators = document.querySelectorAll('.welcome__banner-indicator');
+    if (!welcomeImg) return;
+    
+    // Decrementar índice (con wrap-around)
+    currentBannerIndex = (currentBannerIndex - 1 + bannerData.length) % bannerData.length;
+    
+    // Animación de transición
+    welcomeImg.style.opacity = '1';
+    welcomeImg.style.transform = 'scale(0.8)';
+    welcomeImg.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    
+    // Cambiar imagen después de la animación
+    setTimeout(() => {
+        welcomeImg.src = bannerData[currentBannerIndex];
+        welcomeImg.style.opacity = '1';
+        welcomeImg.style.transform = 'scale(1)';
+        
+        // Actualizar indicadores
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentBannerIndex);
+        });
+    }, 300);
+}
+
 // Funcionalidad para la flecha del welcome banner
 document.addEventListener('DOMContentLoaded', () => {
     const welcomeArrow = document.querySelector('.welcome__banner-arrow');
     if (welcomeArrow) {
         welcomeArrow.addEventListener('click', () => {
-            // Cambiar banner en lugar de hacer scroll
-            changeBanner();
+            changeBanner(); // Avanzar
+        });
+    }
+    
+    // ===== NUEVA FLECHA IZQUIERDA =====
+    const welcomeArrowLeft = document.querySelector('.welcome__banner-arrow--left');
+    if (welcomeArrowLeft) {
+        welcomeArrowLeft.addEventListener('click', () => {
+            changeBannerPrevious(); // Retroceder
         });
     }
 });

@@ -869,12 +869,34 @@ body:not(.contact-page) {
     pointer-events: none;
 }
 
-.welcome__banner-container.show .welcome__banner-arrow {
+/* ✅ NUEVA FLECHA IZQUIERDA */
+.welcome__banner-arrow--left {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.123);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    cursor: pointer !important;
+    transition: background 0.3s ease, transform 0.2s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.welcome__banner-container.show .welcome__banner-arrow,
+.welcome__banner-container.show .welcome__banner-arrow--left {
     opacity: 1;
     pointer-events: auto;
 }
 
-.welcome__banner-arrow:hover {
+.welcome__banner-arrow:hover,
+.welcome__banner-arrow--left:hover {
     background: rgba(0, 0, 0, 0.5);
     transform: translateY(-50%) scale(1.1);
 }
@@ -886,6 +908,15 @@ body:not(.contact-page) {
     transition: fill 0.3s ease;
 }
 
+/* ✅ FLECHA IZQUIERDA ROTADA */
+.welcome__banner-arrow--left img {
+    width: 35px;
+    height: 35px;
+    fill: var(--color-secondary);
+    transition: fill 0.3s ease;
+    transform: rotate(180deg); /* Rotar para apuntar hacia la izquierda */
+}
+
 /* Responsive para móviles */
 @media (max-width: 850px) {
     .welcome__banner-arrow {
@@ -894,14 +925,22 @@ body:not(.contact-page) {
         height: 50px;
     }
 
-    .welcome__banner-arrow img {
+    .welcome__banner-arrow--left {
+        left: 15px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .welcome__banner-arrow img,
+    .welcome__banner-arrow--left img {
         width: 25px;
         height: 25px;
     }
 }
 
 /* Eliminar sombra del tap en móviles */
-.welcome__banner-arrow {
+.welcome__banner-arrow,
+.welcome__banner-arrow--left {
     -webkit-tap-highlight-color: transparent !important;
     outline: none !important;
     user-select: none;
@@ -910,7 +949,9 @@ body:not(.contact-page) {
 }
 
 .welcome__banner-arrow:focus,
-.welcome__banner-arrow:active {
+.welcome__banner-arrow:active,
+.welcome__banner-arrow--left:focus,
+.welcome__banner-arrow--left:active {
     outline: none !important;
     -webkit-tap-highlight-color: transparent !important;
 }
