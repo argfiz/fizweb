@@ -2077,7 +2077,7 @@ footer {
 
 /* Pregunta importante destacada */
 .faq__item--important {
-    background: linear-gradient(135deg, #74003a 0%, var(--color-secondary) 50%);
+    background: linear-gradient(135deg, var(--color-secondary) 70%, #74003a 100%);
     border: 2px solid var(--color-secondary);
     animation: pulseImportant 2s infinite;
 }
