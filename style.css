@@ -26,7 +26,7 @@ body:not(.contact-page) {
     --color-dark-3: #111111;
     --color-light: #f8f9fa;
     --font-main: 'Inter', 'Segoe UI', Arial, sans-serif;
-    --font-hero: 'Agdasima', 'Segoe UI', Arial, sans-serif;
+    --font-hero: 'Tomorrow', 'Segoe UI', Arial, sans-serif;
 }
 
 
@@ -584,7 +584,7 @@ body:not(.contact-page) {
     font-family: var(--font-hero) !important;
     font-size: 3rem !important;
     color: white;
-    letter-spacing: -1px !important;
+    letter-spacing: 0px !important;
     line-height: 1.2 !important;
     text-shadow: 0 2px 12px rgba(247, 37, 133, 0.08) !important;
     margin: 0;
@@ -600,7 +600,7 @@ body:not(.contact-page) {
 .hero__image h2 {
     color: #fff !important;
     font-size: 1.8rem !important;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
     font-family: var(--font-hero) !important;
     letter-spacing: 1px !important;
     line-height: 1.3 !important;
@@ -616,7 +616,7 @@ body:not(.contact-page) {
 .hero__image h1 .typewriter {
     position: relative;
     color: var(--color-secondary);
-    font-size: 1.8em !important;
+    font-size: 1.6em !important;
     font-weight: 300 !important;
     font-family: var(--font-hero) !important;
     text-decoration: none;
@@ -626,12 +626,12 @@ body:not(.contact-page) {
     vertical-align: baseline;
     letter-spacing: 1px !important;
     max-width: 100%;
-    margin-top: -4px;
+    margin-top: -4px !important;
     overflow: hidden;
     box-sizing: border-box;
     text-shadow: 
-        0 0 20px rgba(247, 15, 119, 0.5),
-        0 0 40px rgba(247, 15, 119, 0.3);
+        0 0 20px rgba(247, 15, 119, 0.5) ,
+        0 0 40px rgba(247, 15, 119, 0.3) !important;
     text-transform: none;
     text-align: center;
     /* ✅ Optimizaciones de rendimiento */
@@ -643,7 +643,7 @@ body:not(.contact-page) {
 
 .typewriter-cursor {
     color: #00d4ff !important;
-    font-weight: 500 !important;
+    font-weight: 300 !important;
     /* ✅ Animación más suave */
     animation: blinkOptimized 1.2s infinite;
     vertical-align: baseline;
@@ -689,20 +689,7 @@ body:not(.contact-page) {
 }
 
 
-/* Animación de tipeo y borrado */
-.hero__image h1 .typewriter {
-    position: relative;
-    color: var(--color-secondary);
-    font-size: 1.5em !important;
-    font-weight: 500;
-    text-decoration: none;
-    text-decoration-color: #b8b8b8;
-    min-width: 50px;
-    display: inline-block;
-    vertical-align: baseline;
-    letter-spacing: -2px;
-    margin-top: -4px;
-}
+
 
 
 @keyframes blink {
@@ -753,28 +740,30 @@ body:not(.contact-page) {
 @media (max-width: 600px) {
     .hero__container {
         padding: 0px;
-        padding-top: 110px;
+        padding-top: 100px;
         margin: 0px;
     }
 
     .hero__image {
         padding: 25px 20px;
-        padding-bottom: 60px;
+        padding-bottom: 70px;
         height: 280px;
         min-height: 280px;
         max-height: 280px;
-        gap: 20px; /* ✅ Mantener espacio consistente */
     }
 
     .hero__image h1 {
-        font-size: 2.3rem !important;
-        margin-top: -4px !important;
+        font-size: 1.8rem !important;
+        margin-top: 0px !important;
     }
 
     .hero__image h2 {
-        font-size: 1.5rem !important;
+        font-size: 1.4rem !important;
         color: #fff !important;
         max-width: 100%;
+    }
+    .hero__image h1 .typewriter {
+        margin-top: -3px !important;
     }
 }
 
@@ -786,15 +775,14 @@ body:not(.contact-page) {
         max-height: 290px;
         gap: 18px;
         padding-top: 0px;
-        margin-bottom: 250px !important;
     }
     
     .hero__image h1 {
-        font-size: 2.4rem !important;
+        font-size: 2.3rem !important;
     }
     
     .hero__image h2 {
-        font-size: 1.6rem !important; ;
+        font-size: 1.5rem !important; ;
         color: #fff !important;
     }
 }
