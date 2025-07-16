@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         loadWelcomeBanner(); // ✅ Esta función YA genera los indicadores
     }, 400);
 
-    // ===== FLECHAS DEL BANNER =====
+    // ===== FLECHAS DEL BANNER (SOLO AQUÍ) =====
     const welcomeArrow = document.querySelector('.welcome__banner-arrow');
     if (welcomeArrow) {
         welcomeArrow.addEventListener('click', () => {
@@ -120,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ===== RESTO DEL CÓDIGO =====
     // ===== OBSERVERS =====
     const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
@@ -310,23 +311,6 @@ function changeBannerPrevious() {
   changeBannerToIndex(currentBannerIndex);
 }
 
-// Funcionalidad para la flecha del welcome banner
-document.addEventListener('DOMContentLoaded', () => {
-    const welcomeArrow = document.querySelector('.welcome__banner-arrow');
-    if (welcomeArrow) {
-        welcomeArrow.addEventListener('click', () => {
-            changeBanner(); // Avanzar
-        });
-    }
-    
-    // ===== NUEVA FLECHA IZQUIERDA =====
-    const welcomeArrowLeft = document.querySelector('.welcome__banner-arrow--left');
-    if (welcomeArrowLeft) {
-        welcomeArrowLeft.addEventListener('click', () => {
-            changeBannerPrevious(); // Retroceder
-        });
-    }
-});
 /*****************************************************************************************************/
 /* ============================================ GALLERY SWIPE =================================== ****/
 /*****************************************************************************************************/
@@ -819,6 +803,218 @@ document.addEventListener('DOMContentLoaded', () => {
   // Renderizar la tarjeta inicial (por defecto el primer servicio)
   animateTabCardChange(servicesData[0].key);
 });
+
+/*****************************************************************************************************/
+/* ========================================== TYPEWRITER ANIMATED ================================== */
+/*****************************************************************************************************/
+
+// ✅ FUNCIÓN initTypewriter()
+function initTypewriter() {
+    const typewriterElement = document.querySelector('.typewriter');
+    if (!typewriterElement) return;
+
+    const words = typewriterElement.getAttribute('data-words').split(',');
+    let currentWordIndex = 0;
+    let currentText = '';
+    let isDeleting = false;
+    let typeSpeed = 200;
+    let deleteSpeed = 70;
+    let pauseTime = 2500;
+    let animationId;
+    let isPaused = false;
+
+    // ✅ Variables para detectar scroll y touch
+    let isScrolling = false;
+    let isTouching = false;
+    let scrollTimeout;
+    let touchTimeout;
+    let lastScrollTime = 0;
+    let lastTouchTime = 0;
+
+    // ✅ Usar requestAnimationFrame para mejor rendimiento
+    let lastTime = 0;
+    let nextUpdateTime = 0;
+
+    function type(currentTime) {
+        // Solo actualizar cuando sea necesario y no esté pausado
+        if (currentTime >= nextUpdateTime && !isPaused) {
+            const currentWord = words[currentWordIndex];
+            
+            if (isDeleting) {
+                currentText = currentWord.substring(0, currentText.length - 1);
+                nextUpdateTime = currentTime + deleteSpeed;
+            } else {
+                currentText = currentWord.substring(0, currentText.length + 1);
+                nextUpdateTime = currentTime + 150;
+            }
+
+            // ✅ Batch DOM update - solo si cambió el contenido
+            const newContent = `${currentText}<span class="typewriter-cursor">|</span>`;
+            if (typewriterElement.innerHTML !== newContent) {
+                typewriterElement.innerHTML = newContent;
+            }
+
+            if (!isDeleting && currentText === currentWord) {
+                nextUpdateTime = currentTime + pauseTime;
+                isDeleting = true;
+            } else if (isDeleting && currentText === '') {
+                isDeleting = false;
+                currentWordIndex = (currentWordIndex + 1) % words.length;
+                nextUpdateTime = currentTime + 500;
+            }
+        }
+
+        // ✅ Continuar solo si no está pausado
+        if (!isPaused) {
+            animationId = requestAnimationFrame(type);
+        }
+    }
+
+    // ✅ Función para pausar animación
+    function pauseAnimation() {
+        if (!isPaused) {
+            isPaused = true;
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+        }
+    }
+
+    // ✅ Función para reanudar animación
+    function resumeAnimation() {
+        if (isPaused) {
+            isPaused = false;
+            if (!animationId) {
+                animationId = requestAnimationFrame(type);
+            }
+        }
+    }
+
+    // ✅ MANEJO DE SCROLL OPTIMIZADO
+    function handleScroll() {
+        const now = Date.now();
+        lastScrollTime = now;
+        
+        if (!isScrolling) {
+            isScrolling = true;
+            pauseAnimation();
+        }
+
+        // Limpiar timeout previo
+        clearTimeout(scrollTimeout);
+        
+        // Reanudar después de que pare el scroll
+        scrollTimeout = setTimeout(() => {
+            if (Date.now() - lastScrollTime >= 150) {
+                isScrolling = false;
+                if (!isTouching) {
+                    resumeAnimation();
+                }
+            }
+        }, 150);
+    }
+
+    // ✅ MANEJO DE TOUCH PARA MÓVILES
+    function handleTouchStart(e) {
+        lastTouchTime = Date.now();
+        isTouching = true;
+        pauseAnimation();
+    }
+
+    function handleTouchMove(e) {
+        lastTouchTime = Date.now();
+        if (!isTouching) {
+            isTouching = true;
+            pauseAnimation();
+        }
+    }
+
+    function handleTouchEnd(e) {
+        clearTimeout(touchTimeout);
+        
+        // Reanudar después de un pequeño delay
+        touchTimeout = setTimeout(() => {
+            if (Date.now() - lastTouchTime >= 200) {
+                isTouching = false;
+                if (!isScrolling) {
+                    resumeAnimation();
+                }
+            }
+        }, 200);
+    }
+
+    // ✅ MANEJO DE VISIBILIDAD
+    function handleVisibilityChange() {
+        if (document.hidden) {
+            pauseAnimation();
+        } else if (!isScrolling && !isTouching) {
+            resumeAnimation();
+        }
+    }
+
+    // ✅ Intersection Observer para pausar cuando no sea visible
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (!isPaused && !isScrolling && !isTouching) {
+                    resumeAnimation();
+                }
+            } else {
+                pauseAnimation();
+            }
+        });
+    }, { threshold: 0.1 });
+
+    observer.observe(typewriterElement);
+
+    // ✅ AGREGAR TODOS LOS EVENT LISTENERS
+    
+    // Scroll listeners (pasivo para mejor rendimiento)
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Touch listeners para móviles
+    document.addEventListener('touchstart', handleTouchStart, { passive: true });
+    document.addEventListener('touchmove', handleTouchMove, { passive: true });
+    document.addEventListener('touchend', handleTouchEnd, { passive: true });
+    document.addEventListener('touchcancel', handleTouchEnd, { passive: true });
+    
+    // Visibilidad de la página
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    
+    // Pausar durante resize
+    window.addEventListener('resize', () => {
+        pauseAnimation();
+        setTimeout(() => {
+            if (!isScrolling && !isTouching) {
+                resumeAnimation();
+            }
+        }, 300);
+    });
+
+    // ✅ INICIAR DESPUÉS DE UN DELAY
+    setTimeout(() => {
+        if (!isPaused) {
+            animationId = requestAnimationFrame(type);
+        }
+    }, 1000);
+
+    // ✅ CLEANUP FUNCTION
+    return () => {
+        if (animationId) {
+            cancelAnimationFrame(animationId);
+        }
+        window.removeEventListener('scroll', handleScroll);
+        document.removeEventListener('touchstart', handleTouchStart);
+        document.removeEventListener('touchmove', handleTouchMove);
+        document.removeEventListener('touchend', handleTouchEnd);
+        document.removeEventListener('touchcancel', handleTouchEnd);
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+        observer.disconnect();
+        clearTimeout(scrollTimeout);
+        clearTimeout(touchTimeout);
+    };
+}
 
 
 
