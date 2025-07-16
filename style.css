@@ -31,6 +31,7 @@ body:not(.contact-page) {
 
 
 .section__title {
+    font-family: var(--font-hero);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2118,7 +2119,7 @@ footer {
 
 /* Pregunta importante destacada */
 .faq__item--important {
-    background: linear-gradient(135deg, var(--color-secondary) 70%, #74003a 100%);
+    background:  #b9006c ;
     border: 2px solid var(--color-secondary);
     animation: pulseImportant 2s infinite;
 }
