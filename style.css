@@ -2317,12 +2317,12 @@ html {
 #contact .section__title {
     padding-left: 0px;
     padding-right: 0px;
+    font-size: 1.4rem;
+    font-weight: 400;
     
 }
 
-#contact .section__title p {
-    font-size: 1.2rem;
-}
+
 
 #contact .main_container {
     max-width: 900px;
@@ -2363,6 +2363,7 @@ html {
 
 .contact__details {
     margin: 24px 0;
+    font-family: var(--font-hero);
 }
 
 
@@ -2502,7 +2503,7 @@ html {
 .contact__form form {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 28px;
 }
 
 .form__group {
