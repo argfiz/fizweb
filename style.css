@@ -630,8 +630,8 @@ body:not(.contact-page) {
     overflow: hidden;
     box-sizing: border-box;
     text-shadow: 
-        0 0 20px rgba(247, 15, 119, 0.5) ,
-        0 0 40px rgba(247, 15, 119, 0.3) !important;
+        0 0 20px rgba(247, 15, 119, 0.7) ,
+        0 0 40px rgba(247, 15, 119, 0.5) !important;
     text-transform: none;
     text-align: center;
     /* ✅ Optimizaciones de rendimiento */
