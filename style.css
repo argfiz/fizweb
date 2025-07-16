@@ -864,11 +864,64 @@ body:not(.contact-page) {
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.7);
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
+    /* ✅ Eliminar tap highlight en móviles */
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .welcome__banner-indicator.active {
     background: var(--color-secondary);
+    transform: scale(1.2); /* ✅ Indicador activo más grande */
+}
+
+.welcome__banner-indicator:hover {
+    background: var(--color-secondary);
+    transform: scale(1.1);
+}
+
+.welcome__banner-indicator:focus,
+.welcome__banner-indicator:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+.welcome__banner-indicators {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 3;
+}
+
+.welcome__banner-indicator {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.welcome__banner-indicator.active {
+    background: var(--color-secondary);
+    transform: scale(1.2);
+}
+
+.welcome__banner-indicator:hover {
+    background: var(--color-secondary);
+    transform: scale(1.1);
+}
+
+.welcome__banner-indicator:focus,
+.welcome__banner-indicator:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
 }
 
 /* ✅ NUEVA FLECHA DERECHA*/
