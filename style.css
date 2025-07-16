@@ -26,6 +26,7 @@ body:not(.contact-page) {
     --color-dark-3: #111111;
     --color-light: #f8f9fa;
     --font-main: 'Inter', 'Segoe UI', Arial, sans-serif;
+    --font-hero: 'Agdasima', 'Segoe UI', Arial, sans-serif;
 }
 
 
@@ -563,7 +564,7 @@ body:not(.contact-page) {
 }
 .hero__image {
     padding: 25px;
-    padding-bottom: 60px;
+    padding-bottom: 75px;
     max-height: 320px;
     min-height: 320px;
     height: 320px;
@@ -583,8 +584,8 @@ body:not(.contact-page) {
     font-family: var(--font-hero) !important;
     font-size: 3rem !important;
     color: white;
-    letter-spacing: 1px !important;
-    line-height: 1.2 !important;
+    letter-spacing: -1px !important;
+    line-height: 1.1 !important;
     text-shadow: 0 2px 12px rgba(247, 37, 133, 0.08) !important;
     margin: 0;
     padding: 0;
@@ -598,7 +599,7 @@ body:not(.contact-page) {
 
 .hero__image h2 {
     color: #fff !important;
-    font-size: 1.8rem !important;
+    font-size: 1.9rem !important;
     font-weight: 400 !important;
     font-family: var(--font-hero) !important;
     letter-spacing: 1px !important;
@@ -615,7 +616,7 @@ body:not(.contact-page) {
 .hero__image h1 .typewriter {
     position: relative;
     color: var(--color-secondary);
-    font-size: 1.6em !important;
+    font-size: 1.8em !important;
     font-weight: 300 !important;
     font-family: var(--font-hero) !important;
     text-decoration: none;
@@ -623,7 +624,7 @@ body:not(.contact-page) {
     min-width: 50px;
     display: inline-block;
     vertical-align: baseline;
-    letter-spacing: -2px !important;
+    letter-spacing: 1px !important;
     max-width: 100%;
     overflow: hidden;
     box-sizing: border-box;
@@ -641,14 +642,14 @@ body:not(.contact-page) {
 
 .typewriter-cursor {
     color: #00d4ff !important;
-    font-weight: 300;
+    font-weight: 500 !important;
     /* ✅ Animación más suave */
     animation: blinkOptimized 1.2s infinite;
     vertical-align: baseline;
     line-height: inherit;
     text-decoration: none !important;
     text-decoration-color: transparent !important;
-    margin-left: -2px;
+    margin-left: -4px;
     text-shadow: 
         0 0 15px rgba(0, 212, 255, 0.8),
         0 0 30px rgba(0, 212, 255, 0.6);
