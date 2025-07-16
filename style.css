@@ -585,7 +585,7 @@ body:not(.contact-page) {
     font-size: 3rem !important;
     color: white;
     letter-spacing: -1px !important;
-    line-height: 1.1 !important;
+    line-height: 1.2 !important;
     text-shadow: 0 2px 12px rgba(247, 37, 133, 0.08) !important;
     margin: 0;
     padding: 0;
@@ -599,8 +599,8 @@ body:not(.contact-page) {
 
 .hero__image h2 {
     color: #fff !important;
-    font-size: 1.9rem !important;
-    font-weight: 400 !important;
+    font-size: 1.8rem !important;
+    font-weight: 500 !important;
     font-family: var(--font-hero) !important;
     letter-spacing: 1px !important;
     line-height: 1.3 !important;
@@ -626,6 +626,7 @@ body:not(.contact-page) {
     vertical-align: baseline;
     letter-spacing: 1px !important;
     max-width: 100%;
+    margin-top: -4px;
     overflow: hidden;
     box-sizing: border-box;
     text-shadow: 
@@ -688,23 +689,11 @@ body:not(.contact-page) {
 }
 
 
-
-.hero__image h2 {
-    color: white;
-    font-size: 1.4rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin-top: 10px;
-    line-height: 1.3;
-    max-width: 900px;
-
-}
-
 /* Animación de tipeo y borrado */
 .hero__image h1 .typewriter {
     position: relative;
     color: var(--color-secondary);
-    font-size: 1.5em;
+    font-size: 1.5em !important;
     font-weight: 500;
     text-decoration: none;
     text-decoration-color: #b8b8b8;
@@ -712,6 +701,7 @@ body:not(.contact-page) {
     display: inline-block;
     vertical-align: baseline;
     letter-spacing: -2px;
+    margin-top: -4px;
 }
 
 
@@ -763,7 +753,7 @@ body:not(.contact-page) {
 @media (max-width: 600px) {
     .hero__container {
         padding: 0px;
-        padding-top: 120px;
+        padding-top: 110px;
         margin: 0px;
     }
 
@@ -777,32 +767,34 @@ body:not(.contact-page) {
     }
 
     .hero__image h1 {
-        font-size: 2.1rem;
-        /* ✅ Eliminar altura fija en móviles */
+        font-size: 2.3rem !important;
+        margin-top: -4px !important;
     }
 
     .hero__image h2 {
-        font-size: 1.2rem;
+        font-size: 1.5rem !important;
         color: #fff !important;
         max-width: 100%;
     }
 }
 
 /* ✅ Ajustes para tablets */
-@media (min-width: 601px) and (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 960px) {
     .hero__image {
         min-height: 290px;
         height: 290px;
         max-height: 290px;
         gap: 18px;
+        padding-top: 0px;
+        margin-bottom: 250px !important;
     }
     
     .hero__image h1 {
-        font-size: 2.3rem;
+        font-size: 2.4rem !important;
     }
     
     .hero__image h2 {
-        font-size: 1.3rem;
+        font-size: 1.6rem !important; ;
         color: #fff !important;
     }
 }
