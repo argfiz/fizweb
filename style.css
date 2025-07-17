@@ -2186,7 +2186,7 @@ footer {
 .faq__list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 5px;
 }
 
 .faq__item {
@@ -2198,8 +2198,8 @@ footer {
 
 /* Pregunta importante destacada */
 .faq__item--important {
-    background: #c9006f;
-    border: 2px solid #ff8ed0;
+    background: #ff008c;
+    /*border: 5px solid #5f0037;*/
     animation: pulseImportant 2s infinite;
 }
 
