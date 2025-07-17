@@ -1494,10 +1494,78 @@ body:not(.contact-page) {
     cursor: pointer !important;
 }
 
+/* ✅ CONTENEDOR PARA LOS BOTONES */
+.card__buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 28px auto;
+    width: 100%;
+}
+
+.card__price-info-icon,
+.card__pay-button {
+    background: var(--color-secondary);
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 31;
+    cursor: pointer !important;
+    pointer-events: auto;
+    position: relative;
+    box-shadow:
+        0 2px 15px rgba(0, 0, 0, 1),
+        0 4px 25px rgba(0, 0, 0, 0.8),
+        0 8px 40px rgba(0, 0, 0, 0.7);
+    /* Agregar la transición aquí para que funcione en ambas direcciones */
+    transition: transform 0.5s ease;
+    /* ✅ Eliminar estilos de margin individual */
+    margin: 0;
+}
+
+.card__price-info-icon:hover,
+.card__pay-button:hover {
+    cursor: pointer !important;
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+}
+
+.card__price-info-icon img,
+.card__pay-button img {
+    filter: brightness(0) invert(1);
+    display: block;
+    cursor: pointer !important;
+}
+
+/* ✅ BOTÓN DE PAGO ESPECÍFICO */
+.card__pay-button {
+    background: #00c851; /* Verde para indicar pago */
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card__pay-button:hover {
+    transform: scale(1.2);
+}
+
+/* ✅ ÍCONO DE PAGO */
+.card__pay-button img {
+    width: 40px;
+    height: 40px;
+}
+
 /*============================================================
 ======= Eliminar el hover en móviles ========================= */
 .card__price-info-icon,
-.card__price-info-icon img {
+.card__price-info-icon img,
+.card__pay-button,
+.card__pay-button img {
     -webkit-tap-highlight-color: transparent !important;
     outline: none !important;
     user-select: none;
@@ -1507,12 +1575,12 @@ body:not(.contact-page) {
 }
 
 .card__price-info-icon:focus,
-.card__price-info-icon:active {
+.card__price-info-icon:active,
+.card__pay-button:focus,
+.card__pay-button:active {
     outline: none !important;
     -webkit-tap-highlight-color: transparent !important;
 }
-
-
 
 
 /* =======================================================================================================
@@ -1664,7 +1732,8 @@ body:not(.contact-page) {
     }
 
     /* Animación específica para tap */
-    .card__price-info-icon.tap-animation {
+    .card__price-info-icon.tap-animation,
+    .card__pay-button.tap-animation {
         animation: mobileIconTap 0.3s cubic-bezier(.4, 0, .2, 1);
     }
 }

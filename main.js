@@ -323,6 +323,7 @@ const sliderCardsData = [
     precio: "$200.000",
     precioNota: "Precio Final",
     precioMensual: "$15.000",
+    paymentLink: "https://link.mercadopago.com.ar/inicial", // ✅ Link de pago
     items: {
       página: 1,
       secciones: 3,
@@ -337,6 +338,7 @@ const sliderCardsData = [
     precioNota: "Precio Final",
     precioNotaInfo: "./assets/icons/info-icon.svg",
     precioMensual: "$30.000",
+    paymentLink: "https://link.mercadopago.com.ar/mediano", // ✅ Link de pago
     items: {
       paginas: 3,
       secciones: 9,
@@ -350,6 +352,7 @@ const sliderCardsData = [
     precio: "$400.000",
     precioNota: "Precio Final",
     precioMensual: "$45.000",
+    paymentLink: "https://link.mercadopago.com.ar/full", // ✅ Link de pago
     items: {
       paginas: 5,
       secciones: 15,
@@ -391,38 +394,48 @@ function renderSlides() {
           </ul>
         </div>
         
-            <div class="card__price card__price--${idx + 1}">
-              <span>${card.precio}</span>
-              <small>${card.precioNota}</small>
+        <div class="card__price card__price--${idx + 1}">
+          <span>${card.precio}</span>
+          <small>${card.precioNota}</small>
+        </div>
+        
+        <!-- ✅ CONTENEDOR PARA AMBOS BOTONES -->
+        <div class="card__buttons-container">
+          <div class="card__price-info-icon">
+            <img src="${card.precioNotaInfo || './assets/icons/info-icon.svg'}" alt="Info Icon">
+          </div>
+          
+          <!-- ✅ NUEVO BOTÓN DE PAGO -->
+          <a href="${card.paymentLink || '#'}" class="card__pay-button" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/icons/payment-icon.svg" alt="Pagar">
+          </a>
+        </div>
+        
+        <div class="card__price-info">
+          <div class="card__price-info-text">
+            
+            <ul>
+              <li>Multidispositivos</li>
+              <li>Botón WhatsApp flotante</li>
+              <li>Conexion a Redes Sociales</li>
+              <li>Instalacion en servidor</li>
+              <li>No incluye mantenimiento</li>
+            </ul>
+            <div class="container-card__price-info">
+              <p class="card__price-info-text-bottom">
+                  ${card.precioMensual ? `Mantenimiento <br>
+                  <span>${card.precioMensual}</span> /mes <br>
+                  <span id="recommended">RECOMENDADO</span>` : ''}
+              </p>
+            
+            <ul class="list-card__price-info-text-bottom">
+              <li>Codigo QR</li>
+              <li>Hosting y Dominio</li>
+              <li>Actualizacion anual</li>
+            </ul>
             </div>
-            <div class="card__price-info-icon">
-              <img src="${card.precioNotaInfo || './assets/icons/info-icon.svg'}" alt="Info Icon">
-            </div>
-            <div class="card__price-info">
-              <div class="card__price-info-text">
-                
-                <ul>
-                  <li>Multidispositivos</li>
-                  <li>Botón WhatsApp flotante</li>
-                  <li>Conexion a Redes Sociales</li>
-                  <li>Instalacion en servidor</li>
-                  <li>No incluye mantenimiento</li>
-                </ul>
-                <div class="container-card__price-info">
-                  <p class="card__price-info-text-bottom">
-                      ${card.precioMensual ? `Mantenimiento <br>
-                      <span>${card.precioMensual}</span> /mes <br>
-                      <span id="recommended">RECOMENDADO</span>` : ''}
-                  </p>
-                
-                <ul class="list-card__price-info-text-bottom">
-                  <li>Codigo QR</li>
-                  <li>Hosting y Dominio</li>
-                  <li>Actualizacion anual</li>
-                </ul>
-                </div>
-              </div>
-            </div>
+          </div>
+        </div>
       </div>
     </div>
   `).join('');
@@ -430,6 +443,7 @@ function renderSlides() {
 
 
 function addPriceInfoListeners() {
+  // ✅ Listeners para el botón de información (existente)
   document.querySelectorAll('.card__price-info-icon').forEach(iconDiv => {
     iconDiv.addEventListener('click', function(e) {
       e.stopPropagation();
@@ -455,6 +469,32 @@ function addPriceInfoListeners() {
       const card = this.closest('.card');
       const priceInfo = card.querySelector('.card__price-info');
       priceInfo.classList.toggle('open');
+    });
+  });
+  
+  // ✅ Listeners para el botón de pago (NUEVO)
+  document.querySelectorAll('.card__pay-button').forEach(payButton => {
+    payButton.addEventListener('click', function(e) {
+      // Función para manejar el tap en móviles
+      function handleMobilePayTap(button) {
+        // Solo en móviles (ancho menor a 700px)
+        if (window.innerWidth <= 700) {
+          // Agregar clase de animación
+          button.classList.add('tap-animation');
+          
+          // Remover la clase después de la animación
+          setTimeout(() => {
+            button.classList.remove('tap-animation');
+          }, 300);
+        }
+      }
+      
+      // Ejecutar animación de tap
+      handleMobilePayTap(this);
+      
+      // El navegador seguirá el href automáticamente
+      // Opcional: agregar analytics o tracking aquí
+      console.log('💳 Redirigiendo a pago:', this.href);
     });
   });
 }
