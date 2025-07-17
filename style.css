@@ -1549,7 +1549,7 @@ body:not(.contact-page) {
 
 /* ✅ BOTÓN DE PAGO ESPECÍFICO */
 .card__pay-button {
-    background: #0ba300;
+    background: #46ab3f;
     /* Verde para indicar pago */
     text-decoration: none;
     color: white;
