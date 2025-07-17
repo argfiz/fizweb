@@ -1828,8 +1828,7 @@ body:not(.contact-page) {
 /* Tarjeta de contenido */
 .tab__card {
     padding: 0 60px;
-    padding-top: 25px;
-
+    padding-top: 50px;
     background: var(--color-card-bg);
     border-radius: 0px;
     margin: 0 auto 0 auto;
@@ -1877,7 +1876,7 @@ body:not(.contact-page) {
 
 .tab__card h3 {
     color: #fff !important;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     color: var(--color-card-title);
     letter-spacing: 3px;
     margin: 0;
@@ -1896,7 +1895,7 @@ body:not(.contact-page) {
     /* ✅ Eliminar márgenes que causan saltos */
     padding: 0;
     width: 100%;
-    font-size: 1.6rem !important;
+    font-size: 1.7rem !important;
     line-height: 1.4;
     text-align: center;
     /* ✅ Evitar desbordamiento */
@@ -1967,8 +1966,8 @@ body:not(.contact-page) {
 }
 
 .option__tab img {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     transition: filter var(--transition-main);
     filter: none;
     /*sacar sombra en movil*/
@@ -2019,7 +2018,7 @@ body:not(.contact-page) {
     }
 
     .tab__card {
-        padding-top: 25px;
+        padding-top: 50px;
         padding-right: 30px;
         padding-left: 30px;
         height: calc(100vh/1.5);
@@ -2323,7 +2322,7 @@ footer {
 
 #faqSection .section__title {
     max-width: 900px;
-    padding-top: 140px;
+    padding-top: 170px;
     padding-bottom: 50px;
 }
 
