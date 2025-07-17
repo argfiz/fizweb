@@ -348,7 +348,7 @@ const sliderCardsData = [
     nombre: "Full",
     subtitulo: "Perfecto para quienes buscan una web completa y profesional con todo lo necesario.",
     img: "./assets/img/pack-g.svg",
-    precio: "$550.000",
+    precio: "$600.000",
     precioNota: "Precio Final",
     precioMensual: "$45.000",
     paymentLink: "https://link.mercadopago.com.ar/full", // ✅ Link de pago
