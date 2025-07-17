@@ -1,8 +1,12 @@
 /** { cursor: default; }*/
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: var(--font-main);
 }
 
@@ -839,6 +843,7 @@ body:not(.contact-page) {
     pointer-events: none;
     will-change: opacity, transform;
     position: relative;
+    
 }
 
 .welcome__banner-container.show {
