@@ -1876,7 +1876,7 @@ body:not(.contact-page) {
 
 .tab__card h3 {
     color: #fff !important;
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: var(--color-card-title);
     letter-spacing: 3px;
     margin: 0;
