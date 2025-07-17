@@ -2669,16 +2669,21 @@ html {
 }
 
 
-
+.contact__text {
+    
+}
 .contact__text h3 {
-    margin: 0 0 4px 0;
+    margin: 0;
     font-size: 1.3em;
     color: var(--color-dark);
+    font-family: var(--font-hero) !important;
 }
 
 .contact__text p {
     margin: 0;
-    font-size: 1.4em;
+    font-size: 1.6em;
+    font-family: var(--font-hero) !important;
+    color: var(--color-main);
 }
 
 .social__links {
@@ -2768,8 +2773,8 @@ html {
 .form__group textarea {
     font-weight: 400;
     padding: 8px 10px;
-    border: 1px solid #cecece;
-    border-radius: 10px;
+    border: 0px solid #cecece;
+    border-radius: 5px;
     font-size: 1.2rem;
     background: #fff6fa;
     resize: vertical;
@@ -2787,9 +2792,12 @@ html {
     padding: 12px 0;
     margin-top: 10px;
     border-radius: 10px;
-    font-size: 1.3em;
+    font-size: 1.4em;
     cursor: pointer;
     transition: background 0.2s;
+    letter-spacing: 1px;
+    font-family: var(--font-hero) !important;
+   
 }
 
 .submit__btn:hover {
