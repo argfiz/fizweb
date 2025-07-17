@@ -616,7 +616,9 @@ function animateTabCardChange(serviceKey) {
         <div class="title__tab__container">
           <h3>${service.title}</h3>
         </div>
-        <p>${service.desc}</p>
+        <div class="content__tab__container">
+          <p>${service.desc}</p>
+        </div>
         <div class="option__tabs">
           ${servicesData.map((srv, idx) => `
             <button class="option__tab${srv.key === serviceKey ? ' active' : ''}" data-service="${srv.key}">
@@ -640,80 +642,87 @@ function animateTabCardChange(serviceKey) {
     return;
   }
 
-  // Elementos del contenido (NO los tabs)
+  // ✅ EVITAR MÚLTIPLES ANIMACIONES SIMULTÁNEAS
+  if (card.classList.contains('animating')) {
+    return;
+  }
+  
+  card.classList.add('animating');
+
+  // Elementos del contenido
   const titleContainer = card.querySelector('.title__tab__container');
-  const descParagraph = card.querySelector('p');
+  const contentContainer = card.querySelector('.content__tab__container') || card.querySelector('p').parentElement;
   const tabsContainer = card.querySelector('.option__tabs');
+
+  // ✅ CREAR CONTENEDOR PARA EL PÁRRAFO SI NO EXISTE
+  if (!card.querySelector('.content__tab__container')) {
+    const pElement = card.querySelector('p');
+    const contentDiv = document.createElement('div');
+    contentDiv.className = 'content__tab__container';
+    contentDiv.appendChild(pElement);
+    titleContainer.parentNode.insertBefore(contentDiv, titleContainer.nextSibling);
+  }
 
   // Actualizar el tab activo SIN animación
   tabsContainer.querySelectorAll('.option__tab').forEach(tab => {
     tab.classList.toggle('active', tab.dataset.service === serviceKey);
   });
 
-  // PRECARGAR la nueva imagen antes de la transición
+  // ✅ PRECARGAR la nueva imagen
   const newImage = new Image();
   newImage.src = service.bg;
   
-  // Cuando la imagen esté cargada, hacer la transición
   newImage.onload = () => {
-    // Crear overlay para transición de fondo
-    const bgOverlay = document.createElement('div');
-    bgOverlay.style.cssText = `
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('${service.bg}');
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      z-index: 1;
-      transition: opacity 0.8s ease;
-      pointer-events: none;
-    `;
+    // ✅ PASO 1: Animar salida del contenido
+    titleContainer.style.opacity = '0';
+    titleContainer.style.transform = 'translateY(-10px)';
+    titleContainer.style.filter = 'blur(3px)';
+    titleContainer.style.transition = 'opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease';
     
-    card.style.position = 'relative';
-    card.appendChild(bgOverlay);
+    contentContainer.style.opacity = '0';
+    contentContainer.style.transform = 'translateY(-10px)';
+    contentContainer.style.filter = 'blur(3px)';
+    contentContainer.style.transition = 'opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease';
 
-    // Animar salida del contenido
-    titleContainer.classList.add('tab-anim-out');
-    descParagraph.classList.add('tab-anim-out');
-
-    // Mostrar el overlay del fondo (MÁS LENTO)
+    // ✅ PASO 2: Después de la animación de salida, cambiar contenido
     setTimeout(() => {
-      bgOverlay.style.opacity = '1';
-    }, 100);
-
-    // Después de la animación de salida, cambiar contenido
-    setTimeout(() => {
-      // Limpiar clases de salida
-      titleContainer.classList.remove('tab-anim-out');
-      descParagraph.classList.remove('tab-anim-out');
-
-      // Cambiar contenido
-      titleContainer.innerHTML = `<h3>${service.title}</h3>`;
-      descParagraph.textContent = service.desc;
-
-      // Aplicar el nuevo fondo a la tarjeta principal
+      // Cambiar el fondo
       if (service.bg) {
         card.style.backgroundImage = `url('${service.bg}')`;
         card.style.backgroundSize = 'cover';
         card.style.backgroundPosition = 'center';
       }
 
-      // Animar entrada del nuevo contenido
-      titleContainer.classList.add('tab-anim-in');
-      descParagraph.classList.add('tab-anim-in');
+      // Cambiar contenido
+      titleContainer.innerHTML = `<h3>${service.title}</h3>`;
+      contentContainer.innerHTML = `<p>${service.desc}</p>`;
 
-      // Limpiar después de la animación de entrada
+      // ✅ PASO 3: Animar entrada del nuevo contenido
       setTimeout(() => {
-        titleContainer.classList.remove('tab-anim-in');
-        descParagraph.classList.remove('tab-anim-in');
-        bgOverlay.remove();
-      }, 450); // Más tiempo para transición suave
+        titleContainer.style.opacity = '1';
+        titleContainer.style.transform = 'translateY(0)';
+        titleContainer.style.filter = 'blur(0)';
+        
+        contentContainer.style.opacity = '1';
+        contentContainer.style.transform = 'translateY(0)';
+        contentContainer.style.filter = 'blur(0)';
 
-    }, 450); // Más tiempo para la salida
+        // ✅ PASO 4: Limpiar estilos y permitir nuevas animaciones
+        setTimeout(() => {
+          titleContainer.style.transition = '';
+          titleContainer.style.opacity = '';
+          titleContainer.style.transform = '';
+          titleContainer.style.filter = '';
+          
+          contentContainer.style.transition = '';
+          contentContainer.style.opacity = '';
+          contentContainer.style.transform = '';
+          contentContainer.style.filter = '';
+          
+          card.classList.remove('animating');
+        }, 350);
+      }, 50);
+    }, 350);
   };
 
   // Si la imagen ya está en caché, ejecutar inmediatamente

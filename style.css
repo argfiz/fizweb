@@ -874,7 +874,8 @@ body:not(.contact-page) {
 
 .welcome__banner-indicator.active {
     background: var(--color-secondary);
-    transform: scale(1.2); /* ✅ Indicador activo más grande */
+    transform: scale(1.2);
+    /* ✅ Indicador activo más grande */
 }
 
 .welcome__banner-indicator:hover {
@@ -1543,7 +1544,8 @@ body:not(.contact-page) {
 
 /* ✅ BOTÓN DE PAGO ESPECÍFICO */
 .card__pay-button {
-    background: #00c851; /* Verde para indicar pago */
+    background: #00c851;
+    /* Verde para indicar pago */
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
@@ -1770,11 +1772,11 @@ body:not(.contact-page) {
     --color-card-bg: #000;
     --color-card-shadow: 0 8px 32px rgba(0, 0, 0, 1);
     --color-card-shadow-active:
-        0 25px 30px -5px rgba(0, 0, 0, 0.9),     
-        0 12px 15px -6px rgba(0, 0, 0, 0.7),     
-        0 40px 70px -12px rgba(0, 0, 0, 0.8),    
-        0 60px 120px -20px rgba(0, 0, 0, 0.6),   
-        0 6px 10px -2px rgba(0, 0, 0, 0.5),      
+        0 25px 30px -5px rgba(0, 0, 0, 0.9),
+        0 12px 15px -6px rgba(0, 0, 0, 0.7),
+        0 40px 70px -12px rgba(0, 0, 0, 0.8),
+        0 60px 120px -20px rgba(0, 0, 0, 0.6),
+        0 6px 10px -2px rgba(0, 0, 0, 0.5),
         inset 0 2px 4px 0 rgba(255, 255, 255, 0.06);
     --color-card-title: #222;
     --color-card-desc: #444;
@@ -1821,6 +1823,8 @@ body:not(.contact-page) {
 /* Tarjeta de contenido */
 .tab__card {
     padding: 0 60px;
+    padding-top: 25px;
+
     background: var(--color-card-bg);
     border-radius: 0px;
     margin: 0 auto 0 auto;
@@ -1832,7 +1836,9 @@ body:not(.contact-page) {
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-
+    /* ✅ Evitar cambios de layout durante animaciones */
+    contain: layout;
+    overflow: hidden;
 }
 
 .tab__card.active {
@@ -1840,21 +1846,73 @@ body:not(.contact-page) {
     width: 100%;
 }
 
+/* ✅ CONTENEDORES ESTABLES */
+.title__tab__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 80px;
+    /* ✅ Altura fija para evitar saltos */
+    flex-shrink: 0;
+}
+
+.content__tab__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    flex: 1;
+    padding: 20px 0;
+    /* ✅ Evitar cambios de altura */
+    min-height: 200px;
+    max-height: 300px;
+    overflow: hidden;
+}
+
 .tab__card h3 {
     color: #fff !important;
     font-size: 1.8rem;
     color: var(--color-card-title);
     letter-spacing: 3px;
-    padding-top: 50px;
-    
+    margin: 0;
+    /* ✅ Eliminar márgenes que causan saltos */
+    padding: 0;
+    line-height: 1.2;
+    text-align: center;
+    /* ✅ Evitar cambios de layout */
+    width: 100%;
+    display: block;
 }
 
 .tab__card p {
     color: white;
     margin: 0;
+    /* ✅ Eliminar márgenes que causan saltos */
+    padding: 0;
     width: 100%;
     font-size: 1.6rem !important;
+    line-height: 1.4;
+    text-align: center;
+    /* ✅ Evitar desbordamiento */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
 
+/* ✅ CLASE PARA EVITAR ANIMACIONES MÚLTIPLES */
+.tab__card.animating {
+    pointer-events: none;
+}
+
+.tab__card.animating .option__tabs {
+    pointer-events: none;
+}
+
+/* ✅ ELIMINAR ANIMACIONES CONFLICTIVAS */
+.tab-anim-out,
+.tab-anim-in {
+    /* Eliminar estas animaciones que causan conflicto */
+    animation: none !important;
 }
 
 
@@ -1956,15 +2014,24 @@ body:not(.contact-page) {
     }
 
     .tab__card {
+        padding-top: 25px;
         padding-right: 30px;
         padding-left: 30px;
         height: calc(100vh/1.5);
 
     }
 
+    .title__tab__container {
+        min-height: 60px;
+    }
+
+    .content__tab__container {
+        min-height: 150px;
+        max-height: 250px;
+    }
+
     .tab__card h3 {
         font-size: 1.7rem;
-        padding-top: 25px;
     }
 
     .tab__card p {
@@ -1988,18 +2055,31 @@ body:not(.contact-page) {
 
     .tab__card {
         height: 400px;
+        padding-top: 25px;
 
     }
+
+    .title__tab__container {
+        min-height: 70px;
+    }
+
+    .content__tab__container {
+        min-height: 180px;
+        max-height: 220px;
+    }
+
     .option__tabs {
         margin-bottom: 0px;
     }
+
     .tab__card h3 {
-    padding-top: 25px;
+        padding-top: 25px;
     }
+
     .tab__card p {
         font-size: 1.5rem !important;
         line-height: 1.3;
-}
+    }
 
 }
 
