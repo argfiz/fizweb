@@ -217,7 +217,6 @@ const bannerData = [
   "./assets/img/welcome-banner2.png",
   "./assets/img/welcome-banner3.png",
   "./assets/img/welcome-banner4.png",
-  "./assets/img/welcome-banner5.png",
   "./assets/img/welcome-banner6.png",
   "./assets/img/welcome-banner7.png",
 ];
@@ -334,7 +333,7 @@ const sliderCardsData = [
     nombre: "Mediano",
     subtitulo: "Ideal para los indecisos y emprendedores en crecimiento que buscan una web más completa.",
     img: "./assets/img/pack-m.jpg",
-    precio: "$300.000",
+    precio: "$400.000",
     precioNota: "Precio Final",
     precioNotaInfo: "./assets/icons/info-icon.svg",
     precioMensual: "$30.000",
@@ -349,7 +348,7 @@ const sliderCardsData = [
     nombre: "Full",
     subtitulo: "Perfecto para quienes buscan una web completa y profesional con todo lo necesario.",
     img: "./assets/img/pack-g.svg",
-    precio: "$400.000",
+    precio: "$550.000",
     precioNota: "Precio Final",
     precioMensual: "$45.000",
     paymentLink: "https://link.mercadopago.com.ar/full", // ✅ Link de pago
