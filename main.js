@@ -456,7 +456,8 @@ function renderSlides() {
         <div class="card__price-payment">
           <div class="card__price-info-text">
              <p>Eleginos:</p>
-             <span>Mientras vos vendés, nosotros cuidamos que tu sitio web esté siempre online y actualizada.</span>
+             <span> Elegí la forma de pago que más te convenga y comenzá con tranquilidad tu incursion a lo digital.</span> 
+             </span>
              <ul class="list-card__price-info-text-bottom">
                 <li>Codigo QR</li>
                 <li>Hosting y Dominio</li>
