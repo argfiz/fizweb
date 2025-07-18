@@ -1332,7 +1332,12 @@ body:not(.contact-page) {
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
 }
-
+.card__price-info .card__price-info-text p {
+    color: #fff;
+    margin: 0;
+    padding-bottom: 25px;
+    padding-top: 5px;
+}
 .card__price-info .card__price-info-text ul {
     list-style: none;
     padding: 0;
@@ -1372,6 +1377,7 @@ body:not(.contact-page) {
     margin-bottom: 25px;
     margin-top: 0;
 }
+
 .card__price-info-text span {
     font-size: 1.1rem;
     padding: 25px;

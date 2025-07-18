@@ -445,7 +445,7 @@ function renderSlides() {
             <div class="container-card__price-info">
               <p class="card__price-info-text-bottom">
                   ${card.precioMensual ? `
-                  <span>${card.precioMensual}</span> /mes <br>
+                  <span>${card.precioMensual}</span>/mes <br>
                   <span id="recommended">RECOMENDADO</span>` : ''}
               </p>
             </div>
