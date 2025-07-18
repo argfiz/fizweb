@@ -482,22 +482,15 @@ function addPriceInfoListeners() {
     });
   });
   
-  // ✅ ELIMINAR COMPLETAMENTE LA SECCIÓN DEL BOTÓN DE PAGO
-  /*
-  // ✅ Listeners para el botón de pago (ELIMINADO)
+  // ✅ RESTAURAR LISTENERS PARA EL BOTÓN DE PAGO (SOLO PARA ANIMACIÓN)
   document.querySelectorAll('.card__pay-button').forEach(payButton => {
-    // ... código eliminado ...
-  });
-  */
-
-  // ✅ Listeners para el botón de mantenimiento (EXISTENTE)
-  document.querySelectorAll('.card__maintenance-button').forEach(maintenanceButton => {
-    maintenanceButton.addEventListener('click', function(e) {
+    payButton.addEventListener('click', function(e) {
       e.stopPropagation();
+      e.preventDefault(); // ✅ Prevenir cualquier acción por defecto
       
       // Función para manejar el tap en móviles
-      function handleMobileMaintenanceTap(button) {
-        // Solo en móviles (ancho menor a 700)
+      function handleMobilePayTap(button) {
+        // Solo en móviles (ancho menor a 700px)
         if (window.innerWidth <= 700) {
           // ✅ Remover cualquier animación previa
           button.classList.remove('tap-animation');
@@ -511,7 +504,40 @@ function addPriceInfoListeners() {
           // Remover la clase después de la animación
           setTimeout(() => {
             button.classList.remove('tap-animation');
-          }, 300);
+          }, 400); // ✅ Usar mismo timing que la animación CSS
+        }
+      }
+      
+      // Ejecutar animación de tap
+      handleMobilePayTap(this);
+      
+      // ✅ NO HAY FUNCIONALIDAD ADICIONAL - SOLO ANIMACIÓN
+      console.log('💳 Botón de pago tocado (solo animación)');
+    });
+  });
+
+  // ✅ Listeners para el botón de mantenimiento (EXISTENTE)
+  document.querySelectorAll('.card__maintenance-button').forEach(maintenanceButton => {
+    maintenanceButton.addEventListener('click', function(e) {
+      e.stopPropagation();
+      
+      // Función para manejar el tap en móviles
+      function handleMobileMaintenanceTap(button) {
+        // Solo en móviles (ancho menor a 700px)
+        if (window.innerWidth <= 700) {
+          // ✅ Remover cualquier animación previa
+          button.classList.remove('tap-animation');
+          
+          // ✅ Forzar reflow para resetear la animación
+          void button.offsetWidth;
+          
+          // Agregar clase de animación
+          button.classList.add('tap-animation');
+          
+          // Remover la clase después de la animación
+          setTimeout(() => {
+            button.classList.remove('tap-animation');
+          }, 400);
         }
       }
       
