@@ -418,7 +418,8 @@ function renderSlides() {
           <div class="card__price-info-text">
             
             <p>Pack incluye:</p>
-            <span>Mientras vos vendés, nosotros cuidamos que tu sitio web esté siempre online y actualizada.</span>
+            <span> Cada pack incluye todo lo necesario para que tu sitio web esté listo para vender.</span>
+             </span>
             <ul>
               <li>Multidispositivos</li>
               <li>Botón WhatsApp flotante</li>

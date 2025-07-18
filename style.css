@@ -1379,6 +1379,9 @@ body:not(.contact-page) {
 }
 
 .card__price-info-text-bottom {
+    margin: 0; /* ✅ Eliminar todos los márgenes */
+    margin-top: 0px; /* ✅ Específicamente el margen superior */
+    padding: 0; /* ✅ Eliminar padding también */
     margin-top: 0px;
     padding-top: 0px;
     border-radius: 10px;
@@ -1403,6 +1406,7 @@ body:not(.contact-page) {
     font-weight: 600;
     font-size: 2em;
     display: inline-block;
+    padding-bottom: 0;
 }
 
 
@@ -1452,7 +1456,6 @@ body:not(.contact-page) {
 .card__price-maintenance .card__price-info-text p {
     color: #fff;
     margin: 0;
-    padding-top: 50px;
     padding-bottom: 0;
 }
 
@@ -1513,7 +1516,9 @@ body:not(.contact-page) {
 }
 
 .card__price-maintenance .card__price-info-text-bottom {
+     margin: 0; /* ✅ Sin márgenes */
     margin-top: 0px;
+    padding: 0; /* ✅ Sin padding */
     margin-top: 0px;
     border-radius: 10px;
     color: #fff;
@@ -1531,11 +1536,14 @@ body:not(.contact-page) {
     font-weight: 600;
     font-size: 2em;
     display: inline-block;
+    padding-bottom: 0;
 }
 
 .card__price-maintenance .container-card__price-info {
     padding: 0px 0px;
     padding-bottom: 0px;
+    margin: 0; 
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1749,7 +1757,6 @@ body:not(.contact-page) {
     font-size: 0.8rem;
     letter-spacing: 2px;
     display: inline-block;
-    margin-top: 0px;
     padding: 1px 2px;
     background: var(--color-secondary);
     border-radius: 3px;
