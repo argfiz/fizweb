@@ -1696,9 +1696,13 @@ body:not(.contact-page) {
 
 /* Animación de tap para móviles */
 @media (max-width: 820px) {
-    
+    .card__pay-button:hover,
+    .card__maintenance-button:hover,
+    .card__price-info-icon:hover {
+        transform: scale(1);
+        transition: transform 0.2s ease;
+    }
 }
-
 
 
  
