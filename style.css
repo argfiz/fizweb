@@ -1038,7 +1038,7 @@ body:not(.contact-page) {
 @media (min-width: 901px) and (max-width: 1200px) {
     .welcome__banner {
         margin-top: -200px;
-
+        width: 75%;
     }
 }
 
