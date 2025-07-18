@@ -437,7 +437,7 @@ function renderSlides() {
              <h4>Mantenimiento:</h4>
              <p>Mientras vos vendés, nosotros cuidamos que tu sitio web esté siempre online y actualizada.</p>
              <ul class="list-card__price-info-text-bottom">
-                <li>Codigo QR personalizado</li>
+                <li>QR personalizado</li>
                 <li>Hosting y Dominio </li>
                 <li>Actualizacion anual </li>
                 <li>Solución de errores</li>
