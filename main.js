@@ -400,16 +400,24 @@ function renderSlides() {
         
         <!-- ✅ CONTENEDOR PARA AMBOS BOTONES -->
         <div class="card__buttons-container">
+          <!-- ✅ BOTÓN DE INFORMACIÓN -->   
           <div class="card__price-info-icon">
             <img src="${card.precioNotaInfo || './assets/icons/info-icon.svg'}" alt="Info Icon">
           </div>
-          
-          <!-- ✅ NUEVO BOTÓN DE PAGO -->
-          <a href="${card.paymentLink || '#'}" class="card__pay-button" target="_blank" rel="noopener noreferrer">
+
+          <!-- ✅ BOTÓN DE MANTENIMIENTO -->
+            <div  class="card__maintenance-button">
+            <img src="./assets/icons/setting-icon.svg" alt="Mantenimiento">
+          </div>
+
+          <!-- ✅ BOTÓN DE PAGO -->
+          <div  class="card__pay-button">
             <img src="./assets/icons/payment-icon.svg" alt="Pagar">
-          </a>
+          </div> 
         </div>
         
+            
+
         <div class="card__price-info">
           <div class="card__price-info-text">
             

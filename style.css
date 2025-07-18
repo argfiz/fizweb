@@ -1511,8 +1511,9 @@ body:not(.contact-page) {
 }
 
 .card__price-info-icon,
+.card__maintenance-button,
 .card__pay-button {
-    background: var(--color-secondary);
+    background: #ffffff;
     width: 58px;
     height: 58px;
     border-radius: 50%;
@@ -1527,42 +1528,43 @@ body:not(.contact-page) {
         0 2px 15px rgba(0, 0, 0, 1),
         0 4px 25px rgba(0, 0, 0, 0.8),
         0 8px 40px rgba(0, 0, 0, 0.7);
-    /* Agregar la transición aquí para que funcione en ambas direcciones */
     transition: transform 0.5s ease;
-    /* ✅ Eliminar estilos de margin individual */
     margin: 0;
 }
 
 .card__price-info-icon:hover,
+.card__maintenance-button:hover,
 .card__pay-button:hover {
     cursor: pointer !important;
     transform: scale(1.1);
     transition: transform 0.4s ease;
 }
-
-.card__price-info-icon img,
-.card__pay-button img {
-    filter: brightness(0) invert(1);
+.card__price-info-icon img{
+    filter: brightness(0);
     display: block;
     cursor: pointer !important;
+}
+
+.card__maintenance-button img,
+.card__pay-button img {
+    filter: brightness(0) invert(1);
+    
 }
 
 /* ✅ BOTÓN DE PAGO ESPECÍFICO */
 .card__pay-button {
     background: #46ab3f;
-    /* Verde para indicar pago */
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 600;
 }
-
+.card__maintenance-button{
+    background: var(--color-secondary);
+}
 .card__pay-button:hover {
     transform: scale(1.1);
 }
 
 /* ✅ ÍCONO DE PAGO */
-.card__pay-button img {
+.card__pay-button img,
+.card__maintenance-button img {
     width: 40px;
     height: 40px;
 }
