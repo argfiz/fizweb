@@ -1470,7 +1470,7 @@ body:not(.contact-page) {
     color: #fff;
     margin: 0;
     padding-bottom: 25px;
-    padding-top: 25px;
+    padding-top: 5px;
 }
 
 .card__price-maintenance .card__price-info-text span {
@@ -1550,8 +1550,8 @@ body:not(.contact-page) {
     font-weight: 600;
     font-size: 2em;
     display: inline-block;
-    padding-bottom: 0;
-    padding-right: 0;
+    padding: 0;
+    
 }
 
 .card__price-maintenance .container-card__price-info {
@@ -1640,9 +1640,9 @@ body:not(.contact-page) {
 =====================================*/
 .card__price-payment .card__price-info-text p {
     color: #fff;
-    padding-top: 25px;
+    padding-top: 5px;
     margin: 0;
-    padding-bottom: 0;
+    padding-bottom: 25px;
 }
 
 .card__price-payment .card__price-info-text span {
@@ -1719,12 +1719,7 @@ body:not(.contact-page) {
     display: block;
 }
 
-.card__price-payment .card__price-info-text-bottom span {
-    color: #fff;
-    font-weight: 600;
-    font-size: 2em;
-    display: inline-block;
-}
+
 
 .card__price-payment .container-card__price-info {
     padding: 0px 0px;
