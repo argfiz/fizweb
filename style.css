@@ -2774,10 +2774,10 @@ html {
 .form__group textarea {
     font-weight: 400;
     padding: 8px 10px;
-    border: 0px solid #cecece;
+    border: 1px solid #ffa9df;
     border-radius: 5px;
     font-size: 1.2rem;
-    background: #fff6fa;
+    background: #f9f9f9;
     resize: vertical;
     color: var(--color-dark);
 }
