@@ -2670,21 +2670,22 @@ html {
 }
 
 
-.contact__text {
-    
-}
+
 .contact__text h3 {
     margin: 0;
     font-size: 1.3em;
-    color: var(--color-dark);
+    color: #545454;
     font-family: var(--font-hero) !important;
+    letter-spacing: 1px;
+    font-weight: 700 !important;
 }
 
 .contact__text p {
     margin: 0;
     font-size: 1.6em;
     font-family: var(--font-hero) !important;
-    color: var(--color-main);
+    color: #585858;
+    font-weight: 500 !important;
 }
 
 .social__links {
