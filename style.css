@@ -1537,6 +1537,7 @@ body:not(.contact-page) {
     font-size: 2em;
     display: inline-block;
     padding-bottom: 0;
+    padding-right: 0;
 }
 
 .card__price-maintenance .container-card__price-info {
