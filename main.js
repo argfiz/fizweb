@@ -457,18 +457,19 @@ function renderSlides() {
           <div class="card__price-info-text">
              <h4>Eleginos:</h4>
              <p> Seleccioná lo que deseas pagar y comenzá con tranquilidad tu incursion a lo digital.</p> 
-             </span>
+             
              <p>  
-               <span>Podés comenzar aqui:</span>  
-            <a href="${card.paymentLink}" class="card__pay-link" target="_blank">
-              <button class="card__pay-button--2">Pagar pack</button>
-            </a>
+                <span>Podés comenzar aqui:</span>  
+                  <a href="${card.paymentLink}" class="card__pay-link" target="_blank">
+                    <button class="card__pay-button--2">Pagar pack</button>
+                  </a>
               </p>
+
               <p>  
                <span>No olvides el mantenimiento:</span>  
-            <a href="${card.paymentLink}" class="card__pay-link" target="_blank">
-              <button class="card__pay-button--2">Suscribirse ahora</button>
-            </a>
+                <a href="${card.paymentLink}" class="card__pay-link" target="_blank">
+                  <button class="card__pay-button--2">Suscribite ahora</button>
+                </a>
               </p>
             
           </div>
