@@ -418,6 +418,7 @@ function renderSlides() {
           <div class="card__price-info-text">
             
             <p>Pack incluye:</p>
+            <span>Mientras vos vendés, nosotros cuidamos que tu sitio web esté siempre online y actualizada.</span>
             <ul>
               <li>Multidispositivos</li>
               <li>Botón WhatsApp flotante</li>
@@ -432,11 +433,12 @@ function renderSlides() {
         <!-- ✅ CAPA DE MANTENIMIENTO ... -->
         <div class="card__price-maintenance">
           <div class="card__price-info-text">
-             <p>Mantenimiento incluye:</p>
+             <p>Mantenimiento:</p>
+             <span>Mientras vos vendés, nosotros cuidamos que tu sitio web esté siempre online y actualizada.</span>
              <ul class="list-card__price-info-text-bottom">
-                <li>Codigo QR</li>
-                <li>Hosting y Dominio</li>
-                <li>Actualizacion anual</li>
+                <li>Codigo QR personalizado</li>
+                <li>Hosting y Dominio </li>
+                <li>Actualizacion anual </li>
                 <li>Solución de errores</li>
               </ul>
             <div class="container-card__price-info">
@@ -445,13 +447,23 @@ function renderSlides() {
                   <span>${card.precioMensual}</span> /mes <br>
                   <span id="recommended">RECOMENDADO</span>` : ''}
               </p>
-            
-             
             </div>
           </div>
         </div>
 
-
+         <!-- ✅ CAPA DE PAGO ... -->
+        <div class="card__price-payment">
+          <div class="card__price-info-text">
+             <p>Eleginos:</p>
+             <span>Mientras vos vendés, nosotros cuidamos que tu sitio web esté siempre online y actualizada.</span>
+             <ul class="list-card__price-info-text-bottom">
+                <li>Codigo QR</li>
+                <li>Hosting y Dominio</li>
+                <li>Actualizacion anual</li>
+                <li>Solución de errores</li>
+              </ul>
+          </div>
+        </div>           
 
 
       </div>
@@ -511,11 +523,16 @@ function addPriceInfoListeners() {
       e.preventDefault();
       
       handleMobileTap(this, () => {
-        // ✅ Cerrar capa de mantenimiento si está abierta
+        // ✅ Cerrar otras capas si están abiertas
         const card = this.closest('.card');
         const maintenanceInfo = card.querySelector('.card__price-maintenance');
+        const paymentInfo = card.querySelector('.card__price-payment');
+        
         if (maintenanceInfo && maintenanceInfo.classList.contains('open')) {
           maintenanceInfo.classList.remove('open');
+        }
+        if (paymentInfo && paymentInfo.classList.contains('open')) {
+          paymentInfo.classList.remove('open');
         }
         
         // ✅ Toggle capa de información
@@ -525,30 +542,51 @@ function addPriceInfoListeners() {
     });
   });
   
-  // ✅ BOTÓN DE PAGO (SOLO ANIMACIÓN)
+  // ✅ BOTÓN DE PAGO (NUEVA FUNCIONALIDAD)
   document.querySelectorAll('.card__pay-button').forEach(payButton => {
     payButton.addEventListener('click', function(e) {
       e.stopPropagation();
       e.preventDefault();
       
       handleMobileTap(this, () => {
-        console.log('💳 Botón de pago tocado (solo animación)');
+        // ✅ Cerrar otras capas si están abiertas
+        const card = this.closest('.card');
+        const priceInfo = card.querySelector('.card__price-info');
+        const maintenanceInfo = card.querySelector('.card__price-maintenance');
+        
+        if (priceInfo && priceInfo.classList.contains('open')) {
+          priceInfo.classList.remove('open');
+        }
+        if (maintenanceInfo && maintenanceInfo.classList.contains('open')) {
+          maintenanceInfo.classList.remove('open');
+        }
+        
+        // ✅ Toggle capa de pago
+        const paymentInfo = card.querySelector('.card__price-payment');
+        paymentInfo.classList.toggle('open');
+        
+        console.log('💳 Capa de pago toggled');
       });
     });
   });
 
-  // ✅ BOTÓN DE MANTENIMIENTO (NUEVO COMPORTAMIENTO)
+  // ✅ BOTÓN DE MANTENIMIENTO (EXISTENTE)
   document.querySelectorAll('.card__maintenance-button').forEach(maintenanceButton => {
     maintenanceButton.addEventListener('click', function(e) {
       e.stopPropagation();
       e.preventDefault();
       
       handleMobileTap(this, () => {
-        // ✅ Cerrar capa de información si está abierta
+        // ✅ Cerrar otras capas si están abiertas
         const card = this.closest('.card');
         const priceInfo = card.querySelector('.card__price-info');
+        const paymentInfo = card.querySelector('.card__price-payment');
+        
         if (priceInfo && priceInfo.classList.contains('open')) {
           priceInfo.classList.remove('open');
+        }
+        if (paymentInfo && paymentInfo.classList.contains('open')) {
+          paymentInfo.classList.remove('open');
         }
         
         // ✅ Toggle capa de mantenimiento
