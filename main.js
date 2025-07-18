@@ -395,7 +395,7 @@ function renderSlides() {
           <small>${card.precioNota}</small>
         </div>
         
-        <!-- ✅ CONTENEDOR PARA TODOS LOS BOTONES -->
+        <!-- ✅ CONTENEDOR PARA LOS BOTONES -->
         <div class="card__buttons-container">
           <!-- ✅ BOTÓN DE INFORMACIÓN -->   
           <div class="card__price-info-icon">
@@ -407,8 +407,8 @@ function renderSlides() {
             <img src="./assets/icons/setting-icon.svg" alt="Mantenimiento">
           </div>
 
-          <!-- ✅ BOTÓN DE PAGO CON DATA ATTRIBUTE -->
-          <div class="card__pay-button" data-payment-link="${card.paymentLink || '#'}">
+          <!-- ✅ BOTÓN DE PAGO SIN DATA ATTRIBUTE -->
+          <div class="card__pay-button">
             <img src="./assets/icons/payment-icon.svg" alt="Pagar">
           </div> 
         </div>
@@ -482,56 +482,22 @@ function addPriceInfoListeners() {
     });
   });
   
-  // ✅ Listeners para el botón de pago (MEJORADO)
+  // ✅ ELIMINAR COMPLETAMENTE LA SECCIÓN DEL BOTÓN DE PAGO
+  /*
+  // ✅ Listeners para el botón de pago (ELIMINADO)
   document.querySelectorAll('.card__pay-button').forEach(payButton => {
-    payButton.addEventListener('click', function(e) {
-      e.preventDefault(); // ✅ Prevenir navegación inmediata
-      
-      // Función para manejar el tap en móviles
-      function handleMobilePayTap(button) {
-        // Solo en móviles (ancho menor a 700px)
-        if (window.innerWidth <= 700) {
-          // ✅ Remover cualquier animación previa
-          button.classList.remove('tap-animation');
-          
-          // ✅ Forzar reflow para resetear la animación
-          void button.offsetWidth;
-          
-          // Agregar clase de animación
-          button.classList.add('tap-animation');
-          
-          // Remover la clase después de la animación
-          setTimeout(() => {
-            button.classList.remove('tap-animation');
-            // ✅ Navegar después de la animación
-            if (button.dataset.paymentLink) {
-              window.open(button.dataset.paymentLink, '_blank');
-            }
-          }, 300);
-        } else {
-          // ✅ En desktop, navegar inmediatamente
-          if (button.dataset.paymentLink) {
-            window.open(button.dataset.paymentLink, '_blank');
-          }
-        }
-      }
-      
-      // Ejecutar animación de tap
-      handleMobilePayTap(this);
-      
-      // Console log para debugging
-      console.log('💳 Botón de pago clickeado');
-    });
+    // ... código eliminado ...
   });
+  */
 
-  // ✅ Listeners para el botón de mantenimiento (NUEVO)
+  // ✅ Listeners para el botón de mantenimiento (EXISTENTE)
   document.querySelectorAll('.card__maintenance-button').forEach(maintenanceButton => {
     maintenanceButton.addEventListener('click', function(e) {
       e.stopPropagation();
       
       // Función para manejar el tap en móviles
       function handleMobileMaintenanceTap(button) {
-        // Solo en móviles (ancho menor a 700px)
+        // Solo en móviles (ancho menor a 700)
         if (window.innerWidth <= 700) {
           // ✅ Remover cualquier animación previa
           button.classList.remove('tap-animation');
