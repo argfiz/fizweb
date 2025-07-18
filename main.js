@@ -373,8 +373,6 @@ function renderSlides() {
         <div class="container-card__items">
           <ul class="card__items card__items--${idx + 1}">
             ${Object.entries(card.items).map(([key, value], i) => {
-                
-              // Personaliza el label si quieres mostrar "Páginas", "Secciones", etc.
                 let label = '';
                 if (key === 'paginas') label = 'Páginas';
                 else if (key === 'secciones') label = 'Secciones';
@@ -387,7 +385,6 @@ function renderSlides() {
                   </div>
                   <span>${label}</span>
                 </li>`;
-
               }).join('')
              }
           </ul>
@@ -398,7 +395,7 @@ function renderSlides() {
           <small>${card.precioNota}</small>
         </div>
         
-        <!-- ✅ CONTENEDOR PARA AMBOS BOTONES -->
+        <!-- ✅ CONTENEDOR PARA TODOS LOS BOTONES -->
         <div class="card__buttons-container">
           <!-- ✅ BOTÓN DE INFORMACIÓN -->   
           <div class="card__price-info-icon">
@@ -406,18 +403,17 @@ function renderSlides() {
           </div>
 
           <!-- ✅ BOTÓN DE MANTENIMIENTO -->
-            <div  class="card__maintenance-button">
+          <div class="card__maintenance-button">
             <img src="./assets/icons/setting-icon.svg" alt="Mantenimiento">
           </div>
 
-          <!-- ✅ BOTÓN DE PAGO -->
-          <div  class="card__pay-button">
+          <!-- ✅ BOTÓN DE PAGO CON DATA ATTRIBUTE -->
+          <div class="card__pay-button" data-payment-link="${card.paymentLink || '#'}">
             <img src="./assets/icons/payment-icon.svg" alt="Pagar">
           </div> 
         </div>
         
-            
-
+        <!-- Resto del contenido... -->
         <div class="card__price-info">
           <div class="card__price-info-text">
             
@@ -460,6 +456,12 @@ function addPriceInfoListeners() {
       function handleMobileIconTap(icon) {
         // Solo en móviles (ancho menor a 700px)
         if (window.innerWidth <= 700) {
+          // ✅ Remover cualquier animación previa
+          icon.classList.remove('tap-animation');
+          
+          // ✅ Forzar reflow para resetear la animación
+          void icon.offsetWidth;
+          
           // Agregar clase de animación
           icon.classList.add('tap-animation');
           
@@ -480,13 +482,63 @@ function addPriceInfoListeners() {
     });
   });
   
-  // ✅ Listeners para el botón de pago (NUEVO)
+  // ✅ Listeners para el botón de pago (MEJORADO)
   document.querySelectorAll('.card__pay-button').forEach(payButton => {
     payButton.addEventListener('click', function(e) {
+      e.preventDefault(); // ✅ Prevenir navegación inmediata
+      
       // Función para manejar el tap en móviles
       function handleMobilePayTap(button) {
         // Solo en móviles (ancho menor a 700px)
         if (window.innerWidth <= 700) {
+          // ✅ Remover cualquier animación previa
+          button.classList.remove('tap-animation');
+          
+          // ✅ Forzar reflow para resetear la animación
+          void button.offsetWidth;
+          
+          // Agregar clase de animación
+          button.classList.add('tap-animation');
+          
+          // Remover la clase después de la animación
+          setTimeout(() => {
+            button.classList.remove('tap-animation');
+            // ✅ Navegar después de la animación
+            if (button.dataset.paymentLink) {
+              window.open(button.dataset.paymentLink, '_blank');
+            }
+          }, 300);
+        } else {
+          // ✅ En desktop, navegar inmediatamente
+          if (button.dataset.paymentLink) {
+            window.open(button.dataset.paymentLink, '_blank');
+          }
+        }
+      }
+      
+      // Ejecutar animación de tap
+      handleMobilePayTap(this);
+      
+      // Console log para debugging
+      console.log('💳 Botón de pago clickeado');
+    });
+  });
+
+  // ✅ Listeners para el botón de mantenimiento (NUEVO)
+  document.querySelectorAll('.card__maintenance-button').forEach(maintenanceButton => {
+    maintenanceButton.addEventListener('click', function(e) {
+      e.stopPropagation();
+      
+      // Función para manejar el tap en móviles
+      function handleMobileMaintenanceTap(button) {
+        // Solo en móviles (ancho menor a 700px)
+        if (window.innerWidth <= 700) {
+          // ✅ Remover cualquier animación previa
+          button.classList.remove('tap-animation');
+          
+          // ✅ Forzar reflow para resetear la animación
+          void button.offsetWidth;
+          
           // Agregar clase de animación
           button.classList.add('tap-animation');
           
@@ -498,11 +550,11 @@ function addPriceInfoListeners() {
       }
       
       // Ejecutar animación de tap
-      handleMobilePayTap(this);
+      handleMobileMaintenanceTap(this);
       
-      // El navegador seguirá el href automáticamente
-      // Opcional: agregar analytics o tracking aquí
-      console.log('💳 Redirigiendo a pago:', this.href);
+      // Lógica para mostrar información de mantenimiento
+      console.log('🔧 Información de mantenimiento');
+      // Aquí puedes agregar modal o lógica adicional
     });
   });
 }
