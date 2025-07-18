@@ -1696,73 +1696,13 @@ body:not(.contact-page) {
 
 /* Animación de tap para móviles */
 @media (max-width: 820px) {
-    .card__price-info-icon,
-    .card__maintenance-button,
-    .card__pay-button {
-        /* ✅ Eliminar transiciones automáticas en móviles */
-        transition: none !important;
-    }
-
-    .card__price-info-icon:hover,
-    .card__maintenance-button:hover,
-    .card__pay-button:hover {
-        /* ✅ Forzar que NO se agrande en móviles */
-        transform: scale(1) !important;
-        box-shadow:
-            0 2px 15px rgba(0, 0, 0, 0.7),
-            0 4px 25px rgba(0, 0, 0, 0.5),
-            0 8px 40px rgba(0, 0, 0, 0.4);
-    }
-    /* ✅ Animación específica para tap MEJORADA */
-    .card__price-info-icon.tap-animation,
-    .card__maintenance-button.tap-animation,
-    .card__pay-button.tap-animation {
-        animation: mobileIconTapSmooth 0.4s cubic-bezier(.4, 0, .2, 1) !important;
-    }
-
-    /* ✅ Asegurar que no hay otros transforms activos */
-    .card__price-info-icon:active,
-    .card__maintenance-button:active,
-    .card__pay-button:active {
-        transform: scale(1) !important;
-        transition: none !important;
-    }
+    
 }
 
-/* Keyframe para la animación de tap */
-@keyframes mobileIconTapSmooth {
-    0% {
-        transform: scale(1);
-        box-shadow:
-            0 2px 15px rgba(0, 0, 0, 0.7),
-            0 4px 25px rgba(0, 0, 0, 0.5),
-            0 8px 40px rgba(0, 0, 0, 0.4);
-    }
 
-    40% {
-        transform: scale(1.08);
-        box-shadow:
-            0 4px 20px rgba(0, 0, 0, 0.8),
-            0 8px 35px rgba(0, 0, 0, 0.6),
-            0 12px 50px rgba(0, 0, 0, 0.5);
-    }
 
-    70% {
-        transform: scale(1.02);
-        box-shadow:
-            0 3px 18px rgba(0, 0, 0, 0.75),
-            0 6px 30px rgba(0, 0, 0, 0.55),
-            0 10px 45px rgba(0, 0, 0, 0.45);
-    }
+ 
 
-    100% {
-        transform: scale(1);
-        box-shadow:
-            0 2px 15px rgba(0, 0, 0, 0.7),
-            0 4px 25px rgba(0, 0, 0, 0.5),
-            0 8px 40px rgba(0, 0, 0, 0.4);
-    }
-}
 /* =======================================================================================================
    =================================TABS TEMPLATE=================================================
    =======================================================================================================*/
