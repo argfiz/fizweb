@@ -431,6 +431,7 @@ function renderSlides() {
               <li>Codigo QR</li>
               <li>Hosting y Dominio</li>
               <li>Actualizacion anual</li>
+              <li>Solución de errores</li>
             </ul>
             </div>
           </div>
