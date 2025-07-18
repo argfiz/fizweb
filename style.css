@@ -1765,10 +1765,8 @@ body:not(.contact-page) {
 #recommended {
     color: #323232;
     font-weight: 900;
-    font-size: 0.9rem;
-    letter-spacing: 3px;
-    display: inline-block;
-    padding: 3px 6px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
     background: var(--color-secondary);
     border-radius: 3px;
     text-decoration: underline;
