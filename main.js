@@ -417,8 +417,8 @@ function renderSlides() {
         <div class="card__price-info">
           <div class="card__price-info-text">
             
-            <p>Pack incluye:</p>
-            <span> Cada pack incluye todo lo necesario para que tu sitio web esté listo para vender.</span>
+            <h4>Pack incluye:</h4>
+            <p> Cada pack incluye todo lo necesario para que tu sitio web esté listo para vender.</p>
              </span>
             <ul>
               <li>Multidispositivos</li>
@@ -434,8 +434,8 @@ function renderSlides() {
         <!-- ✅ CAPA DE MANTENIMIENTO ... -->
         <div class="card__price-maintenance">
           <div class="card__price-info-text">
-             <p>Mantenimiento:</p>
-             <span>Mientras vos vendés, nosotros cuidamos que tu sitio web esté siempre online y actualizada.</span>
+             <h4>Mantenimiento:</h4>
+             <p>Mientras vos vendés, nosotros cuidamos que tu sitio web esté siempre online y actualizada.</p>
              <ul class="list-card__price-info-text-bottom">
                 <li>Codigo QR personalizado</li>
                 <li>Hosting y Dominio </li>
@@ -455,9 +455,21 @@ function renderSlides() {
          <!-- ✅ CAPA DE PAGO ... -->
         <div class="card__price-payment">
           <div class="card__price-info-text">
-             <p>Eleginos:</p>
-             <span> Elegí la forma de pago que más te convenga y comenzá con tranquilidad tu incursion a lo digital.</span> 
+             <h4>Eleginos:</h4>
+             <p> Seleccioná lo que deseas pagar y comenzá con tranquilidad tu incursion a lo digital.</p> 
              </span>
+             <p>  
+               <span>Podés comenzar aqui:</span>  
+            <a href="${card.paymentLink}" class="card__pay-link" target="_blank">
+              <button class="card__pay-button--2">Pagar pack</button>
+            </a>
+              </p>
+              <p>  
+               <span>No olvides el mantenimiento:</span>  
+            <a href="${card.paymentLink}" class="card__pay-link" target="_blank">
+              <button class="card__pay-button--2">Suscribirse ahora</button>
+            </a>
+              </p>
             
           </div>
         </div>           

@@ -1353,19 +1353,32 @@ body:not(.contact-page) {
     width: 100%;
     flex: 1 1 auto;
 }
-
-.card__price-info-text p {
-    font-size: 1.5rem;
+.card__price-info-text h4 {
+    margin: 0;
     padding: 25px;
     padding-top: 50px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+    text-align: left;
+    transition: background 0.2s;
+}
+.card__price-info-text p {
+    font-size: 1.2rem;
+    padding: 25px;
+    padding-top: 25px;
     padding-bottom: 0;
-    margin-bottom: 0;
+    margin-bottom: 25px;
     margin-top: 0;
 }
 .card__price-info-text span {
     font-size: 1.1rem;
     padding: 25px;
+    padding-left: 0px;
+    padding-right: 0px;
     color: #fff;
+    width: 100%;
 }
 .card__price-info-text-top {
     margin: 0;
@@ -1456,7 +1469,8 @@ body:not(.contact-page) {
 .card__price-maintenance .card__price-info-text p {
     color: #fff;
     margin: 0;
-    padding-bottom: 0;
+    padding-bottom: 25px;
+    padding-top: 25px;
 }
 
 .card__price-maintenance .card__price-info-text span {
@@ -1626,15 +1640,19 @@ body:not(.contact-page) {
 =====================================*/
 .card__price-payment .card__price-info-text p {
     color: #fff;
-    padding-top: 50px;
+    padding-top: 25px;
     margin: 0;
     padding-bottom: 0;
 }
 
 .card__price-payment .card__price-info-text span {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 25px;
+    padding-left: 0px;
+    padding-right: 0px;
     color: #fff;
+    text-align: center;
+    max-width: 100%;
 }
 
 .card__price-payment .card__price-info-text ul {
@@ -1906,6 +1924,41 @@ body:not(.contact-page) {
 .card__maintenance-button img {
     width: 40px;
     height: 40px;
+}
+.card__pay-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+.card__pay-button--2 {
+    background: #46ab3f;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem !important;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    text-align: center;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.card__pay-button--2 {
+   background: #46ab3f;
+   border: none;
+   border-radius: 4px;
+   color: #fff;
+   cursor: pointer;
+   font-size: 0.9rem;
+   padding: 10px 15px;
+   text-align: center;
+   transition: background 0.3s;
 }
 
 /*============================================================
