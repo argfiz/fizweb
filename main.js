@@ -458,12 +458,7 @@ function renderSlides() {
              <p>Eleginos:</p>
              <span> Elegí la forma de pago que más te convenga y comenzá con tranquilidad tu incursion a lo digital.</span> 
              </span>
-             <ul class="list-card__price-info-text-bottom">
-                <li>Codigo QR</li>
-                <li>Hosting y Dominio</li>
-                <li>Actualizacion anual</li>
-                <li>Solución de errores</li>
-              </ul>
+            
           </div>
         </div>           
 
