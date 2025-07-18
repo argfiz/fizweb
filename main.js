@@ -413,10 +413,11 @@ function renderSlides() {
           </div> 
         </div>
         
-        <!-- Resto del contenido... -->
+        <!-- ✅CAPA DE INFORMACION... -->
         <div class="card__price-info">
           <div class="card__price-info-text">
             
+            <p>Pack incluye:</p>
             <ul>
               <li>Multidispositivos</li>
               <li>Botón WhatsApp flotante</li>
@@ -424,22 +425,35 @@ function renderSlides() {
               <li>Instalacion en servidor</li>
               <li>No incluye mantenimiento</li>
             </ul>
+            
+          </div>
+        </div>
+
+        <!-- ✅ CAPA DE MANTENIMIENTO ... -->
+        <div class="card__price-maintenance">
+          <div class="card__price-info-text">
+             <p>Mantenimiento incluye:</p>
+             <ul class="list-card__price-info-text-bottom">
+                <li>Codigo QR</li>
+                <li>Hosting y Dominio</li>
+                <li>Actualizacion anual</li>
+                <li>Solución de errores</li>
+              </ul>
             <div class="container-card__price-info">
               <p class="card__price-info-text-bottom">
-                  ${card.precioMensual ? `Mantenimiento <br>
+                  ${card.precioMensual ? `
                   <span>${card.precioMensual}</span> /mes <br>
                   <span id="recommended">RECOMENDADO</span>` : ''}
               </p>
             
-            <ul class="list-card__price-info-text-bottom">
-              <li>Codigo QR</li>
-              <li>Hosting y Dominio</li>
-              <li>Actualizacion anual</li>
-              <li>Solución de errores</li>
-            </ul>
+             
             </div>
           </div>
         </div>
+
+
+
+
       </div>
     </div>
   `).join('');
@@ -447,106 +461,102 @@ function renderSlides() {
 
 
 function addPriceInfoListeners() {
-  // ✅ Listeners para el botón de información (existente)
+  // ✅ FUNCIÓN MEJORADA PARA TAP MÓVIL LIMPIO
+  function handleMobileTap(element, callback = null) {
+    // Solo en móviles (ancho menor a 700px)
+    if (window.innerWidth <= 700) {
+      // ✅ RESETEO AGRESIVO DE CUALQUIER ESTADO PREVIO
+      element.classList.remove('tap-animation');
+      element.style.cssText = ''; // Limpiar TODOS los estilos inline
+      element.style.transform = 'scale(1) !important';
+      element.style.transition = 'none !important';
+      
+      // ✅ Forzar múltiples reflows para asegurar reset
+      void element.offsetWidth;
+      void element.offsetHeight;
+      
+      // ✅ Pequeño delay para asegurar limpieza
+      setTimeout(() => {
+        // ✅ Agregar clase de animación
+        element.classList.add('tap-animation');
+        
+        // ✅ Ejecutar callback durante la animación
+        if (callback) {
+          setTimeout(callback, 100); // Ejecutar a los 100ms
+        }
+        
+        // ✅ Limpiar después de la animación
+        setTimeout(() => {
+          element.classList.remove('tap-animation');
+          // ✅ Forzar estado limpio final
+          element.style.cssText = '';
+          element.style.transform = 'scale(1) !important';
+          element.style.transition = 'none !important';
+          element.style.boxShadow = '';
+          
+          // ✅ Forzar reflow final
+          void element.offsetWidth;
+        }, 350);
+      }, 10);
+    } else {
+      // ✅ En desktop, ejecutar callback inmediatamente
+      if (callback) callback();
+    }
+  }
+
+  // ✅ BOTÓN DE INFORMACIÓN (EXISTENTE)
   document.querySelectorAll('.card__price-info-icon').forEach(iconDiv => {
     iconDiv.addEventListener('click', function(e) {
       e.stopPropagation();
+      e.preventDefault();
       
-      // Función para manejar el tap en móviles
-      function handleMobileIconTap(icon) {
-        // Solo en móviles (ancho menor a 700px)
-        if (window.innerWidth <= 700) {
-          // ✅ Remover cualquier animación previa
-          icon.classList.remove('tap-animation');
-          
-          // ✅ Forzar reflow para resetear la animación
-          void icon.offsetWidth;
-          
-          // Agregar clase de animación
-          icon.classList.add('tap-animation');
-          
-          // Remover la clase después de la animación
-          setTimeout(() => {
-            icon.classList.remove('tap-animation');
-          }, 300);
+      handleMobileTap(this, () => {
+        // ✅ Cerrar capa de mantenimiento si está abierta
+        const card = this.closest('.card');
+        const maintenanceInfo = card.querySelector('.card__price-maintenance');
+        if (maintenanceInfo && maintenanceInfo.classList.contains('open')) {
+          maintenanceInfo.classList.remove('open');
         }
-      }
-      
-      // Ejecutar animación de tap
-      handleMobileIconTap(this);
-      
-      // Lógica original para mostrar/ocultar info
-      const card = this.closest('.card');
-      const priceInfo = card.querySelector('.card__price-info');
-      priceInfo.classList.toggle('open');
+        
+        // ✅ Toggle capa de información
+        const priceInfo = card.querySelector('.card__price-info');
+        priceInfo.classList.toggle('open');
+      });
     });
   });
   
-  // ✅ RESTAURAR LISTENERS PARA EL BOTÓN DE PAGO (SOLO PARA ANIMACIÓN)
+  // ✅ BOTÓN DE PAGO (SOLO ANIMACIÓN)
   document.querySelectorAll('.card__pay-button').forEach(payButton => {
     payButton.addEventListener('click', function(e) {
       e.stopPropagation();
-      e.preventDefault(); // ✅ Prevenir cualquier acción por defecto
+      e.preventDefault();
       
-      // Función para manejar el tap en móviles
-      function handleMobilePayTap(button) {
-        // Solo en móviles (ancho menor a 700px)
-        if (window.innerWidth <= 700) {
-          // ✅ Remover cualquier animación previa
-          button.classList.remove('tap-animation');
-          
-          // ✅ Forzar reflow para resetear la animación
-          void button.offsetWidth;
-          
-          // Agregar clase de animación
-          button.classList.add('tap-animation');
-          
-          // Remover la clase después de la animación
-          setTimeout(() => {
-            button.classList.remove('tap-animation');
-          }, 400); // ✅ Usar mismo timing que la animación CSS
-        }
-      }
-      
-      // Ejecutar animación de tap
-      handleMobilePayTap(this);
-      
-      // ✅ NO HAY FUNCIONALIDAD ADICIONAL - SOLO ANIMACIÓN
-      console.log('💳 Botón de pago tocado (solo animación)');
+      handleMobileTap(this, () => {
+        console.log('💳 Botón de pago tocado (solo animación)');
+      });
     });
   });
 
-  // ✅ Listeners para el botón de mantenimiento (EXISTENTE)
+  // ✅ BOTÓN DE MANTENIMIENTO (NUEVO COMPORTAMIENTO)
   document.querySelectorAll('.card__maintenance-button').forEach(maintenanceButton => {
     maintenanceButton.addEventListener('click', function(e) {
       e.stopPropagation();
+      e.preventDefault();
       
-      // Función para manejar el tap en móviles
-      function handleMobileMaintenanceTap(button) {
-        // Solo en móviles (ancho menor a 700px)
-        if (window.innerWidth <= 700) {
-          // ✅ Remover cualquier animación previa
-          button.classList.remove('tap-animation');
-          
-          // ✅ Forzar reflow para resetear la animación
-          void button.offsetWidth;
-          
-          // Agregar clase de animación
-          button.classList.add('tap-animation');
-          
-          // Remover la clase después de la animación
-          setTimeout(() => {
-            button.classList.remove('tap-animation');
-          }, 400);
+      handleMobileTap(this, () => {
+        // ✅ Cerrar capa de información si está abierta
+        const card = this.closest('.card');
+        const priceInfo = card.querySelector('.card__price-info');
+        if (priceInfo && priceInfo.classList.contains('open')) {
+          priceInfo.classList.remove('open');
         }
-      }
-      
-      // Ejecutar animación de tap
-      handleMobileMaintenanceTap(this);
-      
-      // Lógica para mostrar información de mantenimiento
-      console.log('🔧 Información de mantenimiento');
-      // Aquí puedes agregar modal o lógica adicional
+        
+        // ✅ Toggle capa de mantenimiento
+        const maintenanceInfo = card.querySelector('.card__price-maintenance');
+        maintenanceInfo.classList.toggle('open');
+        
+        console.log('🔧 Capa de mantenimiento toggled');
+      });
     });
   });
 }
