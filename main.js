@@ -461,12 +461,12 @@ function renderSlides() {
              <p>  
                 <span>Podés comenzar aqui:</span>  
                   <a href="${card.paymentLink}" class="card__pay-link" target="_blank">
-                    <button class="card__pay-button--2">Pagar pack</button>
+                    <button class="card__pay-button--2">Pagar sitio web</button>
                   </a>
               </p>
 
               <p>  
-               <span>No olvides el mantenimiento:</span>  
+               <span>Mantenimiento:</span>  
                 <a href="${card.paymentLink}" class="card__pay-link" target="_blank">
                   <button class="card__pay-button--2">Suscribite ahora</button>
                 </a>
