@@ -1848,7 +1848,7 @@ body:not(.contact-page) {
     margin: 0;
     
     /* ✅ BOX-SHADOW ULTRA SIMPLIFICADA */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     
     /* ✅ TRANSICIÓN SOLO DE TRANSFORM */
     transition: none; /* Sin transiciones por defecto */
