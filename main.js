@@ -609,6 +609,27 @@ function addPriceInfoListeners() {
   });
 }
 
+// ✅ EVENT DELEGATION SIMPLE
+document.addEventListener('click', (e) => {
+    const button = e.target.closest('.card__price-info-icon, .card__maintenance-button, .card__pay-button');
+    if (!button) return;
+
+    e.preventDefault();
+    const card = button.closest('.card');
+    const layers = card.querySelectorAll('.card__price-info, .card__price-maintenance, .card__price-payment');
+    
+    // Cerrar todas
+    layers.forEach(layer => layer.classList.remove('open'));
+    
+    // Abrir la correspondiente
+    if (button.classList.contains('card__price-info-icon')) {
+        card.querySelector('.card__price-info').classList.add('open');
+    } else if (button.classList.contains('card__maintenance-button')) {
+        card.querySelector('.card__price-maintenance').classList.add('open');
+    } else if (button.classList.contains('card__pay-button')) {
+        card.querySelector('.card__price-payment').classList.add('open');
+    }
+});
 renderSlides();
 addPriceInfoListeners();
 
