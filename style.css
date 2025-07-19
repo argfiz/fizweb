@@ -910,7 +910,7 @@ body:not(.contact-page) {
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    background: rgba(0, 0, 0, 0.532);
+    background: rgba(0, 0, 0, 0.194);
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
 }
