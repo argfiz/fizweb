@@ -1318,9 +1318,9 @@ body:not(.contact-page) {
 .card__price-info.open {
     pointer-events: auto;
     opacity: 1;
-    background: linear-gradient(rgba(20, 20, 20, 0.70));
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    background: linear-gradient(rgba(0, 0, 0, 0.8));
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 .card__price-info .card__price-info-text p {
     color: #fff;
@@ -1443,9 +1443,9 @@ body:not(.contact-page) {
 .card__price-maintenance.open {
     pointer-events: auto;
     opacity: 1;
-    background: linear-gradient(rgba(20, 20, 20, 0.70));
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    background: linear-gradient(rgba(0, 0, 0, 0.8));
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
 .card__price-maintenance .card__price-info-text {
@@ -1616,9 +1616,9 @@ body:not(.contact-page) {
 .card__price-payment.open {
     pointer-events: auto;
     opacity: 1;
-    background: linear-gradient(rgba(20, 20, 20, 0.70));
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    background: linear-gradient(rgba(0, 0, 0, 0.8));
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
 .card__price-payment .card__price-info-text {
