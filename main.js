@@ -427,48 +427,19 @@ function renderSlides() {
 
 
 function addPriceInfoListeners() {
-  // ✅ FUNCIÓN MEJORADA PARA TAP MÓVIL LIMPIO
-  function handleMobileTap(element, callback = null) {
-    // Solo en móviles (ancho menor a 700px)
+  // ✅ TAP SIMPLE
+function handleMobileTap(element, callback) {
     if (window.innerWidth <= 700) {
-      // ✅ RESETEO AGRESIVO DE CUALQUIER ESTADO PREVIO
-      element.classList.remove('tap-animation');
-      element.style.cssText = ''; // Limpiar TODOS los estilos inline
-      element.style.transform = 'scale(1) !important';
-      element.style.transition = 'none !important';
-      
-      // ✅ Forzar múltiples reflows para asegurar reset
-      void element.offsetWidth;
-      void element.offsetHeight;
-      
-      // ✅ Pequeño delay para asegurar limpieza
-      setTimeout(() => {
-        // ✅ Agregar clase de animación
-        element.classList.add('tap-animation');
-        
-        // ✅ Ejecutar callback durante la animación
-        if (callback) {
-          setTimeout(callback, 100); // Ejecutar a los 100ms
-        }
-        
-        // ✅ Limpiar después de la animación
+        element.style.transform = 'scale(0.95)';
         setTimeout(() => {
-          element.classList.remove('tap-animation');
-          // ✅ Forzar estado limpio final
-          element.style.cssText = '';
-          element.style.transform = 'scale(1) !important';
-          element.style.transition = 'none !important';
-          element.style.boxShadow = '';
-          
-          // ✅ Forzar reflow final
-          void element.offsetWidth;
-        }, 350);
-      }, 10);
+            element.style.transform = 'scale(1)';
+            if (callback) callback();
+        }, 150);
     } else {
-      // ✅ En desktop, ejecutar callback inmediatamente
-      if (callback) callback();
+        if (callback) callback();
     }
-  }
+}
+  
 
   // ✅ BOTÓN DE INFORMACIÓN (EXISTENTE)
   document.querySelectorAll('.card__price-info-icon').forEach(iconDiv => {
@@ -1192,6 +1163,8 @@ const universalObserver = new IntersectionObserver((entries) => {
 // Observar todo de una vez
 document.querySelectorAll('.section__title, .swiper, .tabs__container, .option__tabs, .contact__info, .contact__form')
     .forEach(el => universalObserver.observe(el));
+
+
 
 
 
