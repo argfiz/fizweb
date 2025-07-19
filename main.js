@@ -120,63 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ===== RESTO DEL CÓDIGO =====
-    // ===== OBSERVERS =====
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                obs.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.10 });
-
-    document.querySelectorAll('.section__title').forEach(title => {
-        observer.observe(title);
-    });
-
-    // ===== SWIPER =====
-    const swiperObserver = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                obs.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.10 });
-
-    const swiperEl = document.querySelector('.swiper');
-    if (swiperEl) {
-        swiperObserver.observe(swiperEl);
-    }
-
-    // ===== TABS =====
-    const tabsObserver = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                obs.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.tabs__container').forEach(container => {
-        tabsObserver.observe(container);
-    });
-
-    // ===== OPTION TABS =====
-    const optionTabsObserver = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                obs.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.option__tabs').forEach(tabs => {
-        optionTabsObserver.observe(tabs);
-    });
+    
+   
 
     // ===== CONTACT =====
     const contactInfo = document.querySelector('.contact__info');
@@ -1234,6 +1179,20 @@ function initTypewriterOptimized() {
 
     setTimeout(typeStep, 1000);
 }
+
+// ✅ UN SOLO OBSERVER UNIVERSAL
+const universalObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            universalObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+
+// Observar todo de una vez
+document.querySelectorAll('.section__title, .swiper, .tabs__container, .option__tabs, .contact__info, .contact__form')
+    .forEach(el => universalObserver.observe(el));
 
 
 
