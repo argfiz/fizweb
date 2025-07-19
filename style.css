@@ -3031,19 +3031,19 @@ html {
 
 .contact__text h3 {
     margin: 0;
-    font-size: 1.3em;
-    color: #545454;
+    font-size: 1.3rem;
+    color: #000000;
     font-family: var(--font-hero) !important;
     letter-spacing: 0px;
-    font-weight: 700 !important;
+    font-weight: 500 !important;
 }
 
 .contact__text p {
     margin: 0;
-    font-size: 1.6em;
+    font-size: 1.6rem;
     font-family: var(--font-hero) !important;
     color: #585858;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
 }
 
 .social__links {
