@@ -2003,37 +2003,25 @@ body:not(.contact-page) {
 // Estas animaciones se aplican a la tarjeta de precios cuando se abre o cierra la información de precios.
 // Se utilizan para crear un efecto de entrada y salida suave con transformación y desenfoque.
 // Las animaciones se definen con keyframes y se aplican a la clase .card*/
-@keyframes cardPriceInfoIn {
+@keyframes cardPriceInfoInOptimized {
     0% {
         opacity: 0;
-        transform: translateY(0px) scale(0.6);
-        filter: blur(12px);
+        transform: scale(0.8); /* ✅ Scale menos agresivo */
     }
-
-    60% {
-        opacity: 1;
-        transform: translateY(0px) scale(1);
-        filter: blur(2px);
-    }
-
     100% {
         opacity: 1;
-        transform: translateY(0) scale(1);
-        filter: blur(0);
+        transform: scale(1);
     }
 }
 
-@keyframes cardPriceInfoOut {
+@keyframes cardPriceInfoOutOptimized {
     0% {
         opacity: 1;
-        transform: translateY(0) scale(1);
-        filter: blur(12px);
+        transform: scale(1);
     }
-
     100% {
         opacity: 0;
-        transform: translateY(0px) scale(0.75);
-        filter: blur(12px);
+        transform: scale(0.95);
     }
 }
 
@@ -2042,12 +2030,17 @@ body:not(.contact-page) {
     will-change: opacity, transform, filter;
 }
 
-.card__price-info.open {
-    animation: cardPriceInfoIn 0.60s cubic-bezier(.4, 0, .2, 1);
+/* ✅ Aplicar animaciones optimizadas */
+.card__price-info.open,
+.card__price-maintenance.open,
+.card__price-payment.open {
+    animation: cardPriceInfoInOptimized 0.35s cubic-bezier(.4, 0, .2, 1);
 }
 
-.card__price-info:not(.open) {
-    animation: cardPriceInfoOut 0.35s cubic-bezier(.4, 0, .2, 1);
+.card__price-info:not(.open),
+.card__price-maintenance:not(.open),
+.card__price-payment:not(.open) {
+    animation: cardPriceInfoOutOptimized 0.25s cubic-bezier(.4, 0, .2, 1);
 }
 
 
