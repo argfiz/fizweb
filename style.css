@@ -1940,31 +1940,7 @@ body:not(.contact-page) {
 
 
 
-/* Animaciones para la tarjeta de precios
-// Estas animaciones se aplican a la tarjeta de precios cuando se abre o cierra la información de precios.
-// Se utilizan para crear un efecto de entrada y salida suave con transformación y desenfoque.
-// Las animaciones se definen con keyframes y se aplican a la clase .card*/
-@keyframes cardPriceInfoInOptimized {
-    0% {
-        opacity: 0;
-        transform: scale(0.8); /* ✅ Scale menos agresivo */
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
 
-@keyframes cardPriceInfoOutOptimized {
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    100% {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-}
 
 .card__price-info {
     /* ...tus estilos previos... */
