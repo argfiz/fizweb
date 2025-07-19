@@ -400,7 +400,7 @@ function renderSlides() {
         <div class="card__price-payment">
           <div class="card__price-info-text">
              <h4>Eleginos:</h4>
-             <p> Seleccioná lo que deseas pagar y comenzá con tranquilidad tu incursion a lo digital.</p> 
+             <p> Seleccioná lo que deseas y comenzá con tranquilidad tu incursion a lo digital.</p> 
              
              <p>  
                 <span>Podés comenzar aqui:</span>  
