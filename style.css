@@ -108,15 +108,6 @@ body:not(.contact-page) {
     }
 }
 
-/************************************************************/
-/***************Divider component***************************/
-/************************************************************/
-
-
-
-
-
-
 /*************************************************************************/
 /****************** ====== NAVBAR RESPONSIVE ====== *********************/
 /***********************************************************************/
@@ -202,9 +193,6 @@ body:not(.contact-page) {
     outline: none !important;
     -webkit-tap-highlight-color: transparent !important;
 }
-
-
-
 
 /* Oculta el logo grande del menú lateral en escritorio */
 .logo-nav__menu {
@@ -327,11 +315,6 @@ body:not(.contact-page) {
     -webkit-tap-highlight-color: transparent !important;
 }
 
-
-
-
-
-
 /* ====== HAMBURGER ====== */
 .hamburger {
     display: none;
@@ -378,9 +361,6 @@ body:not(.contact-page) {
     outline: none !important;
     -webkit-tap-highlight-color: transparent !important;
 }
-
-
-
 
 /* Animación */
 .hamburger.active span:nth-child(1) {
@@ -704,9 +684,6 @@ body:not(.contact-page) {
     opacity: 1;
     transform: translateY(0);
 }
-
-
-
 
 
 @keyframes blink {
@@ -1078,7 +1055,6 @@ body:not(.contact-page) {
     }
 }
 
-
 /**********************************************************/
 /************=== GALLERY SWIPE  ========================= */
 /**********************************************************/
@@ -1107,9 +1083,6 @@ body:not(.contact-page) {
     margin-top: 30px;
 }
 
-
-
-
 .card {
     position: relative;
     background: url('./assets/img/bg-card.png') center center/cover no-repeat;
@@ -1119,8 +1092,6 @@ body:not(.contact-page) {
     flex-direction: column;
 
 }
-
-
 
 .card__header {
     max-width: 310px;
@@ -1201,9 +1172,6 @@ body:not(.contact-page) {
     list-style: none;
     color: #fff;
 }
-
-
-
 
 .card__items li {
     font-size: 1.1rem;
@@ -1292,8 +1260,6 @@ body:not(.contact-page) {
     display: block;
     margin-top: -6px;
 }
-
-
 
 /* ✅ CAPA DE INFORMACION
 ===========================
@@ -1417,7 +1383,6 @@ body:not(.contact-page) {
     display: inline-block;
     padding-bottom: 0;
 }
-
 
 
 /* ✅ CAPA DE MANTENIMIENTO (IGUAL QUE PRICE-INFO) 
@@ -1716,8 +1681,6 @@ body:not(.contact-page) {
     display: block;
 }
 
-
-
 .card__price-payment .container-card__price-info {
     padding: 0px 0px;
     padding-bottom: 0px;
@@ -1757,11 +1720,6 @@ body:not(.contact-page) {
     animation: cardPriceInfoOut 0.35s cubic-bezier(.4, 0, .2, 1);
 }
 
-
-
-
-
-
 #recommended {
     color: #000000;
     font-weight: 900;
@@ -1771,8 +1729,6 @@ body:not(.contact-page) {
     border-radius: 3px;
     text-decoration: underline;
 }
-
-
 
 .card__price-info-text li {
     position: relative;
@@ -1941,8 +1897,6 @@ body:not(.contact-page) {
     width: 100%;
 }
 
-
-
 /*============================================================
 ======= Eliminar el hover en móviles =========================
 ============================================================*/
@@ -2107,8 +2061,6 @@ body:not(.contact-page) {
         transition: transform 0.2s ease;
     }
 }
-
-
 
 
 /* =======================================================================================================
@@ -2352,9 +2304,6 @@ body:not(.contact-page) {
 }
 
 
-
-
-
 @media (max-width: 700px) {
     #services .section__title {
         padding-top: 40px;
@@ -2513,8 +2462,6 @@ body:not(.contact-page) {
     position: relative;
 }
 
-
-
 /* =======================================================================================================
    =================================FOOTER TEMPLATE=================================================
    =======================================================================================================*/
@@ -2638,9 +2585,6 @@ footer {
     outline: none !important;
     -webkit-tap-highlight-color: transparent !important;
 }
-
-
-
 
 
 .footer-copy {
@@ -2789,11 +2733,6 @@ footer {
 }
 
 
-
-
-
-
-
 .faq__item.open .faq__icon {
     transform: rotate(90deg);
 }
@@ -2844,7 +2783,6 @@ footer {
         background-attachment: scroll;
     }
 }
-
 
 @media (min-width: 701px) and (max-width: 1000px) {
     #faqSection .section__title {
@@ -2898,15 +2836,12 @@ footer {
 }
 
 
-
 /* =======================================================================================================
    =================================CONTACT TEMPLATE==========================================================
    =======================================================================================================*/
 html {
     background-color: #111;
 }
-
-
 
 #contact {
     background: transparent;
@@ -2920,8 +2855,6 @@ html {
     font-weight: 400;
 
 }
-
-
 
 #contact .main_container {
     max-width: 900px;
