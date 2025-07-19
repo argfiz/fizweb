@@ -1103,12 +1103,13 @@ body:not(.contact-page) {
 }
 
 .card__header h3 {
+    font-family: var(--font-hero);
     font-size: 1.6rem;
     font-weight: 700;
     margin: 0;
     padding-bottom: 8px;
     padding-left: 10px;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
 }
 
 .card__header--1 {
@@ -1317,6 +1318,7 @@ body:not(.contact-page) {
     margin: 0;
     padding: 25px;
     padding-top: 50px;
+    font-family: var(--font-hero);
     font-size: 1.4rem;
     font-weight: 500;
     color: #fff;
@@ -1887,6 +1889,7 @@ body:not(.contact-page) {
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
+    font-family: var(--font-hero);
     font-size: 1rem !important;
     font-weight: 600;
     letter-spacing: 1px;
