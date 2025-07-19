@@ -1823,6 +1823,8 @@ body:not(.contact-page) {
     gap: 15px;
     margin: 28px auto;
     width: 100%;
+    z-index: 35 !important;
+    position: relative;
     /* ✅ Optimizaciones */
     will-change: auto;
     contain: layout style;
@@ -1839,7 +1841,7 @@ body:not(.contact-page) {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 31;
+     z-index: 40 !important;
     cursor: pointer !important;
     pointer-events: auto;
     position: relative;
