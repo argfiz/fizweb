@@ -1292,7 +1292,6 @@ body:not(.contact-page) {
     flex-direction: column;
     justify-content: flex-end;
     /* ✅ OPTIMIZACIONES DE HARDWARE */
-    will-change: auto; /* Solo opacity cuando cambie */
     backface-visibility: hidden;
     transform: translateZ(0);
     contain: layout style;
@@ -1420,7 +1419,6 @@ body:not(.contact-page) {
     flex-direction: column;
     justify-content: flex-end;
     /* ✅ OPTIMIZACIONES DE HARDWARE */
-    will-change: auto; /* Solo opacity cuando cambie */
     backface-visibility: hidden;
     transform: translateZ(0);
     contain: layout style;
@@ -1563,10 +1561,6 @@ body:not(.contact-page) {
     background: var(--color-secondary);
 }
 
-/* ✅ ANIMACIONES PARA LA CAPA DE MANTENIMIENTO */
-.card__price-maintenance {
-    will-change: opacity, transform, filter;
-}
 
 
 
@@ -1589,7 +1583,6 @@ body:not(.contact-page) {
     flex-direction: column;
     justify-content: flex-end;
     /* ✅ OPTIMIZACIONES DE HARDWARE */
-    will-change: auto; /* Solo opacity cuando cambie */
     backface-visibility: hidden;
     transform: translateZ(0);
     contain: layout style;
@@ -1723,10 +1716,7 @@ body:not(.contact-page) {
     background: var(--color-secondary);
 }
 
-/* ✅ ANIMACIONES PARA LA CAPA DE PAGO */
-.card__price-payment {
-    will-change: opacity, transform, filter;
-}
+
 
 
 
@@ -1990,14 +1980,6 @@ body:not(.contact-page) {
     transform: scale(1.25);
 }
 
-
-
-
-
-.card__price-info {
-    /* ...tus estilos previos... */
-    will-change: opacity, transform, filter;
-}
 
 
 @media (min-width: 501px) {
