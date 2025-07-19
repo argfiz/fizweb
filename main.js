@@ -1176,6 +1176,44 @@ function initTypewriter() {
     };
 }
 
+// ✅ TYPEWRITER ULTRA SIMPLIFICADO
+function initTypewriterOptimized() {
+    const element = document.querySelector('.typewriter');
+    if (!element) return;
+
+    const words = element.getAttribute('data-words').split(',');
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeStep() {
+        const currentWord = words[wordIndex];
+        
+        if (isDeleting) {
+            charIndex--;
+        } else {
+            charIndex++;
+        }
+
+        element.innerHTML = `${currentWord.substring(0, charIndex)}<span class="typewriter-cursor">|</span>`;
+
+        let delay = isDeleting ? 50 : 150;
+
+        if (!isDeleting && charIndex === currentWord.length) {
+            delay = 2000;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            delay = 300;
+        }
+
+        setTimeout(typeStep, delay);
+    }
+
+    setTimeout(typeStep, 1000);
+}
+
 
 
 
