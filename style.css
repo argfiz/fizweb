@@ -1928,7 +1928,7 @@ body:not(.contact-page) {
 }
 .card__pay-button--2 {
     background: #11ff009c;
-    border: 1px solid #11ff00;
+    border: none;
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
