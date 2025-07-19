@@ -1301,9 +1301,8 @@ body:not(.contact-page) {
 .card__price-info.open {
     pointer-events: auto;
     opacity: 1;
-    background: linear-gradient(rgba(0, 0, 0, 0.8));
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    background: linear-gradient(rgba(27, 27, 27, 0.9));
+    
 }
 .card__price-info .card__price-info-text p {
     color: #fff;
@@ -1430,9 +1429,7 @@ body:not(.contact-page) {
 .card__price-maintenance.open {
     pointer-events: auto;
     opacity: 1;
-    background: linear-gradient(rgba(0, 0, 0, 0.8));
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    background: linear-gradient(rgba(27, 27, 27, 0.9));
 }
 
 .card__price-maintenance .card__price-info-text {
@@ -1601,9 +1598,8 @@ body:not(.contact-page) {
 .card__price-payment.open {
     pointer-events: auto;
     opacity: 1;
-    background: linear-gradient(rgba(0, 0, 0, 0.8));
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    background: linear-gradient(rgba(27, 27, 27, 0.9));
+    
 }
 
 .card__price-payment .card__price-info-text {
@@ -1894,7 +1890,7 @@ body:not(.contact-page) {
 
 /* ✅ BOTÓN DE PAGO ESPECÍFICO */
 .card__pay-button {
-    background: #46ab3f;
+    background: #0ed600;
 }
 
 .card__maintenance-button {
@@ -1922,7 +1918,7 @@ body:not(.contact-page) {
 }
 .card__pay-button--2,
 .card__pay-button--3 {
-    background: #0cb400;
+    background: #0ece00;
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -1931,7 +1927,7 @@ body:not(.contact-page) {
     font-size: 1rem !important;
     font-weight: 600;
     letter-spacing: 1px;
-    padding: 10px 15px;
+    padding: 13px 0px;
     text-align: center;
     transition: background 0.3s;
     width: 100%;
