@@ -1916,7 +1916,8 @@ body:not(.contact-page) {
     text-align: center;
     margin-top: 5px;
 }
-.card__pay-button--2 {
+.card__pay-button--2,
+.card__pay-button--3 {
     background: #11ff009c;
     border: none;
     border-radius: 5px;
@@ -1930,6 +1931,9 @@ body:not(.contact-page) {
     text-align: center;
     transition: background 0.3s;
     width: 100%;
+}
+.card__pay-button--3 {
+    background: #db0167;
 }
 
 /*============================================================
