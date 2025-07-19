@@ -2213,7 +2213,7 @@ body:not(.contact-page) {
     /* ✅ Eliminar márgenes que causan saltos */
     padding: 0;
     width: 100%;
-    font-size: 1.7rem !important;
+    font-size: 1.6rem !important;
     line-height: 1.4;
     text-align: center;
     /* ✅ Evitar desbordamiento */
