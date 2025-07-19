@@ -121,8 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     
-   
-
+  
     // ===== CONTACT =====
     const contactInfo = document.querySelector('.contact__info');
     if (contactInfo) {
