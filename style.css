@@ -1774,7 +1774,7 @@ body:not(.contact-page) {
 }
 
 .card__price-info-text li:last-child {
-    background: #de046ae3;
+    background: var(--color-secondary);
     color: #fff;
     font-weight: 900;
 }
@@ -1922,7 +1922,7 @@ body:not(.contact-page) {
 }
 .card__pay-button--2,
 .card__pay-button--3 {
-    background: #11ff009c;
+    background: #0cb400;
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -1937,7 +1937,7 @@ body:not(.contact-page) {
     width: 100%;
 }
 .card__pay-button--3 {
-    background: #db0167;
+    background: var(--color-secondary);
 }
 
 /*============================================================
