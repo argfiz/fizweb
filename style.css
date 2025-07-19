@@ -1735,13 +1735,15 @@ body:not(.contact-page) {
 
 
 #recommended {
-    color: #000000;
-    font-weight: 900;
-    font-size: 0.8rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.7rem;
     letter-spacing: 1px;
-    background: transparent;
+    background: var(--color-secondary);
     border-radius: 3px;
-    text-decoration: underline;
+    display: inline-block;
+    padding: 3px 6px;
+    width: fit-content;
 }
 
 .card__price-info-text li {
@@ -1793,7 +1795,9 @@ body:not(.contact-page) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #ff0077da;
+    background: var(--color-secondary);
+    font-family: var(--font-hero);
+    font-weight: 100 !important;
 }
 
 #home .list-card__price-info-text-bottom {

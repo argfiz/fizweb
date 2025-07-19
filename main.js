@@ -434,7 +434,8 @@ function renderSlides() {
         <!-- ✅ CAPA DE MANTENIMIENTO ... -->
         <div class="card__price-maintenance">
           <div class="card__price-info-text">
-             <h4>Mantenimiento:</h4>
+          
+             <h4>Mantenimiento:<span id="recommended">RECOMENDADO</span></h4>
              <p>Mientras vos vendés, nosotros cuidamos que tu sitio web esté siempre online y actualizada.</p>
              <ul class="list-card__price-info-text-bottom">
                 <li>QR personalizado</li>
@@ -445,8 +446,7 @@ function renderSlides() {
             <div class="container-card__price-info">
               <p class="card__price-info-text-bottom">
                   ${card.precioMensual ? `
-                  <span>${card.precioMensual}</span>/mes <br>
-                  <span id="recommended">RECOMENDADO</span>` : ''}
+                  <span>${card.precioMensual}</span>/mes <br>` : ''}
               </p>
             </div>
           </div>
