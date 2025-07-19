@@ -1550,13 +1550,7 @@ body:not(.contact-page) {
     will-change: opacity, transform, filter;
 }
 
-.card__price-maintenance.open {
-    animation: cardPriceInfoIn 0.60s cubic-bezier(.4, 0, .2, 1);
-}
 
-.card__price-maintenance:not(.open) {
-    animation: cardPriceInfoOut 0.35s cubic-bezier(.4, 0, .2, 1);
-}
 
 
 /* ✅ CAPA DE PAGO (IGUAL QUE PRICE-INFO Y MAINTENANCE) 
@@ -1713,13 +1707,7 @@ body:not(.contact-page) {
     will-change: opacity, transform, filter;
 }
 
-.card__price-payment.open {
-    animation: cardPriceInfoIn 0.60s cubic-bezier(.4, 0, .2, 1);
-}
 
-.card__price-payment:not(.open) {
-    animation: cardPriceInfoOut 0.35s cubic-bezier(.4, 0, .2, 1);
-}
 
 #recommended {
     color: #000000;
@@ -1986,18 +1974,7 @@ body:not(.contact-page) {
     will-change: opacity, transform, filter;
 }
 
-/* ✅ Aplicar animaciones optimizadas */
-.card__price-info.open,
-.card__price-maintenance.open,
-.card__price-payment.open {
-    animation: cardPriceInfoInOptimized 0.35s cubic-bezier(.4, 0, .2, 1);
-}
 
-.card__price-info:not(.open),
-.card__price-maintenance:not(.open),
-.card__price-payment:not(.open) {
-    animation: cardPriceInfoOutOptimized 0.25s cubic-bezier(.4, 0, .2, 1);
-}
 
 
 
