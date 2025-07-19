@@ -1275,7 +1275,6 @@ body:not(.contact-page) {
     pointer-events: none;
     opacity: 0;
     background: transparent;
-    transition: opacity 0.25s;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -1400,7 +1399,6 @@ body:not(.contact-page) {
     pointer-events: none;
     opacity: 0;
     background: transparent;
-    transition: opacity 0.25s;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -1567,7 +1565,6 @@ body:not(.contact-page) {
     pointer-events: none;
     opacity: 0;
     background: transparent;
-    transition: opacity 0.25s;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -1973,10 +1970,6 @@ body:not(.contact-page) {
     /* ...tus estilos previos... */
     will-change: opacity, transform, filter;
 }
-
-
-
-
 
 
 @media (min-width: 501px) {
