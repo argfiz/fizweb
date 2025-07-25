@@ -427,124 +427,68 @@ function renderSlides() {
 
 
 function addPriceInfoListeners() {
-  // ✅ TAP SIMPLE
-function handleMobileTap(element, callback) {
-    if (window.innerWidth <= 700) {
-        element.style.transform = 'scale(0.95)';
-        setTimeout(() => {
-            element.style.transform = 'scale(1)';
-            if (callback) callback();
-        }, 150);
-    } else {
-        if (callback) callback();
+    // ✅ FUNCIÓN DE TAP ULTRA RÁPIDA PARA MÓVILES
+    function handleInstantTap(element, callback) {
+        if ('ontouchstart' in window) {
+            element.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                element.style.transform = 'translateZ(0) scale(0.95)';
+                element.style.transition = 'none';
+            }, { passive: false });
+            
+            element.addEventListener('touchend', (e) => {
+                e.preventDefault();
+                element.style.transform = 'translateZ(0) scale(1)';
+                element.style.transition = 'none';
+                if (callback) callback();
+            }, { passive: false });
+        } else {
+            element.addEventListener('click', callback);
+        }
     }
+
+    // ✅ BOTÓN DE INFORMACIÓN - INSTANTÁNEO
+    document.querySelectorAll('.card__price-info-icon').forEach(iconDiv => {
+        handleInstantTap(iconDiv, () => {
+            const card = iconDiv.closest('.card');
+            const layers = card.querySelectorAll('.card__price-maintenance, .card__price-payment');
+            
+            // Cerrar otras capas instantáneamente
+            layers.forEach(layer => layer.classList.remove('open'));
+            
+            // Toggle información instantáneamente
+            card.querySelector('.card__price-info').classList.toggle('open');
+        });
+    });
+
+    // ✅ BOTÓN DE MANTENIMIENTO - INSTANTÁNEO
+    document.querySelectorAll('.card__maintenance-button').forEach(maintenanceButton => {
+        handleInstantTap(maintenanceButton, () => {
+            const card = maintenanceButton.closest('.card');
+            const layers = card.querySelectorAll('.card__price-info, .card__price-payment');
+            
+            // Cerrar otras capas instantáneamente
+            layers.forEach(layer => layer.classList.remove('open'));
+            
+            // Toggle mantenimiento instantáneamente
+            card.querySelector('.card__price-maintenance').classList.toggle('open');
+        });
+    });
+
+    // ✅ BOTÓN DE PAGO - INSTANTÁNEO
+    document.querySelectorAll('.card__pay-button').forEach(payButton => {
+        handleInstantTap(payButton, () => {
+            const card = payButton.closest('.card');
+            const layers = card.querySelectorAll('.card__price-info, .card__price-maintenance');
+            
+            // Cerrar otras capas instantáneamente
+            layers.forEach(layer => layer.classList.remove('open'));
+            
+            // Toggle pago instantáneamente
+            card.querySelector('.card__price-payment').classList.toggle('open');
+        });
+    });
 }
-  
-
-  // ✅ BOTÓN DE INFORMACIÓN (EXISTENTE)
-  document.querySelectorAll('.card__price-info-icon').forEach(iconDiv => {
-    iconDiv.addEventListener('click', function(e) {
-      e.stopPropagation();
-      e.preventDefault();
-      
-      handleMobileTap(this, () => {
-        // ✅ Cerrar otras capas si están abiertas
-        const card = this.closest('.card');
-        const maintenanceInfo = card.querySelector('.card__price-maintenance');
-        const paymentInfo = card.querySelector('.card__price-payment');
-        
-        if (maintenanceInfo && maintenanceInfo.classList.contains('open')) {
-          maintenanceInfo.classList.remove('open');
-        }
-        if (paymentInfo && paymentInfo.classList.contains('open')) {
-          paymentInfo.classList.remove('open');
-        }
-        
-        // ✅ Toggle capa de información
-        const priceInfo = card.querySelector('.card__price-info');
-        priceInfo.classList.toggle('open');
-      });
-    });
-  });
-  
-  // ✅ BOTÓN DE PAGO (NUEVA FUNCIONALIDAD)
-  document.querySelectorAll('.card__pay-button').forEach(payButton => {
-    payButton.addEventListener('click', function(e) {
-      e.stopPropagation();
-      e.preventDefault();
-      
-      handleMobileTap(this, () => {
-        // ✅ Cerrar otras capas si están abiertas
-        const card = this.closest('.card');
-        const priceInfo = card.querySelector('.card__price-info');
-        const maintenanceInfo = card.querySelector('.card__price-maintenance');
-        
-        if (priceInfo && priceInfo.classList.contains('open')) {
-          priceInfo.classList.remove('open');
-        }
-        if (maintenanceInfo && maintenanceInfo.classList.contains('open')) {
-          maintenanceInfo.classList.remove('open');
-        }
-        
-        // ✅ Toggle capa de pago
-        const paymentInfo = card.querySelector('.card__price-payment');
-        paymentInfo.classList.toggle('open');
-        
-        console.log('💳 Capa de pago toggled');
-      });
-    });
-  });
-
-  // ✅ BOTÓN DE MANTENIMIENTO (EXISTENTE)
-  document.querySelectorAll('.card__maintenance-button').forEach(maintenanceButton => {
-    maintenanceButton.addEventListener('click', function(e) {
-      e.stopPropagation();
-      e.preventDefault();
-      
-      handleMobileTap(this, () => {
-        // ✅ Cerrar otras capas si están abiertas
-        const card = this.closest('.card');
-        const priceInfo = card.querySelector('.card__price-info');
-        const paymentInfo = card.querySelector('.card__price-payment');
-        
-        if (priceInfo && priceInfo.classList.contains('open')) {
-          priceInfo.classList.remove('open');
-        }
-        if (paymentInfo && paymentInfo.classList.contains('open')) {
-          paymentInfo.classList.remove('open');
-        }
-        
-        // ✅ Toggle capa de mantenimiento
-        const maintenanceInfo = card.querySelector('.card__price-maintenance');
-        maintenanceInfo.classList.toggle('open');
-        
-        console.log('🔧 Capa de mantenimiento toggled');
-      });
-    });
-  });
-}
-
-// ✅ EVENT DELEGATION SIMPLE
-document.addEventListener('click', (e) => {
-    const button = e.target.closest('.card__price-info-icon, .card__maintenance-button, .card__pay-button');
-    if (!button) return;
-
-    e.preventDefault();
-    const card = button.closest('.card');
-    const layers = card.querySelectorAll('.card__price-info, .card__price-maintenance, .card__price-payment');
-    
-    // Cerrar todas
-    layers.forEach(layer => layer.classList.remove('open'));
-    
-    // Abrir la correspondiente
-    if (button.classList.contains('card__price-info-icon')) {
-        card.querySelector('.card__price-info').classList.add('open');
-    } else if (button.classList.contains('card__maintenance-button')) {
-        card.querySelector('.card__price-maintenance').classList.add('open');
-    } else if (button.classList.contains('card__pay-button')) {
-        card.querySelector('.card__price-payment').classList.add('open');
-    }
-});
 renderSlides();
 addPriceInfoListeners();
 
