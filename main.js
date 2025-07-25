@@ -790,20 +790,24 @@ function addTabListeners() {
    =======================================================================================================*/
 const faqData = [
   {
-    question: "¿Qué incluye el desarrollo de mi página web?",
+    question: "¿Qué incluye el desarrollo de mi sitio web?",
     answer: "Tu sitio va a tener un diseño moderno que se adapta a cualquier pantalla, secciones personalizadas, enlaces a tus redes y carga rápida. Todo listo para que tu marca se vea profesional desde el primer momento."
   },
   {
     question: "¿Cuánto tiempo tarda en estar lista mi web?",
     answer: "Depende del plan y de cuánto contenido tengas, pero en general la web está lista entre 7 y 30 días hábiles desde que nos pasás todo lo necesario."
   },
+   {
+    question: "¿Puedo ver un avance de mi sitio web?",
+    answer: "Sí, durante el proceso de desarrollo podrás ver avances. Queremos que estés al tanto de cómo va tomando forma tu sitio."
+  },
   {
     question: "¿Puedo modificar el contenido después de publicada?",
-    answer: "Si contratas mantenimiento, dispones de una actualizacion anual para cambios menores como textos, imágenes o productos. Posteriormente, si querés hacer cambios más grandes, te pasamos un presupuesto sin compromiso "
+    answer: "Si te suscribis al mantenimiento, dispones de una actualizacion anual para cambios menores como textos, imágenes o productos. Posteriormente, si querés hacer cambios más grandes, te pasamos un presupuesto sin compromiso "
   },
   {
     question: "¿El Hosting, Dominio y QR están incluido?",
-    answer: "No, el precio es por el desarrollo del sitio web. Pero si contratas el mantenimiento podemos encargarnos de eso por una tarifa mensual. Así nos ocupamos de que tu sitio esté siempre online y funcionando correctamente."
+    answer: "No, el precio es por el desarrollo del sitio web. Pero si te suscribis al mantenimiento podemos encargarnos de eso por una tarifa mensual. Así nos ocupamos de que tu sitio esté siempre online y funcionando correctamente."
   },
   {
     question: "¿Por que te recomendamos contratar el mantenimiento?",
@@ -811,8 +815,8 @@ const faqData = [
     important: true
   },
   {
-    question: "¿Qué pasa si no contrato el mantenimiento?",
-    answer: "Si no querés el mantenimiento, te facilitamos los links del Hosting y del Dominio que recomendamos para que puedas gestionarlo por tu cuenta y podamos avanzar con la instalacion del sitio web en el servidor de tu preferencia. Pero si lo contratás, nos ocupamos nosotros para que no te compliques con temas técnicos."
+    question: "¿Qué pasa si no me suscribo al mantenimiento?",
+    answer: "Si no querés el mantenimiento, te facilitamos los links del Hosting y del Dominio que recomendamos para que puedas gestionarlo por tu cuenta y podamos avanzar con la instalacion del sitio web en el servidor de tu preferencia. Pero si te suscribis, nos ocupamos nosotros para que no te compliques con temas técnicos."
   },
   {
     question: "¿Qué necesito para empezar?",
