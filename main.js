@@ -266,7 +266,7 @@ const sliderCardsData = [
     precio: "$200.000",
     precioNota: "Precio Final",
     precioMensual: "$15.000",
-    paymentLink: "https://link.mercadopago.com.ar/inicial", // ✅ Link de pago
+    paymentLink: "https://link.mercadopago.com.ar/1", // ✅ Link de pago
     items: {
       página: 1,
       secciones: 3,
@@ -281,7 +281,7 @@ const sliderCardsData = [
     precioNota: "Precio Final",
     precioNotaInfo: "./assets/icons/info-icon.svg",
     precioMensual: "$30.000",
-    paymentLink: "https://link.mercadopago.com.ar/mediano", // ✅ Link de pago
+    paymentLink: "https://link.mercadopago.com.ar/2", // ✅ Link de pago
     items: {
       paginas: 3,
       secciones: 9,
@@ -295,7 +295,7 @@ const sliderCardsData = [
     precio: "$600.000",
     precioNota: "Precio Final",
     precioMensual: "$45.000",
-    paymentLink: "https://link.mercadopago.com.ar/full", // ✅ Link de pago
+    paymentLink: "https://link.mercadopago.com.ar/3", // ✅ Link de pago
     items: {
       paginas: 5,
       secciones: 15,
