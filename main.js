@@ -794,11 +794,11 @@ const faqData = [
     answer: "Tu sitio va a tener un diseño moderno que se adapta a cualquier pantalla, secciones personalizadas, enlaces a tus redes y carga rápida. Todo listo para que tu marca se vea profesional desde el primer momento."
   },
   {
-    question: "¿Cuánto tiempo tarda en estar lista mi web?",
+    question: "¿Cuánto tiempo tarda en estar lista?",
     answer: "Depende del plan y de cuánto contenido tengas, pero en general la web está lista entre 7 y 30 días hábiles desde que nos pasás todo lo necesario."
   },
    {
-    question: "¿Puedo ver un avance de mi sitio web?",
+    question: "¿Puedo ver un avance?",
     answer: "Sí, durante el proceso de desarrollo podrás ver avances. Queremos que estés al tanto de cómo va tomando forma tu sitio."
   },
   {
