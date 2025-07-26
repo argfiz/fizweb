@@ -754,7 +754,7 @@ const faqData = [
     answer: "No, el precio es por el desarrollo del sitio web. Pero si te suscribis al mantenimiento podemos encargarnos de eso por una tarifa mensual. Así nos ocupamos de que tu sitio esté siempre online y funcionando correctamente."
   },
   {
-    question: "¿Por que te recomendamos contratar el mantenimiento?",
+    question: "¿Por que te recomendamos susscribirte al mantenimiento?",
     answer: "Porque el mantenimiento garantiza que tu sitio web esté siempre actualizado, seguro y funcionando correctamente. Además, te ahorra tiempo y preocupaciones, permitiéndote enfocarte en hacer crecer tu negocio.",
     important: true
   },
