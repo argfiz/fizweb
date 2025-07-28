@@ -1300,7 +1300,7 @@ body:not(.contact-page) {
 .card__price-info.open {
     pointer-events: auto;
     opacity: 1;
-    background: linear-gradient(rgba(27, 27, 27, 0.95));
+    background: linear-gradient(rgba(27, 27, 27, 0.98));
     
 }
 .card__price-info .card__price-info-text p {
@@ -1427,7 +1427,7 @@ body:not(.contact-page) {
 .card__price-maintenance.open {
     pointer-events: auto;
     opacity: 1;
-    background: linear-gradient(rgba(27, 27, 27, 0.95));
+    background: linear-gradient(rgba(27, 27, 27, 0.98));
 }
 
 .card__price-maintenance .card__price-info-text {
@@ -1591,7 +1591,7 @@ body:not(.contact-page) {
 .card__price-payment.open {
     pointer-events: auto;
     opacity: 1;
-    background: linear-gradient(rgba(27, 27, 27, 0.95));
+    background: linear-gradient(rgba(27, 27, 27, 0.98));
     
 }
 

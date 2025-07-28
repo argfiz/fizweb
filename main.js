@@ -366,6 +366,7 @@ function renderSlides() {
              </span>
             <ul>
               <li>Multidispositivos</li>
+              <li>Sección de contacto</li>
               <li>Botón WhatsApp flotante</li>
               <li>Conexion a Redes Sociales</li>
               <li>Instalacion en servidor</li>
