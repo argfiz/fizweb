@@ -27,7 +27,7 @@ document.querySelectorAll('.nav-menu__link').forEach(link => {
 });
 // Resalta el nav-menu__link activo
 document.querySelectorAll('.nav-menu__link').forEach(link => {
-  link.addEventListener('click', function() {
+  link.addEventListener('click', function () {
     document.querySelectorAll('.nav-menu__link').forEach(l => l.classList.remove('active'));
     this.classList.add('active');
   });
@@ -71,90 +71,90 @@ window.addEventListener('scroll', () => {
 /*******************************************banner-welcome LOAD*****************************************/
 /**************************Función de animación de tipeo**************************************/
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('🚀 Inicializando página...');
+  console.log('🚀 Inicializando página...');
 
-    // ===== HERO =====
-    const hero = document.querySelector('.hero__image');
-    if (hero) {
-        setTimeout(() => {
-            hero.classList.add('visible');
-        }, 125);
-    }
-
-    const divider = document.querySelector('.section__divider');
-    if (divider) {
-        setTimeout(() => {
-            divider.classList.add('visible');
-        }, 125);
-    }
-
-    // ===== TYPEWRITER OPTIMIZADO =====
+  // ===== HERO =====
+  const hero = document.querySelector('.hero__image');
+  if (hero) {
     setTimeout(() => {
-        const typewriterCleanup = initTypewriter();
-        
-        // Cleanup al cerrar/recargar la página
-        window.addEventListener('beforeunload', () => {
-            if (typewriterCleanup) {
-                typewriterCleanup();
-            }
-        });
-    }, 200);
+      hero.classList.add('visible');
+    }, 125);
+  }
 
-    // ===== WELCOME BANNER CON INDICADORES =====
+  const divider = document.querySelector('.section__divider');
+  if (divider) {
     setTimeout(() => {
-        loadWelcomeBanner(); // ✅ Esta función YA genera los indicadores
-    }, 400);
+      divider.classList.add('visible');
+    }, 125);
+  }
 
-    // ===== FLECHAS DEL BANNER (SOLO AQUÍ) =====
-    const welcomeArrow = document.querySelector('.welcome__banner-arrow');
-    if (welcomeArrow) {
-        welcomeArrow.addEventListener('click', () => {
-            changeBanner(); // Avanzar
-        });
-    }
+  // ===== TYPEWRITER OPTIMIZADO =====
+  setTimeout(() => {
+    const typewriterCleanup = initTypewriter();
 
-    const welcomeArrowLeft = document.querySelector('.welcome__banner-arrow--left');
-    if (welcomeArrowLeft) {
-        welcomeArrowLeft.addEventListener('click', () => {
-            changeBannerPrevious(); // Retroceder
-        });
-    }
+    // Cleanup al cerrar/recargar la página
+    window.addEventListener('beforeunload', () => {
+      if (typewriterCleanup) {
+        typewriterCleanup();
+      }
+    });
+  }, 200);
 
-    
-  
-    // ===== CONTACT =====
-    const contactInfo = document.querySelector('.contact__info');
-    if (contactInfo) {
-        setTimeout(() => {
-            contactInfo.classList.add('visible');
-        }, 250);
-    }
+  // ===== WELCOME BANNER CON INDICADORES =====
+  setTimeout(() => {
+    loadWelcomeBanner(); // ✅ Esta función YA genera los indicadores
+  }, 400);
 
-    const contactForm = document.querySelector('.contact__form');
-    if (contactForm) {
-        setTimeout(() => {
-            contactForm.classList.add('visible');
-        }, 450);
-    }
+  // ===== FLECHAS DEL BANNER (SOLO AQUÍ) =====
+  const welcomeArrow = document.querySelector('.welcome__banner-arrow');
+  if (welcomeArrow) {
+    welcomeArrow.addEventListener('click', () => {
+      changeBanner(); // Avanzar
+    });
+  }
 
-    // ===== WHATSAPP =====
+  const welcomeArrowLeft = document.querySelector('.welcome__banner-arrow--left');
+  if (welcomeArrowLeft) {
+    welcomeArrowLeft.addEventListener('click', () => {
+      changeBannerPrevious(); // Retroceder
+    });
+  }
+
+
+
+  // ===== CONTACT =====
+  const contactInfo = document.querySelector('.contact__info');
+  if (contactInfo) {
     setTimeout(() => {
-        const wa = document.querySelector('.whatsapp-float');
-        if (wa) wa.classList.add('show');
-    }, 700);
+      contactInfo.classList.add('visible');
+    }, 250);
+  }
 
-    // ===== INICIALIZAR RESTO =====
-    renderSlides();
-    addPriceInfoListeners();
-    renderFAQ();
-    animateFaqItemsOnScroll();
-    animateTabCardChange(servicesData[0].key);
+  const contactForm = document.querySelector('.contact__form');
+  if (contactForm) {
+    setTimeout(() => {
+      contactForm.classList.add('visible');
+    }, 450);
+  }
 
-    console.log('✅ Inicialización completada');
+  // ===== WHATSAPP =====
+  setTimeout(() => {
+    const wa = document.querySelector('.whatsapp-float');
+    if (wa) wa.classList.add('show');
+  }, 700);
+
+  // ===== INICIALIZAR RESTO =====
+  renderSlides();
+  addPriceInfoListeners();
+  renderFAQ();
+  animateFaqItemsOnScroll();
+  animateTabCardChange(servicesData[0].key);
+
+  console.log('✅ Inicialización completada');
 });
 
 /*****************************************************************************************************/
-/* ======================================== WELCOME BANNER ================================ */   
+/* ======================================== WELCOME BANNER ================================ */
 /*****************************************************************************************************/
 const bannerData = [
   "./assets/img/welcome-banner.png",
@@ -172,25 +172,25 @@ let currentBannerIndex = 0;
 function generateBannerIndicators() {
   const indicatorsContainer = document.querySelector('.welcome__banner-indicators');
   if (!indicatorsContainer) return;
-  
+
   // Limpiar indicadores existentes
   indicatorsContainer.innerHTML = '';
-  
+
   // Generar indicadores basados en bannerData
   bannerData.forEach((banner, index) => {
     const indicator = document.createElement('div');
     indicator.className = `welcome__banner-indicator${index === 0 ? ' active' : ''}`;
     indicator.setAttribute('data-index', index);
-    
+
     // Agregar evento click para navegar directamente al banner
     indicator.addEventListener('click', () => {
       currentBannerIndex = index;
       changeBannerToIndex(index);
     });
-    
+
     indicatorsContainer.appendChild(indicator);
   });
-  
+
   console.log(`✅ Generados ${bannerData.length} indicadores del banner`);
 }
 
@@ -199,10 +199,10 @@ function changeBannerToIndex(targetIndex) {
   const welcomeImg = document.querySelector('.welcome__banner');
   const indicators = document.querySelectorAll('.welcome__banner-indicator');
   if (!welcomeImg) return;
-  
+
   // Cambiar imagen
   welcomeImg.src = bannerData[targetIndex];
-  
+
   // Actualizar indicadores
   indicators.forEach((indicator, index) => {
     indicator.classList.toggle('active', index === targetIndex);
@@ -213,33 +213,33 @@ function changeBannerToIndex(targetIndex) {
 function loadWelcomeBanner() {
   const welcomeContainer = document.querySelector('.welcome__banner-container');
   const welcomeImg = document.querySelector('.welcome__banner');
-  
+
   if (!welcomeContainer || !welcomeImg) return;
-  
+
   // ✅ AQUÍ SE GENERAN LOS INDICADORES
   generateBannerIndicators();
-  
+
   // Crear una imagen para precargar
   const img = new Image();
   img.src = welcomeImg.src;
-  
+
   // Cuando la imagen esté cargada, ejecutar la animación
   img.onload = () => {
     welcomeContainer.classList.add('show');
   };
-  
+
   // Fallback: Si la imagen ya está en caché, ejecutar inmediatamente
   if (img.complete) {
     welcomeContainer.classList.add('show');
   }
-  
+
   // Timeout de seguridad: mostrar después de 1 segundo máximo
   setTimeout(() => {
     if (!welcomeContainer.classList.contains('show')) {
       welcomeContainer.classList.add('show');
     }
   }, 1000);
-  
+
   console.log('✅ Welcome banner cargado con indicadores dinámicos');
 }
 
@@ -317,20 +317,20 @@ function renderSlides() {
         <div class="container-card__items">
           <ul class="card__items card__items--${idx + 1}">
             ${Object.entries(card.items).map(([key, value], i) => {
-                let label = '';
-                if (key === 'paginas') label = 'Páginas';
-                else if (key === 'secciones') label = 'Secciones';
-                else if (key === 'productos') label = 'Productos';
-                else label = key.charAt(0).toUpperCase() + key.slice(1);
+    let label = '';
+    if (key === 'paginas') label = 'Páginas';
+    else if (key === 'secciones') label = 'Secciones';
+    else if (key === 'productos') label = 'Productos';
+    else label = key.charAt(0).toUpperCase() + key.slice(1);
 
-                return `<li>
+    return `<li>
                   <div class="card__item-value card__item-value--${idx + 1}">
                     <span>${value}</span>
                   </div>
                   <span>${label}</span>
                 </li>`;
-              }).join('')
-             }
+  }).join('')
+    }
           </ul>
         </div>
         
@@ -404,16 +404,23 @@ function renderSlides() {
              <p> Elegí el medio de pago que mas te convenga y contactanos para facilitarte el link de pago.</p> 
              
               <ul class="list-card__price-info-text-bottom">
-                <li>Tarjeta de crédito</li>
-                <li>Tarjeta de débito</li>
-                <li>Disponible en MercadoPago</li>
-                <li>Cuotas sin tarjeta</li>
-                <li>Transferencia (-10% off)</li>
+                <li>10% Off
+                  <ul class="payment-subitems">
+                    <li>Tarjeta de débito</li>
+                    <li>Disponible en MercadoPago</li>
+                    <li>Cuotas sin tarjeta</li>
+                    <li>Transferencia</li>
+                  </ul>
+                  
+                </li>
               </ul>
-              
+
+              <p class="card__credit-card-title">Tarjeta de crédito</p>
               <div class="container-card__price-info-text-payment">
               <p> Hasta 3 cuotas sin interes </p>  
               </div>    
+              
+              
 
 
           </div>
@@ -427,67 +434,67 @@ function renderSlides() {
 
 
 function addPriceInfoListeners() {
-    // ✅ FUNCIÓN DE TAP ULTRA RÁPIDA PARA MÓVILES
-    function handleInstantTap(element, callback) {
-        if ('ontouchstart' in window) {
-            element.addEventListener('touchstart', (e) => {
-                e.preventDefault();
-                element.style.transform = 'translateZ(0) scale(0.95)';
-                element.style.transition = 'none';
-            }, { passive: false });
-            
-            element.addEventListener('touchend', (e) => {
-                e.preventDefault();
-                element.style.transform = 'translateZ(0) scale(1)';
-                element.style.transition = 'none';
-                if (callback) callback();
-            }, { passive: false });
-        } else {
-            element.addEventListener('click', callback);
-        }
+  // ✅ FUNCIÓN DE TAP ULTRA RÁPIDA PARA MÓVILES
+  function handleInstantTap(element, callback) {
+    if ('ontouchstart' in window) {
+      element.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        element.style.transform = 'translateZ(0) scale(0.95)';
+        element.style.transition = 'none';
+      }, { passive: false });
+
+      element.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        element.style.transform = 'translateZ(0) scale(1)';
+        element.style.transition = 'none';
+        if (callback) callback();
+      }, { passive: false });
+    } else {
+      element.addEventListener('click', callback);
     }
+  }
 
-    // ✅ BOTÓN DE INFORMACIÓN - INSTANTÁNEO
-    document.querySelectorAll('.card__price-info-icon').forEach(iconDiv => {
-        handleInstantTap(iconDiv, () => {
-            const card = iconDiv.closest('.card');
-            const layers = card.querySelectorAll('.card__price-maintenance, .card__price-payment');
-            
-            // Cerrar otras capas instantáneamente
-            layers.forEach(layer => layer.classList.remove('open'));
-            
-            // Toggle información instantáneamente
-            card.querySelector('.card__price-info').classList.toggle('open');
-        });
-    });
+  // ✅ BOTÓN DE INFORMACIÓN - INSTANTÁNEO
+  document.querySelectorAll('.card__price-info-icon').forEach(iconDiv => {
+    handleInstantTap(iconDiv, () => {
+      const card = iconDiv.closest('.card');
+      const layers = card.querySelectorAll('.card__price-maintenance, .card__price-payment');
 
-    // ✅ BOTÓN DE MANTENIMIENTO - INSTANTÁNEO
-    document.querySelectorAll('.card__maintenance-button').forEach(maintenanceButton => {
-        handleInstantTap(maintenanceButton, () => {
-            const card = maintenanceButton.closest('.card');
-            const layers = card.querySelectorAll('.card__price-info, .card__price-payment');
-            
-            // Cerrar otras capas instantáneamente
-            layers.forEach(layer => layer.classList.remove('open'));
-            
-            // Toggle mantenimiento instantáneamente
-            card.querySelector('.card__price-maintenance').classList.toggle('open');
-        });
-    });
+      // Cerrar otras capas instantáneamente
+      layers.forEach(layer => layer.classList.remove('open'));
 
-    // ✅ BOTÓN DE PAGO - INSTANTÁNEO
-    document.querySelectorAll('.card__pay-button').forEach(payButton => {
-        handleInstantTap(payButton, () => {
-            const card = payButton.closest('.card');
-            const layers = card.querySelectorAll('.card__price-info, .card__price-maintenance');
-            
-            // Cerrar otras capas instantáneamente
-            layers.forEach(layer => layer.classList.remove('open'));
-            
-            // Toggle pago instantáneamente
-            card.querySelector('.card__price-payment').classList.toggle('open');
-        });
+      // Toggle información instantáneamente
+      card.querySelector('.card__price-info').classList.toggle('open');
     });
+  });
+
+  // ✅ BOTÓN DE MANTENIMIENTO - INSTANTÁNEO
+  document.querySelectorAll('.card__maintenance-button').forEach(maintenanceButton => {
+    handleInstantTap(maintenanceButton, () => {
+      const card = maintenanceButton.closest('.card');
+      const layers = card.querySelectorAll('.card__price-info, .card__price-payment');
+
+      // Cerrar otras capas instantáneamente
+      layers.forEach(layer => layer.classList.remove('open'));
+
+      // Toggle mantenimiento instantáneamente
+      card.querySelector('.card__price-maintenance').classList.toggle('open');
+    });
+  });
+
+  // ✅ BOTÓN DE PAGO - INSTANTÁNEO
+  document.querySelectorAll('.card__pay-button').forEach(payButton => {
+    handleInstantTap(payButton, () => {
+      const card = payButton.closest('.card');
+      const layers = card.querySelectorAll('.card__price-info, .card__price-maintenance');
+
+      // Cerrar otras capas instantáneamente
+      layers.forEach(layer => layer.classList.remove('open'));
+
+      // Toggle pago instantáneamente
+      card.querySelector('.card__price-payment').classList.toggle('open');
+    });
+  });
 }
 renderSlides();
 addPriceInfoListeners();
@@ -584,7 +591,7 @@ function handleTabClick(e) {
   const clicked = e.currentTarget;
   // Si ya está activo, no hagas nada
   if (clicked.classList.contains('active')) return;
-  
+
   // Llamar a la animación
   animateTabCardChange(clicked.dataset.service);
 }
@@ -599,7 +606,7 @@ function animateTabCardChange(serviceKey) {
   if (!service || !body) return;
 
   let card = body.querySelector('.tab__card');
-  
+
   if (!card) {
     // Crear la tarjeta inicial CON los tabs dentro
     body.innerHTML = `
@@ -620,7 +627,7 @@ function animateTabCardChange(serviceKey) {
       </div>
     `;
     card = body.querySelector('.tab__card');
-    
+
     // Aplicar fondo inicial
     if (service.bg) {
       card.style.backgroundImage = `url('${service.bg}')`;
@@ -637,7 +644,7 @@ function animateTabCardChange(serviceKey) {
   if (card.classList.contains('animating')) {
     return;
   }
-  
+
   card.classList.add('animating');
 
   // Elementos del contenido
@@ -662,14 +669,14 @@ function animateTabCardChange(serviceKey) {
   // ✅ PRECARGAR la nueva imagen
   const newImage = new Image();
   newImage.src = service.bg;
-  
+
   newImage.onload = () => {
     // ✅ PASO 1: Animar salida del contenido
     titleContainer.style.opacity = '0';
     titleContainer.style.transform = 'translateY(-10px)';
     titleContainer.style.filter = 'blur(3px)';
     titleContainer.style.transition = 'opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease';
-    
+
     contentContainer.style.opacity = '0';
     contentContainer.style.transform = 'translateY(-10px)';
     contentContainer.style.filter = 'blur(3px)';
@@ -693,7 +700,7 @@ function animateTabCardChange(serviceKey) {
         titleContainer.style.opacity = '1';
         titleContainer.style.transform = 'translateY(0)';
         titleContainer.style.filter = 'blur(0)';
-        
+
         contentContainer.style.opacity = '1';
         contentContainer.style.transform = 'translateY(0)';
         contentContainer.style.filter = 'blur(0)';
@@ -704,12 +711,12 @@ function animateTabCardChange(serviceKey) {
           titleContainer.style.opacity = '';
           titleContainer.style.transform = '';
           titleContainer.style.filter = '';
-          
+
           contentContainer.style.transition = '';
           contentContainer.style.opacity = '';
           contentContainer.style.transform = '';
           contentContainer.style.filter = '';
-          
+
           card.classList.remove('animating');
         }, 350);
       }, 50);
@@ -741,7 +748,7 @@ const faqData = [
     question: "¿Cuánto tiempo tarda en estar lista?",
     answer: "Depende del plan y de cuánto contenido tengas, pero en general la web está lista entre 7 y 30 días hábiles desde que nos pasás todo lo necesario."
   },
-   {
+  {
     question: "¿Puedo ver un avance?",
     answer: "Sí, durante el proceso de desarrollo podrás ver avances. Queremos que estés al tanto de cómo va tomando forma tu sitio."
   },
@@ -854,263 +861,263 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ✅ FUNCIÓN initTypewriter()
 function initTypewriter() {
-    const typewriterElement = document.querySelector('.typewriter');
-    if (!typewriterElement) return;
+  const typewriterElement = document.querySelector('.typewriter');
+  if (!typewriterElement) return;
 
-    const words = typewriterElement.getAttribute('data-words').split(',');
-    let currentWordIndex = 0;
-    let currentText = '';
-    let isDeleting = false;
-    let typeSpeed = 200;
-    let deleteSpeed = 50;
-    let pauseTime = 2500;
-    let animationId;
-    let isPaused = false;
+  const words = typewriterElement.getAttribute('data-words').split(',');
+  let currentWordIndex = 0;
+  let currentText = '';
+  let isDeleting = false;
+  let typeSpeed = 200;
+  let deleteSpeed = 50;
+  let pauseTime = 2500;
+  let animationId;
+  let isPaused = false;
 
-    // ✅ Variables para detectar scroll y touch
-    let isScrolling = false;
-    let isTouching = false;
-    let scrollTimeout;
-    let touchTimeout;
-    let lastScrollTime = 0;
-    let lastTouchTime = 0;
+  // ✅ Variables para detectar scroll y touch
+  let isScrolling = false;
+  let isTouching = false;
+  let scrollTimeout;
+  let touchTimeout;
+  let lastScrollTime = 0;
+  let lastTouchTime = 0;
 
-    // ✅ Usar requestAnimationFrame para mejor rendimiento
-    let lastTime = 0;
-    let nextUpdateTime = 0;
+  // ✅ Usar requestAnimationFrame para mejor rendimiento
+  let lastTime = 0;
+  let nextUpdateTime = 0;
 
-    function type(currentTime) {
-        // Solo actualizar cuando sea necesario y no esté pausado
-        if (currentTime >= nextUpdateTime && !isPaused) {
-            const currentWord = words[currentWordIndex];
-            
-            if (isDeleting) {
-                currentText = currentWord.substring(0, currentText.length - 1);
-                nextUpdateTime = currentTime + deleteSpeed;
-            } else {
-                currentText = currentWord.substring(0, currentText.length + 1);
-                nextUpdateTime = currentTime + 150;
-            }
+  function type(currentTime) {
+    // Solo actualizar cuando sea necesario y no esté pausado
+    if (currentTime >= nextUpdateTime && !isPaused) {
+      const currentWord = words[currentWordIndex];
 
-            // ✅ Batch DOM update - solo si cambió el contenido
-            const newContent = `${currentText}<span class="typewriter-cursor">|</span>`;
-            if (typewriterElement.innerHTML !== newContent) {
-                typewriterElement.innerHTML = newContent;
-            }
+      if (isDeleting) {
+        currentText = currentWord.substring(0, currentText.length - 1);
+        nextUpdateTime = currentTime + deleteSpeed;
+      } else {
+        currentText = currentWord.substring(0, currentText.length + 1);
+        nextUpdateTime = currentTime + 150;
+      }
 
-            if (!isDeleting && currentText === currentWord) {
-                nextUpdateTime = currentTime + pauseTime;
-                isDeleting = true;
-            } else if (isDeleting && currentText === '') {
-                isDeleting = false;
-                currentWordIndex = (currentWordIndex + 1) % words.length;
-                nextUpdateTime = currentTime + 500;
-            }
-        }
+      // ✅ Batch DOM update - solo si cambió el contenido
+      const newContent = `${currentText}<span class="typewriter-cursor">|</span>`;
+      if (typewriterElement.innerHTML !== newContent) {
+        typewriterElement.innerHTML = newContent;
+      }
 
-        // ✅ Continuar solo si no está pausado
-        if (!isPaused) {
-            animationId = requestAnimationFrame(type);
-        }
+      if (!isDeleting && currentText === currentWord) {
+        nextUpdateTime = currentTime + pauseTime;
+        isDeleting = true;
+      } else if (isDeleting && currentText === '') {
+        isDeleting = false;
+        currentWordIndex = (currentWordIndex + 1) % words.length;
+        nextUpdateTime = currentTime + 500;
+      }
     }
 
-    // ✅ Función para pausar animación
-    function pauseAnimation() {
-        if (!isPaused) {
-            isPaused = true;
-            if (animationId) {
-                cancelAnimationFrame(animationId);
-                animationId = null;
-            }
-        }
+    // ✅ Continuar solo si no está pausado
+    if (!isPaused) {
+      animationId = requestAnimationFrame(type);
+    }
+  }
+
+  // ✅ Función para pausar animación
+  function pauseAnimation() {
+    if (!isPaused) {
+      isPaused = true;
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+        animationId = null;
+      }
+    }
+  }
+
+  // ✅ Función para reanudar animación
+  function resumeAnimation() {
+    if (isPaused) {
+      isPaused = false;
+      if (!animationId) {
+        animationId = requestAnimationFrame(type);
+      }
+    }
+  }
+
+  // ✅ MANEJO DE SCROLL OPTIMIZADO
+  function handleScroll() {
+    const now = Date.now();
+    lastScrollTime = now;
+
+    if (!isScrolling) {
+      isScrolling = true;
+      pauseAnimation();
     }
 
-    // ✅ Función para reanudar animación
-    function resumeAnimation() {
-        if (isPaused) {
-            isPaused = false;
-            if (!animationId) {
-                animationId = requestAnimationFrame(type);
-            }
-        }
-    }
+    // Limpiar timeout previo
+    clearTimeout(scrollTimeout);
 
-    // ✅ MANEJO DE SCROLL OPTIMIZADO
-    function handleScroll() {
-        const now = Date.now();
-        lastScrollTime = now;
-        
-        if (!isScrolling) {
-            isScrolling = true;
-            pauseAnimation();
-        }
-
-        // Limpiar timeout previo
-        clearTimeout(scrollTimeout);
-        
-        // Reanudar después de que pare el scroll
-        scrollTimeout = setTimeout(() => {
-            if (Date.now() - lastScrollTime >= 150) {
-                isScrolling = false;
-                if (!isTouching) {
-                    resumeAnimation();
-                }
-            }
-        }, 150);
-    }
-
-    // ✅ MANEJO DE TOUCH PARA MÓVILES
-    function handleTouchStart(e) {
-        lastTouchTime = Date.now();
-        isTouching = true;
-        pauseAnimation();
-    }
-
-    function handleTouchMove(e) {
-        lastTouchTime = Date.now();
+    // Reanudar después de que pare el scroll
+    scrollTimeout = setTimeout(() => {
+      if (Date.now() - lastScrollTime >= 150) {
+        isScrolling = false;
         if (!isTouching) {
-            isTouching = true;
-            pauseAnimation();
+          resumeAnimation();
         }
-    }
+      }
+    }, 150);
+  }
 
-    function handleTouchEnd(e) {
-        clearTimeout(touchTimeout);
-        
-        // Reanudar después de un pequeño delay
-        touchTimeout = setTimeout(() => {
-            if (Date.now() - lastTouchTime >= 200) {
-                isTouching = false;
-                if (!isScrolling) {
-                    resumeAnimation();
-                }
-            }
-        }, 200);
-    }
+  // ✅ MANEJO DE TOUCH PARA MÓVILES
+  function handleTouchStart(e) {
+    lastTouchTime = Date.now();
+    isTouching = true;
+    pauseAnimation();
+  }
 
-    // ✅ MANEJO DE VISIBILIDAD
-    function handleVisibilityChange() {
-        if (document.hidden) {
-            pauseAnimation();
-        } else if (!isScrolling && !isTouching) {
-            resumeAnimation();
+  function handleTouchMove(e) {
+    lastTouchTime = Date.now();
+    if (!isTouching) {
+      isTouching = true;
+      pauseAnimation();
+    }
+  }
+
+  function handleTouchEnd(e) {
+    clearTimeout(touchTimeout);
+
+    // Reanudar después de un pequeño delay
+    touchTimeout = setTimeout(() => {
+      if (Date.now() - lastTouchTime >= 200) {
+        isTouching = false;
+        if (!isScrolling) {
+          resumeAnimation();
         }
+      }
+    }, 200);
+  }
+
+  // ✅ MANEJO DE VISIBILIDAD
+  function handleVisibilityChange() {
+    if (document.hidden) {
+      pauseAnimation();
+    } else if (!isScrolling && !isTouching) {
+      resumeAnimation();
     }
+  }
 
-    // ✅ Intersection Observer para pausar cuando no sea visible
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                if (!isPaused && !isScrolling && !isTouching) {
-                    resumeAnimation();
-                }
-            } else {
-                pauseAnimation();
-            }
-        });
-    }, { threshold: 0.1 });
-
-    observer.observe(typewriterElement);
-
-    // ✅ AGREGAR TODOS LOS EVENT LISTENERS
-    
-    // Scroll listeners (pasivo para mejor rendimiento)
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    // Touch listeners para móviles
-    document.addEventListener('touchstart', handleTouchStart, { passive: true });
-    document.addEventListener('touchmove', handleTouchMove, { passive: true });
-    document.addEventListener('touchend', handleTouchEnd, { passive: true });
-    document.addEventListener('touchcancel', handleTouchEnd, { passive: true });
-    
-    // Visibilidad de la página
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    
-    // Pausar durante resize
-    window.addEventListener('resize', () => {
+  // ✅ Intersection Observer para pausar cuando no sea visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (!isPaused && !isScrolling && !isTouching) {
+          resumeAnimation();
+        }
+      } else {
         pauseAnimation();
-        setTimeout(() => {
-            if (!isScrolling && !isTouching) {
-                resumeAnimation();
-            }
-        }, 300);
+      }
     });
+  }, { threshold: 0.1 });
 
-    // ✅ INICIAR DESPUÉS DE UN DELAY
+  observer.observe(typewriterElement);
+
+  // ✅ AGREGAR TODOS LOS EVENT LISTENERS
+
+  // Scroll listeners (pasivo para mejor rendimiento)
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  // Touch listeners para móviles
+  document.addEventListener('touchstart', handleTouchStart, { passive: true });
+  document.addEventListener('touchmove', handleTouchMove, { passive: true });
+  document.addEventListener('touchend', handleTouchEnd, { passive: true });
+  document.addEventListener('touchcancel', handleTouchEnd, { passive: true });
+
+  // Visibilidad de la página
+  document.addEventListener('visibilitychange', handleVisibilityChange);
+
+  // Pausar durante resize
+  window.addEventListener('resize', () => {
+    pauseAnimation();
     setTimeout(() => {
-        if (!isPaused) {
-            animationId = requestAnimationFrame(type);
-        }
-    }, 1000);
+      if (!isScrolling && !isTouching) {
+        resumeAnimation();
+      }
+    }, 300);
+  });
 
-    // ✅ CLEANUP FUNCTION
-    return () => {
-        if (animationId) {
-            cancelAnimationFrame(animationId);
-        }
-        window.removeEventListener('scroll', handleScroll);
-        document.removeEventListener('touchstart', handleTouchStart);
-        document.removeEventListener('touchmove', handleTouchMove);
-        document.removeEventListener('touchend', handleTouchEnd);
-        document.removeEventListener('touchcancel', handleTouchEnd);
-        document.removeEventListener('visibilitychange', handleVisibilityChange);
-        observer.disconnect();
-        clearTimeout(scrollTimeout);
-        clearTimeout(touchTimeout);
-    };
+  // ✅ INICIAR DESPUÉS DE UN DELAY
+  setTimeout(() => {
+    if (!isPaused) {
+      animationId = requestAnimationFrame(type);
+    }
+  }, 1000);
+
+  // ✅ CLEANUP FUNCTION
+  return () => {
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+    }
+    window.removeEventListener('scroll', handleScroll);
+    document.removeEventListener('touchstart', handleTouchStart);
+    document.removeEventListener('touchmove', handleTouchMove);
+    document.removeEventListener('touchend', handleTouchEnd);
+    document.removeEventListener('touchcancel', handleTouchEnd);
+    document.removeEventListener('visibilitychange', handleVisibilityChange);
+    observer.disconnect();
+    clearTimeout(scrollTimeout);
+    clearTimeout(touchTimeout);
+  };
 }
 
 // ✅ TYPEWRITER ULTRA SIMPLIFICADO
 function initTypewriterOptimized() {
-    const element = document.querySelector('.typewriter');
-    if (!element) return;
+  const element = document.querySelector('.typewriter');
+  if (!element) return;
 
-    const words = element.getAttribute('data-words').split(',');
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
+  const words = element.getAttribute('data-words').split(',');
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
 
-    function typeStep() {
-        const currentWord = words[wordIndex];
-        
-        if (isDeleting) {
-            charIndex--;
-        } else {
-            charIndex++;
-        }
+  function typeStep() {
+    const currentWord = words[wordIndex];
 
-        element.innerHTML = `${currentWord.substring(0, charIndex)}<span class="typewriter-cursor">|</span>`;
-
-        let delay = isDeleting ? 50 : 150;
-
-        if (!isDeleting && charIndex === currentWord.length) {
-            delay = 2000;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            delay = 300;
-        }
-
-        setTimeout(typeStep, delay);
+    if (isDeleting) {
+      charIndex--;
+    } else {
+      charIndex++;
     }
 
-    setTimeout(typeStep, 1000);
+    element.innerHTML = `${currentWord.substring(0, charIndex)}<span class="typewriter-cursor">|</span>`;
+
+    let delay = isDeleting ? 50 : 150;
+
+    if (!isDeleting && charIndex === currentWord.length) {
+      delay = 2000;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      delay = 300;
+    }
+
+    setTimeout(typeStep, delay);
+  }
+
+  setTimeout(typeStep, 1000);
 }
 
 // ✅ UN SOLO OBSERVER UNIVERSAL
 const universalObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            universalObserver.unobserve(entry.target);
-        }
-    });
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      universalObserver.unobserve(entry.target);
+    }
+  });
 }, { threshold: 0.1 });
 
 // Observar todo de una vez
 document.querySelectorAll('.section__title, .swiper, .tabs__container, .option__tabs, .contact__info, .contact__form')
-    .forEach(el => universalObserver.observe(el));
+  .forEach(el => universalObserver.observe(el));
 
 
 

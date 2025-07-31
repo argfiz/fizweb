@@ -1631,7 +1631,7 @@ body:not(.contact-page) {
     padding: 0;
     padding-top: 25px;
     padding-bottom: 0px;
-    border-top: 1px solid var(--color-secondary);
+    
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -1730,16 +1730,17 @@ body:not(.contact-page) {
     justify-content: center;
     text-align: center;
     margin: 20px auto;
+    margin-top: 0px !important;
     padding: 15px 0px;
     max-width: 100%;
     width: 100%;
     
     /* ✅ Diseño visual elegante */
-    background: linear-gradient(135deg, rgba(247, 15, 119, 0.1), rgba(247, 15, 119, 0.05));
-    border: 2px solid rgba(247, 15, 119, 0.3);
+    background: linear-gradient(135deg, rgb(247, 15, 119));
+    
     border-radius: 0px;
     box-shadow: 
-        0 4px 15px rgba(247, 15, 119, 0.2),
+        0 4px 15px rgba(247, 15, 119, 0.2),W
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
     
     /* ✅ Efectos sutiles */
@@ -1752,11 +1753,10 @@ body:not(.contact-page) {
 
 /* ✅ Efecto de hover elegante */
 .container-card__price-info-text-payment:hover {
-    transform: translateY(-2px);
     box-shadow: 
         0 8px 25px rgba(247, 15, 119, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.15);
-    border-color: rgba(247, 15, 119, 0.5);
+    
 }
 
 /* ✅ Brillo sutil animado */
@@ -3342,5 +3342,88 @@ html {
     100% {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+
+
+/* ✅ ESTILOS PARA SUBITEMS DE PAGO 
+====================================
+==================================*/
+.payment-subitems {
+    list-style: none !important;
+    padding: 0 !important;
+    padding-left: 5px !important;
+    margin: 8px 0 0 0 !important;
+    background: transparent !important;
+}
+
+.payment-subitems li {
+    position: relative !important;
+    padding: 6px 0 6px 25px !important;
+    color: #fff !important;
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;
+    background: transparent !important;
+}
+
+.payment-subitems li::before {
+    content: '➤' !important;
+    position: absolute !important;
+    left: 0px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: auto !important;
+    height: auto !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: var(--color-secondary) !important;
+    font-size: 0.8rem !important;
+}
+
+/* ✅ El item principal "10% Off" */
+.card__price-payment .card__price-info-text li:has(.payment-subitems) {
+    /*background: linear-gradient(135deg, rgba(247, 15, 119, 0.2), rgba(247, 15, 119, 0.1)) !important;*/
+    font-weight: 800 !important;
+    color: var(--color-secondary) !important;
+    font-size: 1.8rem !important;
+}
+/* ✅ ASEGURAR QUE EL PUNTO desaparezca */
+.card__price-payment .card__price-info-text li:has(.payment-subitems)::before {
+    content: none !important;
+}
+
+
+/* ✅ Responsive para móviles */
+@media (max-width: 600px) {
+    .payment-subitems {
+        padding-left: 15px !important;
+    }
+    
+    .payment-subitems li {
+        font-size: 0.85rem !important;
+        padding: 5px 0 5px 20px !important;
+    }
+}
+
+
+
+/* ✅ CENTRAR TÍTULO "TARJETA DE CRÉDITO" */
+.card__credit-card-title {
+    text-align: center !important;
+    margin: 20px auto 10px auto !important;
+    padding: 0 !important;
+    color: #fff !important;
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+/* ✅ Responsive para móviles */
+@media (max-width: 600px) {
+    .card__credit-card-title {
+        font-size: 1rem !important;
+        margin: 15px auto 8px auto !important;
     }
 }
