@@ -401,22 +401,21 @@ function renderSlides() {
         <div class="card__price-payment">
           <div class="card__price-info-text">
              <h4>Eleginos:</h4>
-             <p> Seleccioná lo que deseas y comenzá con tranquilidad tu incursion a lo digital.</p> 
+             <p> Elegí el medio de pago que mas te convenga y contactanos para facilitarte el link de pago.</p> 
              
-             <p>  
-                <span>Podés comenzar aqui:</span>  
-                  <a href="${card.paymentLink}" class="card__pay-link" target="_blank">
-                    <button class="card__pay-button--2">Pagar sitio web</button>
-                  </a>
-              </p>
+              <ul class="list-card__price-info-text-bottom">
+                <li>Tarjeta de crédito</li>
+                <li>Tarjeta de débito</li>
+                <li>Disponible en MercadoPago</li>
+                <li>Cuotas sin tarjeta</li>
+                <li>Transferencia (-10% off)</li>
+              </ul>
+              
+              <div class="container-card__price-info-text-payment">
+              <p> Hasta 3 cuotas sin interes </p>  
+              </div>    
 
-              <p>  
-               <span>Mantenimiento:</span>  
-                <a href="${card.paymentLink}" class="card__pay-link" target="_blank">
-                  <button class="card__pay-button--3">Suscribite ahora</button>
-                </a>
-              </p>
-            
+
           </div>
         </div>           
 
