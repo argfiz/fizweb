@@ -3398,9 +3398,9 @@ html {
 
 /* ✅ CENTRAR TÍTULO "TARJETA DE CRÉDITO" */
 .card__credit-card-title {
-    text-align: center !important;
-    margin: 15px auto 10px auto !important;
+    margin: 10px auto 10px auto !important;
     padding: 0 !important;
+    padding-left: 25px !important;
     color: #fff !important;
     font-size: 1.1rem !important;
     font-weight: 500 !important;
