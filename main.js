@@ -20,9 +20,21 @@ hamburger.addEventListener('click', () => {
 // Cerrar menú al hacer click en un link del menú
 document.querySelectorAll('.nav-menu__link').forEach(link => {
   link.addEventListener('click', () => {
+    const navMenu = document.getElementById('navMenu');
+    const hamburger = document.getElementById('hamburger');
+    
+    // ✅ DESACTIVAR TRANSICIONES TEMPORALMENTE
+    navMenu.style.transition = 'none';
+    
+    // ✅ CERRAR INMEDIATAMENTE
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
     document.body.style.overflow = '';
+    
+    // ✅ RESTAURAR TRANSICIONES DESPUÉS DEL CIERRE
+    setTimeout(() => {
+      navMenu.style.transition = '';
+    }, 50);
   });
 });
 // Resalta el nav-menu__link activo
