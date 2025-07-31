@@ -3386,6 +3386,7 @@ html {
     font-weight: 800 !important;
     color: var(--color-secondary) !important;
     font-size: 1.8rem !important;
+    padding-left: 25px !important;
 }
 /* ✅ ASEGURAR QUE EL PUNTO desaparezca */
 .card__price-payment .card__price-info-text li:has(.payment-subitems)::before {
