@@ -3353,14 +3353,13 @@ html {
 .payment-subitems {
     list-style: none !important;
     padding: 0 !important;
-    padding-left: 5px !important;
     margin: 8px 0 0 0 !important;
     background: transparent !important;
 }
 
 .payment-subitems li {
     position: relative !important;
-    padding: 6px 0 6px 25px !important;
+    padding: 6px 0 6px 20px !important;
     color: #fff !important;
     font-size: 0.9rem !important;
     font-weight: 400 !important;
@@ -3394,24 +3393,12 @@ html {
 }
 
 
-/* ✅ Responsive para móviles */
-@media (max-width: 600px) {
-    .payment-subitems {
-        padding-left: 15px !important;
-    }
-    
-    .payment-subitems li {
-        font-size: 0.85rem !important;
-        padding: 5px 0 5px 20px !important;
-    }
-}
-
 
 
 /* ✅ CENTRAR TÍTULO "TARJETA DE CRÉDITO" */
 .card__credit-card-title {
     text-align: center !important;
-    margin: 20px auto 10px auto !important;
+    margin: 15px auto 10px auto !important;
     padding: 0 !important;
     color: #fff !important;
     font-size: 1.1rem !important;
@@ -3420,10 +3407,3 @@ html {
     display: block !important;
 }
 
-/* ✅ Responsive para móviles */
-@media (max-width: 600px) {
-    .card__credit-card-title {
-        font-size: 1rem !important;
-        margin: 15px auto 8px auto !important;
-    }
-}
