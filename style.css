@@ -1730,7 +1730,7 @@ body:not(.contact-page) {
     justify-content: center;
     text-align: center;
     margin: 20px auto;
-    padding: 20px 0px;
+    padding: 15px 0px;
     max-width: 100%;
     width: 100%;
     
@@ -1782,7 +1782,7 @@ body:not(.contact-page) {
     margin: 0 !important;
     padding: 0 !important;
     color: #fff !important;
-    font-size: 1.3rem !important;
+    font-size: 1.2rem !important;
     font-weight: 600 !important;
     letter-spacing: 0.5px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
