@@ -275,7 +275,7 @@ const sliderCardsData = [
     nombre: "Inicial",
     subtitulo: "Oportuno para los emprendedores que inician su camino digital y quieren tener presencia en la web.",
     img: "./assets/img/pack-s.jpg",
-    precio: "$200.000",
+    precio: "$250.000",
     precioNota: "Precio Final",
     precioMensual: "$15.000",
     paymentLink: "https://link.mercadopago.com.ar/1", // ✅ Link de pago
@@ -289,7 +289,7 @@ const sliderCardsData = [
     nombre: "Mediano",
     subtitulo: "Ideal para los indecisos y emprendedores en crecimiento que buscan una web más completa.",
     img: "./assets/img/pack-m.jpg",
-    precio: "$400.000",
+    precio: "$500.000",
     precioNota: "Precio Final",
     precioNotaInfo: "./assets/icons/info-icon.svg",
     precioMensual: "$30.000",
@@ -304,7 +304,7 @@ const sliderCardsData = [
     nombre: "Full",
     subtitulo: "Perfecto para quienes buscan una web completa y profesional con todo lo necesario.",
     img: "./assets/img/pack-g.jpg",
-    precio: "$600.000",
+    precio: "$800.000",
     precioNota: "Precio Final",
     precioMensual: "$45.000",
     paymentLink: "https://link.mercadopago.com.ar/3", // ✅ Link de pago
