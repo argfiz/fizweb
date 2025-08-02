@@ -3458,8 +3458,8 @@ html {
 @media (max-width: 400px) {
 
     .tab__card p {
-        font-size: 0.8rem !important;
-        line-height: 1.1 !important; 
+        font-size: 1rem !important;
+        line-height: 1.2 !important; 
     }
     .content__tab__container {
         padding-top: 0;
