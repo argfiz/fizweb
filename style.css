@@ -2466,7 +2466,7 @@ body:not(.contact-page) {
 @media (max-width: 400px) {
 
     .tab__card p {
-        font-size: 1.1rem !important;
+        font-size: 0.8rem !important;
         line-height: 1.1 !important; 
     }
     .content__tab__container {
