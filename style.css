@@ -2466,8 +2466,12 @@ body:not(.contact-page) {
 @media (max-width: 400px) {
 
     .tab__card p {
-        font-size: 1.2rem !important;
-        line-height: 1.3;
+        font-size: 1.1rem !important;
+        line-height: 1.2;
+    }
+    .content__tab__container {
+        padding-top: 0;
+        margin-top: 0;
     }
 }
 
