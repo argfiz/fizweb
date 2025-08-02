@@ -303,7 +303,7 @@ const sliderCardsData = [
   {
     nombre: "Full",
     subtitulo: "Perfecto para quienes buscan una web completa y profesional con todo lo necesario.",
-    img: "./assets/img/pack-g.svg",
+    img: "./assets/img/pack-g.jpg",
     precio: "$600.000",
     precioNota: "Precio Final",
     precioMensual: "$45.000",
