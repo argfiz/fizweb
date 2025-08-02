@@ -2474,11 +2474,11 @@ body:not(.contact-page) {
         margin-top: 0;
     }
      .tabs__details {
-        height: calc(100vh/1.2);
+        height: 100vh !important;
     }
 
     .tabs__body {
-        height: calc(100vh/1.2);
+        height: 100vh !important;
     }
 }
 
