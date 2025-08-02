@@ -3451,3 +3451,25 @@ html {
     width: 100% !important;
     display: block !important;
 }
+
+
+
+
+@media (max-width: 400px) {
+
+    .tab__card p {
+        font-size: 0.8rem !important;
+        line-height: 1.1 !important; 
+    }
+    .content__tab__container {
+        padding-top: 0;
+        margin-top: 0;
+    }
+     .tabs__details {
+        height: 100vh !important;
+    }
+
+    .tabs__body {
+        height: 100vh !important;
+    }
+}
