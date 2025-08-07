@@ -1,0 +1,683 @@
+/* CSS crítico removido - presente en inline CSS para FCP óptimo */
+
+/* ← ESTILOS MOVIDOS DESDE INLINE CSS - Carga asíncrona para mejor performance */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Variables extendidas y transiciones - NO críticas para FCP */
+:root {
+  --color-secondary: #2e0036;
+  --color-dark: #333333;
+  --color-dark2: #111111;
+  --transition-fast: 0.15s ease;
+  --transition-smooth: 0.25s cubic-bezier(.4, 0, .2, 1);
+  /* Variables críticas referenciadas desde inline: --color-primary, --color-light, --font-main */
+}
+
+
+
+/*======================================================================================
+=========================== NAVBAR =================================================
+======================================================================================
+================================================================================== */
+/* ← ESTILOS NAVBAR MOVIDOS DESDE INLINE CSS */
+#main-nav {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition: height var(--transition-smooth), box-shadow var(--transition-fast);
+  contain: layout style;
+}
+
+.logo-nav {
+  cursor: pointer;
+}
+
+.logo-nav img {
+  object-fit: cover;
+  cursor: pointer;
+  transition: height var(--transition-smooth), width var(--transition-smooth);
+}
+
+.logo-nav span {
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: font-size var(--transition-smooth);
+}
+
+.nav-menu__link {
+  padding-bottom: 5px;
+  font-weight: 400;
+  background: transparent;
+  transition: color var(--transition-fast);
+  position: relative;
+  font-family: var(--font-main);
+}
+
+.hamburger {
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: auto;
+  background: none;
+  border: none;
+  position: relative;
+}
+
+.hamburger span {
+  border-radius: 2px;
+  transition: transform var(--transition-smooth), opacity var(--transition-smooth);
+}
+
+
+
+/* ← ESTILOS MÓVIL MOVIDOS DESDE INLINE CSS */
+@media (max-width: 800px) {
+  .nav-menu {
+    padding: 0;
+    transition: transform var(--transition-smooth), opacity var(--transition-fast);
+    box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* ← ESTILOS NAVBAR ADICIONALES - NO críticos, solo interacciones */
+#main-nav.will-change {
+  will-change: height, box-shadow;
+}
+
+#main-nav.scrolled {
+  height: 55px;
+  background: #25002b;
+}
+
+#main-nav.scrolled .logo-nav img {
+  height: 45px;
+  width: 45px;
+}
+
+#main-nav.scrolled .nav-menu .logo-nav__menu img {
+  height: 160px;
+  width: 160px;
+}
+
+#main-nav.scrolled .logo-nav span {
+  font-size: 1.5rem;
+}
+
+.logo-nav__menu {
+  display: none;
+}
+
+.nav-menu__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: width var(--transition-smooth);
+}
+
+.nav-menu__link:hover::after {
+  width: 100%;
+}
+
+.nav-menu__social {
+  display: none;
+}
+
+.nav-menu__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--color-dark);
+  transition: background-color var(--transition-fast);
+}
+
+.nav-menu__social-link:hover {
+  background-color: var(--color-light);
+}
+
+.nav-menu__social-link img {
+  width: 28px;
+  height: 28px;
+  transition: filter var(--transition-fast);
+  filter: brightness(0) invert(1);
+}
+
+.nav-menu__social-link:hover img {
+  filter: brightness(0) invert(0);
+}
+
+.hamburger.will-change span {
+  will-change: transform, opacity;
+}
+
+.nav-menu.will-change {
+  will-change: transform, opacity;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.active span:nth-child(4) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ESCRITORIO: Social links a la derecha de nav links */
+@media (min-width: 801px) {
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+  }
+
+  .nav-menu__list {
+    display: flex;
+    order: 1;
+  }
+
+  .nav-menu__social {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    order: 2;
+    margin-left: auto;
+  }
+}
+
+/* MÓVIL: Estilos adicionales del menú lateral */
+@media (max-width: 800px) {
+  .nav-menu.active {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .logo-nav__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    background: white;
+  }
+
+  .logo-nav__menu img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .nav-menu__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin: 0;
+    order: 1;
+  }
+
+  .nav-menu__list {
+    padding: 0;
+    width: 100%;
+    gap: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 2;
+  }
+
+  .nav-menu__item {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-menu__link {
+    font-size: 1.4rem;
+    font-weight: 400;
+    width: 100%;
+    box-shadow: none;
+    padding: 15px 0;
+    margin: 0;
+  }
+}
+
+/*======================================================================================
+=========================== HERO SECTION =================================================
+======================================================================================
+================================================================================== */
+/* ← ESTILOS HERO MOVIDOS DESDE INLINE CSS */
+.hero-section {
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 2;
+}
+
+.hero-highlight {
+  animation: gradientShift 6s ease-in-out infinite;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  /* ← OPTIMIZACIÓN CRÍTICA: ZERO CLS - Solo compositor layer properties */
+  contain: layout style paint;
+  will-change: background-position, filter;
+}
+
+@keyframes gradientShift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+    transform: translate3d(0, 0, 0);
+    /* ← COMPENSACIÓN VISUAL: Variación de filtro sin CLS */
+    filter: brightness(1) saturate(1);
+  }
+
+  50% {
+    background-position: 100% 50%;
+    transform: translate3d(0, 0, 0);
+    /* ← COMPENSACIÓN VISUAL: Micro-intensificación sin layout shift */
+    filter: brightness(1.05) saturate(1.1);
+  }
+}
+
+.btn-primary,
+.btn-secondary {
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.btn-primary {
+  box-shadow: 0 4px 15px rgba(101, 1, 119, 0.4);
+}
+
+.btn-secondary {
+  backdrop-filter: blur(10px);
+}
+
+/* ← OPTIMIZACIÓN: Respetar preferencias de usuario para reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .hero-highlight {
+    animation: none;
+    background-position: 0% 50%;
+    /* Posición estática */
+  }
+}
+
+/* ← OPTIMIZACIÓN: Pausar animación en dispositivos de batería baja */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-highlight {
+    animation-play-state: running;
+  }
+}
+
+/* Hover effects de botones - NO críticos */
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(101, 1, 119, 0.6);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ====== WHATSAPP FLOAT OPTIMIZADO ====== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+  color: white;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.whatsapp-float img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* ====== RESPONSIVE HERO OPTIMIZADO ====== */
+@media (max-width: 800px) {
+  /* Hero responsive crítico removido - presente en inline CSS */
+
+  .hero-container {
+    max-width: 100%;
+  }
+
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+  }
+  .whatsapp-float img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+}
+
+/*======================================================================================
+=========================== GALLERY SWIPER ============================================
+======================================================================================
+================================================================================== */
+.banner-container {
+  margin-top: 50px;
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.gallery-swiper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.gallery-swiper .swiper-slide {
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+/* Pagination - Posicionada debajo de la galería */
+.banner-container .swiper-pagination {
+  position: relative ;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.gallery-swiper .swiper-pagination-bullet {
+  background: #ffffff;
+  opacity: 1;
+}
+
+.gallery-swiper .swiper-pagination-bullet-active {
+  background: var(--color-primary);
+}
+
+/* Navigation */
+.gallery-swiper .swiper-button-next,
+.gallery-swiper .swiper-button-prev {
+  color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: -20px;
+}
+
+.gallery-swiper .swiper-button-next:after,
+.gallery-swiper .swiper-button-prev:after {
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner-container {
+    margin: 50px auto;
+  }
+  
+  .gallery-swiper .swiper-slide img {
+    height: 300px;
+  }
+  
+  .banner-container .swiper-pagination {
+    margin-top: 15px;
+  }
+}
+
+/*======================================================================================
+=========================== TITLE CONTAINER ==========================================
+======================================================================================
+================================================================================== */
+.title-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1200px;
+  margin: 70px auto 0;
+  padding: 0 40px;
+  color: white;
+}
+
+.title-container h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-family: var(--font-main);
+  line-height: 1.2;
+  background: linear-gradient(45deg, var(--color-primary), #8338ec, #ff6b6b);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 6s ease-in-out infinite;
+  letter-spacing: -1px;
+  
+}
+
+.title-container p {
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  line-height: 1.6;
+  opacity: 0.9;
+  font-family: var(--font-main);
+  max-width: 800px;
+  margin:  0 auto 30px;
+  font-weight: 400;
+  
+}
+.title-container .btn-secondary {
+width: 280px;
+ }
+
+ 
+
+/* Responsive para title-container */
+@media (max-width: 800px) {
+  .title-container {
+    padding: 0 25px;
+  }
+  
+  .title-container h2 {
+    margin-bottom: 20px;
+    margin-top: 25px;
+  }
+  
+  .title-container p {
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .title-container {
+    margin: 0px auto 0;
+    padding: 0 20px;
+  }
+}
+
+
+/*======================================================================================
+=========================== FOOTER ===================================================
+======================================================================================
+================================================================================== */
+:root {
+    /* Footer básico reutilizable */
+    --footer-bg: #040406;
+    --footer-text: #fff;
+    --footer-link-hover: #c300ff;
+    --footer-copy: #bbb;
+    --footer-padding: 25px 0 10px 0;
+    --footer-font-size: 1rem;
+    --footer-max-width: 1100px;
+    --footer-padding-x: 24px;
+    --footer-link-margin: 0 12px;
+    --footer-social-size: 1.7rem;
+    --footer-social-hover-size: 2rem;
+    --footer-copy-size: 14px;
+}
+
+footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    padding: var(--footer-padding);
+    font-size: var(--footer-font-size);
+}
+
+.footer__container {
+    max-width: var(--footer-max-width);
+    margin: 0 auto;
+    padding: 0 var(--footer-padding-x);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__brand {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links a {
+    color: var(--footer-text);
+    text-decoration: none;
+    margin: var(--footer-link-margin);
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--footer-link-hover);
+}
+
+.footer__social {
+    padding: 30px 0 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espacio entre íconos */
+}
+
+.footer__social a {
+    display: inline-block;
+}
+
+.footer__social img,
+.footer__social svg {
+    width: fit-content;
+    height: var(--footer-social-size);
+    filter: brightness(0) invert(1);
+    transition: 
+        filter 0.2s,
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.footer__social a:hover img,
+.footer__social a:hover svg {
+    transform: scale(1.18); /* Ajusta el factor según tu gusto */
+}
+
+.footer-copy {
+    font-size: var(--footer-copy-size);
+    color: var(--footer-copy);
+    text-align: center;
+}
+
+@media (max-width: 475px) {
+
+    .footer__container {
+        padding: 0 16px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    }
+    .footer__brand {
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    }
+    .footer-links a {
+        margin: 0 8px;
+        
+    }
+
+    .footer__social img,
+    .footer__social svg {
+        width: fit-content;
+        height: var(--footer-social-size);
+        
+    }
+
+    .footer-copy {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 12px;
+        color: var(--footer-copy);
+        padding: 0 10px;
+
+    }
+  
+}
