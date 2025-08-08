@@ -130,17 +130,16 @@ hero-section<!DOCTYPE html>
 
         /* Hero Content Ultra-Critical */
         .hero-content {
-            margin-top: 40px;
+            margin-top: 20px;
             position: relative;
             z-index: 2;
             text-align: center;
             max-width: 100%;
-            padding: 0px;
+            padding: 0px 50px;
             color: white
         }
 
         .hero-title {
-            padding: 0 40px;
             font-size: clamp(2.5rem, 6vw, 3rem);
             font-weight: 500;
             margin-bottom: 30px;
@@ -165,10 +164,9 @@ hero-section<!DOCTYPE html>
 
         .hero-description {
             font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-            padding: 0 40px;
             line-height: 1.3;
             opacity: 0.9;
-            max-width: 680px;
+            max-width: 940px;
             font-family: var(--font-fallback);
             font-display: swap;
             text-align: left;
@@ -180,7 +178,6 @@ hero-section<!DOCTYPE html>
             justify-content: flex-start;
             flex-wrap: wrap;
             margin-top: 35px;
-            padding: 0 40px
         }
 
         .btn-primary,
@@ -234,12 +231,12 @@ hero-section<!DOCTYPE html>
             }
 
             .hero-content {
-                margin-top: 50px
+                margin-top: 50px;
+                padding: 0 20px;
             }
 
             .hero-cta {
                 align-items: center;
-                padding: 0 20px
             }
 
             .btn-primary,
@@ -249,12 +246,11 @@ hero-section<!DOCTYPE html>
             }
 
             .hero-title {
-                padding: 0 20px;
                 line-height: 48px
             }
 
             .hero-description {
-                padding: 0 20px
+                
             }
         }
 
@@ -337,7 +333,8 @@ hero-section<!DOCTYPE html>
             text-align: center;
             transition: .3s opacity;
             transform: translate3d(0, 0, 0);
-            z-index: 10
+            z-index: 10;
+            padding-top: 15px;
         }
 
         .swiper-pagination.swiper-pagination-hidden {
@@ -537,13 +534,10 @@ hero-section<!DOCTYPE html>
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Tu página web soñada,<br>
-                    <span class="hero-highlight">más cerca</span>
-                    que nunca!
-                </h1>
+                    Tu página web,<span class="hero-highlight"> más cerca</span> que nunca!</h1>
 
                 <p class="hero-description">
-                    Mas presencia digital al alcance de todos, acercando la web de manera rápida y eficiente.
+                    Te brindamos soluciones digitales rápidas y accesibles, porque estar en la web debería ser simple, seguro y para todos.
                 </p>
 
                 <div class="hero-cta">
@@ -647,7 +641,7 @@ hero-section<!DOCTYPE html>
                 spaceBetween: 20,
                 loop: true,
                 autoplay: {
-                    delay: 3000,
+                    delay: 4000,
                     disableOnInteraction: false,
                     pauseOnMouseEnter: true
                 },
@@ -690,7 +684,7 @@ hero-section<!DOCTYPE html>
                 },
 
                 // ← OPTIMIZACIÓN: GPU acceleration
-                speed: 600,
+                speed: 800,
                 effect: 'slide'
             });
 
