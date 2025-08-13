@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ← OPTIMIZACIÓN SEO + LIGHTHOUSE -->
+    <title>Paginas Web | fizweb</title>
+    <meta name="description"
+        content="Mas presencia digital al alcance de todos, acercando la web de manera rápida y eficiente.">
+    <meta name="keywords" content="fizweb, páginas web, frontend, performance, rapido, accesible, conectado">
+    <meta name="author" content="fizweb">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.fizweb.net">
+    <link rel="preload" href="./assets/hero-section-bg.png" as="image" fetchpriority="high">
+    <link rel="preload" href="./assets/logo-v1.png" as="image">
+    <link rel="preload" href="./style.css" as="style">
+    <link rel="dns-prefetch" href="//wa.me">
+    <link rel="preconnect" href="https://wa.me">
+    <link rel="dns-prefetch" href="//www.facebook.com">
+    <link rel="dns-prefetch" href="//www.instagram.com">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <!-- ← CRITICAL CSS ULTRA-OPTIMIZADO - Solo FCP esencial -->
+    <style>
+        /* Ultra-Critical: Solo FCP/LCP essentials - Reducido ~60% */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            padding-top: 80px;
+            background-color: #040406
+        }
+
+        :root {
+            --color-primary: #650177;
+            --color-light: #f8f9fa;
+            --font-main: "Lato", sans-serif;
+            --font-fallback: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+        }
+
+        /* Navbar Ultra-Critical */
+        #main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(90deg, #2c0034 0%, var(--color-primary) 100%);
+            height: 80px;
+            padding: 0 25px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000
+        }
+
+        .logo-nav {
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .logo-nav img {
+            height: 50px;
+            width: 50px;
+            border-radius: 10%
+        }
+
+        .logo-nav span {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            font-family: var(--font-main);
+        
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 25px
+        }
+
+        .nav-menu__list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+
+        .nav-menu__link {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-left: 20px;
+            text-decoration: none;
+            font-family: var(--font-fallback)
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            z-index: 3000;
+            cursor: pointer
+        }
+
+        .hamburger span {
+            width: 30px;
+            height: 2px;
+            margin-bottom: 3px;
+            background: var(--color-light);
+            display: block
+        }
+
+        /* Hero Ultra-Critical */
+        .hero-section {
+            min-height: 100vh;
+            position: relative;
+            padding-bottom: 50px;
+        }
+
+        .hero-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1
+        }
+
+        /* Hero Content Ultra-Critical */
+        .hero-content {
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 100%;
+            padding: 0px 50px;
+            color: white
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 3rem);
+            font-weight: 600;
+            margin-bottom: 30px;
+            font-family: var(--font-fallback);
+            line-height: 60px;
+            font-display: swap;
+            text-align: left;
+            max-width: 900px;
+            letter-spacing: -1px;
+        }
+
+        .hero-highlight {
+            background: linear-gradient(45deg, #ff0000, #0000ff, #00ff00);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+            letter-spacing: -2px;
+            font-size: 1.5em
+        }
+
+        .hero-description {
+            font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+            line-height: 1.3;
+            opacity: 0.9;
+            max-width: 800px;
+            font-family: var(--font-fallback);
+            font-display: swap;
+            text-align: left;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: var(--font-fallback);
+            text-decoration: none;
+            display: inline-block;
+            width: 280px;
+            font-display: swap
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--color-primary), #8338ec);
+            color: white
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3)
+        }
+
+        /* Mobile Ultra-Critical */
+        @media (max-width:800px) {
+            .hamburger {
+                display: flex
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 320px;
+                height: 100vh;
+                opacity: 0;
+                pointer-events: none;
+                transform: translateX(100%);
+                background: rgba(17, 17, 17, 0.95);
+                z-index: 2000;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 80px
+            }
+
+            .hero-content {
+                margin-top: 50px;
+                padding: 0 20px;
+            }
+
+            .hero-cta {
+                align-items: center;
+                width: 100%;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: auto;
+            }
+
+            .hero-title {
+                line-height: 48px
+            }
+
+        
+        }
+
+        /* ← FONT SWAP: Activar Ubuntu cuando esté cargado */
+        .fonts-loaded .logo-nav span,
+        .fonts-loaded .hero-title,
+        .fonts-loaded .hero-description,
+        .fonts-loaded .btn-primary,
+        .fonts-loaded .btn-secondary,
+        .fonts-loaded .nav-menu__link {
+            font-family: var(--font-main)
+        }
+
+        /* ← SWIPER CRITICAL CSS INLINE - Solo esencial para evitar FOUC */
+        .swiper {
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            overflow: hidden;
+            list-style: none;
+            padding: 0;
+            z-index: 1;
+            display: block
+        }
+
+        .swiper-vertical>.swiper-wrapper {
+            flex-direction: column
+        }
+
+        .swiper-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            transition-property: transform;
+            box-sizing: content-box
+        }
+
+        .swiper-horizontal {
+            touch-action: pan-y
+        }
+
+        .swiper-vertical {
+            touch-action: pan-x
+        }
+
+        .swiper-slide {
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            
+            position: relative;
+            transition-property: transform;
+            display: block
+        }
+
+        .swiper-slide-invisible-blank {
+            visibility: hidden
+        }
+
+        .swiper-autoheight,
+        .swiper-autoheight .swiper-slide {
+            height: auto
+        }
+
+        .swiper-autoheight .swiper-wrapper {
+            align-items: flex-start;
+            transition-property: transform, height
+        }
+
+        .swiper-backface-hidden .swiper-slide {
+            transform: translateZ(0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden
+        }
+
+        .swiper-pagination {
+            position: absolute;
+            text-align: center;
+            transition: .3s opacity;
+            transform: translate3d(0, 0, 0);
+            z-index: 10;
+            padding-top: 15px;
+        }
+
+        .swiper-pagination.swiper-pagination-hidden {
+            opacity: 0
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-bullets.swiper-pagination-horizontal {
+            bottom: 8px;
+            top: auto;
+            left: 0;
+            width: 100%
+        }
+
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            border-radius: 50%;
+            background: #ffffff !important;
+            opacity: 1 !important;
+            margin: 0 4px;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: var(--color-primary)
+        }
+
+        /* Paginación externa - debajo de la galería */
+        .banner-container .swiper-pagination {
+            position: relative;
+            margin-top: 20px;
+            text-align: center;
+            bottom: auto;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: absolute;
+            top: 50%;
+            width: 27px;
+            height: 44px;
+            margin-top: -22px;
+            z-index: 10;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary)
+        }
+
+        .swiper-button-next {
+            right: 10px
+        }
+
+        .swiper-button-prev {
+            left: 10px
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-family: 'swiper-icons';
+            font-size: 44px;
+            text-transform: none !important;
+            letter-spacing: 0;
+            font-variant: initial;
+            line-height: 1
+        }
+
+        .swiper-button-prev:after {
+            content: '‹'
+        }
+
+        .swiper-button-next:after {
+            content: '›'
+        }
+    </style>
+
+    <!-- ← OPTIMIZACIÓN CRÍTICA: FONT SWAP SCRIPT -->
+    <script>
+        /* ULTRA-OPTIMIZED FONT LOADING - NO blocking FCP */
+        (function () {
+            if ('fonts' in document) {
+                document.fonts.ready.then(function () {
+                    document.documentElement.className += ' fonts-loaded';
+                });
+            }
+        })();
+    </script>
+
+    <!-- Swiper CSS - LAZY LOAD para evitar blocking render -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    </noscript>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- ← OPTIMIZACIÓN SOCIAL MEDIA (Open Graph) -->
+    <meta property="og:title" content="Paginas Web | fizweb">
+    <meta property="og:description"
+        content="Mas presencia digital al alcance de todos, acercando la web de manera rápida y eficiente. Paginas Web desde $300.000">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.fizweb.net">
+    <meta property="og:image" content="https://fizweb.net/assets/logo-v1.png">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:site_name" content="fizweb">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- ← OPTIMIZACIÓN FAVICON -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="manifest" href="./manifest.json">
+
+    <!-- ← OPTIMIZACIÓN DE FUENTES CRÍTICA: ASYNC LOADING -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- ← OPTIMIZACIÓN CRÍTICA: PRELOAD solo weights críticos -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    </noscript>
+
+</head>
+
+<body>
+    <nav id="main-nav" aria-label="Main">
+        <!-- LOGO PRINCIPAL - EXTREMO IZQUIERDO -->
+        <div class="logo-nav">
+            <img src="./assets/logo-v1.png" alt="Marca logo" width="50" height="50">
+            <span>fizweb</span>
+        </div>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <div class="nav-menu" id="navMenu">
+            <!-- Logo grande solo para móvil -->
+            <div class="logo-nav logo-nav__menu">
+                <img src="./assets/logo-v1.png" alt="Marca logo" loading="lazy" width="160" height="160">
+            </div>
+
+            <!-- Social links -->
+            <div class="nav-menu__social">
+                <a href="https://www.facebook.com/profile.php?id=61578870270606" class="nav-menu__social-link"
+                    aria-label="Facebook">
+                    <img src="./assets/facebook-icon.svg" alt="Facebook icon" loading="lazy" width="28" height="28">
+                </a>
+                <a href="https://www.instagram.com/fizweb/" class="nav-menu__social-link" aria-label="Instagram">
+                    <img src="./assets/instagram-icon.svg" alt="Instagram icon" loading="lazy" width="28" height="28">
+                </a>
+            </div>
+
+            <!-- Links de navegación -->
+            <ul class="nav-menu__list">
+                <li class="nav-menu__item">
+                    <a href="./inicio.html" class="nav-menu__link">Inicio</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="./servicios.html" class="nav-menu__link">Producto</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="./preguntas.html" class="nav-menu__link">Preguntas</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="./contacto.html" class="nav-menu__link">Contacto</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- HAMBURGER - EXTREMO DERECHO -->
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- ← HERO SECTION PRINCIPAL -->
+    <section class="hero-section">
+        <!-- ← OPTIMIZACIÓN: Imagen de fondo como elemento para mejor LCP -->
+        <!-- <img src="./assets/hero-section-bg.png" alt="" class="hero-bg-image" fetchpriority="high" width="1920"
+            height="1080">-->
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    ¡Tu página web <span class="hero-highlight">más cerca</span> que nunca!</h1>
+
+                <p class="hero-description">
+                    Te brindamos soluciones digitales rápidas y accesibles, porque estar en la web debería ser simple, seguro y para todos.
+                </p>
+
+                <div class="hero-cta">
+                    
+                    <a href="./preguntas.html"><button class="btn-secondary">Mas información</button></a>
+                    <a href="./servicios.html"><button class="btn-primary">Ver Mas</button></a>
+                </div>
+            </div>
+            <div class="banner-container">
+                <!-- Galería Swiper -->
+                <div class="swiper gallery-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/img/banner-welcome-bg.png" alt="Galería imagen 1" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/banner-welcome-bg2.png" alt="Galería imagen 2" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/banner-welcome-bg3.png" alt="Galería imagen 3" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/banner-welcome-bg4.png" alt="Galería imagen 4" loading="lazy">
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+            </div>
+            
+        </div>
+
+        <div class="title-container">
+            <h2>¿Por que elegirnos?</h2>
+            <p>Porque crear tu página web con nosotros es fácil, confiable y sin vueltas.
+             Nos encargamos de todo para que tengas una landing page profesional, adaptada 
+             a lo que necesitás, sin complicaciones ni costos exagerados.</p>
+            <a href="./contacto.html"><button class="btn-secondary">Escribinos</button></a>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer__container">
+            
+                <div class="footer__brand">
+                    <div class="footer-links">
+                        <a href="./inicio.html">Inicio</a>
+                        <a href="./servicios.html">Producto</a>
+                        <a href="./preguntas.html">Preguntas</a>
+                        <a href="./contacto.html">Contacto</a>
+                    </div>
+
+                </div>
+
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/profile.php?id=61578870270606" target="_blank"><img src="assets/facebook-icon.svg"
+                            alt="Facebook"></a>
+                    <a href="https://www.instagram.com/fizweb/" target="_blank"><img src="assets/instagram-icon.svg"
+                            alt="Instagram"></a>
+                    
+                    <a href="fizweb.ar@gmail.com"><img src="assets/icons/email-icon.svg" alt="Email"></a>
+                </div>
+                <div class="footer-copy">
+                    <p>&copy; 2025 FIZWEB. Todos los derechos reservados.</p>
+                </div>
+            
+        </div>
+    </footer>
+
+
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/+541138470634" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <img src="./assets/icons/whatsapp-float.png" alt="WhatsApp" loading="lazy" width="70" height="70">
+    </a>
+
+    <!-- ← OPTIMIZACIÓN CRÍTICA: DEFER JavaScript - NO blocking TTI -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- ← OPTIMIZACIÓN CRÍTICA: Main JS también diferido -->
+    <script type="module" defer src="./main.js"></script>
+
+    <!-- ← OPTIMIZACIÓN CRÍTICA: Swiper initialization diferida y optimizada -->
+    <script defer>
+        // ← ULTRA-OPTIMIZED: Swiper lazy initialization
+        function initSwiper() {
+            if (typeof Swiper === 'undefined') {
+                // Fallback: retry después de 50ms si Swiper no está cargado
+                setTimeout(initSwiper, 50);
+                return;
+            }
+
+            const gallerySwiper = new Swiper('.gallery-swiper', {
+                // Configuración básica
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                },
+                centeredSlides: false,
+                // Pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: true
+                },
+
+                // Navigation
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // Responsive breakpoints
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 8,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 8,
+                    },
+                },
+
+                // ← OPTIMIZACIÓN: Performance enhancements
+                watchOverflow: true,
+                observeParents: true,
+                observer: true,
+
+                // ← OPTIMIZACIÓN: Lazy loading de slides
+                preloadImages: false,
+                lazy: {
+                    loadPrevNext: true,
+                    loadPrevNextAmount: 1
+                },
+
+                // ← OPTIMIZACIÓN: GPU acceleration
+                speed: 800,
+                effect: 'slide'
+            });
+
+            // ← OPTIMIZACIÓN: Pausar autoplay cuando no está visible (ahorro batería)
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        gallerySwiper.autoplay.start();
+                    } else {
+                        gallerySwiper.autoplay.stop();
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const swiperElement = document.querySelector('.gallery-swiper');
+            if (swiperElement) {
+                observer.observe(swiperElement);
+            }
+        }
+
+        // ← LAZY INITIALIZATION: Solo cuando sea necesario
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initSwiper);
+        } else {
+            initSwiper();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,320 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paginas Web | fizweb</title>
+    <style>
+        /* Ultra-Critical: Solo FCP/LCP essentials - Reducido ~60% */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            padding-top: 0px;
+            background-image: url('./assets/img/multidispositivos-banner.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        :root {
+            --color-primary: #650177;
+            --color-light: #f8f9fa;
+            --font-main: "Lato", sans-serif;
+            --font-fallback: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+        }
+
+        /* Navbar Ultra-Critical */
+        #main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(90deg, #2c0034 0%, var(--color-primary) 100%);
+            height: 80px;
+            padding: 0 25px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000
+        }
+
+        .logo-nav {
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .logo-nav img {
+            height: 50px;
+            width: 50px;
+            border-radius: 10%
+        }
+
+        .logo-nav span {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            font-family: var(--font-fallback);
+            font-display: swap
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 25px
+        }
+
+        .nav-menu__list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+
+        .nav-menu__link {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-left: 20px;
+            text-decoration: none;
+            font-family: var(--font-fallback)
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            z-index: 3000;
+            cursor: pointer
+        }
+
+        .hamburger span {
+            width: 30px;
+            height: 2px;
+            margin-bottom: 3px;
+            background: var(--color-light);
+            display: block
+        }
+
+        .logo-nav span,
+        .nav-menu__link {
+            font-family: var(--font-main);
+        }
+
+        @media (max-width:800px) {
+            .hamburger {
+                display: flex
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 320px;
+                height: 100vh;
+                opacity: 0;
+                pointer-events: none;
+                transform: translateX(100%);
+                background: rgba(17, 17, 17, 0.95);
+                z-index: 2000;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 80px
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav id="main-nav" aria-label="Main">
+        <!-- LOGO PRINCIPAL - EXTREMO IZQUIERDO -->
+        <div class="logo-nav">
+            <img src="./assets/logo-v1.png" alt="Marca logo" width="50" height="50">
+            <span>fizweb</span>
+        </div>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <div class="nav-menu" id="navMenu">
+            <!-- Logo grande solo para móvil -->
+            <div class="logo-nav logo-nav__menu">
+                <img src="./assets/logo-v1.png" alt="Marca logo" loading="lazy" width="160" height="160">
+            </div>
+
+            <!-- Social links -->
+            <div class="nav-menu__social">
+                <a href="https://www.facebook.com/profile.php?id=61578870270606" class="nav-menu__social-link"
+                    aria-label="Facebook">
+                    <img src="./assets/facebook-icon.svg" alt="Facebook icon" loading="lazy" width="28" height="28">
+                </a>
+                <a href="https://www.instagram.com/fizweb/" class="nav-menu__social-link" aria-label="Instagram">
+                    <img src="./assets/instagram-icon.svg" alt="Instagram icon" loading="lazy" width="28" height="28">
+                </a>
+            </div>
+
+            <!-- Links de navegación -->
+            <ul class="nav-menu__list">
+                <li class="nav-menu__item">
+                    <a href="./inicio.html" class="nav-menu__link">Inicio</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="./servicios.html" class="nav-menu__link">Producto</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="./preguntas.html" class="nav-menu__link">Preguntas</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="./contacto.html" class="nav-menu__link">Contacto</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- HAMBURGER - EXTREMO DERECHO -->
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+
+    <section id="contact">
+        <div class="main_container">
+            <div class="contact__container">
+                <div class="contact__info">
+                    <div class="title-container">
+                        <h2>Contáctanos</h2>
+                        <p>Si tenés dudas o querés empezar tu página web, escribinos por cualquiera de estos medios y te
+                            responderemos lo antes posible.</p>
+                    </div>
+
+                    <div class="contact__details">
+                        <div class="contact__item">
+                            <a href="https://maps.google.com/?q=-34.603722,-58.382173" target="_blank">
+                                <div class="contact__icon">
+                                    <img src="./assets/icons/location-icon.svg" alt="">
+                                </div>
+                            </a>
+                            <div class="contact__text">
+                                <h3>Ubicación</h3>
+                                <p>CABA, Argentina</p>
+                            </div>
+                        </div>
+
+                        <div class="contact__item">
+                            <a href="mailto:fizweb.ar@gmail.com">
+                                <div class="contact__icon">
+                                    <img src="./assets/icons/email-icon.svg" alt="">
+                                </div>
+                            </a>
+                            <div class="contact__text">
+                                <h3>Email</h3>
+                                <p>fizweb.ar@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact__item">
+                            <a href="tel:+541112345678">
+                                <div class="contact__icon">
+                                    <img src="./assets/icons/mobile-phone_icon.svg" alt="">
+                                </div>
+                            </a>
+                            <div class="contact__text">
+                                <h3>Teléfono</h3>
+                                <p>+54 11 3847-0634</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social__links">
+                        <a href="https://www.facebook.com/profile.php?id=61578870270606" target="_blank"><img
+                                src="./assets/icons/facebook-icon.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/fizweb/" target="_blank"><img src="./assets/icons/instagram-icon.png"
+                                alt="instagram"></a>
+                        <a href="https://wa.me/+541138470634" target="_blank"><img
+                                src="./assets/icons/whatsapp-float.png" alt="whatsapp"></a>        
+                    </div>
+
+
+                    <img src="./assets/qr-fizweb.png" alt="qr-fizweb" class="qr-code">
+
+                </div>
+
+                <div class="contact__form">
+                    <div class="title-container">
+                        <h2>Envíanos un mensaje</h2>
+                    </div>
+                    <form action="https://formsubmit.co/fizweb.ar@gmail.com" method="POST">
+                        <div class="form__group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="phone">Teléfono (opcional)</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form__group">
+                            <label for="service">Servicio de interés</label>
+                            <select id="service" name="service">
+                                <option value="">Selecciona un servicio</option>
+                                <option value="web">Página web</option>
+                                <option value="hosting">Mantenimiento</option>
+                                <option value="other">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit__btn">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<footer>
+        <div class="footer__container">
+            
+                <div class="footer__brand">
+                    <div class="footer-links">
+                        <a href="./inicio.html">Inicio</a>
+                        <a href="./servicios.html">Producto</a>
+                        <a href="./preguntas.html">Preguntas</a>
+                        <a href="./contacto.html">Contacto</a>
+                    </div>
+
+                </div>
+
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/profile.php?id=61578870270606" target="_blank"><img src="assets/facebook-icon.svg"
+                            alt="Facebook"></a>
+                    <a href="https://www.instagram.com/fizweb/" target="_blank"><img src="assets/instagram-icon.svg"
+                            alt="Instagram"></a>
+                    
+                    <a href="fizweb.ar@gmail.com"><img src="assets/icons/email-icon.svg" alt="Email"></a>
+                </div>
+                <div class="footer-copy">
+                    <p>&copy; 2025 FIZWEB. Todos los derechos reservados.</p>
+                </div>
+            
+        </div>
+    </footer>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

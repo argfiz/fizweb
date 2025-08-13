@@ -179,48 +179,96 @@
     </nav>
 
 
+    <div class="title-container title-container_services">
+        <h2>Lo que hacemos</h2>
+        <p>Aqui vas a encontrar información detallada sobre nuestros servicios, incluyendo todo lo que ofrecemos en cada una de nuestras páginas web.
+        </p>
+    </div>
+    <div class="tabs">
 
-    <section id="faqSection" class="faq__section">
-        <div class="title-container">
-            <h2>Preguntas Frecuentes</h2>
-            <p>Respondemos de forma clara y sencilla las preguntas más frecuentes, para que conozcas cómo trabajamos y puedas aprovechar al máximo cada uno de nuestros servicios.</p>
+        <div class="tabs__menu-container">
+            <div>
+                <ul class="tabs__list" role="tablist">
+                    <li class="tabs__item" role="presentation">
+                        <a href="#A" class="tabs__link" id="tab-A" role="tab" aria-controls="A" aria-selected="true"
+                            tabindex="0">Producto</a>
+                    </li>
+                    <li class="tabs__item" role="presentation">
+                        <a href="#B" class="tabs__link" id="tab-B" role="tab" aria-controls="B" aria-selected="false"
+                            tabindex="-1">Mantenimiento</a>
+                    </li>
+                    <li class="tabs__item" role="presentation">
+                        <a href="#C" class="tabs__link" id="tab-C" role="tab" aria-controls="C" aria-selected="false"
+                            tabindex="-1">Pago</a>
+                    </li>
+                </ul>
+            </div>
+            <section id="A" class="tabs__section" role="tabpanel" aria-labelledby="tab-A" aria-hidden="false">
+
+                <div class="tabs__body">
+                    <div class="body__features-list">
+                        <ul class="features-list">
+                            <li>Diseño moderno y adaptable</li>
+                            <li>Seccion de contacto</li>
+                            <li>Botón Whatsapp flotante</li>
+                            <li>Conexión a redes sociales</li>
+                            <li>Instalación en servidor</li>
+                        </ul>
+                    </div>
+                    <div class="body__prices">
+                        <h3>Precios desde:</h3>
+                        <p>$300.000</p>
+                        <a href="./contacto.html">Escribinos </a>
+
+                    </div>
+                    
+                </div>
+
+                <p class="body__note">* El valor indicado corresponde únicamente al desarrollo de la pagina web. El mantenimiento se cotiza por separado.</p>
+            </section>
+
+            <section id="B" class="tabs__section" role="tabpanel" aria-labelledby="tab-B" aria-hidden="true">
+                <div class="tabs__body">
+                    Content of section B
+                </div>
+            </section>
+
+            <section id="C" class="tabs__section" role="tabpanel" aria-labelledby="tab-C" aria-hidden="true">
+                <div class="tabs__body">
+                    Content of section C
+                </div>
+            </section>
         </div>
-        <div class="main__container">
+        <img src="./assets/icons/right-arrow.svg" alt="Right arrow" class="arrow-icon">
+    </div>
 
-            <div class="faq__list" id="faqList">
-                <!-- Example FAQ Item -->
+
+    <footer>
+        <div class="footer__container">
+
+            <div class="footer__brand">
+                <div class="footer-links">
+                    <a href="./inicio.html">Inicio</a>
+                    <a href="./servicios.html">Producto</a>
+                    <a href="./preguntas.html">Preguntas</a>
+                    <a href="./contacto.html">Contacto</a>
+                </div>
+
+            </div>
+
+            <div class="footer__social">
+                <a href="https://www.facebook.com/profile.php?id=61578870270606" target="_blank"><img
+                        src="assets/facebook-icon.svg" alt="Facebook"></a>
+                <a href="https://www.instagram.com/fizweb/" target="_blank"><img src="assets/instagram-icon.svg"
+                        alt="Instagram"></a>
+
+                <a href="fizweb.ar@gmail.com"><img src="assets/icons/email-icon.svg" alt="Email"></a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2025 FIZWEB. Todos los derechos reservados.</p>
             </div>
         </div>
-    </section>
-
-
-<footer>
-        <div class="footer__container">
-            
-                <div class="footer__brand">
-                    <div class="footer-links">
-                        <a href="./inicio.html">Inicio</a>
-                        <a href="./servicios.html">Producto</a>
-                        <a href="./preguntas.html">Preguntas</a>
-                        <a href="./contacto.html">Contacto</a>
-                    </div>
-
-                </div>
-
-                <div class="footer__social">
-                    <a href="https://www.facebook.com/profile.php?id=61578870270606" target="_blank"><img src="assets/facebook-icon.svg"
-                            alt="Facebook"></a>
-                    <a href="https://www.instagram.com/fizweb/" target="_blank"><img src="assets/instagram-icon.svg"
-                            alt="Instagram"></a>
-                    
-                    <a href="fizweb.ar@gmail.com"><img src="assets/icons/email-icon.svg" alt="Email"></a>
-                </div>
-                <div class="footer-copy">
-                    <p>&copy; 2025 FIZWEB. Todos los derechos reservados.</p>
-                </div>
-        </div>
     </footer>
-
 
     <script src="main.js"></script>
 </body>
